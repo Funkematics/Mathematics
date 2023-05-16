@@ -1,0 +1,25 @@
+# Fdb version 4
+["pdflatex"] 1684241274 "proofintro.tex" "build/proofintro.pdf" "proofintro" 1684241274 0
+  "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty" 1523134290 2211 ca7ce284ab93c8eecdc6029dc5ccbd73 ""
+  "/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty" 1523134290 4161 7f6eb9092061a11f87d08ed13515b48d ""
+  "/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty" 1601675358 87353 2c21ff5f2e32e1bf714e600924d810db ""
+  "/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty" 1523134290 4116 32e6abd27229755a83a8b7f18e583890 ""
+  "/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty" 1523134290 2432 8ff93b1137020e8f21930562a874ae66 ""
+  "/usr/share/texmf-dist/tex/latex/base/article.cls" 1601675358 20145 aad8c3dd3bc36e260347b84002182bc2 ""
+  "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1601675358 8449 a72d5d4e612221b46000c3d71724e0ef ""
+  "/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1616086534 27164 3d5f7887a89df4eb2f6e86ba26ef3254 ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1683572152 39447 2134d78a2da0cee52270db0ec417a200 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1683572160 327343 41a22076d79f3b37803909eea542967d ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1683572155 1329898 f9cf0eb7f8adcabc31aa6d8936240a88 ""
+  "build/proofintro.aux" 1684241274 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "proofintro.tex" 1684241271 302 af221427c4dfe7faa1074625d38af078 ""
+  (generated)
+  "build/proofintro.aux"
+  "build/proofintro.log"
+  "build/proofintro.pdf"
+  (rewritten before read)
