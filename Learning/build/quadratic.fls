@@ -1,4 +1,4 @@
-PWD /home/funkycosmonaut/Documents/Mathematics/Learning
+PWD /home/funky/Documents/Mathematics/Learning
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT quadratic.tex
@@ -92,6 +92,7 @@ INPUT build/quadratic.aux
 INPUT build/quadratic.aux
 INPUT build/quadratic.aux
 OUTPUT build/quadratic.aux
+INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
