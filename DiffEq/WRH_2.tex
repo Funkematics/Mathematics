@@ -44,6 +44,9 @@ Thus our solution is:
 \begin{align}
      \Aboxed{x\sin(y) + y\cos(x) - \frac{3}{2}y^2 = C}
 \end{align}
+
+
+
 \setcounter{subsubsection}{0}\subsubsection{problem b)}
 We are given the differential equation $ (y\ln(y) + e^{xy})dx + (\frac{1}{y} + x\ln(y))dy = 0 $ first we determine if it is exact: 
 
@@ -55,6 +58,44 @@ We are given the differential equation $ (y\ln(y) + e^{xy})dx + (\frac{1}{y} + x
 Thus we can conclude:
 \begin{align*}
     \Aboxed{\text{The Equation is not exact}}
+\end{align*}\setcounter{equation}{0}
+
+\setcounter{subsection}{3}
+\subsection{problem 2}
+We are given the equation $y(x + y + 1)dx + (x + 2y)dy = 0$, we first determine if it is exact or not.
+\setcounter{subsubsection}{1}
+%\subsection{problem 2)}
+\subsubsection{a)}
+\begin{align*}
+    &M(x,y) = y(x + y + 1) = yx + y^2 + y & \frac{\delta M}{\delta y} = x + 2y + 1\\
+    &N(x,y) = x + 2y & \frac{\delta N}{\delta y} = 1 
 \end{align*}
+\begin{align*}
+    \frac{\delta M}{\delta y} \not= \frac{\delta N}{\delta y}\\ \Aboxed{\text{Not Exact}}
+\end{align*}
+
+
+\setcounter{subsubsection}{1}
+For this part we add $\mu(x) = e^x$ as our integrating factor to get the equation 
+$(yxe^x + y^2e^x + ye^x)dx + (xe^x + eye^x)dy = 0$:
+\subsubsection{b)} 
+\begin{align*}
+    &M(x,y) =  yxe^x + y^2e^x + ye^x & \frac{\delta M}{\delta y} = xe^x + 2ye^x + e^x\\
+    &N(x,y) = xe^x + 2ye^x & \frac{\delta N}{\delta y} = e^x + xe^x + 2ye^x
+\end{align*}
+\begin{align*}
+    \frac{\delta M}{\delta y} = \frac{\delta N}{\delta y}\\ \Aboxed{\text{Exact Equation}}
+\end{align*}
+
+\setcounter{subsubsection}{1}
+Now we find the solution:
+\subsubsection{c)} 
+\begin{align}
+    & f(x,y) = \int(yxe^x + y^2e^x + ye^x) &= e^xy^2 + e^xy + g(y) \\
+    & \frac{\delta f}{\delta y} = \textcolor{red}{2e^xy+xe^x = xe^x + 2ye^x} & g(y) = 0
+\end{align}
+\begin{align}
+     \Aboxed{e^xy^2 + e^xxy = C}
+\end{align}
 
 \end{document}
