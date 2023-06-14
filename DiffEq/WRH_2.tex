@@ -26,9 +26,7 @@
 %\section{section1}
 
 \subsection{Exact equations}
-\subsubsection{problem1}
-
-
+\subsubsection{problem a)}
 Consider the differential equation: $(\sin(y) - y\sin(x))dx + (\cos(x) + x\cos(y) - 3y)dy = 0$, we solve via the method of exact equations:
 \begin{align*}
     & M(x,y) = (\sin(y) - y\sin(x)) & \frac{\delta M}{\delta y} = \cos(y) - \sin(x)\\
@@ -46,13 +44,17 @@ Thus our solution is:
 \begin{align}
      \Aboxed{x\sin(y) + y\cos(x) - \frac{3}{2}y^2 = C}
 \end{align}
-
-%\subsubsection{problem2}
-%We are given the differential equation 
+\setcounter{subsubsection}{0}\subsubsection{problem b)}
+We are given the differential equation $ (y\ln(y) + e^{xy})dx + (\frac{1}{y} + x\ln(y))dy = 0 $ first we determine if it is exact: 
 
 \setcounter{equation}{0}
-%\begin{equation}
-%    x+y
-%\end{equation}
+\begin{align*}
+    &M(x,y) = y\ln(y) + e^{xy} & \frac{\delta M}{\delta y} = \ln(y) + 1 + xe^{xy}\\
+    &N(x,y) = \frac{1}{y} + x\ln(y) & \frac{\delta N}{\delta y} = \ln(y)
+\end{align*}
+Thus we can conclude:
+\begin{align*}
+    \Aboxed{\text{The Equation is not exact}}
+\end{align*}
 
 \end{document}
