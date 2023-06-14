@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage[%paperheight = 59.4cm,
+            %paperwidth = 42cm,
+            includehead,
+            nomarginpar,
+            textwidth=15cm,
+            headheight=10mm]{geometry}
+
+
+\begin{document}
+
+\pagestyle{fancy}
+%\fancyhead{}\fancyfoot{}
+
+\fancyhf[OHC]{Christopher Munoz WRH3 Diffeq}
+\setcounter{section}{2}
+\setcounter{subsection}{3}
+\setcounter{subsubsection}{0}
+%\section{section1}
+
+\subsection{Exact equations}
+\subsubsection{problem1}
+
+
+Consider the differential equation: $(\sin(y) - y\sin(x))dx + (\cos(x) + x\cos(y) - 3y)dy = 0$, we solve via the method of exact equations:
+\begin{align*}
+    & M(x,y) = (\sin(y) - y\sin(x)) & \frac{\delta M}{\delta y} = \cos(y) - \sin(x)\\
+    & N(x,y) = (\cos(x) + x\cos(y) - 3y) & \frac{\delta N}{\delta y} = \cos(y) - \sin(x)
+\end{align*}
+Now we solve:
+\begin{align}
+    & f(x,y) = \int(\sin(y) - y\sin(x))dx & = x\sin(y) + y\cos(x) + g(y)\\
+     &\frac{\delta f}{\delta y} = \textcolor{red}{x\cos(y)} + \textcolor{red}{\cos(x)} + g'(y) =
+     \textcolor{red}{\cos(x)} + \textcolor{red}{x\cos(y)} - 3y & \rightarrow  g'(y) = -3y\\
+     & \int g'(y) = \int -3y \\
+     & g(y) = -\frac{3}{2}y^2
+\end{align}
+Thus our solution is:
+\begin{align}
+     \Aboxed{x\sin(y) + y\cos(x) - \frac{3}{2}y^2 = C}
+\end{align}
+
+%\subsubsection{problem2}
+%We are given the differential equation 
+
+\setcounter{equation}{0}
+%\begin{equation}
+%    x+y
+%\end{equation}
+
+\end{document}
