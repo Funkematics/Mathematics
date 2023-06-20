@@ -25,7 +25,7 @@
 \setcounter{subsubsection}{0}
 %\section{section1}
 
-\subsection{Exact equations}
+\subsection{}
 \subsubsection{8 a)}
 Suppose $ a = b = 1 $ for the Gompertz differential equation: $\frac{\delta P}{\delta t} = P(a - b\ln P)$, the following are the phase portraits for cases $ P_0 > e$ and $ 0 < P_0 < e $:
 \begin{align*}
@@ -40,7 +40,7 @@ For $ a = 1, b = -1 $,  cases $ P_0 > e^{-1}$ and $ 0 < P_0 < e^{-1} $:
     & \\
     & \\
 \end{align*}
-\subsubsection*{8 c)}
+az
 Explicit solution for $ P(O) = P_0 $.
 \begin{align*}
     & \frac{dP}{dt} &= P(a - b\ln P) \\
@@ -83,42 +83,44 @@ Plugging this in and the mass of 16 our final solution is:
 \begin{align*}
      \Aboxed{v(t) = \sqrt{\frac{16g}{k}} \tan(-\sqrt{\frac{kg}{16}}t + \tan^{-1}(300)\sqrt{\frac{k}{16g}})}
 \end{align*}
-\setcounter{subsection}{3}
-\subsection{problem 2}
-We are given the equation $y(x + y + 1)dx + (x + 2y)dy = 0$, we first determine if it is exact or not.
-\setcounter{subsubsection}{1}
+\setcounter{section}{4}
+\setcounter{subsection}{0}
+\subsection{}
+\setcounter{subsubsection}{0}
 %\subsection{problem 2)}
-\subsubsection{a)}
+\subsubsection{}
+We are given the equation $ x^2y;; - xy' + y = 0$ and its solution $ y = c_1x + c_2x \ln(x), (0, \infty)$ we are tasked with finding the member that satisfies y(1) = 3 and y'(1) = -1, first we derive and plug:
 \begin{align*}
-    &M(x,y) = y(x + y + 1) = yx + y^2 + y & \frac{\delta M}{\delta y} = x + 2y + 1\\
-    &N(x,y) = x + 2y & \frac{\delta N}{\delta y} = 1 
+    & y = c_1x + c_2x\ln(x) & 3 = c_1\\
+    & y' = c_1 + c_2(\ln(x) + 1) & -1 = c_1 + c_2\\
+    & y'' = c_2 \frac{1}{x} 
 \end{align*}
+We get $c_1 = 3$ and $c_2 = -4$, our solution is:
 \begin{align*}
-    \frac{\delta M}{\delta y} \not= \frac{\delta N}{\delta y}\\ \Aboxed{\text{Not Exact}}
-\end{align*}
-
-
-\setcounter{subsubsection}{1}
-For this part we add $\mu(x) = e^x$ as our integrating factor to get the equation 
-$(yxe^x + y^2e^x + ye^x)dx + (xe^x + eye^x)dy = 0$:
-\subsubsection{b)} 
-\begin{align*}
-    &M(x,y) =  yxe^x + y^2e^x + ye^x & \frac{\delta M}{\delta y} = xe^x + 2ye^x + e^x\\
-    &N(x,y) = xe^x + 2ye^x & \frac{\delta N}{\delta y} = e^x + xe^x + 2ye^x
-\end{align*}
-\begin{align*}
-    \frac{\delta M}{\delta y} = \frac{\delta N}{\delta y}\\ \Aboxed{\text{Exact Equation}}
+    \Aboxed{3x -4x\ln(x)}
 \end{align*}
 
-\setcounter{subsubsection}{1}
-Now we find the solution:
-\subsubsection{c)} 
-\begin{align}
-    & f(x,y) = \int(yxe^x + y^2e^x + ye^x) &= e^xy^2 + e^xy + g(y) \\
-    & \frac{\delta f}{\delta y} = \textcolor{red}{2e^xy+xe^x = xe^x + 2ye^x} & g(y) = 0
-\end{align}
-\begin{align}
-     \Aboxed{e^xy^2 + e^xxy = C}
-\end{align}
 
+\subsubsection{} 
+We determine if $f_1 = 1 + x, f_2 = 3x, f_3 = -x^2$ are linearly independant using wronskian:
+\begin{equation}
+\begin{bmatrix}
+    1+x & 3x & -x^2\\
+    1 & 3 & -2x \\
+    0 & 0 & - 2
+\end{bmatrix}
+  = \boxed{ -6} \\
+\end{equation}
+Thus the functions are linearly independant since -6 $\not=$ 0
+
+\subsubsection{}
+We verify that $y_1 = e^{\frac{x}{3}} and y_2 = xe^{\frac{x}{3}}$ form a fundamental set of solutions for $ 9y'' +6y' + y = 0$
+\begin{align*}
+    & y_1 = e^{\frac{x}{3}} & y_1'' = \frac{e^{\frac{x}{3}}}{3} && y_1'' = \frac{e^{\frac{x}{3}}}{9} \\
+    & y_2 = xe^{\frac{x}{3}} & y_2'= \frac{1}{3} e^{\frac{x}{3}}(x+3) && y_2'' = \frac{1}{9} e^{\frac{x}{3}}(x+6) 
+\end{align*}
+plugging both equations into $ 9y'' +6y' + y = 0$ we get:
+\begin{align*}
+\end{align*}
+RAN OUT OF TIME DANG
 \end{document}
