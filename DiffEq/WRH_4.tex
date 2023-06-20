@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage[%paperheight = 59.4cm,
+            %paperwidth = 42cm,
+            includehead,
+            nomarginpar,
+            textwidth=15cm,
+            headheight=10mm]{geometry}
+
+
+\begin{document}
+
+\pagestyle{fancy}
+%\fancyhead{}\fancyfoot{}
+
+\fancyhf[OHC]{Christopher Munoz WRH4 Diffeq}
+\setcounter{section}{3}
+\setcounter{subsection}{1}
+\setcounter{subsubsection}{0}
+%\section{section1}
+
+\subsection{Exact equations}
+\subsubsection{8 a)}
+Suppose $ a = b = 1 $ for the Gompertz differential equation: $\frac{\delta P}{\delta t} = P(a - b\ln P)$, the following are the phase portraits for cases $ P_0 > e$ and $ 0 < P_0 < e $:
+\begin{align*}
+    & \\
+    & \\
+    & \\
+\end{align*}
+\subsubsection*{8 b)}
+For $ a = 1, b = -1 $,  cases $ P_0 > e^{-1}$ and $ 0 < P_0 < e^{-1} $:
+\begin{align*}
+    & \\
+    & \\
+    & \\
+\end{align*}
+\subsubsection*{8 c)}
+Explicit solution for $ P(O) = P_0 $.
+\begin{align*}
+    & \frac{dP}{dt} &= P(a - b\ln P) \\
+    & \int \frac{dP}{P(a - b\ln P)} & = \int dt \\
+    & \int \frac{d(\ln P)}{(a - b \ln P)} &= \int dt \\
+    & - \frac{1}{b} \ln |a - b \ln P| + c &= t
+\end{align*}
+When we plug in $ P(O) = P_0 $ we get $ c = \frac{1}{b}|a - b \ln P_0|$ so we get:
+\begin{align*}
+    & t = & - \frac{1}{b} \ln |a - b \ln P| + \frac{1}{b} \ln \frac{a - b \ln P_0}{a - b \ln P} \\
+    & \ln P(t) = & \frac{a}{b} (1 - e^{-bt}) + e^{-bt} \ln P_0 \\
+    &P(t) = & \Aboxed{e^{\frac{a}{b} (1 - e^{-bt})} P_0^{e^{-bt}}} 
+\end{align*}
+\subsubsection{}
+Suppose we have the same 16 pound cannonball shot vertically upward with an initial velocity $v_0 = 300 ft/s$, the differential equation for the cannonball would be: 
+\setcounter{equation}{0}
+\begin{align*}
+    & m \frac{dv}{dt} = -mg - kv^2 \\
+\end{align*}
+Now we solve using separations of variables:
+\begin{align}
+    & -dt = \frac{mdv}{mg + kv^2} \\
+    & -dt = \frac{1}{g} \frac{dv}{1+(\sqrt{\frac{k}{mg}}v)^2} \\
+    & -\int dt = \int \frac{1}{g} \sqrt{\frac{mg}{k}} \frac{\sqrt{\frac{k}{mg}}}{1 + (\sqrt{\frac{k}{mg}}v)^2} dv \\
+    & -t + c = \sqrt{\frac{m}{gk}} \tan^{-1}(\sqrt{\frac{k}{mg}}v) \\
+    & -\sqrt{\frac{kg}{m}}t + c = \tan^{-1}(\sqrt{\frac{k}{mg}}v) \\
+    & \tan(-\sqrt{\frac{kg}{m}}t + c) = (\sqrt{\frac{k}{mg}}v)
+\end{align}\setcounter{equation}{0}
+Final
+\begin{align*}
+    & v(t) = \sqrt{\frac{mg}{k}} \tan(-\sqrt{\frac{kg}{m}}t + c)
+\end{align*}
+Plugging in $v(0) = 300$ we find c:
+\begin{align}
+    & v(0) = \sqrt{\frac{mg}{k}} \tan(-\sqrt{\frac{kg}{m}}(0) + c) \\
+    & 300 =  \sqrt{\frac{mg}{k}}\tan(c) \\
+    & c = \tan^{-1}(300)\sqrt{\frac{k}{mg}}
+\end{align}
+Plugging this in and the mass of 16 our final solution is:
+\begin{align*}
+     \Aboxed{v(t) = \sqrt{\frac{16g}{k}} \tan(-\sqrt{\frac{kg}{16}}t + \tan^{-1}(300)\sqrt{\frac{k}{16g}})}
+\end{align*}
+\setcounter{subsection}{3}
+\subsection{problem 2}
+We are given the equation $y(x + y + 1)dx + (x + 2y)dy = 0$, we first determine if it is exact or not.
+\setcounter{subsubsection}{1}
+%\subsection{problem 2)}
+\subsubsection{a)}
+\begin{align*}
+    &M(x,y) = y(x + y + 1) = yx + y^2 + y & \frac{\delta M}{\delta y} = x + 2y + 1\\
+    &N(x,y) = x + 2y & \frac{\delta N}{\delta y} = 1 
+\end{align*}
+\begin{align*}
+    \frac{\delta M}{\delta y} \not= \frac{\delta N}{\delta y}\\ \Aboxed{\text{Not Exact}}
+\end{align*}
+
+
+\setcounter{subsubsection}{1}
+For this part we add $\mu(x) = e^x$ as our integrating factor to get the equation 
+$(yxe^x + y^2e^x + ye^x)dx + (xe^x + eye^x)dy = 0$:
+\subsubsection{b)} 
+\begin{align*}
+    &M(x,y) =  yxe^x + y^2e^x + ye^x & \frac{\delta M}{\delta y} = xe^x + 2ye^x + e^x\\
+    &N(x,y) = xe^x + 2ye^x & \frac{\delta N}{\delta y} = e^x + xe^x + 2ye^x
+\end{align*}
+\begin{align*}
+    \frac{\delta M}{\delta y} = \frac{\delta N}{\delta y}\\ \Aboxed{\text{Exact Equation}}
+\end{align*}
+
+\setcounter{subsubsection}{1}
+Now we find the solution:
+\subsubsection{c)} 
+\begin{align}
+    & f(x,y) = \int(yxe^x + y^2e^x + ye^x) &= e^xy^2 + e^xy + g(y) \\
+    & \frac{\delta f}{\delta y} = \textcolor{red}{2e^xy+xe^x = xe^x + 2ye^x} & g(y) = 0
+\end{align}
+\begin{align}
+     \Aboxed{e^xy^2 + e^xxy = C}
+\end{align}
+
+\end{document}
