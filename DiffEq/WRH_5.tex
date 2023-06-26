@@ -24,9 +24,6 @@
 \setcounter{section}{4}
 \setcounter{subsection}{2}
 \setcounter{subsubsection}{0}
-%\section{section1}
-
-%\subsection*{}
 \subsubsection{} 
  We are given the differential equation $ y'' + 2y' + y = 0$ with the solution $y_1 = xe^{-x}$ we will construct the second solution using the formula provided: $y_2 = y_1\int \frac{e^{- \int p(x)dx}}{(y_1)^2}dx$.
 \begin{align}
@@ -35,13 +32,37 @@
     & = xe^{-x}\int \frac{e^{-2x}}{(xe^{-x})^2}dx \\
     & = xe^{-x}\int \frac{e^{-2x}}{(x^2e^{-2x})}dx \\
     & = xe^{-x}\int \frac{1}{x^2}dx \\
-    & = xe^{-x} * (- \frac{1}{x}) \\
+    & = xe^{-x} \int (\frac{\sec(\ln(x))}{x}) \\
     & = -e^{-x}
 \end{align}
 Our second solution is 
 \begin{align*}
     \Aboxed{y_2 = C_2 e^{-x}}
 \end{align*}
-\subsubsection{}
+\subsubsection{} 
+We are given the differential equation $x^2y'' - 3xy' + 5y = 0$ with the solution $y_1 = x^2 \cos(\ln(x))$ we will construct the second solution using the formula provided: $y_2 = y_1\int \frac{e^{- \int p(x)dx}}{(y_1)^2}dx$.
+
+First we divide our equation $x^2y'' - 3xy' + 5y = 0$ by its leading term $x^2$:  
+\setcounter{equation}{0}
+\begin{align*}
+    \frac{x^2y'' - 3xy' + 5y}{x^2} = y'' - \frac{3y'}{x} + \frac{5y}{x^2}
+\end{align*}
+Our $p (x) $ term is $-\frac{3}{x}$.
+\begin{align}
+    y_2 &= y_1\int \frac{e^{- \int p(x)dx}}{(y_1)^2}dx \\ 
+    &  = x^2 \cos(\ln(x)) \int \frac{e^{- \int -\frac{3}{x}dx}}{(x^2 \cos(\ln(x)))^2}dx & p(x) = - \frac{3}{x}  \\
+    & = x^2 \cos(\ln(x)) \int \frac{e^{3\ln(x)}}{(x^2 \cos(\ln(x)))^2}dx \\
+    & = x^2 \cos(\ln(x)) \int \frac{x^3}{(x^4 \cos^2(\ln(x)))}dx \\
+    & = x^2 \cos(\ln(x)) \int \frac{1}{xcos^2(\ln(x))}dx \\
+    & = x^2 \cos(\ln(x)) \int \frac{\sec^2(\ln(x))}{x} \\
+    & = x^2 \cos(\ln(x)) \int {\sec^2(u)}du & u = \ln(x) && du = \frac{1}{x}\\
+    & = x^2 \cos(\ln(x)) * \tan(\ln(x))\\
+    & = x^2 \cos(\ln(x)) * \frac{\sin(\ln(x))}{\cos(\ln(x))} \\
+    & = x^2 \sin(\ln(x))
+\end{align}
+Meaning our second solution is
+\begin{align*}
+    \Aboxed{y_2 = C_2x^2 \sin(\ln(x))}
+\end{align*}
 
 \end{document}

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1687796091 "WRH_5.tex" "build/WRH_5.pdf" "WRH_5" 1687796091 0
+["pdflatex"] 1687807491 "WRH_5.tex" "build/WRH_5.pdf" "WRH_5" 1687807492 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -9,8 +9,11 @@
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1246382020 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsl10.tfm" 1136768653 1508 efecb4a315fe0975509670a272d75ef5 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
@@ -18,6 +21,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb" 1248133631 35022 e40946b20bfdcd1099eafb2bcd9f25dd ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
@@ -124,8 +128,8 @@
   "/usr/share/texmf-site/tex/latex/pgf/utilities/pgfrcs.sty" 1687431860 325 f9f16d12354225b7dd52a3321f085955 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1687432179 327343 41a22076d79f3b37803909eea542967d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1687432177 1329896 a5ce6472f6089c0efb394442ee93fb13 ""
-  "WRH_5.tex" 1687796088 1306 faec18db325c6305bb77506b8643144c ""
-  "build/WRH_5.aux" 1687796091 228 36649861d7dce0d01e8d8b92301a587b "pdflatex"
+  "WRH_5.tex" 1687807489 2540 ea7c943b2f00b099409be5e1fe51a373 ""
+  "build/WRH_5.aux" 1687807492 321 ef1346cf5c269c3cd8e4eb292b3380f8 "pdflatex"
   (generated)
   "build/WRH_5.aux"
   "build/WRH_5.log"
