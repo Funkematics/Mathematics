@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage[%paperheight = 59.4cm,
+            %paperwidth = 42cm,
+            includehead,
+            nomarginpar,
+            textwidth=15cm,
+            headheight=10mm]{geometry}
+
+
+\begin{document}
+
+\pagestyle{fancy}
+%\fancyhead{}\fancyfoot{}
+
+\fancyhf[OHC]{Christopher Munoz WRH5 Diffeq}
+\setcounter{section}{4}
+\setcounter{subsection}{2}
+\setcounter{subsubsection}{0}
+%\section{section1}
+
+%\subsection*{}
+\subsubsection{} 
+ We are given the differential equation $ y'' + 2y' + y = 0$ with the solution $y_1 = xe^{-x}$ we will construct the second solution using the formula provided: $y_2 = y_1\int \frac{e^{- \int p(x)dx}}{(y_1)^2}dx$.
+\begin{align}
+    y_2 &= y_1\int \frac{e^{- \int p(x)dx}}{(y_1)^2}dx \\ 
+    &  = xe^{-x}\int \frac{e^{- \int 2dx}}{(xe^{-x})^2}dx & p(x) = 2  \\
+    & = xe^{-x}\int \frac{e^{-2x}}{(xe^{-x})^2}dx \\
+    & = xe^{-x}\int \frac{e^{-2x}}{(x^2e^{-2x})}dx \\
+    & = xe^{-x}\int \frac{1}{x^2}dx \\
+    & = xe^{-x} * (- \frac{1}{x}) \\
+    & = -e^{-x}
+\end{align}
+Our second solution is 
+\begin{align*}
+    \Aboxed{y_2 = C_2 e^{-x}}
+\end{align*}
+\subsubsection{}
+
+\end{document}
