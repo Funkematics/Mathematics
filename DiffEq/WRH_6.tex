@@ -67,9 +67,25 @@ Our solution is then:
 c) $ y'' + 4y' + 4y = (3+x)e^{-2x}$
 \begin{align*}
     & y'' + 4y' + 4y = (3+x)e^{-2x} && y_p = Ax^2e^{-2x} + Bx^3e^{-2x}\\
-    & m^2 + 4m + 4 = 0 \\
-    & (m+2)(m+2) = 0 \\
-    & m = -2 \\
+    & m^2 + 4m + 4 = 0 && y_p' = 2Axe^{-2x} - 2Ax^2e^{-2x} + 3Bx^2e^{-2x} - 2Bx^3e^{-2x} \\
+    & (m+2)(m+2) = 0 && y_p''= 2Ae^{-2x} + 4Ae^{-2x} - 8Ae^{-2x}\\
+    & m = -2 && +4Bx^3e^{-2x} - 12Bx^2e^{-2x} + 6Bxe^{-2x} \\
     & y_c = c_1e^{-2x} + c_2xe^{-2x}
+\end{align*}
+Why did you choose to torture me like this, here is the nasty after plugging in:
+\begin{align*}
+    & 2Ae^{-2x} + 4Ae^{-2x} - 8Ae^{-2x} + 4Bx^3e^{-2x} - 12Bx^2e^{-2x} + 6Bxe^{-2x} \\
+    & + 8Axe^{-2x} - 8Ax^2e^{-2x} + 12Bx^2e^{-2x} - 8Bx^3e^{-2x} \\
+    & + Ax^2e^{-2x} + Bx^3e^{-2x} \\
+    & = 3e^{-2x} + xe^{-2x}
+\end{align*}
+Simplifies beautifully into:
+\begin{align*}
+    & 2Ae^{-2x} + 6Bxe^{-2x} =  3e^{-2x} + xe^{-2x} \\
+    & A = \frac{3}{2}, B = \frac{1}{6}
+\end{align*}
+Our solution is then :
+\begin{align*}
+    y_c + y_p = \Aboxed{c_1e^{-2x} + c_2xe^{-2x} + \frac{3}{2}x^2e^{-2x} + \frac{1}{6}x^3e^{-2x}}
 \end{align*}
 \end{document}
