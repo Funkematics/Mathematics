@@ -9,7 +9,7 @@
 \usepackage{fancyhdr}
 \usepackage[%paperheight = 59.4cm,
             %paperwidth = 42cm,
-            includehead,
+            %includehead,
             nomarginpar,
             textwidth=15cm,
             headheight=10mm]{geometry}
@@ -47,7 +47,7 @@ First we divide our equation $x^2y'' - 3xy' + 5y = 0$ by its leading term $x^2$:
 \begin{align*}
     \frac{x^2y'' - 3xy' + 5y}{x^2} = y'' - \frac{3y'}{x} + \frac{5y}{x^2}
 \end{align*}
-Our $p (x) $ term is $-\frac{3}{x}$.
+Our $p (x) $ term is now $-\frac{3}{x}$, now we just plug in and solve:
 \begin{align}
     y_2 &= y_1\int \frac{e^{- \int p(x)dx}}{(y_1)^2}dx \\ 
     &  = x^2 \cos(\ln(x)) \int \frac{e^{- \int -\frac{3}{x}dx}}{(x^2 \cos(\ln(x)))^2}dx & p(x) = - \frac{3}{x}  \\
@@ -60,9 +60,88 @@ Our $p (x) $ term is $-\frac{3}{x}$.
     & = x^2 \cos(\ln(x)) * \frac{\sin(\ln(x))}{\cos(\ln(x))} \\
     & = x^2 \sin(\ln(x))
 \end{align}
-Meaning our second solution is
+Thus our second solution is:
 \begin{align*}
     \Aboxed{y_2 = C_2x^2 \sin(\ln(x))}
 \end{align*}
+\subsubsection{} \setcounter{equation}{0}
+We are given the differential equation $y'' + 16y = 0$ with the solution of $y_1 = \sin(4x)$. We will find the second solution using the reduction of order technique assuming $y_2 = uy_1$, first some derivatives
+\begin{align*}
+    y_2 &= uy_1 && y_1 = \sin(4x)\\
+    y_2' &= u'y_1 + uy_1'' && y_1' = 4\cos(4x) \\
+    y_2'' &= u''y_1 + 2u'y_1' + uy_1''&& y_1'' = -16\sin(4x)
+\end{align*}
+Next we plug in our derivatives into the original equation:
+\begin{align}
+    u''y_1 + 2u'y_1' + uy_1'' + 16(uy_1) = 0
+\end{align}
+and our y's, simplify and solve:
+\begin{align}
+     u''\sin(4x) + 8u'\cos(4x)-16u\sin(4x) + 16u\sin(4x) = 0\\
+     u''\sin(4x) + 8u'\cos(4x)+16u(\sin(4x) - \sin(4x)) = 0\\
+     u''\sin(4x) + 8u'\cos(4x) = 0 && w' = u'', w = u'\\
+     w'\sin(4x) + 8w\cos(4x) = 0 \\
+     w' + 8w\cot(4x) = 0 \\
+\end{align}
+Got stuck
+\subsection{}
+\subsubsection{}
+The following is mostly factoring and algebra:
+\newline a) $20y'' - y' - y = 0$
+\begin{align*}
+    20m^2 - m - 1 = 0 \\
+    (4m-1)(5m+1) = 0 && m = \frac{1}{4}, -\frac{1}{5} \\
+    \Aboxed{y = c_1e^{\frac{-x}{5}} + c_2e^{\frac{x}{4}}}
+\end{align*}
+b) $ y'' - 10y' + 25y = 0$
+\begin{align*}
+    m^2 - 10m + 25 = 0 \\
+    (m-5)(m-5) = 0 && m = 5 \\
+    \Aboxed{y = c_1e^{5x} + c_2xe^{5x}}
+\end{align*}
+c) $ 5y'' + y = 0$
+\begin{align*}
+    5m^2 + 1 = 0 \\
+    m^2 = -\frac{1}{5} && m = \frac{i}{\sqrt{5}}, -\frac{i}{\sqrt{5}} \\
+    \Aboxed{y = c_1\cos(\frac{x}{\sqrt{5}}) + c_2\sin(\frac{x}{\sqrt{5}})}
+\end{align*}
+d) $ y^{(4)} - 2y'' + y = 0$
+\begin{align*}
+    m^4 -2m^2 + 1 = 0\\
+    (m+1)^2(m-1)^2 && m = 1,-1 \\
+    \Aboxed{y = c_1e^{-x} + c_2xe^{-x} + c_3e^x + c_4xe^x}
+\end{align*}
+e) $ y^{(5)} + y^{(4)} - y''' = 0$
+\begin{align*}
+    m^5 + m^4 - m^3 = 0\\
+    m^3(m^2+m-1) && \text{Use quadratic formula for right side} \\ 
+    m = 0,\frac{\sqrt{5}-1}{2},\frac{-\sqrt{5}-1}{2} \\
+    \Aboxed{y = c_1+c_2e^{\frac{x\sqrt{5}-1}{2}} + c_3e^{\frac{-x\sqrt{5}-1}{2}}}
+\end{align*}
+I hope that's the answer
+\subsubsection{}
+We can find a differential equation whos solution is $c_1e^{9x} + c_2xe^{9x}$ by finding a quadratic equation whos root is 9 and 9 alone, so I'm going to go ahead and steal problem be from 4.3.1.
+\begin{align*}
+    (m-9)(m-9) \\
+    m^2 - 18m + 81 = 0 \\
+    \Aboxed{ y'' - 18y' +81y = 0}
+\end{align*}
+\subsubsection{}
+Here we solve the initial value problem $y'' + 2y' + y = 0$ with $y(0) = 5$ and $y'(0) = 10$
+\begin{align*}
+    m^2 + 2m + 1 = 0 \\
+    (m+1)(m+1) = 0 && m = -1\\
+    y = c_1e^{-x} + c_2xe^{-x}
+\end{align*}
+now for our actual solution:
+\begin{align*}
+    y &= c_1e^{-x} + c_2xe^{-x} \\
+    y'&= -c_1e^{-x} + c_2(e^{-x} - xe^{-x}) && 10 = c_2 \\
+    & \Aboxed{y = 5e^{-x} + 10xe^{-x}}
+\end{align*}
+Ran out of time for the rest
+
+
+
 
 \end{document}
