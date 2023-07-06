@@ -72,7 +72,7 @@ c) $ y'' + 4y' + 4y = (3+x)e^{-2x}$
     & m = -2 && +4Bx^3e^{-2x} - 12Bx^2e^{-2x} + 6Bxe^{-2x} \\
     & y_c = c_1e^{-2x} + c_2xe^{-2x}
 \end{align*}
-Why did you choose to torture me like this, here is the nasty after plugging in:
+Here is the nasty after plugging in:
 \begin{align*}
     & 2Ae^{-2x} + 4Ae^{-2x} - 8Ae^{-2x} + 4Bx^3e^{-2x} - 12Bx^2e^{-2x} + 6Bxe^{-2x} \\
     & + 8Axe^{-2x} - 8Ax^2e^{-2x} + 12Bx^2e^{-2x} - 8Bx^3e^{-2x} \\
@@ -123,5 +123,56 @@ I'm assuming the 81 below gets absorbed into $c_1$ since its a constant too, our
     \Aboxed{c_1 + c_2e^{-\frac{x}{3}} + \frac{9x^2}{3} - 27x}
 \end{align*}
 \subsubsection{}
-We solve for the initial value problem $y'' - 4y' + 4y = (6x^2 - 12x)e^{2x}$, $y(0) = 1$, $y'(0) = 0$. 
+We solve for the initial value problem $y'' - 4y' + 4y = (6x^2 - 12x)e^{2x}$, $y(0) = 1$, $y'(0) = 0$.
+Gonna skip the bits with finding our complimentary solution since the roots to $m^2 - 4m + 4$ is $ 2 $, $y_c =
+c_1e^{2x} + c_2xe^{2x} $
+\begin{align*}
+    & y_c = c_1e^{2x} + c_2xe^{2x}
+    & y_p = u_1e^{2x} + u_2xe^{2x}
+\end{align*}
+Now lets find $u_1$ and $u_2$:
+\begin{align}
+    W_1 &= 
+    \begin{vmatrix}
+        e^{2x} & xe^{2x} \\
+        2e^{2x} & 2xe^{2x}+e^{2x} 
+    \end{vmatrix} = (2xe^{4x} + e^{4x}) - 2xe^{4x} = e^{4x} \\
+    W_2 &= 
+    \begin{vmatrix}
+        0 & xe^{2x} \\
+        (6x^2-12x)e^{2x} & 2xe^{2x} + e^{2x} 
+    \end{vmatrix} = -xe^{4x}(6x^2-12x) 
+   \\ 
+    W_3 &= 
+    \begin{vmatrix}
+        e^{2x} & 0 \\
+        2e^{2x} & (6x^2-12x)e^{2x}  
+    \end{vmatrix} = e^{4x}(6x^2 - 12x) \\
+    u_1 &= \int\frac{-xe^{4x}(6x^2-12x)}{e^{4x}}dx = \int (-6x^3 + 12x^2)dx = -\frac{3}{2}x^4 + 4x^3 \\
+    u_2 &= \int\frac{e^{4x}(6x^2-12x)}{e^{4x}}dx = \int(6x^2 - 12x)dx = 2x^3 - 6x^2 \\
+    y_c + y_p &= c_1e^{2x} + c_2xe^{2x} + ( -\frac{3}{2}x^4 + 4x^3)e^{2x} + ( 2x^3 - 6x^2)xe^{2x} \\
+    &= c_1e^{2x} + c_2xe^{2x} + \frac{1}{2}x^4e^{2x} + 2x^3e^{2x} 
+\end{align}
+Now that we have our general solution, its time to find its derivative, plug in our initial conditions and solve the subsequent system of equations for $c_1$ and $c_2$
+\begin{align*}
+    y &= c_1e^{2x} + c_2xe^{2x} + \frac{1}{2}x^4e^{2x} + 2x^3e^{2x}\\
+    y'&= 2c_1e^{2x} + c_2(2xe^{2x} + e^{2x}) + \frac{1}{4}(4x^3e^{2x} + 2x^4e^{2x}) + 2(3x^2e^{2x} + 2x^3e^{2x})\\
+    &y(0) = c_1 = 1 \\
+    &y'(0) = 2 + c_2 =  0,  c_2 = -2 \\
+\end{align*}
+Turned out not to have been much of a system since plugging in gave us the solution thankfully(or I might be a complete idiot). Our solution is:
+\begin{align*}
+    \Aboxed{y = e^{2x} -2xe^{2x} + \frac{1}{2}x^4e^{2x} + 2x^3e^{2x}}
+\end{align*}
+
+\setcounter{subsection}{7}
+\setcounter{subsubsection}{0}
+\subsubsection{}
+We are tasked with solving the following differential equations: \\
+a) $4x^2y'' + y= 0$
+\begin{align*}
+    y = x^m \\
+    y' = mx^{m-1} \\
+    y'' = m(m-1)x^{m-2}
+\end{align*}
 \end{document}
