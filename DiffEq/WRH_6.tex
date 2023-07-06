@@ -171,8 +171,27 @@ Turned out not to have been much of a system since plugging in gave us the solut
 We are tasked with solving the following differential equations: \\
 a) $4x^2y'' + y= 0$
 \begin{align*}
-    y = x^m \\
-    y' = mx^{m-1} \\
-    y'' = m(m-1)x^{m-2}
+    &  y = x^m  && 4m^2x^m-4mx^m+x^m = 0\\
+    & y' = mx^{m-1} && (4m^2 -4m + 1)x^m = 0\\
+    & y'' = m(m-1)x^{m-2} && (2m - 1)^2 = 0 \\
+    & && m = \frac{1}{2}
+\end{align*}
+Simple enough, we end up with the solution:
+\begin{align*}
+    y = \Aboxed{c_1\sqrt{x}+c_2\sqrt{x}\ln{x}}
+\end{align*}
+b) $ x^2y'' - 7xy' + 41y = 0$
+\begin{align*}
+    &  y = x^m  && m^2x^m -8mx^m + 41x^m = 0\\
+    & y' = mx^{m-1} && (m^2 - 8m + 41)x^m = 0\\
+    & y'' = m(m-1)x^{m-2} && m^2 - 8m + 41 = 0
+\end{align*}
+We're gonna throw that quadratic into a calculator because I'm out of time, we get our roots and then our solution:
+\begin{align*}
+    4+5i && 4-5i\\
+\end{align*}
+Our answer is then:
+\begin{align*}
+    y = \Aboxed{c_1x^4\cos(5\ln(x)) + c_2x^4\sin(5\ln(x))}
 \end{align*}
 \end{document}
