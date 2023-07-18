@@ -62,7 +62,27 @@ Our solutions are
 \begin{align*}
     \Aboxed{t =\frac{1}{4} s} && \text{Time mass passes through equilibrium position} \\ \Aboxed{t = \frac{1}{2} s} && \text{Time mass attainsextreme displacement from equilibrium} \\ \Aboxed{e^{-2}} && \text{position of mass at the instant of extreme displacement}
 \end{align*}
+\subsubsection{}
 
+A mass weighing 10 pounds stretches a spring 2 feet. The mass is attached to a dashpot device that offers a damping force numerically equal to $ \beta(\beta > 0) $ times the instantaneous velocity. Determine the values of the damping constant $\beta$ so that the subsequent motion is overdamped, critically damped and underdamped.
 
-
+We have our equations for overdamped, critically damped and underdamped below and constants:
+\begin{align*}
+    \beta^2 - 4mk > 0 && m = \frac{10}{32} = \frac{5}{16}\\
+    \beta^2 - 4mk = 0  && k = \frac{10}{2} = 5 \\
+    \beta^2 - 4mk < 0 
+\end{align*}
+Now we just plug in and solve for each:
+\begin{align*}
+    \beta^2 - 4*\frac{5}{16} * 5 > 0 && \beta^2 - 4*\frac{5}{16} * 5 = 0 &&& \beta^2 - 4*\frac{5}{16} * 5 < 0 \\
+    \beta^2 > \frac{100}{16} && \beta^2 = \frac{100}{16} &&& \beta^2 < \frac{100}{16} \\
+    \beta > \frac{5}{2} && \beta = \frac{5}{2} &&& \beta < \frac{5}{2}
+\end{align*}
+Our values are
+\begin{align*}
+    \Aboxed{\beta > \frac{5}{2}} && \text{For overdamped}\\
+    \Aboxed{\beta = \frac{5}{2}} && \text{For critically damped}\\
+    \Aboxed{0 < \beta < \frac{5}{2}} && \text{For underdamped}
+\end{align*}
+       
 \end{document}
