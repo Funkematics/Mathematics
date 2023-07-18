@@ -16,13 +16,53 @@
 
 
 \begin{document}
-
+ 
 \pagestyle{fancy}
 %\fancyhead{}\fancyfoot{}
 
 \fancyhf[OHC]{Christopher Munoz WRH6 Diffeq}
 \setcounter{section}{5}
-\setcounter{subsection}{2}
-\setcounter{subsubsection}{1}
+\setcounter{subsection}{1}
+\setcounter{subsubsection}{2}
 \subsubsection{}
+A mass weighing 4 pounds is attached to a spring whose constant is 2 lb/ft. The medium offers a damping force that is numerically equal to the instantaneous velocity. The mass is initially released from a point 1 foot above the equilibrium position with a downward velocity of 8 ft/s. Determine the time at which the mass passes through the equilibrium position. Find the time at which the mass attains its extreme displacement from the equilibrium position. What is the position of the mass at this instant?
+
+We have the initial conditions $ x(0) = -1 $ and $ \dot x(0) = 8$, we first establish the equation to solve:
+\begin{align}
+    m\ddot x = -kx - \beta \dot x && m = \frac{4}{32} = \frac{1}{8} ; k = 2 ; \beta = 1 \\
+    \frac{1}{8}\ddot x = -2x - \dot x \\
+    \ddot x = -16x - 8 \dot x \\
+    \ddot x + 8 \dot x + 16x = 0
+\end{align}
+We can begin solving the auxillary equation:
+\begin{align}
+    m^2 + 8m + 16 = 0 \\
+    (m + 4)(m + 4) = 0 \\
+    m = -4
+\end{align}
+meaning our general solution is $ c_1e^{-4t} + c_2te^{-4t} $, we proceed to plug in our initial conditions and solve for $c_1$ and $c_2$
+\begin{align}
+    x = c_1e^{-4t} + c_2te^{-4t} && \dot x = -4c_1e^{-4t} + c_2(e^{-4t} -4te^{-4t}) \\
+    x(0) =  c_1e^{-4(0)} + c_2te^{-4(0)} && \dot x(0) = -4c_1e^{-4(0)} + c_2(e^{-4(0)} -4te^{-4(0)}) \\
+    -1 =  c_1  && 8 = -4c_1 + c_2 \\
+    c_1 = -1 && c_2 = 4
+\end{align}
+Our solution is $x = -e^{-4t} + 4te^{-4t}$, Now we solve for t when $ x = 0$ and $\dot x = 0$ to find time where the mass passes through the equilibrium position and its extreme displacement from equilibrium position, note the derivative of our solution is $\dot x = 8e^{-4t} - 16te^{-4t} $
+\begin{align}
+    0 = -e^{-4t} + 4te^{-4t} && 0 = 8e^{-4t} - 16te^{-4t} \\
+    0 = e^{-4t}(4t - 1) && 0 = 8e^{-4t}(1 - 2t)\\
+    t =\frac{1}{4} s && t = \frac{1}{2} s
+\end{align}
+To find the mass at the instance of extreme displacement, we plug in our time for it into our solution:
+\begin{align}
+    x(\frac{1}{2}) &= -e^{-2} + 2e^{-2} \\
+    &= e^{-2}
+\end{align}
+Our solutions are
+\begin{align*}
+    \Aboxed{t =\frac{1}{4} s} && \text{Time mass passes through equilibrium position} \\ \Aboxed{t = \frac{1}{2} s} && \text{Time mass attainsextreme displacement from equilibrium} \\ \Aboxed{e^{-2}} && \text{position of mass at the instant of extreme displacement}
+\end{align*}
+
+
+
 \end{document}
