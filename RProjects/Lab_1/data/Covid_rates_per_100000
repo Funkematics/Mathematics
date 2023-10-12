@@ -1,0 +1,40 @@
+"HOSP_RATE_VAX" "HOSP_RATE_UNVAX" "DEATH_RATE_VAX" "DEATH_RATE_UNVAX"
+"Alabama" 9 696 3 124
+"Alaska" 9 154 1 11
+"Arizona" 27 1306 2 182
+"California" 9 647 1 58
+"Colorado" 24 567 4 37
+"Delaware" 7 978 2 26
+"Georgia" 5 735 1 99
+"Idaho" 11 288 2 30
+"Illinois" 20 1001 5 68
+"Indiana" 9 547 4 29
+"Kentucky" 21 893 4 85
+"Louisiana" 12 347 3 54
+"Maine" 6 571 3 24
+"Massachusetts" 15 615 4 87
+"Michigan" 24 693 9 87
+"Minnesota" 40 465 6 71
+"Mississippi" 17 702 4 127
+"Montana" 11 472 2 42
+"Nebraska" 13 458 3 48
+"Nevada" 35 1182 6 98
+"New Hampshire" 5 454 2 37
+"New Jersey" 7 948 2 96
+"Newico" 22 535 1 37
+"North Carolina" 17 816 3 80
+"North Dakota" 37 720 8 47
+"Ohio" 8 1041 1 76
+"Oklahoma" 16 1116 2 158
+"Oregon" 21 512 3 32
+"Rhode Island" 63 468 4 98
+"South Carolina" 12 322 3 39
+"South Dakota" 30 515 6 74
+"Tennessee" 17 613 2 105
+"Texas" 4 735 0.7 61
+"Utah" 33 205 1 15
+"Vermont" 8 468 3 24
+"Virginia" 6 906 2 41
+"Washington" 12 606 2 34
+"Washington, D.C." 7 3326 2 55
+"Wisconsin" 20 652 2 30

@@ -1,0 +1,42 @@
+"BT_HOSP" "PCT_OF_ALL_COVID_HOSP" "BT_DEATHS" "PCT_OF_ALL_COVID_DEATHS"
+"Alabama" 77 0.3 21 0.4
+"Alaska" 17 2 2 3.3
+"Arizona" 379 0.5 34 0.3
+"Arkansas" NA 4.7 NA 2.6
+"California" 843 0.4 88 0.5
+"Colorado" 312 1.2 52 3.1
+"Delaware" 22 0.4 6 3.5
+"Georgia" 85 0.1 21 0.2
+"Idaho" 37 0.9 6 1.3
+"Illinois" 563 0.6 151 2.2
+"Indiana" 185 0.7 69 4.8
+"Kentucky" 303 1.1 52 2
+"Louisiana" 125 1 28 1.4
+"Maine" 27 0.5 13 5.6
+"Massachusetts" 329 1.1 80 1.9
+"Michigan" 569 1.1 223 3.3
+"Minnesota" 349 1.6 50 1.5
+"Mississippi" 74 0.4 19 0.6
+"Montana" 31 0.8 7 2.1
+"Nebraska" 58 0.9 13 1.8
+"Nevada" 235 0.8 42 1.8
+"New Hampshire" 22 0.5 10 2.8
+"New Jersey" 195 0.3 50 0.8
+"New Mexico" 155 2 10 1.9
+"North Carolina" 321 0.5 61 0.9
+"North Dakota" 58 1.3 13 4.4
+"Ohio" 205 0.2 34 0.5
+"Oklahoma" 130 0.4 19 0.4
+"Oregon" 191 1.1 31 2.9
+"Rhode Island" 159 4 11 1.4
+"South Carolina" 162 1.3 39 2.6
+"South Dakota" 53 1.4 11 2.1
+"Tennessee" 218 0.6 31 0.5
+"Texas" 291 0.2 52 0.4
+"Utah" 230 4.3 8 2
+"Vermont" 15 0.7 6 5.5
+"Virginia" 145 0.3 42 1.7
+"Washington" 259 0.8 52 2.7
+"Washington, D.C." 13 0.1 4 1.4
+"West Virginia" NA NA 31 1.3
+"Wisconsin" 313 1.1 35 2.7
