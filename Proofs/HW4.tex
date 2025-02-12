@@ -79,11 +79,11 @@
 \definecolor{MidnightBlue}{rgb}{.3,.4,.6}
 \newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
 
-\chead{MATH F401}
+\chead{MATH F265}
 \pagestyle{fancy}
 %Modify these items:
-\rhead{\emph{Your Full Name Here}}
-\lhead{\emph{HW \#0 --- 3/14/15}}
+\rhead{\emph{Christopher Munoz}}
+\lhead{\emph{HW \#4 --- 2/12/2025}}
 
 
 \begin{document}
@@ -135,15 +135,48 @@ True
 	R: $f'$ is constant \newline
 	Translation: (P $\land$ Q) $\Rightarrow \neg$ R
 \end{exercise}
-\begin{exercise}[2.9.4]  For every prime number $p$, there is another prime number $q$ with $q > p$ \newline
-	let $\PP$ be the set of prime numbers. \newline
+\begin{exercise}[2.9.4]  For every prime number $p$, there is another prime number $q$ with $q > p.$ \newline
+	Let $\PP$ be the set of prime numbers. \newline
 	Translation: $\forall p \in \PP, \exists q \in \PP, q > p$  
+\end{exercise} \singlespacing
+\begin{exercise}[2.9.6] For every positive number $\varepsilon$, there is a positive number $M$ for which \newline $|f(x) - b| < \varepsilon, $ whenever $x > M.$ 
+
+\setstretch{2.5} %Use for 2.5 spacing
+	Translation: $\forall \varepsilon \in \RR, \varepsilon > 0, \exists M \in \RR, M > 0, (x > M) \Rightarrow (|f(x) - b | < \varepsilon)$
 \end{exercise}
-\begin{exercise}[2.9.6] For every positive number $\varepsilon$, there is a positive number $M$ for which \newline $|f(x) - b| < \varepsilon, $ whenever $x > M$
+\setstretch{2.5} %Use for 2.5 spacing
+\begin{exercise}[2.9.7] There exists a real number $a$ for which $a + x = x$ for every real number x.
+	Translation: $\exists a \in \RR, \forall x \in \RR, a + x = x$
 \end{exercise}
-\begin{exercise}[2.9.7]
+\textbf{For the following we are negating each statement}
+\begin{exercise}[2.10.2] If $x$ is prime, then $\sqrt{x}$ is not a rational number. \newline
+	Negation: If $x$ is not a prime number, then $\sqrt{x}$ is a rational number.
 \end{exercise}
- \end{document}
+\begin{exercise}[2.10.3] For every prime number $p$, there is another prime number $q$ with $q > p$. \newline
+	Negation: There exists a prime number $p$  such that $q \leq p$ for all other prime numbers $q$.
+\end{exercise}
+\begin{exercise}[2.10.6] There exists a real number $a$ for which $a + x = x$ for every real number $x$. \newline
+	Negation: For all real numbers $a$, there exists a real number $x$ such that $a + x \neq x$
+\end{exercise}
+\begin{exercise}[2.10.8] If $x$ is a rational number and $x \neq 0$, then $\tan{(x)}$ is not a rational number. \newline
+	Negation: There exists a rational number x that is non-zero such that $\tan{(x)}$ is a rational number.
+\end{exercise}
+\singlespacing
+\begin{exercise}[2.10.10] If $f$ is a polynomial and its degree is greater than 2, then $f'$ is not constant. \newline
+\newline
+Negation: If $f$ is a polynimal and its degree is less than or equal to 2, then $f'$ is constant.
+\end{exercise}
+\setstretch{2.5}
+\textbf{Reflection Reflection Reflection}\newline
+How long did it take?
+It took around 1 to 2 minutes to do each problems including the practice problems, the part of the assignment that took the most time was setting up LaTeX using the template, but once it was setup it was pretty smooth sailing. \newline
+
+What was easy for you? Pretty much everything we covered in class, with some of the problems "rhyming" with what we have already covered. \newline
+
+What was challenging? Problem 4 in section 2.7 since I wasn't entirely sure if something like {1,2} is a subset of the real numbers, the fact that its a list tripped me up a bit, but I figured if we took the hypothetical powerset of the real numbers then {1,2} would be in there. Might be bad logic and I'll find out when this is graded if its good or bad logic. \newline
+
+Comparison. Some of my answers are different, but I think they are logically equivalent, something about the way the solution to problem 1 in section 2.9 rubs me the wrong way because they set R to "$f'$ is not constant" so the "not" is embedded in R. In software there is this concept called encapsulation, I'm not a huge fan of encapsulation,  rather I much prefer composition.
+\end{document}
  \end
 
   
