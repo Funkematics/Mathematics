@@ -1,0 +1,112 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage[all]{xy}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some useful shortcuts for our favorite sets of numbers
+\newcommand{\RR}{\ensuremath{\mathbb R}} %Note, you can use these WITHOUT entering math mode
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\QQ}{{\ensuremath\mathbb Q}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\EE}{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\newcommand{\bsl}[1]{\texttt{\symbol{92}{\em #1}}} %for backslashes.
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Commenting tools --- You can ignore these, but if you have a question about latex and send me your source file, I'll use them to explain stuff to you.
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+%\newcommand{\com}[1]{{\color{BrickRed}{\\ Comment:}\color{OliveGreen}{#1} \\}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH F401}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Your Full Name Here}}
+\lhead{\emph{HW \#0 --- 3/14/15}}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+\setstretch{2.5} %Use for 2.5 spacing
+%\doublespacing %Use for double spacing
+
+\begin{exercise}[1.7.1] A sample exercise statement about \ZZ. 
+\begin{proof} A sample proof statement. 
+
+Lorem ipsum dolor \RR\ sit amet, consectetur adipiscing elit. Sed volutpat, diam nec ornare rutrum, nisi est vehicula nisi, non venenatis nibh arcu non sem. Aliquam erat volutpat. Fusce convallis magna nec eros accumsan dictum. Pellentesque quis venenatis mauris. Suspendisse aliquet tincidunt nisl eget porta. Nullam lacus enim, fringilla a dictum in, ornare non nisi. Sed turpis urna, accumsan at feugiat nec, lacinia vitae justo. Ut porttitor urna et suscipit ultricies. Duis congue semper neque, vitae hendrerit tortor consectetur vitae. Vivamus quis felis at quam iaculis iaculis. Quisque congue justo ac molestie tempus. Praesent tempus aliquet sodales. Donec eleifend ante quis hendrerit vulputate.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[1.9.3] A sample exercise statement.
+\begin{proof}[Answer:]  A sample solution answer.
+
+Etiam venenatis lacinia velit, a vulputate ante tempor in. Donec non nisl vel massa tempus varius in vulputate sapien. Sed imperdiet velit vel diam mollis laoreet. Vestibulum ullamcorper tincidunt felis quis molestie. Mauris pulvinar nibh et neque fringilla dignissim. Nam bibendum diam sit amet purus dapibus finibus. Phasellus porttitor efficitur erat eget ornare. Suspendisse potenti.
+\end{proof}
+\end{exercise}
+
+
+ \end{document}
+ \end
+
+  

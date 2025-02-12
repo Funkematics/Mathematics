@@ -1,0 +1,135 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage[all]{xy}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some useful shortcuts for our favorite sets of numbers
+\newcommand{\RR}{\ensuremath{\mathbb R}} %Note, you can use these WITHOUT entering math mode
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\QQ}{{\ensuremath\mathbb Q}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\EE}{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\newcommand{\bsl}[1]{\texttt{\symbol{92}{\em #1}}} %for backslashes.
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Commenting tools --- You can ignore these, but if you have a question about latex and send me your source file, I'll use them to explain stuff to you.
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+%\newcommand{\com}[1]{{\color{BrickRed}{\\ Comment:}\color{OliveGreen}{#1} \\}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH F401}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Your Full Name Here}}
+\lhead{\emph{HW \#0 --- 3/14/15}}
+
+
+\begin{document}
+
+\thispagestyle{fancy}
+%\doublespacing %Use for double spacing
+
+\textbf{Exercises: Determine the domain.} For each of the folowing quantified statements taken randomly from mathematics textbooks, \textbf{ determine a plausible domain.} Some of the domains are implicit.
+
+\begin{exercise}[1] (Well-ordering principle) Every nonempty subset of \NN\ has a smallest element. \newline 
+
+	The plausible domain is \{$X \subseteq \NN\: |X| \leq 1$\}
+
+\end{exercise}
+
+\begin{exercise}[2] Every finite connected graph $G$ has a spanning tree. \newline
+
+	The set of all finite connected graphs.
+\end{exercise}
+\begin{exercise}[3] A tree with $n$ vertices has exactly $n - 1$ edges. \newline
+	
+	The set of all trees.
+\end{exercise}
+
+\begin{exercise}[4] Every finite acyclic graph has at least one sink and at least one source. \newline
+
+
+	The set of all finite acyclic graphs
+\end{exercise}
+
+\begin{exercise}[5] If $u$ and $v$ are different vertices of a digraph $G$, and if there is a path in $G$ from $u$ to $v$, then there is an acyclic path $u$ to $v$. \newline
+
+	The domain is the set of vertices in digraph G.
+\end{exercise}
+
+\textbf{More translation practice: the implicit domain is $\ZZ\ $. } Each of the following statements is implicitely quantified: that is, each is a "for all" statement, with domain $ \ZZ\ .$ For each of the following: \newline
+(i) translate into symbols \newline
+(ii) Write the negation of the statement in words \newline
+(iii) Write the contraposition of the original statement in words \newline
+(iv) Which are true? \newline
+
+\begin{exercise}[1] If $a$ divides $b$, then $ac$ divides $bc$ for any $c$. \newline
+\end{exercise}
+
+
+
+ \end{document}
+ \end
+
+  
