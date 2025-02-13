@@ -78,11 +78,11 @@
 \definecolor{MidnightBlue}{rgb}{.3,.4,.6}
 \newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
 
-\chead{MATH F401}
+\chead{MATH F256}
 \pagestyle{fancy}
 %Modify these items:
-\rhead{\emph{Your Full Name Here}}
-\lhead{\emph{HW \#0 --- 3/14/15}}
+\rhead{\emph{Christopher, Grace, Maicee}}
+\lhead{\emph{Quantifiers and Negation Pt 2}}
 
 
 \begin{document}
@@ -90,50 +90,81 @@
 \thispagestyle{fancy}
 %\doublespacing %Use for double spacing
 
-\textbf{Exercises: Determine the domain.} For each of the folowing quantified statements taken randomly from mathematics textbooks, \textbf{ determine a plausible domain.} Some of the domains are implicit.
+\noindent\textbf{Exercises: Determine the domain.} For each of the folowing quantified statements taken randomly from mathematics textbooks, \textbf{ determine a plausible domain.} Some of the domains are implicit.\newline
 
 \begin{exercise}[1] (Well-ordering principle) Every nonempty subset of \NN\ has a smallest element. \newline 
 
-	The plausible domain is \{$X \subseteq \NN\: |X| \leq 1$\}
+	The plausible domain is \{$X \subseteq \NN\: |X| \leq 1$\} \newline
 
 \end{exercise}
 
 \begin{exercise}[2] Every finite connected graph $G$ has a spanning tree. \newline
 
-	The set of all finite connected graphs.
+	The set of all finite connected graphs.\newline
 \end{exercise}
 \begin{exercise}[3] A tree with $n$ vertices has exactly $n - 1$ edges. \newline
 	
-	The set of all trees.
+	The set of all trees.\newline
 \end{exercise}
 
 \begin{exercise}[4] Every finite acyclic graph has at least one sink and at least one source. \newline
-
-
-	The set of all finite acyclic graphs
+	
+	The set of all finite acyclic graphs \newline
 \end{exercise}
 
 \begin{exercise}[5] If $u$ and $v$ are different vertices of a digraph $G$, and if there is a path in $G$ from $u$ to $v$, then there is an acyclic path $u$ to $v$. \newline
 
-	The domain is the set of vertices in digraph G.
+	The domain is the set of vertices in digraph G.\newline
 \end{exercise}
 
-\textbf{More translation practice: the implicit domain is $\ZZ\ $. } Each of the following statements is implicitely quantified: that is, each is a "for all" statement, with domain $ \ZZ\ .$ For each of the following: \newline
+\noindent\textbf{More translation practice: the implicit domain is $\ZZ\ $. } Each of the following statements is implicitely quantified: that is, each is a "for all" statement, with domain $ \ZZ\ .$ For each of the following: \newline
 (i) translate into symbols \newline
 (ii) Write the negation of the statement in words \newline
 (iii) Write the contraposition of the original statement in words \newline
 (iv) Which are true? \newline
 
-\begin{exercise}[1] If $a$ divides $b$, then $ac$ divides $bc$ for any $c$. \newline
-	(i) \newline
-	(ii) \newline
-	(iii) \newline
-	(iv) \newline
+\begin{exercise}[1] If $a$ divides $b$, then $ac$ divides $bc$ for any $c$. \newline \newline
+	(i) $ \forall a,b, \in \ZZ, a|b \Rightarrow \forall c \in \ZZ, ac|bc$ \newline
+	(ii) For all integers $a$ and $b$, $a$ divides $b$ and there exists an integer $c$ such that $ac$ does not divide $bc$.\newline
+	(iii) For all integers $a$ and $b$, there exists an integer $c$ such that if $ac$ divides $bc$, then $a$ does not divide $b$.\newline
+	(iv) The original statement and the contrapositive are true, making the negation false.\newline
 
 \end{exercise}
 
+\begin{exercise}[2] If $ac$ divides $bc$, then $a$ divides $b$. \newline \newline
+	(i) $ \forall a, b, c \in \ZZ, ac | bc \Rightarrow a | b$ \newline
+	(ii) If $ac$ divides $bc$, then $a$ does not divide $b$\newline
+	(iii) If $a$ does not divide $b$, then $ac$ does not divide $bc$.\newline
+	(iv) The original statement and the contrapositive are false, making the negation true. \newline
+\end{exercise}
 
+\begin{exercise}[3] If $a$ divides $b$ and $a$ divides $b + 2$ then $a = 1$ or $a = 2$. \newline \newline
+	(i) $\forall a,b \in \ZZ, (a | b \land  a | (b + 2)) \Rightarrow (a = 1 \lor a = 2)$\newline
+	(ii) If $a$ divides $b$ and $a$ divides $b + 2$, then $a$ is not equal to 1 or 2.\newline
+	(iii) If $a$ is not equal to 1 or 2, then $a$ does not divide neither $b$ and $b + 2.$\newline
+	(iv) The original statement is and contrapositive are true, negation is false.\newline
+\end{exercise}
 
+\begin{exercise}[4] if $xy$ is even, then $x$ is even or $y$ is even. \newline \newline
+	(i) $\forall x,y \in \ZZ, (2 | xy) \Rightarrow (2 | x \lor 2 | y)$\newline
+	(ii) If $xy$ is even, then $x$ and $y$ are odd.\newline
+	(iii) If $x$ and $y$ are odd, then $xy$ is odd.\newline
+	(iv) The original and the contraposition are true, negation false.\newline
+\end{exercise}
+
+\begin{exercise}[5] The sum of two odd integers is odd\newline \newline
+	(i) $\forall x,y \in \ZZ, x + y = 2k+ 1, \forall k \in \ZZ$ \newline 
+	(ii) The sum of two odd integers is even.\newline
+	(iii) If two integers are odd, then their sum is odd.\newline
+	(iv) The original statement is false, the negation is true, the contrapositive is false.\newline
+\end{exercise}
+
+\begin{exercise}[6] If $a$ and $b$ are odd, then $a^2 + b^2$ is not divisible by 4 \newline \newline
+	(i) $\forall k,m \in \ZZ, (a = 2k+1 \land b = 2m+1) \Rightarrow (a^2 + b^2 \nmid 4)$ \newline
+	(ii) If $a $ and $b$ are odd, then $a^2 + b^2$ is divisible by 4.\newline
+	(iii) If $a^2 + b^2$ is divisible by 4, then $a$ or $b$ are even numbers.\newline
+	(iv) The original statement is true as well as the contrapositive, the negation is false.\newline
+\end{exercise}
  \end{document}
  \end
 

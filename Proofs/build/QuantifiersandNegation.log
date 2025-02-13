@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.1.28)  12 FEB 2025 02:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.1.28)  12 FEB 2025 15:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -610,6 +610,11 @@ Package hyperref Info: Link coloring OFF on input line 88.
 
 Package xypdf Info: Line width: 0.47998pt on input line 88.
 
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
@@ -622,7 +627,17 @@ File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
 
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
@@ -632,22 +647,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--126
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--132
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--139
 
  []
 
@@ -665,7 +710,59 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{14.0pt}.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(build/QuantifiersandNegation.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 141--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--153
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--167
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--167
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (8.0pt): 
+(fancyhdr)                Make it at least 14.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.0pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-6.0pt}.
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{14.0pt}.
+
+[2] (build/QuantifiersandNegation.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -675,23 +772,23 @@ Package rerunfilecheck Info: File `QuantifiersandNegation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14116 strings out of 476182
- 202569 string characters out of 5796232
- 1932975 words of memory out of 5000000
+ 14117 strings out of 476182
+ 202575 string characters out of 5796232
+ 1935975 words of memory out of 5000000
  35720 multiletter control sequences out of 15000+600000
  567465 words of font info for 80 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
- 75i,11n,79p,3254b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,11n,79p,3254b,533s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
->
-Output written on build/QuantifiersandNegation.pdf (1 page, 69999 bytes).
+/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on build/QuantifiersandNegation.pdf (2 pages, 82454 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
- 2 named destinations out of 1000 (max. 500000)
+ 52 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

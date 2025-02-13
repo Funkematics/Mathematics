@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1739361485.73648 "QuantifiersandNegation.tex" "build/QuantifiersandNegation.pdf" "QuantifiersandNegation" 1739361486.45459 0
+["pdflatex"] 1739407733.21468 "QuantifiersandNegation.tex" "build/QuantifiersandNegation.pdf" "QuantifiersandNegation" 1739407733.91787 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -39,6 +39,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
@@ -132,9 +133,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1738079792.38487 39447 2134d78a2da0cee52270db0ec417a200 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1738079757.57164 5316559 3e4e058317271e18a23697c561a59fc5 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1738079745 6800598 a33ae0786524059bb4d5858bbec98ecc ""
-  "QuantifiersandNegation.tex" 1739352317.82554 5104 68efef22a601f56b2b952fd57394132e ""
-  "build/QuantifiersandNegation.aux" 1739361486.35796 298 e3c26f5d1322aa4aed3dab507ddb918d "pdflatex"
-  "build/QuantifiersandNegation.out" 1739361486.23463 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "QuantifiersandNegation.tex" 1739407730.98256 7653 29982fc923bc2ef411b27088bdc4b15e ""
+  "build/QuantifiersandNegation.aux" 1739407733.80921 298 9049f463bb39c1a90e5a460d7741a9a8 "pdflatex"
+  "build/QuantifiersandNegation.out" 1739407733.68588 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "build/QuantifiersandNegation.aux"
   "build/QuantifiersandNegation.log"
