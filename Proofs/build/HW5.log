@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.1.28)  18 FEB 2025 02:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.1.28)  19 FEB 2025 23:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**HW5-template-265.tex
-(./HW5-template-265.tex
+**HW5.tex
+(./HW5.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texmf-dist/tex/latex/amscls/amsart.cls
@@ -506,9 +506,8 @@ Package color Info: Redefining color MidnightBlue on input line 81.
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count307
 \l__pdf_internal_box=\box61
-)
-(build/HW5-template-265.aux)
-\openout1 = `HW5-template-265.aux'.
+) (build/HW5.aux)
+\openout1 = `HW5.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
@@ -534,6 +533,7 @@ LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
+
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -601,10 +601,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 90.
-
-(build/HW5-template-265.out) (build/HW5-template-265.out)
+ (build/HW5.out) (build/HW5.out)
 \@outlinefile=\write4
-\openout4 = `HW5-template-265.out'.
+\openout4 = `HW5.out'.
 
 Package xypdf Info: Line width: 0.47998pt on input line 90.
 
@@ -622,35 +621,52 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{14.0pt}.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-(build/HW5-template-265.aux)
+
+Package fancyhdr Warning: \headheight is too small (8.0pt): 
+(fancyhdr)                Make it at least 14.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.0pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-6.0pt}.
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{14.0pt}.
+
+[2] (build/HW5.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `HW5-template-265.out' has not changed.
+Package rerunfilecheck Info: File `HW5.out' has not changed.
 (rerunfilecheck)             Checksum: 9E6ECCA884F185EBBC0DB02745FF367A;92.
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 94 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 14106 strings out of 476182
- 202266 string characters out of 5796232
- 1943975 words of memory out of 5000000
- 35712 multiletter control sequences out of 15000+600000
+ 14105 strings out of 476182
+ 201967 string characters out of 5796232
+ 1942975 words of memory out of 5000000
+ 35710 multiletter control sequences out of 15000+600000
  567459 words of font info for 80 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
- 75i,11n,79p,3248b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/symbols/msbm10.pfb>
-Output written on build/HW5-template-265.pdf (1 page, 102903 bytes).
+ 75i,11n,79p,3235b,621s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb>
+Output written on build/HW5.pdf (2 pages, 103317 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
+ 72 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  9 words of extra memory for PDF output out of 10000 (max. 10000000)
 

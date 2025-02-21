@@ -91,96 +91,36 @@
 
 \thispagestyle{fancy}
 
-\section*{Chapter 4}
+\section*{Chapter 4} \doublespace
 \begin{exercise}[2] If $x$ is an odd integer, then $x^{3}$ is odd.
 \begin{proof}
-Write your answer here.
+Suppose $x$ is an odd integer. Then by definition of an odd integer, $x = 2k + 1$ for some $k \in \ZZ$. Therefore $x^3 = (2k+1)(2k+1)(2k+1) = (4k^2 + 4k +1)(2k+1) = 8k^3 + 12k^2 + 6k + 1 = 2(4k^3+6k^2 + 3k) + 1  = 2n + 1$, where n = $(4k^3 + 6k^2 + 3k)$. Note that $n$ is an integer due to the closure properties under addition and multiplication in the integers. So $x^3 = 2n+1$, where $n$ is an integer. Thus $x^3$ is odd by definition of an odd number.
 \end{proof}
-\end{exercise}
+\end{exercise} 
 
 \begin{exercise}[4] Suppose $x,y\in\mathbb Z$. If $x$ and $y$ are odd, then $xy$ is odd.
 %I'm showing here how you would enter the integers if you didn't have my nice shortcut at the top. In future, I'll probably just use my shortcut, so if I want the symbol for the integers I would just type \ZZ or $q\in\ZZ$.
-\begin{proof}
-Write your answer here.
+\begin{proof} 
+Suppose $x$ and $y$ are odd integers. Then $x = 2m+1$ for some $m \in \ZZ$ and $y = 2n+1$ for some $n \in \ZZ$ by definition of odd. Therefore $xy = (2m+1)(2n+1) = 4mn + 2m + 2n + 1 = 2(2mn + m + n) + 1 = 2p+1$, where $p = (2mn + m + n)$. Note that $p$ is an integer due to the closure properties under addition and multiplication in the integers. So $xy = 2p + 1$, where p is an integer. Thus $xy$ is odd by definition of an odd number. 
 \end{proof}
 \end{exercise}
 
 
 \begin{exercise}[6] Suppose $a,b,c\in\ZZ$. If $a\mid b$ and $a\mid c$, then $a\mid (b+c)$. %Notice my use of the shortcut to get the symbols for the integers. If you don't have my shortcut in the header of your file, you would have to type $\mathbb Z$.
 \begin{proof}
-Write your answer here.
+Suppose $a \mid b$ and $a \mid c$ and $a,b,c \in \ZZ$. By definition of divisibility, we know that $a \mid b$ means $ b = ak$ for some $k \in \ZZ$. Likewise  $a \mid c$ means $c = al$ for some $l \in \ZZ$. Therefore $(b + c) = ak + al = a(k + l) = am$, where $m = k + l$. Note that $m$ is an integer due to the closure properties under addition and multiplication in the integers. So $(b + c) = am$ where $m$ is an integer. Thus $a \mid (b + c)$ by definition of divisibility. 
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[11] Suppose $a,b,c,d\in\ZZ$. If $a\mid b$ and $c\mid d$, then $ac\mid bd$.
 \begin{proof}
-Write your answer here.
+Suppose $ a \mid b $ and $c \mid d$ and $a,b,c \in \ZZ$. By definition of divisibility, we know that $a \mid b$ means $b = ak$ for some $k \in \ZZ$. Likewise we know that $c \mid d$ means  $d = cl$ for some $l \in \ZZ$. Thus $bd = akcl = ac(kl) = acn$, where $n = kl$. Note that $n$ is an integer due to the closure properties under multiplication in the integers. So $bd = acn$ where $n \in \ZZ$. Thus $ac \mid bd$ by definition of divisibility.
 \end{proof}
 \end{exercise}
-\begin{exercise}[12] If $x\in \RR$ and $0<x<4$, then $\frac{4}{x(4-x)}\ge 1$. %You should inspect what I'm doing here to get the fraction and the inequality.
+\begin{exercise}[12] If $x\in \RR$ and $0<x<4$, then $\frac{4}{x(4-x)}\ge 1$.
 \begin{proof}
-Write your answer here.
+Suppose $x \in \RR$ and $0 < x < 4$, we know that any real number squared is greater than or equal to $0$. Let us choose a real number $(x-2)$ in the interval $0 < x < 4$. Therefore $(x-2)^2 \geq 0$ is equivalent to $x^2 - 4x + 4 \geq 0$ which can be rewiretten as $ 4 \geq x(4-x)$. Dividing both sides by $x(4-x)$ we obtain $\frac{4}{x(4-x)} \geq 1$. Thus the statement holds.
 \end{proof}
 \end{exercise}
-
-\begin{exercise}[14] If $n\in\ZZ$, then $5n^{2}+3n+7$ is odd. (Try cases.)
-\begin{proof}
-Write your answer here.
-\end{proof}
-\end{exercise}
-
-\begin{exercise}[16] If two integers have the same parity, then their sum is even. (Try cases.)
-\begin{proof}
-Write your answer here.
-\end{proof}
-\end{exercise}
-
-\begin{exercise}[18] Suppose $x$ and $y$ are positive real numbers. If $x<y$, then $x^{2}<y^{2}$.
-\begin{proof}
-Write your answer here.
-\end{proof}
-\end{exercise}
-
-\begin{exercise}[20] If $a$ is an integer and $a^{2}\mid a$, then $a\in\{-1,0,1\}$.
-\begin{proof}
-Write your answer here.
-\end{proof}
-\end{exercise}
-
-\begin{exercise}[26] Every odd integer is a difference of two squares. 
-\begin{proof}
-Write your answer here.
-\end{proof}
-\end{exercise}
-
-\begin{exercise}[28] Let $a,b,c\in\ZZ$. Suppose $a$ and $b$ are not both  zero, and $c\ne 0$. Prove that $c\gcd(a,b)\le gcd(ca,cb)$.
-\begin{proof}
-Write your answer here.
-\end{proof}
-\end{exercise}
-
-\begin{exercise}[Reflection Problem]
-Answer the following questions:
-
-
-\begin{proof} \ 
-
-
-\begin{itemize}
-\item How long did it take you to complete each problem? 
-
-Write your answer here.
-\item What was easy?
-
-Write your answer here.
-\item What was challenging? What made it challenging?
-
-Write your answer here.
-\item Compare your answers to the odd numbered exercises to those in the back of the textbook. What did you learn from this comparison?
-
-Write your answer here.
-\end{itemize}\end{proof}
-\end{exercise}
-
 
  \end{document} 
