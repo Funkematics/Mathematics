@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  24 FEB 2025 23:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  25 FEB 2025 00:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -660,17 +660,17 @@ Package rerunfilecheck Info: File `Homework5.out' has not changed.
  )
 (\end occurred inside a group at level 2)
 
-### semi simple group (level 2) entered at line 131 (\begingroup)
+### semi simple group (level 2) entered at line 135 (\begingroup)
 ### semi simple group (level 1) entered at line 94 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
  14108 strings out of 476182
  202109 string characters out of 5796232
- 1936975 words of memory out of 5000000
+ 1938975 words of memory out of 5000000
  35711 multiletter control sequences out of 15000+600000
  567459 words of font info for 80 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
- 75i,11n,79p,3241b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,11n,79p,3241b,682s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.p
 fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fon
@@ -679,7 +679,7 @@ ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public
 y10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on build/Homework5.pdf (3 pages, 96374 bytes).
+Output written on build/Homework5.pdf (3 pages, 99777 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream
