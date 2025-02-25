@@ -1,0 +1,219 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage[all]{xy}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some shortcuts helpful for our assignments
+\newcommand{\bx}{\begin{exercise}}
+\newcommand{\ex}{\end{exercise}}
+
+%Some useful shortcuts for our favorite sets of numbers.
+%Note, you can use these WITHOUT entering math mode
+\def\RR{\ensuremath{\mathbb R}} 
+\def\NN{\ensuremath{\mathbb N}}
+\def\ZZ{\ensuremath{\mathbb Z}}
+\def\QQ{{\ensuremath\mathbb Q}}
+\def\CC{\ensuremath{\mathbb C}}
+\def\EE{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Commenting tools for the professor
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH 265F}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Your Full Name Here}}
+\lhead{\emph{HW \#5 --- 2/28/24}}
+
+\begin{document}
+
+\thispagestyle{fancy}
+\section*{Chapter 4}
+\spacing{2}
+\begin{exercise}[14] If $n\in\ZZ$, then $5n^{2}+3n+7$ is odd. (Try cases.)
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[16] If two integers have the same parity, then their sum is even. (Try cases.)
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[18] Suppose $x$ and $y$ are positive real numbers. If $x<y$, then $x^{2}<y^{2}$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[20] If $a$ is an integer and $a^{2}\mid a$, then $a\in\{-1,0,1\}$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[26] Every odd integer is a difference of two squares. 
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[28] Let $a,b,c\in\ZZ$. Suppose $a$ and $b$ are not both  zero, and $c\ne 0$. Prove that $c\gcd(a,b)\le gcd(ca,cb)$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+\section*{Chapter 5}
+\spacing{2}
+\begin{exercise}[4] Suppose $a,b,c \in\ZZ$. If $a$ does not divice $bc$, then $a$ does not divide $b$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5] Suppose $x\in\RR$. %Note that I'm using my shortcuts for these special symbols from the ``favorite sets of numbers'' section in the header.
+If $x^{2}+5x<-$ then $x<0$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[6] Suppose $x\in\RR$. If $x^{3}-x>0$ then $x>-1$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[7] Suppose $a,b\in\ZZ$. If both $ab$ and $a+b$ are even, then both $a$ and $b$ are even.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[9] Suppose $n\in\ZZ$. If $3\nmid n^{2}$, then $3\nmid n$. % \nmid is a useful symbol to have around!
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[10] Suppose $x,y,z\in\ZZ$ and $x\ne 0$. %Note the \ne symbol!
+If $x\nmid yz$, then $x\nmid y$ and $x\nmid z$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[16] Suppose $x,y\in\ZZ$. If $x+y$ is even, then $x$ and $y$ have the same parity.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[18] If $a,b\in\ZZ$, then $(a+b)^{3}\equiv a^{3}+b^{3}\pmod 3$. %You might want to compare the commands \mod and \pmod to see how they behave differently. Also, if you are working with moduli that have more than one digit, you will have to write something like $\pmod{35}$ to get the desired behavior.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[19] Let $a,b,c\in\ZZ$ and $n\in\NN$. If $a\equiv b\pmod n$ and $a\equiv c\pmod n$, then $c\equiv b\pmod n$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[22] Let $a\in\ZZ, n\in\NN$. If $a$ has remainder $r$ when divided by $n$, then $a\equiv r\pmod n$.
+%Pay close attention to the role of the definitions in this argument!  It's very easy on this kind of problem to assume the conclusion by conflating a relatively obvious fact (the inter-relationship between these two claims) and what the claims *actually* say.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[24] If $a\equiv b\pmod n$ and $c\equiv d\pmod n$, then $ac\equiv bd\pmod n$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+
+\begin{exercise}[25] Let $n\in\NN$. If $2^{n}-1$ is prime, then $n$ is prime.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[32] If $a\equiv b\pmod n$, then $a$ and $b$ have the same remainder when divided by $n$.
+%Again, pay close attention to the roles of the definitions.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+
+
+
+
+ \end{document} 

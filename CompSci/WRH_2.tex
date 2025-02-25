@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage[%paperheight = 59.4cm,
+            %paperwidth = 42cm,
+            includehead,
+            nomarginpar,
+            textwidth=15cm,
+            headheight=10mm]{geometry}
+
+
+\begin{document}
+
+\pagestyle{fancy}
+%\fancyhead{}\fancyfoot{}
+
+\fancyhf[OHC]{Chinook configuration 2023}
+
+The current chinook configuration constists of 39 nodes split between 7 compute partitions and 1 gpu partition and a false partition used for maintenance and downtime that contains all nodes.
+\begin{align*}
+    & debug & Intel \\
+    & N(x,y) = (\cos(x) + x\cos(y) - 3y) & \frac{\delta N}{\delta y} = \cos(y) - \sin(x)
+\end{align*}
+Now we solve:
+\begin{align}
+    & f(x,y) = \int(\sin(y) - y\sin(x))dx & = x\sin(y) + y\cos(x) + g(y)\\
+     &\frac{\delta f}{\delta y} = \textcolor{red}{x\cos(y)} + \textcolor{red}{\cos(x)} + g'(y) =
+     \textcolor{red}{\cos(x)} + \textcolor{red}{x\cos(y)} - 3y & \rightarrow  g'(y) = -3y\\
+     & \int g'(y)dy = \int -3ydy\\
+     & g(y) = -\frac{3}{2}y^2
+\end{align}
+
+
+\end{document}
