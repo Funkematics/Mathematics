@@ -104,7 +104,9 @@ In each case $5n^2 + 3n + 7$ is odd, satisfying all possible integer values for 
 
 \begin{exercise}[16] If two integers have the same parity, then their sum is even. (Try cases.)
 \begin{proof}
-Write your answer here.
+Suppose we have $x,y \in \ZZ$ such that they share the same parity, that is to say either $x$ and $y$ are both even or $x$ and $y$ are both odd. \\
+\underline{Case 1:} Suppose $x$ is even and $y$ is even, then they can be express as $x = 2p$ and $y = 2q$ for some $p,q \in \ZZ$. Therefore $x + y = (2p) + (2q) = 2p + 2q = 2(p+q) = 2n$, where $n = p + q$ and $n \in \ZZ$ because of the closure properties of addition under the integers. Because $x + y = 2n$, that makes $x + y$ even by definition whenever $x$ and $y$ are even. \\
+\underline{Case 2:} Suppose $x$ is odd and $y$ is odd, then $x = 2p + 1$ and $y = 2q + 1$ for some $p,q \in \ZZ$.Therefore $x + y = (2p + 1) + (2q + 1) = 2p + 1 + 2q + 1 = 2p + 2q + 2 = 2(p + q + 1) = 2n$, where $n = p + q + 1$
 \end{proof}
 \end{exercise}
 
