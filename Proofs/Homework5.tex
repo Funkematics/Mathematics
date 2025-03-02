@@ -124,26 +124,27 @@ Suppose $x,y \in \RR+$ and that $x < y$. Multiplying both sides of the inequalit
 	\\ \underline{Case 1:} Suppose $a = -1$, then via substitution $a = a^2b$ gives us $-1 = (-1)^2b = 1b$, or $-1 = 1b$. If we let $b = -1$ then we find that $a^2 \mid a$ and that $a\in\{-1,0,1\}$. 
 	\\ \underline{Case 2:} Suppose $a = 0$, then $a = a^2b$ holds for any value of $b$. Note that although the statement holds, the notion that $a^{2} \mid a$ for $a = 0$ is undefined.
 	\\ \underline{Case 3:} Suppose $a = 1$, then $a = a^2b$ via substitution is $1 = (1)^2b = 1b$. This holds when we let $b = 1$.
-	Thus if $a$ is an integer and $a^{2}\mid a$, then $a$ is in the set $\{-1, 0, 1\}.$
+\\	Thus if $a$ is an integer and $a^{2}\mid a$, then $a$ is in the set $\{-1, 0, 1\}.$
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[26] Every odd integer is a difference of two squares. 
 \begin{proof}
-Write your answer here.
+Suppose $x$ is an odd integer, then by definition of odd $x = 2k + 1$ for some $k \in \ZZ$. Hence $x = 2k + 1 = k^2 + 2k + 1 - k^2 = (2k+1)^2 - k^2 = l^2 - k^2$, where $l = 2k+1$ and $l \in \ZZ$ due to the closure properties of the integers. Note that $l^2 - k^2$ is the difference of two squares.
+\\ Thus every odd integer is a difference of two squares.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[28] Let $a,b,c\in\ZZ$. Suppose $a$ and $b$ are not both  zero, and $c\ne 0$. Prove that $c\gcd(a,b)\le gcd(ca,cb)$.
 \begin{proof}
-Write your answer here.
+	Suppose $a,b,c \in \ZZ$. Let $d = \gcd(a,b)$, then by definition $d \mid a$ and $d \mid b$. That means $a = dn$ and $b = dm$ for some $n,m \in \ZZ$. Multiplying both equations by $c$ we obseve that $ca = cdn$ and $cb = cdm$. Thus $cd \mid ca$ and $cd \mid cb$ where $cd$. Since $\gcd(ca, cb)$ is the greatest common divisor, $cd \leq \gcd(ca, cb)$. Thus $c*\gcd(a,b) \leq \gcd(ca, cb)$. Note that the inequality holds irrespective of whether $c < 0$ or $c > 0$.  
 \end{proof}
 \end{exercise}
 \section*{Chapter 5}
 \spacing{2}
-\begin{exercise}[4] Suppose $a,b,c \in\ZZ$. If $a$ does not divice $bc$, then $a$ does not divide $b$.
+\begin{exercise}[4] Suppose $a,b,c \in\ZZ$. If $a$ does not divide $bc$, then $a$ does not divide $b$.
 \begin{proof}
-Write your answer here.
+Suppose
 \end{proof}
 \end{exercise}
 
