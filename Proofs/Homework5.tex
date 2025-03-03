@@ -167,13 +167,13 @@ If $x^{2}+5x<0$ then $x<0$.
 	\underline{Case 1:} Suppose $a$ is odd and $b$ is even, then by definition of even and odd $a = 2n+1$ and $b = 2m$ respectively where $n,m \in \ZZ$. Hence $ab = (2n+1)(2m) = 4mn + 2m = 2(2mn+m)$ which is even, and $a + b = 2n+1 + 2m = 2(n + m) + 1$ which is odd. Thus both $ab$ and $a+b$ being even is false. \\ 
 	\underline{Case 2:} Suppose $a$ is even and $b$ is odd. Then $a = 2n$ and $b = 2m+1$ for some $n,m \in \ZZ$. Thus $ab = (2n)(2m+1) = 4mn +2n = 2(2mn + n)$ which is even and $a + b = 2n + 2m+1 = 2(n+m) +1$ which is odd. It is not the case that $ab$ and $a+b$ are both even. \\
 	\underline{Case 3:} Suppose $a$ is odd and $b$ is odd. Then $a = 2n + 1$ and $b = 2m + 1$ for some $n,m \in \ZZ$. Thus $ab = (2n+1)(2m+1) = 4nm +2n + 2m + 1 = 2(2nm + n + m) + 1$ which is odd, and $a + b = 2n+1 + 2m+1 = 2n + 2m + 2 = 2(n + m + 1)$ which is even. Thus both $ab$ and $a+b$ being even is false. \\
-	Therefore if $a$ or $b$ is odd, then $ab$ or $a+b$ is odd. It follows by contrapositition that if $a$ and $b$ are even then $ab$ and $a+b$ are even.
+	Therefore if $a$ or $b$ is odd, then $ab$ or $a+b$ is odd. It follows by contrapositition that if $ab$ and $a+b$ are even then $a$ and $b$ are even.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[9] Suppose $n\in\ZZ$. If $3\nmid n^{2}$, then $3\nmid n$. % \nmid is a useful symbol to have around!
 \begin{proof}
-Write your answer here.
+	(By Contraposition)	Suppose $n\in\ZZ$ such that $3 \mid n$. Then by definition of divisibility $n$ can be expressed as $n = 3k$ for some $k \in \ZZ$. It follows that $n^2 = (3k)^2 = 9k^2 = 3(3k^2) = 3b$, where $b = 3k^2$. Thus $3 \mid n^2$ if $3 \mid n$. By contraposition it follows that if $3 \nmid n^2$ then $3 \nmid n$.
 \end{proof}
 \end{exercise}
 
