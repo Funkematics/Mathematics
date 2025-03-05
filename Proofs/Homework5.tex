@@ -195,26 +195,26 @@ Therefore when $x$ and $y$ do not have the same parity, $x+y$ is odd. It follows
 
 \begin{exercise}[18] If $a,b\in\ZZ$, then $(a+b)^{3}\equiv a^{3}+b^{3}\pmod 3$. %You might want to compare the commands \mod and \pmod to see how they behave differently. Also, if you are working with moduli that have more than one digit, you will have to write something like $\pmod{35}$ to get the desired behavior.
 \begin{proof}
-	Suppose $a,b\in\ZZ$, Observe that $(a+b)^3 = (a+b)(a+b)(a+b) = (a^2 + 2ab + b^2)(a+b) = a^3 + 2a^2b + ab^2 + ba^2 + 2ab^2 + b^3 = a^3 + 3a^2b  + 3ab^2 + b^3 = a^3 + b^3 + 3(a^2b + ab^2) = a^3 + b^3 + 3n$, where $n = (a^2b + ab^3)$ and $n \in \ZZ$ by closure properties of the integers. Thus $(a+b)^{3}\equiv a^{3}+b^{3}\pmod 3$ by definition.
+	Suppose $a,b\in\ZZ$, Observe that $(a+b)^3 - (a^3 + b^3) = a^3 + 3a^2b + 3ab^2 + b^3 - a^3 - b^3 = 3(a^2b + ab^2)$ Note that $a^2b + ab^2$ is an integer by closure the closure properties of the integers. Thus $3 \mid [(a+b)^3 - (a^3 + b^3)]$, in other words $(a+b)^{3}\equiv a^{3}+b^{3}\pmod 3$.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[19] Let $a,b,c\in\ZZ$ and $n\in\NN$. If $a\equiv b\pmod n$ and $a\equiv c\pmod n$, then $c\equiv b\pmod n$.
 \begin{proof}
-	Assume $a, b, c \in \ZZ$ and $n\in\NN$ such that $a\equiv b \pmod n$ and $a\equiv c\pmod n$. Then there exists an $n$ such that $n \mid (a - b)$ and $n \mid (a - c)$. Then by definition of divisibility, $(a-b) = nx$ and $(a-c) = ny$ for some $x,y \in \ZZ$.
+	Assume $a, b, c \in \ZZ$ and $n\in\NN$ such that $a\equiv b \pmod n$ and $a\equiv c\pmod n$. Then there exists an $n$ such that $n \mid (a - b)$ and $n \mid (a - c)$. Then by definition of divisibility, $(a-b) = nx$ and $(a-c) = ny$ for some $x,y \in \ZZ$. Observe that by subtracting the two equations, $(a-b) - (a - c) = c - b = nx - ny = n(x - y)$. Thus $c-b = n(x-y)$, so $n \mid (c - b)$ by definition of divisibility. Therefore $c \equiv b \pmod n$ by definition of congruence modulo $n$.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[22] Let $a\in\ZZ, n\in\NN$. If $a$ has remainder $r$ when divided by $n$, then $a\equiv r\pmod n$.
 %Pay close attention to the role of the definitions in this argument!  It's very easy on this kind of problem to assume the conclusion by conflating a relatively obvious fact (the inter-relationship between these two claims) and what the claims *actually* say.
 \begin{proof}
-Write your answer here.
+	Suppose $a\in\ZZ, n\in\NN$ such that $a$ has a remainder $r$ when divided by $n$. By the division algorithm $a = nx + r$, where $x \in \ZZ$ and $r \in [ 0,n )$. Consider what happens when we subtract both sides of the equation by the remainder: $a - r = nx + r - r = nx$. So $n \mid (a - r)$ because $a - r = nx$. Therefore $a \equiv r \pmod{n}$ by definition of congruence modulo $n$.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[24] If $a\equiv b\pmod n$ and $c\equiv d\pmod n$, then $ac\equiv bd\pmod n$. 
 \begin{proof}
-Write your answer here.
+	Suppose $a \equiv b\pmod n$ and $c \equiv d\pmod n$. Then there exists an $n \in \ZZ$ such that $a = b + nx$ and $c = d + ny$, where $x,y\in\ZZ$. It follows that $ac = (b+nx)(d + ny) = bd + bny +dnx + n^2xy = bd + n(by + dx + nxy)$, so $ac = bd + n(by + dx + nxy)$. Subtracting both sides by $bd$ gives $ac - bd = n(by + dx + nxy)$. Therefore $ac \equiv bd \pmod{n}$ by definition of congruence modulo $n$.
 \end{proof}
 \end{exercise}
 
