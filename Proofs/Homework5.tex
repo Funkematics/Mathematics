@@ -84,7 +84,7 @@
 \chead{MATH 265F}
 \pagestyle{fancy}
 %Modify these items:
-\rhead{\emph{Your Full Name Here}}
+\rhead{\emph{Christopher Munoz}}
 \lhead{\emph{HW \#5 --- 2/28/24}}
 
 \begin{document}
@@ -137,7 +137,7 @@ Suppose $x$ is an odd integer, then by definition of odd $x = 2k + 1$ for some $
 
 \begin{exercise}[28] Let $a,b,c\in\ZZ$. Suppose $a$ and $b$ are not both  zero, and $c\ne 0$. Prove that $c\gcd(a,b)\le gcd(ca,cb)$.
 \begin{proof}
-	Suppose $a,b,c \in \ZZ$. Let $d = \gcd(a,b)$, then by definition $d \mid a$ and $d \mid b$. That means $a = dn$ and $b = dm$ for some $n,m \in \ZZ$. Multiplying both equations by $c$ we obseve that $ca = cdn$ and $cb = cdm$. Thus $cd \mid ca$ and $cd \mid cb$ where $cd$. Since $\gcd(ca, cb)$ is the greatest common divisor, $cd \leq \gcd(ca, cb)$. Thus $c*\gcd(a,b) \leq \gcd(ca, cb)$. Note that the inequality holds irrespective of whether $c < 0$ or $c > 0$.  
+	Suppose $a,b,c \in \ZZ$. Let $d = \gcd(a,b)$, then by definition $d \mid a$ and $d \mid b$. That means $a = dn$ and $b = dm$ for some $n,m \in \ZZ$. Multiplying both equations by $c$ we obseve that $ca = cdn$ and $cb = cdm$. Thus $cd \mid ca$ and $cd \mid cb$ where $cd\in\ZZ$. Since $\gcd(ca, cb)$ is the greatest common divisor, $cd \leq \gcd(ca, cb)$. Thus $c*\gcd(a,b) \leq \gcd(ca, cb)$. Note that the inequality holds irrespective of whether $c < 0$ or $c > 0$.  
 \end{proof}
 \end{exercise}
 \section*{Chapter 5}
@@ -227,11 +227,20 @@ Therefore when $x$ and $y$ do not have the same parity, $x+y$ is odd. It follows
 
 \begin{exercise}[32] If $a\equiv b\pmod n$, then $a$ and $b$ have the same remainder when divided by $n$.
 %Again, pay close attention to the roles of the definitions.
-\begin{proof}
+\begin{proof}Assignment Homework 7: §6 and §7, due Wednesday, March 5, 2025 10:00 AM.Homework 7: §6
 Suppose $a \equiv b \pmod n$. Then by definition $n \mid a - b $ which can be expressed in the form $a - b = xn$ for some $x \in \ZZ$. Subsequentially $a = b + xn$ and $b = yn + r$ by rhe division algorithm. Thus $a = b + xn = (yn + r) + xn = yn + xn + r = n(y + x) + r$. So we have $a = n(y+x) + r$ and $b = yn + r$. When we divide both sides by $n$ we see that both $a$ and $b$ share the same remainder. Thus when $a \equiv b \pmod n$, then $a$ and $b$ have the same remainder when divided by $n$.
 \end{proof}
 \end{exercise}
 
+Reflection: \\
+Length of time: It might have taken me 3 minutes to maybe an hour or more on some problems. Getting stuck on some of the last problems in each chapter. A lot of time was spent mulling and meandering about problems trying to get a foothold or an idea as to how to proceed, sometimes I'd struggle with one, think about it during work, fall asleep and somehow it would just click on waking. I probably should've leveraged more assistance since there are time constraints I need to consider. \\
+
+Difficulty: Some of the problems were challenging to me, what I wrote for problem 28 in chapter 4 feels like it has gaps in it for example.
+
+Challenges: Lot of the later proofs in the chapters required me to "align my thinking". 
+
+Comparison: I had to ape problem 25 in Chapter 5, thought about if it could be expressed better in summation notation. I tended to avoid the solutions in the back because
+its almost too spartan for my tastes and I encountered a typo early on in the book.
 
 
 
