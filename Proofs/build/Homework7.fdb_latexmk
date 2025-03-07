@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741307085.47162 "Homework7.tex" "build/Homework7.pdf" "Homework7" 1741307085.7458 0
+["pdflatex"] 1741346180.6086 "Homework7.tex" "build/Homework7.pdf" "Homework7" 1741346180.95417 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -135,9 +135,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1740469235.71723 39447 2134d78a2da0cee52270db0ec417a200 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740469224.94382 327964 66947494ae0b30df692aba42aa1c43ce ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740469205 6800595 69d9fb263956deba8491ea26f3edc411 ""
-  "Homework7.tex" 1741307078.73136 6497 4df59e5fb97eaffaebe5d0eeae37f7e1 ""
-  "build/Homework7.aux" 1741307085.70475 525 c84fcde4e84da2fc79309945bf8b6822 "pdflatex"
-  "build/Homework7.out" 1741307085.70475 184 63427bd0b3ffa351e751b14017001807 "pdflatex"
+  "Homework7.tex" 1741346178.18203 8339 4461a9627f422cf96ea2692c37b97b56 ""
+  "build/Homework7.aux" 1741346180.90539 525 56d48dee321bc4b2188416c98da8d1ae "pdflatex"
+  "build/Homework7.out" 1741346180.90539 184 63427bd0b3ffa351e751b14017001807 "pdflatex"
   (generated)
   "build/Homework7.aux"
   "build/Homework7.log"

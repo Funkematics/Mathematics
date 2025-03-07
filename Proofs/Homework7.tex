@@ -117,19 +117,19 @@
 
 \begin{exercise}[3] Prove that $\sqrt[3]{2}$ is irrational.
 \begin{proof}
-  Suppose for the sake of contradiction that $\sqrt[3]{2}$ is not irrational. Then $\sqrt[3]{2}$ is a rational and is in the form $\sqrt[3]{2} = \frac{a}{b}$ where $a,b\in\ZZ$ and the ratio $\frac{a}{b}$ being in its most reduced form. Observe that cubing both sides $2 = (\frac{a}{b})^3 = \frac{a^3}{b^3}$ so that $2b^3 = a^3$. This implies that $a$ is an even number which is contraditory to $\frac{a}{b}$ existing in its lowest forms. Thus $sqrt[3]{2}$ is irrational.
+  Suppose for the sake of contradiction that $\sqrt[3]{2}$ is not irrational. Then $\sqrt[3]{2}$ is a rational and is in the form $\sqrt[3]{2} = \frac{a}{b}$ where $a,b\in\ZZ$ and the ratio $a,b$ do not sure factors so that $\frac{a}{b}$ is in its lowest form. Observe that when cubing both sides, $2 = (\frac{a}{b})^3 = \frac{a^3}{b^3}$ so that $2b^3 = a^3$. This implies that $a$ is an even number and divisible by $2$. So $a = 2k$ for some $k\in\ZZ$. Substituting for $a$ gives $2b^3 = (2k)^3 = 8k^3$. Thus $b^3 = 4k^3 = 2(2k^3)$.  Because $b^3$ is even, this implies that $b$ is also an even number which is contraditory to $\frac{a}{b}$ existing in its lowest forms. Thus $\sqrt[3]{2}$ must be irrational.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[4] Prove that $\sqrt{6}$ is irrational.
 \begin{proof}
-Write your answer here.
+  Suppose for the sake of contradiction $\sqrt{6}$ is a rational number. Then there exists an $a,b\in\ZZ$ such that $\sqrt{6} = \frac{a}{b}$ and $\frac{a}{b}$ is in its lowest form with no common factors. Squaring both sides gives $6 = (\frac{a}{b})^2 = \frac{a^2}{b^2}$. Thus $6b^2 = a^2$ which implies that $a^2$ is divisible by $6$ and thus $a$ is divisible by $6$ or $a = 6k$ for some $k\in\ZZ$. Substituting in our original equation gives $6b^2 = (6k)^2 = 36k^2$. Simplifying this equation by division of $6$ shows that $b^2 = 6k^2$, this implies that $b^2$ is divisible by $6$. Since it follows that $b$ is also divisible by $6$ and that $a$ is divisible by $6$ we have a contradiction as $\frac{a}{b}$ cannot be in its lowest form. Thus $\sqrt{6}$ is an irrational number. 
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[8] Suppose $a,b,c\in\ZZ$. If $a^{2}+b^{2}=c^{2}$, then $a$ or $b$ is even.
 \begin{proof}
-Write your answer here.
+For the sake of contradiction, suppose that $a,b,c\in\ZZ$ such that $a^2=b^2=c^2$ and $a$ and $b$ are odd. Then there exists an $k,j\in\ZZ$ such that $a = 2k + 1$ and $b = 2j+1$. We know that an odd number added to another odd number is an even number, so that $c^2$ is even and thus $c$ is even so that, $c = 2x$ for some $x\in\ZZ$. Observe that when we substitute $a,b,c$ on both sides of the equations, $a^2 + b^2 = (2k+1)^2 + (2j+1)^2 = 4k^2 + 4k + 1 + 4j^2 + 4j + 1 = 4k^2 + 4j^2 + 4k + 4j + 2 = 2(2k^2 + 2j^2 + 2k + 2j + 1)$ and $c^2 = (2x)^2 = 4x^2$, so that $2(k^2 + 2j^2 + 2k + 2j + 1) = 4x^2$. Dividing both sides by 2 gives $2k^2 + 2j^2 + 2k + 2j + 1 = 2x^2$. Note that the left hand side is odd and the right hand side is even. This is an impossibility since an odd number cannot equal an even number. Thus if $a^2 + b^2=c^2$, then $a$ or $b$ must be even.
 \end{proof}
 \end{exercise}
 
