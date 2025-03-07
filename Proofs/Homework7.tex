@@ -117,7 +117,7 @@
 
 \begin{exercise}[3] Prove that $\sqrt[3]{2}$ is irrational.
 \begin{proof}
-  Suppose for the sake of contradiction that $\sqrt[3]{2}$ is not irrational. Then $\sqrt[3]{2}$ is a rational and is in the form $\sqrt[3]{2} = \frac{a}{b}$ where $a,b\in\ZZ$ and the ratio $a,b$ do not sure factors so that $\frac{a}{b}$ is in its lowest form. Observe that when cubing both sides, $2 = (\frac{a}{b})^3 = \frac{a^3}{b^3}$ so that $2b^3 = a^3$. This implies that $a$ is an even number and divisible by $2$. So $a = 2k$ for some $k\in\ZZ$. Substituting for $a$ gives $2b^3 = (2k)^3 = 8k^3$. Thus $b^3 = 4k^3 = 2(2k^3)$.  Because $b^3$ is even, this implies that $b$ is also an even number which is contraditory to $\frac{a}{b}$ existing in its lowest forms. Thus $\sqrt[3]{2}$ must be irrational.
+  Suppose for the sake of contradiction that $\sqrt[3]{2}$ is not irrational. Then $\sqrt[3]{2}$ is a rational number which can be expressed in the form $\sqrt[3]{2} = \frac{a}{b}$ where $a,b\in\ZZ$ and $a,b$ do not sure factors so that $\frac{a}{b}$ is in its lowest form. Observe that when cubing both sides, $2 = (\frac{a}{b})^3 = \frac{a^3}{b^3}$ so that $2b^3 = a^3$. The integer $a^3$ being an even number implies that $a$ is an even number and divisible by $2$. So $a = 2k$ for some $k\in\ZZ$. Substituting for $a$ gives $2b^3 = (2k)^3 = 8k^3$. Thus $b^3 = 4k^3 = 2(2k^3)$.  Because $b^3$ is even, this implies that $b$ is also an even number which is contraditory to $\frac{a}{b}$ existing in its lowest forms. Thus $\sqrt[3]{2}$ must be irrational.
 \end{proof}
 \end{exercise}
 
@@ -129,13 +129,13 @@
 
 \begin{exercise}[8] Suppose $a,b,c\in\ZZ$. If $a^{2}+b^{2}=c^{2}$, then $a$ or $b$ is even.
 \begin{proof}
-For the sake of contradiction, suppose that $a,b,c\in\ZZ$ such that $a^2=b^2=c^2$ and $a$ and $b$ are odd. Then there exists an $k,j\in\ZZ$ such that $a = 2k + 1$ and $b = 2j+1$. We know that an odd number added to another odd number is an even number, so that $c^2$ is even and thus $c$ is even so that, $c = 2x$ for some $x\in\ZZ$. Observe that when we substitute $a,b,c$ on both sides of the equations, $a^2 + b^2 = (2k+1)^2 + (2j+1)^2 = 4k^2 + 4k + 1 + 4j^2 + 4j + 1 = 4k^2 + 4j^2 + 4k + 4j + 2 = 2(2k^2 + 2j^2 + 2k + 2j + 1)$ and $c^2 = (2x)^2 = 4x^2$, so that $2(k^2 + 2j^2 + 2k + 2j + 1) = 4x^2$. Dividing both sides by 2 gives $2k^2 + 2j^2 + 2k + 2j + 1 = 2x^2$. Note that the left hand side is odd and the right hand side is even. This is an impossibility since an odd number cannot equal an even number. Thus if $a^2 + b^2=c^2$, then $a$ or $b$ must be even.
+For the sake of contradiction, suppose that $a,b,c\in\ZZ$ such that $a^2=b^2=c^2$ and $a$ and $b$ are odd. Then there exists an $k,j\in\ZZ$ such that $a = 2k + 1$ and $b = 2j+1$. We know that an odd number added to another odd number is an even number, so that $c^2$ is even and thus $c$ is also even, so $c = 2x$ for some $x\in\ZZ$. Observe that when we substitute $a,b,c$ on both sides of the equations, $a^2 + b^2 = (2k+1)^2 + (2j+1)^2 = 4k^2 + 4k + 1 + 4j^2 + 4j + 1 = 4k^2 + 4j^2 + 4k + 4j + 2 = 2(2k^2 + 2j^2 + 2k + 2j + 1)$ and $c^2 = (2x)^2 = 4x^2$, so that $2(k^2 + 2j^2 + 2k + 2j + 1) = 4x^2$. Dividing both sides by 2 gives $2k^2 + 2j^2 + 2k + 2j + 1 = 2x^2$. Note that the left hand side is odd and the right hand side is even. This is an impossibility since an odd number cannot equal an even number. Thus if $a^2 + b^2=c^2$, then $a$ or $b$ must be even.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[9] Suppose $a,b\in\RR$. If $a$ is rational and $ab$ is irrational, then $b$ is irrational.
 \begin{proof}
-  Suppose for the sake of contradiction that $a$ is rational, $ab$ is irrational, and $b$ is not irrational. Then $b$ is a rational number and there exists a $c,d \in \ZZ$ such that $b = \frac{c}{d}$. Similarly there exists an $x,y \in \ZZ$ such that $a = \frac{x}{y}$ since $a$ is rational. Observe that $ab = \frac{cx}{dy}$ and that $cx$ and $dy$ are integers by closure properties of the integers. Then $ab$ is a rational number by definition which
+  Suppose for the sake of contradiction that $a$ is rational, $ab$ is irrational, and $b$ is not irrational. Then $b$ is a rational number and there exists $c,d \in \ZZ$ such that $b = \frac{c}{d}$. Similarly there exists an $x,y \in \ZZ$ such that $a = \frac{x}{y}$ since $a$ is rational. Observe that $ab = \frac{cx}{dy}$ and that $cx$ and $dy$ are integers by closure properties of the integers. Then $ab$ is a rational number by definition which
   is a contradiction to our original premise that $ab$ is irrational. Thus if $a$ is rational and $ab$ is irrational, then $b$ must be irrational.
 \end{proof}
 \end{exercise}
@@ -143,7 +143,7 @@ For the sake of contradiction, suppose that $a,b,c\in\ZZ$ such that $a^2=b^2=c^2
 \begin{exercise}[11] There exist no integers $a$ and $b$ for which $18a+6b=1$.
 \begin{proof}
 Suppose for the sake of contradiction that there does exist integers $a$ and $b$ for which $18a + 6b = 1$.
-Then $2(9a + 3b) = 1$ which means $1$ even, a contradiction. Thus there exists no $a,b\in\ZZ$ that satisfies $18a + 6b = 1$.
+Then $2(9a + 3b) = 1$ which means $1$ is even, a contradiction. Thus there exists no $a,b\in\ZZ$ that satisfies $18a + 6b = 1$.
 \end{proof}
 \end{exercise}
 
@@ -168,7 +168,7 @@ Then $2(9a + 3b) = 1$ which means $1$ even, a contradiction. Thus there exists n
 \section*{Chapter 7}
 \begin{exercise}[1] Suppose $x\in\ZZ$. Then $x$ is even if and only if $3x+5$ is odd.
 \begin{proof}
-Suppose that $x$ is even, then $x = 2k$ for some $k\in\ZZ$. Substituting for x, $3x + 5 = 3(2k) + 5 = 6k + 5 = 2(3k + 2) + 1$, an odd number. Showing that if $x$ is even then $3x + 5$ is odd. Conversely using contraposition, suppose that $x$ is not even. Then $x$ is odd and there exists a $k\in\ZZ$ such that $x=2k+1$. Substituting for $x$ gives $3x + 5 = 3(2k+1) + 5 = 6k+ 3 + 5 = 6k + 8 = 2(3k+4)$, an even number. Showing that if $x$ is odd then $3x+5$ is even. By contraposition it must be the case that if $3x+5$ is odd then $x$ is even.
+Suppose that $x$ is even, then $x = 2k$ for some $k\in\ZZ$. Substituting for $x$ gives, $3x + 5 = 3(2k) + 5 = 6k + 5 = 2(3k + 2) + 1$, an odd number. Showing that if $x$ is even then $3x + 5$ is odd. Conversely using contraposition, suppose that $x$ is not even. Then $x$ is odd and there exists a $k\in\ZZ$ such that $x=2k+1$. Substituting for $x$ gives $3x + 5 = 3(2k+1) + 5 = 6k+ 3 + 5 = 6k + 8 = 2(3k+4)$, an even number. Showing that if $x$ is odd then $3x+5$ is even. By contraposition it must be the case that if $3x+5$ is odd then $x$ is even.
 \end{proof}
 \end{exercise}
 \begin{exercise}[4] Let $a$ be an integer. Then $a^{2}+4a+5$ is odd if and only if $a$ is even.
@@ -185,12 +185,12 @@ In all cases where either $x = 0$ or $y = 0$, the equation $(x+y)^2 = x^2 + y^2$
 \end{exercise}
 
 \begin{exercise}[Reflection Problem]
-\begin{proof}
+\begin{proof} 
 Length of time: This too me significantly less time than the previous homework, 1 to 2 minutes on some being able to quickly deduce strategy and what moves to make. Its often the case that more time was spent figuring out how I was going to write it down rather than finding an argument itself. \\
 
 Difficulty: Again significantlly easier time than the previous homeworks, I would say the most challenging problem was actually problem 19 in chapter 6. I was not able to provide an argument without some assistance from the back of the book. My initial strategy was to multiply out $n(n+1)(n+2)(n+3)(n+4)$ but it did not give me anything oobvious I could work with. I even attempted to express consecutive integers as $n(n-1)(n+1)(n-2)(n+2)$ but ran into a similar wall. \\
 
-Challenges:Besides problem 19, I had challenges in balancing the time, but I am proud to say I've caught up after falling behind.
+Challenges:Besides problem 19, I had challenges in balancing the time, but I am proud to say I've caught up after falling behind. \\
 
 Comparison: Again, aped Problem 19, my proofs involving irrationality I questioned after looking at the back. But I've come around to sticking with what I wrote.
 \end{proof}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  7 MAR 2025 06:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  7 MAR 2025 06:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,6 +661,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--192
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+
 Package fancyhdr Warning: \headheight is too small (8.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.0pt}.
@@ -699,7 +704,7 @@ share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist
 ublic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
 .pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on build/Homework7.pdf (4 pages, 133742 bytes).
+Output written on build/Homework7.pdf (4 pages, 133796 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
