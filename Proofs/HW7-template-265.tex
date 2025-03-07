@@ -1,0 +1,203 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage[all]{xy}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some shortcuts helpful for our assignments
+\newcommand{\bx}{\begin{exercise}}
+\newcommand{\ex}{\end{exercise}}
+
+%Some useful shortcuts for our favorite sets of numbers.
+%Note, you can use these WITHOUT entering math mode
+\def\RR{\ensuremath{\mathbb R}} 
+\def\NN{\ensuremath{\mathbb N}}
+\def\ZZ{\ensuremath{\mathbb Z}}
+\def\QQ{{\ensuremath\mathbb Q}}
+\def\CC{\ensuremath{\mathbb C}}
+\def\EE{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Code for formatting the proofs a little nicer for submitted homework
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par\doublespacing
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \list{}{%
+    \settowidth{\leftmargin}{\itshape\proofname:\hskip\labelsep}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\itemindent}{-\leftmargin}%
+  }%
+  \item[\hskip\labelsep\itshape#1\@addpunct{:}]\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+  \singlespacing
+}
+\makeatother
+
+%Commenting tools for the professor
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH 265F}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Your Full Name Here}}
+\lhead{\emph{HW \#7}}
+
+\begin{document}
+
+\thispagestyle{fancy}
+
+\section*{Chapter 6}
+\begin{exercise}[2] Suppose $n\in\ZZ$. If $n^{2}$ is odd, then $n$ is odd.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3] Prove that $\sqrt[3]{2}$ is irrational.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[4] Prove that $\sqrt{6}$ is irrational.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[8] Suppose $a,b,c\in\ZZ$. If $a^{2}+b^{2}=c^{2}$, then $a$ or $b$ is even.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[9] Suppose $a,b\in\RR$. If $a$ is rational and $ab$ is irrational, then $b$ is irrational.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[11] There exist no integers $a$ and $b$ for which $18a+6b=1$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[12] For every positive $x\in\QQ$, there is a positive $y\in\QQ$ for which $y<x$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[16] If $a$ and $b$ are positive real numbers, then $a+b\ge 2\sqrt{ab}$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[19] The product of any five consecutive integers is divisible by 120. (For example, the product of 3, 4, 5, 6 and 7 is 2520, and $2520=120\cdot 21$.)
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\section*{Chapter 7}
+\begin{exercise}[1] Suppose $x\in\ZZ$. Then $x$ is even if and only if $3x+5$ is odd.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+\begin{exercise}[4] Let $a$ be an integer. Then $a^{2}+4a+5$ is odd if an d only if $a$ is even.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+\begin{exercise}[7] Suppose $x,y\in\RR$. Then $(x+y)^{2}=x^{2}+y^{2}$ if and only if $x=0$ or $y=0$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[Reflection Problem]
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ \end{document} 

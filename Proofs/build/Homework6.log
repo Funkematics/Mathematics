@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  5 MAR 2025 23:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  5 MAR 2025 23:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Homework5.tex
-(./Homework5.tex
+**Homework6.tex
+(./Homework6.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texmf-dist/tex/latex/amscls/amsart.cls
@@ -507,8 +507,8 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count307
 \l__pdf_internal_box=\box61
 )
-(build/Homework5.aux)
-\openout1 = `Homework5.aux'.
+(build/Homework6.aux)
+\openout1 = `Homework6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
@@ -603,9 +603,9 @@ e
 ))
 Package hyperref Info: Link coloring OFF on input line 90.
 
-(build/Homework5.out) (build/Homework5.out)
+(build/Homework6.out) (build/Homework6.out)
 \@outlinefile=\write4
-\openout4 = `Homework5.out'.
+\openout4 = `Homework6.out'.
 
 Package xypdf Info: Line width: 0.47998pt on input line 90.
 
@@ -731,12 +731,12 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 14.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.0pt}.
 
-[8] (build/Homework5.aux)
+[8] (build/Homework6.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `Homework5.out' has not changed.
+Package rerunfilecheck Info: File `Homework6.out' has not changed.
 (rerunfilecheck)             Checksum: 714D5721CF26440C7583DB1F9296FF19;184.
  )
 (\end occurred inside a group at level 2)
@@ -762,7 +762,7 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/cm-super/sfrm1200.pfb>
-Output written on build/Homework5.pdf (8 pages, 130073 bytes).
+Output written on build/Homework6.pdf (8 pages, 130043 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
