@@ -1,0 +1,223 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage[all]{xy}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some shortcuts helpful for our assignments
+\newcommand{\bx}{\begin{exercise}}
+\newcommand{\ex}{\end{exercise}}
+
+%Some useful shortcuts for our favorite sets of numbers.
+%Note, you can use these WITHOUT entering math mode
+\def\RR{\ensuremath{\mathbb R}} 
+\def\NN{\ensuremath{\mathbb N}}
+\def\ZZ{\ensuremath{\mathbb Z}}
+\def\QQ{{\ensuremath\mathbb Q}}
+\def\CC{\ensuremath{\mathbb C}}
+\def\EE{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Code for formatting the proofs a little nicer for submitted homework
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par\doublespacing
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \list{}{%
+    \settowidth{\leftmargin}{\itshape\proofname:\hskip\labelsep}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\itemindent}{-\leftmargin}%
+  }%
+  \item[\hskip\labelsep\itshape#1\@addpunct{:}]\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+  \singlespacing
+}
+\makeatother
+
+%Commenting tools for the professor
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH 265F}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Christopher Munoz}}
+\lhead{\emph{HW \#8}}
+
+\begin{document}
+
+\thispagestyle{fancy}
+
+\section*{Chapter 7} Prove the following statements.
+\begin{exercise}[12] There exists a positive real number $x$ for which $x^{2}<\sqrt{x}$.
+\begin{proof}
+  Suppose that $x = \frac{1}{4}$. Observe that substituting for $x$ in our inequality $x^2 < \sqrt{x}$ gives $(\frac{1}{4})^2 = \frac{1}{16} < \frac{1}{2} = \sqrt{\frac{1}{4}}$. Thus $x = \frac{1}{4}$ is such a positive real number.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[18] There is a set $X$ for which $\NN\in X$ and $\NN\subseteq X$.
+\begin{proof}
+  Suppose that the set $X = \NN \cup \{\NN\}$. Observe that $\NN \in X$ and that $\NN \subseteq X$. Thus $X = \NN \cup \{\NN\}$ is such a set.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[21] Every real solution of $x^{3}+x+3=0$ is irrational.
+\begin{proof}
+  (By Contradiction) Suppose for the sake of contradiction that there exists a rational solution to $x^{3} + x +3 = 0$, that is to say that there is an $x = \frac{a}{b}$ where $a,b \in \ZZ$ in its most reduced form such that $(\frac{a}{b})^3 + \frac{a}{b} + 3 = 0$. Observe that multiplying our equation by $b^3$ gives $a^3 + ab^2 + 3b^3 = 0$. Consider these 3 cases:\\ 
+  \underline{Case 1:} Suppose $a$ is odd and $b$ is odd. Then the left-hand side is a sum of 3 odd numbers, which is odd, meaning 0 is odd. This is a contradiction. \\
+  \underline{Case 2:} Suppose $a$ is odd and $b$ is even. Then the left-hand side is a sum of 2 even numbers and an odd number, meaning 0 is odd. This is also contradiction. \\
+  \underline{Case 3:} Suppose $a$ is even and $b$ is odd, likewise the left-hand side is a sum of 2 even numbers and an odd number, meaning 0 is odd. This is yet again another contradiction. \\
+  Thus it follows that every real solution of $x^3 + x + 3 = 0$ must be irrational.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[31] If $n\in\ZZ$, then $\gcd(n,n+1)=1$.
+\begin{proof}
+Suppose $d$ is an integer and that $d \mid n$ and $d \mid (n+1)$. Then it follows that $d \mid (n+1) - n$ which implies $d \mid 1$. Thus the greatest common divisor of $n$ and $n+1$ is in fact $1$.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[35] Suppose $a,b\in\NN$. Then $a=\gcd(a,b)$ if and only if $a\mid b$.
+\begin{proof}
+Suppose $a = \gcd(a,b)$. Then by definition $a \mid a$ and more importantly $a \mid b$. \\
+Conversely suppose $ a \mid b$. Then it must be the case that $a \leq \gcd(a,b)$ since $a$ divides itself and $a \mid b$. Since $\gcd(a,b) \mid a$ then $a = \gcd(a,b) * x$ where $x \in \ZZ$. As all integers are positive, it follows that $a \geq \gcd(a,b)$. \\
+Since $a \leq \gcd(a,b)$ and $a \geq \gcd(a,b)$, then $a = \gcd(a,b)$.
+\end{proof}
+\end{exercise}
+
+\section*{Chapter 8}
+Use the methods introduced in this chapter to prove the following statements.
+\begin{exercise}[4] If $m,n\in\ZZ$, then $\{x\in \ZZ:mn\mid x\}\subseteq (\{x\in\ZZ:m\mid x\}\cap\{x\in\ZZ:n\mid x\}$.
+\begin{proof}
+Suppose $a \in \{x\in \ZZ:mn\mid x\}$. This means $a \in \ZZ$ and $mn \mid a$. By definition of divisibility, there is an integer $k$ such that $a = mn*k$. Therefore $a = m(n*k)$ and $a = n(m*k)$. From $a = m(n*k)$, it follows that $m \mid a$ so that $a \in \{x\in\ZZ:m\mid x\}$. Similarly from $a = n(m *k)$, it follows that $n \mid a$ so that $a \in \{x\in\ZZ:n\mid x \}$. Thus by the definition of the intersection of two sets, we have $a \in \{x\in\ZZ:m\mid x\}\cap\{x\in\ZZ:n\mid x\}$. Thus $\{x\in \ZZ:mn\mid x\}\subseteq (\{x\in\ZZ:m\mid x\}\cap\{x\in\ZZ:n\mid x\}$.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[6] Suppose $A,B$ and $C$ are sets. Prove that if $A\subseteq B$, then $A-C\subseteq B-C$.
+\begin{proof}
+Suppose $A \subseteq B$. Let $x \in (A - C)$, by definition this means $x \in A \land x \notin C$. Since $x \in A$ and $A \subseteq B$, this means $x \in B$. Since $x \in B$ and $x \notin C$ it follows that $x \in B - C$. Thus $A - C \subseteq B - C$.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[7] Suppose $A,B$ and $C$ are sets. If $B\subseteq C$, then $A\times B\subseteq A\times C$.
+\begin{proof}
+Suppose $B \subseteq C$ and let $(x,y) \in A \times B$. Then by definition of the Cartesian product $x \in A$ and $y \in B$. Since $B \subseteq C$ it follows that $y \in C$. Thus $x \in A$ and $y \in C$ implies $(x,y) \in A \times C$. Therefore $(x,y) \in A \times B$ implies $(x,y) \in A \times C$. Hence $A \times B \subseteq A \times C$.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[9] If $A,B$ and $C$ are sets, then $A\cap(B\cup C)=(A\cap B)\cup (A\cap C)$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[10] If $A$ and $B$ are sets in a universal set $U$, then $\overline{A\cap B}=\overline A\cup \overline B$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[14] If $A,B$ and $C$ are sets, then $(A\cup B)-C=(A-C)\cup (B-C)$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}[Reflection Problem]
+
+\begin{itemize}
+\item How long did it take you to complete each problem? What part of the assignment took the most time? Why?
+\begin{proof}[Response]
+Write your answer here.
+\end{proof}
+\item What was easy for you? Why do you think that was so?
+\begin{proof}[Response]
+Write your answer here.
+\end{proof}
+\item What was challenging for you? What made it challenging?
+\begin{proof}[Response]
+Write your answer here.
+\end{proof}
+\item Compare your answers to the odd numbered exercises to those in the back of the textbook. What did you learn from this comparison?
+\begin{proof}[Response]
+Write your answer here.
+\end{proof}
+\end{itemize}
+
+\end{exercise}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ \end{document} 
