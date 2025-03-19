@@ -117,7 +117,7 @@
 
 \begin{exercise}[18] There is a set $X$ for which $\NN\in X$ and $\NN\subseteq X$.
 \begin{proof}
-  Suppose that the set $X = \NN \cup \{\NN\}$. Observe that $\NN \in X$ and that $\NN \subseteq X$. Thus $X = \NN \cup \{\NN\}$ is such a set.
+  Suppose that $X = \NN \cup \{\NN\}$. Observe that $\NN \in X$ and that $\NN \subseteq X$. Thus $X = \NN \cup \{\NN\}$ is such a set.
 \end{proof}
 \end{exercise}
 
@@ -166,20 +166,45 @@ Suppose $B \subseteq C$ and let $(x,y) \in A \times B$. Then by definition of th
 \end{exercise}
 
 \begin{exercise}[9] If $A,B$ and $C$ are sets, then $A\cap(B\cup C)=(A\cap B)\cup (A\cap C)$.
-\begin{proof}
-Write your answer here.
+\begin{proof} Observe the following:
+  \begin{align*}
+    A \cap (B \cup C) & = \{x:x \in A \land x \in (B \cup C) \} && \text{definition of interesection}\\
+                      & = \{x:x \in A \land (x \in B \lor x \in C\} && \text{definition of union} \\
+                      & = \{x: (x \in A \land x\in B) \lor (x \in A \land x \in C)\} && \text{distributive law} \\
+                      & = \{x: (x \in A \cap B) \lor (x \in A \cap C)\} && \text{definition of intersection} \\
+                      & = (A \cap B) \cup (A \cap C) && \text{definition of union}
+  \end{align*}
+  Thus completing the proof.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[10] If $A$ and $B$ are sets in a universal set $U$, then $\overline{A\cap B}=\overline A\cup \overline B$.
-\begin{proof}
-Write your answer here.
+\begin{proof} Observe the following:
+  \begin{align*}
+    \overline{A \cap B} &= U - (A \cap B) && \text{definition of compliment} \\
+                        &= \{x : (x \in U) \land (x \notin A \cap B) && \text{definition of negation} \\
+                        &= \{x : (x \in U) \land \neg ((x \in A) \land (x \in B)) && \text{definition of interesection} \\
+                        &= \{x : (x \in U) \land (\neg(x \in A) \lor \neg(x \in B)) && \text{demorgans law} \\
+                        &= \{x : (x \in U) \land (x \in U) \land ((x \notin A) \lor (x \notin B)) && (x \in U) = (x\in U) \land (x \in U) \\
+                        &= \{x : (x \in U) \land ((x \notin A) \lor (x \in U) \land (x \notin B)) && \text{regroup} \\
+                        &= \{x : (x \in U) \land ((x \notin A)\} \cup \{x: (x \in U) \land (x \notin B)\} && \text{definition of union} \\
+                        &= (U - A) \cup (U - B) && \text{definition of negation} \\
+                        &= \overline{A} \cup \overline{B} && \text{definition of compliment}
+  \end{align*}
+  Thus completing the proof.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[14] If $A,B$ and $C$ are sets, then $(A\cup B)-C=(A-C)\cup (B-C)$.
-\begin{proof}
-Write your answer here.
+\begin{proof} Observe the following:
+  \begin{align*}
+    (A \cup B) - C &= \{x: (x \in a \lor x \in B) \land x \notin C \} && \text{def of union and negation} \\ 
+                   &= \{x: (x \in a) \land (x \notin C) \lor (x \in B) \land (x \notin C) \} && \text{regroup} \\
+                   &= \{x: ((x \in a) \land (x \notin C)) \lor ((x \in B) \land (x \notin C)) \} && \text{regroup} \\ 
+                   &= \{x: ((x \in a) \land (x \notin C))\} \cup \{x: ((x \in B) \land (x \notin C)) \} && \text{definition of union} \\
+                   &= (A - C) \cup (B - C) && \text{definition of negation}
+  \end{align*}
+  Thus completing the proof.
 \end{proof}
 \end{exercise}
 
@@ -190,19 +215,19 @@ Write your answer here.
 \begin{itemize}
 \item How long did it take you to complete each problem? What part of the assignment took the most time? Why?
 \begin{proof}[Response]
-Write your answer here.
+This one went rather smoothly, a couple of minutes at most for each. The ones that took the most time were the last problems in chapter 8 due to formatting and writing it all out.
 \end{proof}
 \item What was easy for you? Why do you think that was so?
 \begin{proof}[Response]
-Write your answer here.
+Anything involving existence proofs felt really easy, felt like a little dopamine boost. Probably the most relaxing in a newspaper puzzle sort of way but perhaps thats the ultimate aim. To have it all feel that relaxing.
 \end{proof}
 \item What was challenging for you? What made it challenging?
 \begin{proof}[Response]
-Write your answer here.
+That proof involving greatest common divisors(problem 31) weirdly enough, I got hung up on it and my solution differs from the one in the back of the book. Perhaps I'm missing something but I feel like my logic was good albeit simple. I'd like to know why my solution wouldn't work if it doesn't so I stuck to my initial solution. 
 \end{proof}
 \item Compare your answers to the odd numbered exercises to those in the back of the textbook. What did you learn from this comparison?
 \begin{proof}[Response]
-Write your answer here.
+I'm not sure this time around to be honest, I'm starting to grow skeptical about whether I should even be consulting them. The most helpful solutions this time around I felt were for the problems that weren't on the assignment as it demonstrated how one should present. For example, 10 and 14 are very similar problems to 11 and 15.
 \end{proof}
 \end{itemize}
 
