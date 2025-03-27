@@ -102,7 +102,7 @@
 \chead{MATH 265F}
 \pagestyle{fancy}
 %Modify these items:
-\rhead{\emph{Your Full Name Here}}
+\rhead{\emph{Christopher Munoz}}
 \lhead{\emph{HW \#9}}
 
 \begin{document}
@@ -112,11 +112,21 @@
 \section*{Chapter 8} Prove the following statements.
 %§8 16, 22, 26.
 \begin{exercise}[16] If $A,B$ and $C$ are sets, then $A\times (B\cup C)=(A\times B)\cup (A\times C)$.
-\begin{proof}
+\begin{proof} Observe the following sequence of equalities:
+  \begin{align*}
+    A \times (B \cup C) & = \{(x,y):(x \in A) \land (y \in B \cup C)\} &&& (\text{def. of } \times)  \\
+                        & = \{(x,y):(x \in A) \land (y \in B) \lor (y \in C)\} &&& (\text{def. of } \cup)\\
+                        & = \{(x,y):(x \in A) \land (x \in A) \land ( y \in B) \lor (y \in C)\} &&& (A = A \land A) \\
+                        & = \{(x,y):(x \in A) \land (y \in B) \lor (x \in A) \land (y \in C)\} &&&  (\text{distrib, law for sets})\\ %distrib law for sets
+                        & = \{(x,y):(x \in A) \land (y  \in B)\} \cup \{(x,y): (x \in A) \land (y \in C)\} &&& (\text{def. of } \cup)\\
+                        & = (A \times B) \cup (A \times C) &&& (\text{def. of } \times)
+  \end{align*}
+  Thus completes the proof.
 \end{proof}
 \end{exercise}
 \begin{exercise}[22] Let $A$ and $B$ be sets. Prove that $A\subseteq B$ if and only if $A\cap B=A$.
 \begin{proof}%[Solution]
+
 \end{proof}
 \end{exercise}
 

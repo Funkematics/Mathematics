@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743034228.1508 "Homework9.tex" "build/Homework9.pdf" "Homework9" 1743034228.41697 0
+["pdflatex"] 1743040704.01316 "Homework9.tex" "build/Homework9.pdf" "Homework9" 1743040704.27905 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -133,9 +133,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1740469235.71723 39447 2134d78a2da0cee52270db0ec417a200 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740469224.94382 327964 66947494ae0b30df692aba42aa1c43ce ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740469205 6800595 69d9fb263956deba8491ea26f3edc411 ""
-  "Homework9.tex" 1743034224.39544 5910 79b12c3cdf45c28928c270cb2495da64 ""
-  "build/Homework9.aux" 1743034228.37881 525 6deacb5d07194e7edbaa90c39465a68e "pdflatex"
-  "build/Homework9.out" 1743034228.37881 184 1982e50c2eee966c8c850022876d9ad9 "pdflatex"
+  "Homework9.tex" 1743040702.38413 6726 f93c63406784e0e6ebd9b62d54f16764 ""
+  "build/Homework9.aux" 1743040704.23748 525 6deacb5d07194e7edbaa90c39465a68e "pdflatex"
+  "build/Homework9.out" 1743040704.23748 184 1982e50c2eee966c8c850022876d9ad9 "pdflatex"
   (generated)
   "build/Homework9.aux"
   "build/Homework9.log"

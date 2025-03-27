@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  26 MAR 2025 16:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  26 MAR 2025 17:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -609,6 +609,10 @@ Package hyperref Info: Link coloring OFF on input line 108.
 
 Package xypdf Info: Line width: 0.47998pt on input line 108.
 
+Overfull \hbox (34.35115pt too wide) detected at line 123
+[]
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (8.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -645,10 +649,10 @@ Package rerunfilecheck Info: File `Homework9.out' has not changed.
 (rerunfilecheck)             Checksum: 1982E50C2EEE966C8C850022876D9AD9;184.
  ) 
 Here is how much of TeX's memory you used:
- 14109 strings out of 476182
- 202161 string characters out of 5796232
- 1939975 words of memory out of 5000000
- 35713 multiletter control sequences out of 15000+600000
+ 14111 strings out of 476182
+ 202217 string characters out of 5796232
+ 1945975 words of memory out of 5000000
+ 35715 multiletter control sequences out of 15000+600000
  567459 words of font info for 80 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
  75i,11n,79p,3241b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -659,7 +663,7 @@ c/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr
 /share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on build/Homework9.pdf (2 pages, 86827 bytes).
+Output written on build/Homework9.pdf (2 pages, 88387 bytes).
 PDF statistics:
  66 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
