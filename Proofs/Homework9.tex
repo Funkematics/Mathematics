@@ -1,0 +1,200 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage[all]{xy}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some shortcuts helpful for our assignments
+\newcommand{\bx}{\begin{exercise}}
+\newcommand{\ex}{\end{exercise}}
+
+%Some useful shortcuts for our favorite sets of numbers.
+%Note, you can use these WITHOUT entering math mode
+\def\RR{\ensuremath{\mathbb R}} 
+\def\NN{\ensuremath{\mathbb N}}
+\def\ZZ{\ensuremath{\mathbb Z}}
+\def\QQ{{\ensuremath\mathbb Q}}
+\def\CC{\ensuremath{\mathbb C}}
+\def\EE{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Code for formatting the proofs a little nicer for submitted homework
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par\doublespacing
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \list{}{%
+    \settowidth{\leftmargin}{\itshape\proofname:\hskip\labelsep}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\itemindent}{-\leftmargin}%
+  }%
+  \item[\hskip\labelsep\itshape#1\@addpunct{:}]\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+  \singlespacing
+}
+\makeatother
+
+
+%Commenting tools for the professor
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH 265F}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Your Full Name Here}}
+\lhead{\emph{HW \#9}}
+
+\begin{document}
+
+\thispagestyle{fancy}
+
+\section*{Chapter 8} Prove the following statements.
+%§8 16, 22, 26.
+\begin{exercise}[16] If $A,B$ and $C$ are sets, then $A\times (B\cup C)=(A\times B)\cup (A\times C)$.
+\begin{proof}
+\end{proof}
+\end{exercise}
+\begin{exercise}[22] Let $A$ and $B$ be sets. Prove that $A\subseteq B$ if and only if $A\cap B=A$.
+\begin{proof}%[Solution]
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[26] Prove that $\{4k+5:k\in\ZZ\}=\{4k+1:k\in\ZZ\}$.
+\begin{proof}%[Solution]
+\end{proof}
+\end{exercise}
+\section*{Chapter 9}
+
+Each of the following statements is either true or false. If a statement is true, prove
+it. If a statement is false, disprove it. 
+%§9 3, 5, 8, 9, 12, 30, 34.
+\begin{exercise}[3] If $n\in \ZZ$ and $n^{5}-n$ is even, then $n$ is even.
+\begin{proof}%[Solution]
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5] If $A, B, C$ and $D$ are sets, then $(A\times B)\cup(C\times D)=(A\cup C)\times (B\cup D)$.
+\begin{proof}%[Solution]
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[8] If $A, B$ and $C$ are sets, and $A-(B\cup C)=(A-B)\cup (A-C)$.
+\begin{proof}%[Solution]
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[9] If $A$ and $B$ are sets, then $\mc P(A)-\mc P(B)\subseteq \mc P(A\setminus B)$.
+\begin{proof}%[Solution]
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[12] If $a,b,c\in\NN$ and $ab, bc$ and $ac$ all have the same parity, then $a,b$ and $c$ all have the same parity.
+\begin{proof}%[Solution]
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[30] There exist integers $a$ and $b$ for which $42a+7b=1$.
+\begin{proof}%[Solution]
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[34] If $X\subseteq A\cup B$, then $X\subseteq A$ or $X\subseteq B$.
+\begin{proof}%[Solution]
+\end{proof}
+\end{exercise}
+
+
+
+\begin{exercise}[Reflection Problem]
+Answer the following questions:
+
+
+\begin{proof} \ 
+
+
+\begin{itemize}
+\item How long did it take you to complete each problem? 
+
+Write your answer here.
+\item What was easy?
+
+Write your answer here.
+\item What was challenging? What made it challenging?
+
+Write your answer here.
+\item Compare your answers to the odd numbered exercises to those in the back of the textbook. What did you learn from this comparison?
+
+Write your answer here.
+\end{itemize}\end{proof}
+\end{exercise}
+
+
+
+
+
+
+
+
+
+ \end{document} 
