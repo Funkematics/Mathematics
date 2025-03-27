@@ -126,12 +126,16 @@
 \end{exercise}
 \begin{exercise}[22] Let $A$ and $B$ be sets. Prove that $A\subseteq B$ if and only if $A\cap B=A$.
 \begin{proof}%[Solution]
-
+Suppose $A \subseteq B$. Then by definition, for an arbitrary $x \in A$, then $x \in B$. Since $x \in A$ and $x \in B$ then by definition of the intersection of sets, $x \in A \cap B$. Given that $x \in A \cap B$ and $x \in A$, it follows that $A \cap B \subseteq A$. Furthermore $A \subseteq A \cap B$ since all elements $A$ are in $A \cap B$ as $B$ is a superset of $A$. Thus if $A \subseteq B$ then $A \cap B = A$. \\
+Conversely if we suppose $A \cap B = A$, then there exists $x \in A$ and $x \in B$ such that all elements of $A$ are in $B$. Thus $ A \subseteq B$. 
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[26] Prove that $\{4k+5:k\in\ZZ\}=\{4k+1:k\in\ZZ\}$.
 \begin{proof}%[Solution]
+Suppose $x \in \{4k + 5: k \in \ZZ\}$. Then $x = 4a + 5$ for some $a \in \ZZ$. From this we get $x = 4(a + 1) + 1$. So $x = 4k + 1$ where $k = (a + 1)$ and $k \in \ZZ$ by closure properties of the integers. Hence $x \in \{4k+1:k\in\ZZ\}$. Subseqentially this means $\{4k + 5:k \in \ZZ\} \subseteq \{4k+1:k\in\ZZ\}$ \\
+Conversely, suppose $x \in \{4k+1:k\in\ZZ\}$. Then $x = 4a + 1$ for some $a \in \ZZ$. If we let $a = b+1$, where $b \in \ZZ$, then we get $x = 4(b+1) + 1 = 4b + 5$. So $x \in \{4k+5:k\in\ZZ\}$. Thus $\{4k+1:k\in\ZZ\} \subseteq \{4k+5:k\in\ZZ\}$. \\
+Since we established that $\{4k+5:k\in\ZZ\} \subseteq \{4k+1:k\in\ZZ\}$ and $\{4k + 1: k \in \ZZ\} \subseteq \{4k+5: k \in \ZZ \}$. By definition of equality $\{4k+5:k\in\ZZ\}=\{4k+1:k\in\ZZ\}.$
 \end{proof}
 \end{exercise}
 \section*{Chapter 9}
@@ -141,6 +145,7 @@ it. If a statement is false, disprove it.
 %§9 3, 5, 8, 9, 12, 30, 34.
 \begin{exercise}[3] If $n\in \ZZ$ and $n^{5}-n$ is even, then $n$ is even.
 \begin{proof}%[Solution]
+
 \end{proof}
 \end{exercise}
 
