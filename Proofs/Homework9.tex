@@ -117,7 +117,7 @@
     A \times (B \cup C) & = \{(x,y):(x \in A) \land (y \in B \cup C)\} &&& (\text{def. of } \times)  \\
                         & = \{(x,y):(x \in A) \land (y \in B) \lor (y \in C)\} &&& (\text{def. of } \cup)\\
                         & = \{(x,y):(x \in A) \land (x \in A) \land ( y \in B) \lor (y \in C)\} &&& (A = A \land A) \\
-                        & = \{(x,y):(x \in A) \land (y \in B) \lor (x \in A) \land (y \in C)\} &&&  (\text{distrib, law for sets})\\ %distrib law for sets
+                        & = \{(x,y):(x \in A) \land (y \in B) \lor (x \in A) \land (y \in C)\} &&&  (\text{distrib. law for sets})\\ %distrib law for sets
                         & = \{(x,y):(x \in A) \land (y  \in B)\} \cup \{(x,y): (x \in A) \land (y \in C)\} &&& (\text{def. of } \cup)\\
                         & = (A \times B) \cup (A \times C) &&& (\text{def. of } \times)
   \end{align*}
@@ -127,13 +127,13 @@
 \begin{exercise}[22] Let $A$ and $B$ be sets. Prove that $A\subseteq B$ if and only if $A\cap B=A$.
 \begin{proof}%[Solution]
 Suppose $A \subseteq B$. Then by definition, for an arbitrary $x \in A$, then $x \in B$. Since $x \in A$ and $x \in B$ then by definition of the intersection of sets, $x \in A \cap B$. Given that $x \in A \cap B$ and $x \in A$, it follows that $A \cap B \subseteq A$. Furthermore $A \subseteq A \cap B$ since all elements $A$ are in $A \cap B$ as $B$ is a superset of $A$. Thus if $A \subseteq B$ then $A \cap B = A$. \\
-Conversely if we suppose $A \cap B = A$, then there exists $x \in A$ and $x \in B$ such that all elements of $A$ are in $B$. Thus $ A \subseteq B$. 
+Conversely if we suppose $A \cap B = A$, then for all $x \in A$, $x \in A \cap B$, so $x \in B$. Thus $ A \subseteq B$. 
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[26] Prove that $\{4k+5:k\in\ZZ\}=\{4k+1:k\in\ZZ\}$.
 \begin{proof}%[Solution]
-Suppose $x \in \{4k + 5: k \in \ZZ\}$. Then $x = 4a + 5$ for some $a \in \ZZ$. From this we get $x = 4(a + 1) + 1$. So $x = 4k + 1$ where $k = (a + 1)$ and $k \in \ZZ$ by closure properties of the integers. Hence $x \in \{4k+1:k\in\ZZ\}$. Subseqentially this means $\{4k + 5:k \in \ZZ\} \subseteq \{4k+1:k\in\ZZ\}$ \\
+Suppose $x \in \{4k + 5: k \in \ZZ\}$. Then $x = 4a + 5$ for some $a \in \ZZ$. From this we get $x = 4(a + 1) + 1$. So $x = 4k + 1$ where $k = (a + 1)$ and $k \in \ZZ$ by closure properties of the integers. Hence $x \in \{4k+1:k\in\ZZ\}$. Subsequently this means $\{4k + 5:k \in \ZZ\} \subseteq \{4k+1:k\in\ZZ\}$ \\
 Conversely, suppose $x \in \{4k+1:k\in\ZZ\}$. Then $x = 4a + 1$ for some $a \in \ZZ$. If we let $a = b+1$, where $b \in \ZZ$, then we get $x = 4(b+1) + 1 = 4b + 5$. So $x \in \{4k+5:k\in\ZZ\}$. Thus $\{4k+1:k\in\ZZ\} \subseteq \{4k+5:k\in\ZZ\}$. \\
 Since we established that $\{4k+5:k\in\ZZ\} \subseteq \{4k+1:k\in\ZZ\}$ and $\{4k + 1: k \in \ZZ\} \subseteq \{4k+5: k \in \ZZ \}$. By definition of equality $\{4k+5:k\in\ZZ\}=\{4k+1:k\in\ZZ\}.$
 \end{proof}
@@ -145,13 +145,13 @@ it. If a statement is false, disprove it.
 %§9 3, 5, 8, 9, 12, 30, 34.
 \begin{exercise}[3] If $n\in \ZZ$ and $n^{5}-n$ is even, then $n$ is even.
 \begin{proof}%[Solution]
-  (Disproof by counterexample) Let $n = 3$, we know that $3$ is an odd number. Observe that $n^5 - n = 3^5 + 3 = 243 - 3 = 240$ which is an even number. Thus the statement is false. 
+  (Disproof by counterexample) Let $n = 3$, we know that $3$ is an odd number. Observe that $n^5 - n = 3^5 - 3 = 243 - 3 = 240$ which is an even number. Thus the statement is false. 
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[5] If $A, B, C$ and $D$ are sets, then $(A\times B)\cup(C\times D)=(A\cup C)\times (B\cup D)$.
 \begin{proof}%[Solution]
-  (Disproof by counterexample) Suppose $A = \{a\}, B = \{b\}, C = \{c\}$ and $D = \{d\}$. Then $(A \times B) \cup (C \times D) = \{(a,b)\} \cup \{(c,d)\} = \{(a,b),(b,c)\}$. Also $(A \cup C) \times (B \cup D) = \{(a,c)\} \times \{(b,d)\} = \{(a,b),(a,d),(c,b),(c,d)\}$, so you see that $(A\times B)\cup(C\times D) \neq (A\cup C)\times (B\cup D)$.
+  (Disproof by counterexample) Suppose $A = \{a\}, B = \{b\}, C = \{c\}$ and $D = \{d\}$. Then $(A \times B) \cup (C \times D) = \{(a,b)\} \cup \{(c,d)\} = \{(a,b),(c,d)\}$. Also $(A \cup C) \times (B \cup D) = \{(a,c)\} \times \{(b,d)\} = \{(a,b),(a,d),(c,b),(c,d)\}$, so you see that $(A\times B)\cup(C\times D) \neq (A\cup C)\times (B\cup D)$.
 \end{proof}
 \end{exercise}
 
@@ -175,13 +175,13 @@ Thus $A - (B\cup C) = \{a,b,c\} - \{b,c\} = \{a\}$ and $(A-B) \cup (A - C) = \{a
 
 \begin{exercise}[12] If $a,b,c\in\NN$ and $ab, bc$ and $ac$ all have the same parity, then $a,b$ and $c$ all have the same parity.
 \begin{proof}%[Solution]
-  (Direct) Suppose $ab, bc$ and $ac$ all have the same parity. We know that the product of 2 numbers will only be odd if both numbers are odd. Thus if $ab, bc$ and $ac$ are odd, then $a,b$ and $c$ must be odd. On the other hand we know that the product of an even and an odd number will be even and the product of an even and an even number is even. So for $ab, bc$ and $ac$ to share even parity, there must be at least 1 even number in each product. If we suppose $a$ is even, then $ab$ and $ac$ are even, for $bc$ to be even, $b$ or $c$ must be even. Now if we suppose that $a$ is odd then $b$ and $c$ must be even. This implies that $a,b,c$ must be even. In either case if $ab, bc$ and $ac$ share the same parity then so must $a,b$ and $c$.
+  (Direct) Suppose $ab, bc$ and $ac$ all have the same parity. We know that the product of 2 numbers will only be odd if both numbers are odd. Thus if $ab, bc$ and $ac$ are odd, then $a,b$ and $c$ must be odd. On the other hand we know that the product of an even and an odd number will be even and the product of an even and an even number is even. So for $ab, bc$ and $ac$ to share even parity, there must be at least 1 even number in each product. If we suppose $a$ is even, then $ab$ and $ac$ are even, for $bc$ to be even, $b$ or $c$ must be even. If we suppose $a$ is odd, then $ab$ needs $b$ to be even and $ac$ needs $c$ to be even. This implies that $a,b,c$ must be even. In either case if $ab, bc$ and $ac$ share the same parity then so must $a,b$ and $c$.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[30] There exist integers $a$ and $b$ for which $42a+7b=1$.
 \begin{proof}%[SolutionR
-  (Disproof by contradiction) Suppose for the sake of contradiction that there is some $a,b \in \ZZ$ for which $42a+7b=1$. Observe that $42a + 7b = 7(6a + b) = 1$, so $7k =1$ where $k = 6a + b$ and $k \in \ZZ$ by closure properties of the integers. Solving for $k$ in $7k = 1$ gives $k = \frac{1}{7}$, a contradiction as $k$ is an integer. This further implies that $a$ or $b$ must be a rational number to satisfy $k = \frac{1}{7} = 6a + b$ Thus there is no $a,b \in \ZZ $ that satisfies $42a + 7b = 1$.
+  (Disproof by contradiction) Suppose for the sake of contradiction that there is some $a,b \in \ZZ$ for which $42a+7b=1$. Observe that $42a + 7b = 7(6a + b) = 1$, so $7k =1$ where $k = 6a + b$ and $k \in \ZZ$ by closure properties of the integers. Solving for $k$ in $7k = 1$ gives $k = \frac{1}{7}$, a contradiction as $k$ is an integer. Thus there is no $a,b \in \ZZ $ that satisfies $42a + 7b = 1$.
 \end{proof}
 \end{exercise}
 
@@ -201,18 +201,18 @@ Answer the following questions:
 
 
 \begin{itemize}
-\item How long did it take you to complete each problem? 
+\item How long did it take you to complete each problem? \\
+  This one took a few minutes on each one, been trying to get better and fixing typos and errors. Didn't take long to do these.
 
-Write your answer here.
-\item What was easy?
+\item What was easy?\\
+The disproofs were pretty easy since I just needed to find counterexamples and I could just find really simple ones.
 
-Write your answer here.
-\item What was challenging? What made it challenging?
+\item What was challenging? What made it challenging? \\
+Probably number 12 in chapter 9 just because I had to figure out how I was even going to write this out in a convincing way. I'm not even entirely convinced by my own argument. Partly its avoiding having to exhaust all cases by writing out $2k+1$'s and $2n$'s but maybe I should have. Also worried about abbreviating stuff in the first problem, I was running out of space on the aligns. Some of my converse arguments feel not satisfying like in 22 in chapter 8 but I was drawing a blank on how I could flesh that out.
 
-Write your answer here.
-\item Compare your answers to the odd numbered exercises to those in the back of the textbook. What did you learn from this comparison?
+\item Compare your answers to the odd numbered exercises to those in the back of the textbook. What did you learn from this comparison? \\
+I've gotten a bit inspired by some of the answers in the back, again a lot of the ones that weren't on the assignment helped inform how I should write the proof for the ones that we're in the assignment.
 
-Write your answer here.
 \end{itemize}\end{proof}
 \end{exercise}
 
