@@ -178,12 +178,27 @@ Therefore, by principle of mathematical induction, $1\cdot 2+2\cdot 3+3\cdot 4+\
 
 \begin{exercise}[8] If $n\in\NN$, then $\frac{1}{2!}+\frac{2}{3!}+\frac{3}{4!}+\cdots+\frac{n}{(n+1)!}=1-\frac{1}{(n+1)!}$.
 \begin{proof}%[Solution]
+  Let $P(n)$ be the statement $\frac{1}{2!}+\frac{2}{3!}+\frac{3}{4!}+\cdots+\frac{n}{(n+1)!}=1-\frac{1}{(n+1)!}$ \\
+  \underline{Base Case:} Observe that when $n = 1$, that $P(n) = \frac{1}{((1)+1)!} = \frac{1}{2!} = \frac{1}{2} = 1 - \frac{1}{((1) + 1!)}$. So $P(1)$ is true. \\
+  \underline{Induction Hypothesis:} Suppose that for some $n = k \geq 1$, where $k \in \NN$ that $P(k)$ is correct. That is to say $\frac{1}{2!} + \frac{2}{3!} + \frac{3}{4!} + \cdots + \frac{k}{(k+1)!} = 1 - \frac{1}{(k+1)!}$. We want to show that $P(k+1)$ holds.\\
+  \underline{Inductive step:} Observe that when $n = k+1$ that \\
+  \begin{align*}
+    P(n) &= \frac{1}{2!} + \frac{2}{3!} + \frac{3}{4!} + \cdots + \frac{(k+1)}{((k+1)+1)!} \\
+         &= \frac{1}{2!} + \frac{2}{3!} + \frac{3}{4!} + \cdots + \frac{k}{(k+1)!} + \frac{(k+1)}{((k+1)+1)!}  \\
+         &= \biggl(\frac{1}{2!} + \frac{2}{3!} + \frac{3}{4!} + \cdots + \frac{k}{(k+1)!}\biggr) + \frac{(k+1)}{((k+1)+1)!}  \\
+         &= 1 - \frac{1}{(k+1)!} + \frac{(k+1)}{((k+1)+1)!}  \\
+         &= 1 - \frac{((k+1)+1)}{((k+1)+1)!} + \frac{(k+1)}{((k+1)+1)!} \\
+         &= 1 - \frac{1}{((k+1)+1)!}
+  \end{align*}
+  Thus by induction we have shown $P(n) = 1 - \frac{1}{(n+1)!}$ is true for all $n \in \NN$.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[10] Prove that $3\mid(5^{2n}-1)$ for every integer $n\ge 0$.
 \begin{proof}
-Write your answer here.
+  \underline{Base Case:} \\
+  \underline{Induction Hypothesis:} \\
+  \underline{Inductive Step:} \\
 \end{proof}
 \end{exercise}
 
