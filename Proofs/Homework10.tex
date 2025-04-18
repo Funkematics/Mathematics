@@ -196,8 +196,9 @@ Therefore, by principle of mathematical induction, $1\cdot 2+2\cdot 3+3\cdot 4+\
 
 \begin{exercise}[10] Prove that $3\mid(5^{2n}-1)$ for every integer $n\ge 0$.
 \begin{proof}
-  \underline{Base Case:} \\
-  \underline{Induction Hypothesis:} \\
+  We will prove via induction on $n$. \\
+  \underline{Base Case:} Consider the case where $n=0$. Observe that $(5^{2n} -1) = (5^{2(0)} - 1) =( 5^0 - 1) =( 1 - 1) = 0$. So we have $3 \mid 0$ which is true.  \\
+  \underline{Induction Hypothesis:} Now suppose the statement is true for some $n = k \geq 0$, that is to say $ 3 \mid (5^{2k} - 1)$\\
   \underline{Inductive Step:} \\
 \end{proof}
 \end{exercise}
