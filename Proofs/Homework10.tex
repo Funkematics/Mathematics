@@ -209,13 +209,22 @@ Therefore, by principle of mathematical induction, $1\cdot 2+2\cdot 3+3\cdot 4+\
                  &= 25(24a) + 24 \\
                  &= 3(25(8a) + 8)
   \end{align*}
-  This shows that $5^{2(k+1)} - 1 = 3(25(8a) + 8)$, which means $3 \mid (5^{2(k+1)} - 1)$. Thus $3 \mid (5^{2n} - 1)$ for all $n \in \ZZ$.
+  This shows that $5^{2(k+1)} - 1 = 3(25(8a) + 8)$, which means $3 \mid (5^{2(k+1)} - 1)$. Thus by induction, $3 \mid (5^{2n} - 1)$ for all $n \in \ZZ$.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[13] Prove that $6\mid(n^{3}-n)$ for every integer $n\ge 0$.
 \begin{proof}
-Write your answer here.
+  \underline{Base Case:} Consider the case where $n = 0$. Observe that $6\mid(n^{3}-n) = 6\mid((0)^3 - (0)) = 6 \mid 0$ which is true.  \\
+  \underline{Induction Hypothesis:} Assume the statement is true for $n = k \geq 0$. That is to say that $6\mid(k^{3}-k)$. This means that $k^3 - k = 6a$ for some $a \in \ZZ$. We want to show the statement is true for $n = k + 1$, that is to say $6 \mid ((k+1)^3 - (k+1))$.\\
+  \underline{Induction Step:} Observe that
+  \begin{align*}
+    (k+1)^3 - (k+1) &= k^3 + 3k^2 + 3k + 1 - k - 1 \\
+                    &= (k^3 - k) + 3k^2 + 3k \\
+                    &= 6a + 3k^2 + 3k  \\
+                    &= 6a + 3k(k+1).
+  \end{align*}
+  Since one of $k$ or $(k+1)$ must be even, it follows that $k(k+1)$ is even. Thus $k(k+1) = 2b$ for some $b \in \ZZ$.
 \end{proof}
 \end{exercise}
 
