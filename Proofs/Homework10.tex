@@ -269,19 +269,50 @@
     2 - \frac{n^2 + n + 1}{n(n+1)^2} &\leq \\
   \end{align*}
   So the statement holds for $P(n+1)$ as $ 2 - \frac{n^2 + n + 1}{n(n+1)^2} \leq 2 - \frac{n^2 + n}{n(n+1)^2} = 2 - \frac{1}{(n+1)}$. \\
-  \underline{Conclusion:} Thus the $P(n)$ holds for every $n \in \NN$, concluding our proof by induction.
+  \underline{Conclusion:} Thus $P(n)$ holds for every $n \in \NN$, concluding our proof by induction.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[22] If $n\in\NN$, then $$\left(1-\frac{1}{2}\right)\left(1-\frac{1}{4}\right)\left(1-\frac{1}{8}\right)\left(1-\frac{1}{16}\right)\cdots\left(1-\frac{1}{2^{n}}\right)\ge \frac{1}{4}+\frac{1}{2^{n+1}}.$$
 \begin{proof}
-Write your answer here.
+  Let $P(n)$ be the statement above as presented.
+  \underline{Base Case:} Consider that for $n=1$, we get $(1 - \frac{1}{2}) = \frac{1}{2} \geq \frac{1}{4} + \frac{1}{2^{((1) + 1)}} = \frac{1}{2}$ which is true. \\
+  \underline{Induction Hypothesis:} Let $n \geq 1$ and assume that $$\left(1-\frac{1}{2}\right)\left(1-\frac{1}{4}\right)\left(1-\frac{1}{8}\right)\left(1-\frac{1}{16}\right)\cdots\left(1-\frac{1}{2^{n}}\right)\ge \frac{1}{4}+\frac{1}{2^{n+1}}.$$. We want to show that our statement is true, that $$\left(1-\frac{1}{2}\right)\left(1-\frac{1}{4}\right)\left(1-\frac{1}{8}\right)\left(1-\frac{1}{16}\right)\cdots\left(1-\frac{1}{2^{(n+1)}}\right)\ge \frac{1}{4}+\frac{1}{2^{(n+1)+1}}.$$ \\
+  \underline{Induction Step:} Observe that $P(n+1)$ can be written as
+  \begin{align*}
+    \biggl[\left(1-\frac{1}{2}\right)\left(1-\frac{1}{4}\right)\left(1-\frac{1}{8}\right)\left(1-\frac{1}{16}\right)\cdots\left(1-\frac{1}{2^{n}}\right) \biggr] \biggl(1 - \frac{1}{2^{n+1}} \biggr) &\ge \biggl[\frac{1}{4}+\frac{1}{2^{n+1}}\biggr] \biggl(1 - \frac{1}{2^{n+1}} \biggr) 
+  \end{align*}
+  Rearranging the right hand side gives
+  \begin{align*}
+\biggl[\frac{1}{4}+\frac{1}{2^{n+1}}\biggr] \biggl(1 - \frac{1}{2^{n+1}} \biggr) 
+  &=\frac{1}{4} + (\frac{1}{4})(\frac{1}{2^{n+1}}) - \frac{1}{2^{n+1}} - (\frac{1}{2^{n+1}})(\frac{1}{2^{n+1}}) \\
+  &= \frac{1}{4} + \frac{1}{2^{n+1}}(1 - \frac{1}{4} - \frac{1}{2^{n+1}}) \\
+  &= \frac{1}{4} + \frac{1}{2^{n+1}}(\frac{3}{4} - \frac{1}{2^{n+1}})
+  \end{align*}
+  Because $n \leq 1$, it follows that $2^{1+1} \leq 2^{n+1}$. Furthermore the inverse of this inequality gives $\frac{1}{2^{n+1}} \leq \frac{1}{2^{1+1}} = \frac{1}{4}$. So
+  \begin{align*}
+  \frac{1}{4} + \frac{1}{2^{n+1}}(\frac{3}{4} - \frac{1}{2^{n+1}}) &\geq \frac{1}{4} + \frac{1}{2^{n+1}}(\frac{3}{4} - \frac{1}{4}) \\
+                                                                   &= \frac{1}{4} + \frac{1}{2^{n+1}}(\frac{1}{2}) \\
+                                                                   &= \frac{1}{4} + \frac{1}{2^{(n+1)+1}}
+  \end{align*}
+  Therefore $\biggl[\left(1-\frac{1}{2}\right)\left(1-\frac{1}{4}\right)\left(1-\frac{1}{8}\right)\left(1-\frac{1}{16}\right)\cdots\left(1-\frac{1}{2^{n}}\right) \biggr] \biggl(1 - \frac{1}{2^{n+1}} \biggr) \\ \ge \biggl[\frac{1}{4}+\frac{1}{2^{n+1}}\biggr] \biggl(1 - \frac{1}{2^{n+1}} \biggr) = \biggl[\frac{1}{4} + \frac{1}{2^{n+1}}(\frac{3}{4} - \frac{1}{2^{n+1}})\biggr]
+  \geq \biggl[\frac{1}{4} + \frac{1}{2^{(n+1)+1}}\biggr]$.\\ 
+\underline{Conclusion:} Hence by induction  $$\left(1-\frac{1}{2}\right)\left(1-\frac{1}{4}\right)\left(1-\frac{1}{8}\right)\left(1-\frac{1}{16}\right)\cdots\left(1-\frac{1}{2^{n}}\right)\ge \frac{1}{4}+\frac{1}{2^{n+1}}.$$ is true for all $n \in \NN$.
 \end{proof}
 \end{exercise}
-
-\begin{exercise}[25] Concerning the Fibonacci sequence, prove that $F_{1}+F_{2}+F_{3}+F_{4}+\cdots+F_{n}=F_{n+2}-1$.
+\break
+\begin{exercise}[25] Concerning the Fibonacci sequence, prove that $F_{1}+F_{2}+F_{3}+F_{4}+\cdots+F_{n}=F_{n+2}-1$ which is true.
 \begin{proof}
-Write your answer here.
+  \underline{Base Case:} Consider the case when $n = 1$, then $F_1 = F_{(1)+2} - 1 = F_3 - 1 = 2 - 1 = 1$, which is true. Now consider the case where $n = 2$, then $F_1 + F_2 = F_{2+2} - 1 = F_{4} - 1 = 3 - 1 = 2$, which is also true. \\
+  \underline{Induction Hypothesis:} Suppose the statement is true for some $n > k \geq 1$, that $F_1 + F_2 + F_3 + F_4 + ... + F_k = F_{k+2} -1$. We want to show that $F_1 + F_2 + F_3 + F_4 + ... + F_k + F_{k+1} = F_{k+3} - 1$. \\
+  \underline{Induction Step:} Now observe the following
+  \begin{align*}
+    F_1 + F_2 + F_3 + F_4 + ... + F_k + F_{k+1} &= \\
+    (F_1 + F_2 + F_3 + F_4 + ... + F_k) + F_{k+1} &= \\
+    F_{k+2} - 1 + F_{k+1} &= (F_{k+1} + F_{k+2}) - 1 \\
+                          &= F_{k+3} - 1.
+  \end{align*}
+\underline{Conclusion:} Thus we have shown that $F_1 + F_2 + F_3 + F_4 + ... + F_k + F_{k+1} = F_{k+3} - 1$, by induction $F_{1}+F_{2}+F_{3}+F_{4}+\cdots+F_{n}=F_{n+2}-1$ is true for all $n \in \ZZ$ where $n \geq 1$.
 \end{proof}
 \end{exercise}
 
