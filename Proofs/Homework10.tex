@@ -4,7 +4,6 @@
 %\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
 
 \usepackage[margin=1in]{geometry}
-
 \usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
 \usepackage[normalem]{ulem}
 \usepackage{setspace} %used for doublespacing, etc.
@@ -317,17 +316,37 @@
 \end{exercise}
 
 
-\begin{exercise}[30] Here $F_{n}$ is the $n$th Fibonacci number. Prove that $$F_{n}=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n}+\left(\frac{1-\sqrt{5}}{2}\right)^{n}}{\sqrt{5}}.$$
+\begin{exercise}[30] Here $F_{n}$ is the $n$th Fibonacci number. Prove that $$F_{n}=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}}{\sqrt{5}}.$$
 
 \emph{Hint:} There are multiple ways to do this... one is to use the fact that $a^{n-1}=\frac{a^{n}}{a}$, while others involve things like the fact if $\phi=\frac{1+\sqrt{5}}{2}$, then $\phi^{2}-\phi-1=0$.
 \begin{proof}
-Write your answer here.
+Let $P(n)$ be our statement $$F_{n}=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}}{\sqrt{5}}.$$\\
+\underline{Base Case:} For the case where $n = 1$, observe that the statement $P(n)$ holds, note that $F_1$ in the fibonacci sequence is $1$.  $$F_{1}=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{1}-\left(\frac{1-\sqrt{5}}{2}\right)^{1}}{\sqrt{5}}= \frac{\frac{2\sqrt{5}}{2}}{\sqrt{5}} = \frac{\sqrt{5}}{\sqrt{5}}=  1$$. \\
+\underline{Induction hypothesis:} Suppose $P(n)$ is true for $n \geq 1$, note that the Fibonacci numbers may be defined by the recurrence relation $F_n = F_{n-1} + F_{n-2}$. In particular, $F_{n+1} = F_{n} + F_{n-1}$ for $n > 1$. We want to show that $$F_{n+1} = \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}}{\sqrt{5}}$$  \\
+\underline{Induction Step:} Observe that
+\begin{align*}
+  F_{n+1} &=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}}{\sqrt{5}} + \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n-1}-\left(\frac{1-\sqrt{5}}{2}\right)^{n-1}}{\sqrt{5}} \\
+         &= \frac{1}{\sqrt{5}}\biggl[ \biggl(\frac{1+\sqrt{5}}{2}\biggr)^n \biggl( 1 + \frac{2}{1+ \sqrt{5}}\biggr) -   \biggl(\frac{1-\sqrt{5}}{2}\biggr)^n \biggl( 1 + \frac{2}{1- \sqrt{5}}\biggr)   \biggr] \\
+ &= \frac{1}{\sqrt{5}}\biggl[ \biggl(\frac{1+\sqrt{5}}{2}\biggr)^n \biggl( 1 + \frac{2}{1+ \sqrt{5}}\biggr) -   \biggl(\frac{1-\sqrt{5}}{2}\biggr)^n \biggl( 1 + \frac{2}{1- \sqrt{5}}\biggr)   \biggr] \\
+\end{align*}Note that $ \biggl( 1 + \frac{2}{1+ \sqrt{5}}\biggr)\biggl( \frac{1 - \sqrt{5}}{1-\sqrt{5}}\biggr) = \frac{1+\sqrt{5}}{2} $ and that $ \biggl( 1 + \frac{2}{1- \sqrt{5}}\biggr)\biggl( \frac{1 + \sqrt{5}}{1+\sqrt{5}}\biggr) = \frac{1-\sqrt{5}}{2} $, when we substitute in our equation we get 
+\begin{align*}
+        &= \frac{1}{\sqrt{5}} \biggl[ \biggl(\frac{1+\sqrt{5}}{2}\biggr)^n \biggl(\frac{1+\sqrt{5}}{2}\biggr)  - \biggl(\frac{1-\sqrt{5}}{2}\biggr)^n   \biggl(\frac{1-\sqrt{5}}{2}\biggr)\biggr] \\
+        &= \frac{1}{\sqrt{5}}\biggl[\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}\biggr] \\
+        &=  \frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}}{\sqrt{5}}.
+\end{align*}
+\underline{Conclusion:} So $P(n+1)$ holds, thus by induction we have proven that $P(n)$ is is true for all $n \in \ZZ$.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[33] Suppose $n$ (infinitely long) straight lines lie on a plane in such a way that no two of the lines are parallel, and no three of the lines intersect in a single point. Show that this arrangement divides the plane into $\frac{n^{2}+n+2}{2}$ regions.
 \begin{proof}
-Write your answer here.
+  \underline{Base Case:} For the case $n = 1$, where we have a single infinite line on a plane, the plane is divided in two. Substituting in our expression we get,  $\frac{1^{2}+1+2}{2} = \frac{4}{2} = 2$.  So the statement holds for $n = 1$. \\
+  \underline{Induction Hypothesis:} Suppose our statement is true for $n \geq 1$. We would like to show that the statement is true for $n+1$ lines. That is adding $n+1$ lines gives $\frac{(n+1)^2 + (n+1)^2 + 2}{2}$. \\
+  \underline{Induction Step:} Observe that adding $n+1$ lines to our original expression gives
+  \begin{align*}
+    (n+1) = \frac{n^{2}+n+2}{2} = \frac{2n + 2 + n^2 + n + 2}{2} = \frac{(n+1)^2 + (n+1)^2 + 2}{2}.
+  \end{align*}
+  \underline{Conclusion:} Thus the statement holds for $n+1$ lines. Thus by induction we conclude that the statement is true for any $n$ lines.(Sorry no pictures, had trouble getting tikz.)
 \end{proof}
 \end{exercise}
 
@@ -337,15 +356,19 @@ Write your answer here.
 \begin{itemize}
 \item How long did it take you to complete each problem? 
 \begin{proof}[Answer]
+  Waaaaaayy too long, I get held up in minor things, some of them philosophical, some of it more nuanced. But most of all it was the careful thinking and writnig out of the proofs. Lots of trial and error algebra were involved and some of wikipedia definitions for the fibonacci sequence. Starting to see what doing pure mathematics actually entails. I started out really slow, sometimes getting bogged down for days for the earlier problems, then it took hours, then it took minutes, and now I have some muscle memory for it. I fell so far behind its embarassing.
 \end{proof}
 \item What was easy?
 \begin{proof}[Answer]
+  It was hard at first, then it got easy as I got the hang of it, then the fibonacci stuff at the end made it hard again, then it became easy again.
 \end{proof}
 \item What was challenging? What made it challenging?
 \begin{proof}[Answer]
+  The time consuming nature of writing in TeX, the "figuring it out", induction didn't click right away for me, then it suddenly did.
 \end{proof}
 \item Compare your answers to the odd numbered exercises to those in the back of the textbook. What did you learn from this comparison?
 \begin{proof}[Answer]
+  I think I did pretty good all things considered
 \end{proof}
 \end{itemize}
 \end{exercise}.
