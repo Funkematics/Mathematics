@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1743928883.89773 "HW10-template-265.tex" "build/HW10-template-265.pdf" "HW10-template-265" 1743928884.19618 0
+["pdflatex"] 1745779453.11267 "HW10-template-265.tex" "build/HW10-template-265.pdf" "HW10-template-265" 1745779453.39831 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -139,8 +139,8 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740469224.94382 327964 66947494ae0b30df692aba42aa1c43ce ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740469205 6800595 69d9fb263956deba8491ea26f3edc411 ""
   "HW10-template-265.tex" 1743928823.31076 7028 2b5f3d44859656455d576b4e7be0c5e5 ""
-  "build/HW10-template-265.aux" 1743928884.14796 416 5b5ef3008733108dcf4f68fa4834bd0f "pdflatex"
-  "build/HW10-template-265.out" 1743928884.14796 97 0fbbf0b6edd8a035c6f63fe2530c5bea "pdflatex"
+  "build/HW10-template-265.aux" 1745779453.3512 416 5b5ef3008733108dcf4f68fa4834bd0f "pdflatex"
+  "build/HW10-template-265.out" 1745779453.3512 97 0fbbf0b6edd8a035c6f63fe2530c5bea "pdflatex"
   (generated)
   "build/HW10-template-265.aux"
   "build/HW10-template-265.log"

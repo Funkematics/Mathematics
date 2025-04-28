@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1741361858.38419 "Homework6.tex" "build/Homework6.pdf" "Homework6" 1741361858.71065 0
+["pdflatex"] 1745779449.94766 "Homework6.tex" "build/Homework6.pdf" "Homework6" 1745779450.23441 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -139,8 +139,8 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740469224.94382 327964 66947494ae0b30df692aba42aa1c43ce ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740469205 6800595 69d9fb263956deba8491ea26f3edc411 ""
   "Homework6.tex" 1741361852.22674 18449 5691fdc36f1e4f3270a1a59aba62844b ""
-  "build/Homework6.aux" 1741361858.65013 525 2962b18b323c50c7dfcfd702af894c59 "pdflatex"
-  "build/Homework6.out" 1741361858.65013 184 714d5721cf26440c7583db1f9296ff19 "pdflatex"
+  "build/Homework6.aux" 1745779450.1845 525 2962b18b323c50c7dfcfd702af894c59 "pdflatex"
+  "build/Homework6.out" 1745779450.18783 184 714d5721cf26440c7583db1f9296ff19 "pdflatex"
   (generated)
   "build/Homework6.aux"
   "build/Homework6.log"

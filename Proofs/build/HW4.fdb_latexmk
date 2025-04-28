@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1739366696.27785 "HW4.tex" "build/HW4.pdf" "HW4" 1739366697.03772 0
+["pdflatex"] 1745779455.68662 "HW4.tex" "build/HW4.pdf" "HW4" 1745779455.96793 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -131,12 +131,12 @@
   "/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657483315 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "/usr/share/texmf-dist/tex/latex/setspace/setspace.sty" 1670275497 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "/usr/share/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "/usr/share/texmf-dist/web2c/texmf.cnf" 1738079792.38487 39447 2134d78a2da0cee52270db0ec417a200 ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1738079757.57164 5316559 3e4e058317271e18a23697c561a59fc5 ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1738079745 6800598 a33ae0786524059bb4d5858bbec98ecc ""
-  "HW4.tex" 1739366693.67448 8932 517a9714cc21f67dbcf21db9430925d7 ""
-  "build/HW4.aux" 1739366696.92451 298 8a5568fcadf522f65cb89149c3d8670a "pdflatex"
-  "build/HW4.out" 1739366696.78118 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1740469235.71723 39447 2134d78a2da0cee52270db0ec417a200 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740469224.94382 327964 66947494ae0b30df692aba42aa1c43ce ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740469205 6800595 69d9fb263956deba8491ea26f3edc411 ""
+  "HW4.tex" 1740468576.99827 8932 517a9714cc21f67dbcf21db9430925d7 ""
+  "build/HW4.aux" 1745779455.92456 298 8a5568fcadf522f65cb89149c3d8670a "pdflatex"
+  "build/HW4.out" 1745779455.90789 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "build/HW4.aux"
   "build/HW4.log"

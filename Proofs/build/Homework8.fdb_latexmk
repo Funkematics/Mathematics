@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1742394206.36261 "Homework8.tex" "build/Homework8.pdf" "Homework8" 1742394206.64896 0
+["pdflatex"] 1745779451.25557 "Homework8.tex" "build/Homework8.pdf" "Homework8" 1745779451.53775 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -136,8 +136,8 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740469224.94382 327964 66947494ae0b30df692aba42aa1c43ce ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740469205 6800595 69d9fb263956deba8491ea26f3edc411 ""
   "Homework8.tex" 1742394205.10829 12461 eedae75f417af32c91ea0855e95e06fa ""
-  "build/Homework8.aux" 1742394206.60497 525 af78a889e452a94fd1c922e6208af582 "pdflatex"
-  "build/Homework8.out" 1742394206.60497 184 f6269cabb009215bb96d026edf42b2db "pdflatex"
+  "build/Homework8.aux" 1745779451.49118 525 af78a889e452a94fd1c922e6208af582 "pdflatex"
+  "build/Homework8.out" 1745779451.49118 184 f6269cabb009215bb96d026edf42b2db "pdflatex"
   (generated)
   "build/Homework8.aux"
   "build/Homework8.log"
