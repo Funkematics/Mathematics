@@ -1,0 +1,225 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage{cancel}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage[all]{xy}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some shortcuts helpful for our assignments
+\newcommand{\bx}{\begin{exercise}}
+\newcommand{\ex}{\end{exercise}}
+
+%Some useful shortcuts for our favorite sets of numbers.
+%Note, you can use these WITHOUT entering math mode
+\def\RR{\ensuremath{\mathbb R}} 
+\def\NN{\ensuremath{\mathbb N}}
+\def\ZZ{\ensuremath{\mathbb Z}}
+\def\QQ{{\ensuremath\mathbb Q}}
+\def\CC{\ensuremath{\mathbb C}}
+\def\EE{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Code for formatting the proofs a little nicer for submitted homework
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par\doublespacing
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \list{}{%
+    \settowidth{\leftmargin}{\itshape\proofname:\hskip\labelsep}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\itemindent}{-\leftmargin}%
+  }%
+  \item[\hskip\labelsep\itshape#1\@addpunct{:}]\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+  \singlespacing
+}
+\makeatother
+
+
+%Commenting tools for the professor
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH 265F}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Your Full Name Here}}
+\lhead{\emph{HW \#11 --- 4/10/24}}
+
+\begin{document}
+
+\thispagestyle{fancy}
+
+%§14.1 1, 3, 4, 12, 13.
+\section*{Section 14.1}
+Show that the two given sets have equal cardinality by describing a bijection from one to the other. Describe your bijection with a formula (not as a table).
+\begin{exercise}[1] $\RR$ and $(0,\infty)$.
+\begin{proof}[Solution]
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3] $\RR$ and $(0,1)$.
+\begin{proof}[Solution]
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[4] The set of even integers and the set of odd integers.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[12] $\NN$ and $\ZZ$ (SuggestionL: use Exercise 18 from \S12.2.)
+\begin{proof}[Solution]
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[13] $\mc P(\NN)$ and $\mc P(\ZZ)$. (Suggestion: use Exercise 12, above.)
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+%§14.2 1, 2, 7.
+\section*{Section 14.2}
+\begin{exercise}[1] Prove that the set $A=\{\ln(n):n\in \NN\}\subseteq \RR$ is countably infinite.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[2] Prove that the set $A=\{(m,n)\in\NN\times\NN:m\le n\}$ is countably infinite.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[7] Prove or disprove: The set $\QQ^{100}$ is countably infinite.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+%§14.3 1, 3, 7.
+\section*{Section 14.3}
+\begin{exercise}[1] Suppose $B$ is an uncountable set and $A$ is a set. Given that there is a surjective function $f:A\to B$, what can be said about the cardinality of $A$?
+\begin{proof}[Solution]
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+
+\begin{exercise}[3] Prove or disprove: If $A$ is uncountable, then $|A|=|\RR|$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[7] Prove or disprove: If $A\subseteq B$ and $A$ is countably infinite and $B$ is uncountable, then $B-A$ is uncountable.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+
+
+%§14.4 1, 2.
+\section*{Section 14.4}
+\begin{exercise}[1] Show that if $A\subseteq B$ and there is an injection $g:B\to A$, then $|A|=|B|$.
+\begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[2] Show that $|\RR^{2}|=|\RR|$. Suggestion: Begin by showing $|(0,1)\times(0,1)|=|(0,1)|$.
+ \begin{proof}
+Write your answer here.
+\end{proof}
+\end{exercise}
+
+
+%Reflection Problem
+\section*{Reflection}
+\begin{exercise}[Reflection Problem] \ 
+
+\begin{proof}[Answers] \ \\
+\begin{description}
+\item[How long did it take you to complete each problem?]
+\item[What was easy?]
+\item[What was challenging? What made it challenging?]
+\item[What did you learn from comparing your answers to those in the book?]
+\end{description}
+\end{proof}
+\end{exercise}.
+
+
+
+
+
+
+
+
+
+ \end{document} 
