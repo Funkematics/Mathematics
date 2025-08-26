@@ -126,19 +126,24 @@ Show that the two given sets have equal cardinality by describing a bijection fr
 
 \begin{exercise}[4] The set of even integers and the set of odd integers.
 \begin{proof}
-	Let $A = \{2k: k \in \ZZ\}$ and $B = \{2n+1:n \in \ZZ \}$
+	Let $A = \{2k: k \in \ZZ\}$ and $B = \{2n+1:n \in \ZZ \}$. Lets define our function $f: A \rightarrow B$ by $f(x) = x+1$. Suppose $f(x) = f(y)$. Then $x + 1 = y + 1$, so $x = y$. Thus $f$ is injective. Let $x = 2k \in \ZZ$, then $f(x) = f(2k) = 2k+1 = y$. Thus $f$ is surjective. Therefore $f$ is bijective and the set of even and odd integers share the same cardinality.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[12] $\NN$ and $\ZZ$ (SuggestionL: use Exercise 18 from \S12.2.)
 \begin{proof}[Solution]
-Write your answer here.
+Lets define our function $f : \NN \rightarrow \ZZ$ by 
+\begin{align*}
+  f(x) = \begin{cases} \frac{x}{2} & \text{if x is even,} \\ -\frac{n-1}{2} & \text{if n is odd}  \end{cases}
+\end{align*}
+Consider the cases where both are even, both are odd or one is even and one is odd. Suppose $x$ and $y$ are even, then $\frac{x}{2} = \frac{y}{2}$. $x = y$.
+Suppose $x$ and $y$ are odd, then $-\frac{x - 1}{2} = -\frac{y - 1}{2}$, so $x - 1 = y - 1$ meaning $x = y$. Suppose $x$ is even and $y$ is odd, then $\frac{x}{2} = -\frac{y - 1}{2}$. This leads to a contradiction as the left is non-negative and the right is negative unless we choose $x = 0$ and $y = 1$ in order to make both sides equal $0$ which is unique. Thus $f$ is injective. Since our even values $n = 2k$ maps to $k \geq 0$ and odd values $n = 2k + 1$ maps to $-k \leq 0$, the integers are all mapped. Thus $f$ is surjective meaning $f$ is bijective, $\NN$ and $\ZZ$ share the same cardinality.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[13] $\mc P(\NN)$ and $\mc P(\ZZ)$. (Suggestion: use Exercise 12, above.)
 \begin{proof}
-Write your answer here.
+  Define function $f: P(\NN) \rightarrow P(\ZZ)$ by $$f(A) = \{g(n): n \in \AA\}$$ where our $g(n)$ is the function from our previous exercise, proven to be bijective. If $f(A_1) = f(A_2)$, then $\{g(n):n \in A_1\} = \{g(n):n \in A_2\}$. Since we've shown $g$ was injective, $A_1 = A_2$ and $f$ is injective. For any $B \subseteq \ZZ$, let $ A = \{n \in \NN:g(n) \in B\}$. Then $f(A) = B$, since $g$ was proven to be surjective, $f$ has to be too in our case. Thus $f$ is bijective and $P(\NN)$ and $P(\ZZ)$ share the same cardinality.
 \end{proof}
 \end{exercise}
 
@@ -146,13 +151,27 @@ Write your answer here.
 \section*{Section 14.2}
 \begin{exercise}[1] Prove that the set $A=\{\ln(n):n\in \NN\}\subseteq \RR$ is countably infinite.
 \begin{proof}
-Write your answer here.
+The elements of the set can be written as an infinite list of $$\ln(1)\rightarrow\ln(2)\rightarrow\ln(3)\cdots$$. Thus $A$ is countably infinite.
 \end{proof}
 \end{exercise}
 
 \begin{exercise}[2] Prove that the set $A=\{(m,n)\in\NN\times\NN:m\le n\}$ is countably infinite.
 \begin{proof}
-Write your answer here.
+We need to show that A={(m,n)∈N×N:m≤n}A = \{ (m, n) \in \mathbb{N} \times \mathbb{N} : m \leq n \}A = \{ (m, n) \in \mathbb{N} \times \mathbb{N} : m \leq n \}
+ is countably infinite. First, observe that for each n∈Nn \in \mathbb{N}n \in \mathbb{N}
+, the pair (n,n)∈A(n, n) \in A(n, n) \in A
+, so ( A ) is infinite. To show ( A ) is countable, define a function f:A→Nf: A \to \mathbb{N}f: A \to \mathbb{N}
+ by ordering pairs such that $f(m,n)=(m+n−2)(m+n−1)2+mf(m, n) = \frac{(m + n - 2)(m + n - 1)}{2} + mf(m, n) = \frac{(m + n - 2)(m + n - 1)}{2} + m$
+ for$ m≤nm \leq nm \leq n$
+. Suppose $f(m1,n1)=f(m2,n2)f(m_1, n_1) = f(m_2, n_2)f(m_1, n_1) = f(m_2, n_2)$
+. Since this is the Cantor pairing function restricted to m≤nm \leq nm \leq n
+, each pair ( (m, n) ) maps to a unique natural number. Thus, ( f ) is injective. For any k∈Nk \in \mathbb{N}k \in \mathbb{N}
+, there exists a pair ( (m, n) ) with m≤nm \leq nm \leq n
+ such that f(m,n)=kf(m, n) = kf(m, n) = k
+, as the pairing function covers all natural numbers when extended to N×N\mathbb{N} \times \mathbb{N}\mathbb{N} \times \mathbb{N}
+. Thus, ( f ) is surjective. Since ( f ) is bijective and ( A ) is infinite, ( A ) is countably infinite.
+
+
 \end{proof}
 \end{exercise}
 

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1745942829.63529 "Homework11.tex" "build/Homework11.pdf" "Homework11" 1745942829.93899 0
+["pdflatex"] 1745859768.64025 "Homework12.tex" "build/Homework12.pdf" "Homework12" 1745859768.92802 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -41,10 +41,12 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1248133631 32001 6aeea3afe875097b1eb0da29acd61e28 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
@@ -137,14 +139,12 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1740469235.71723 39447 2134d78a2da0cee52270db0ec417a200 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740469224.94382 327964 66947494ae0b30df692aba42aa1c43ce ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740469205 6800595 69d9fb263956deba8491ea26f3edc411 ""
-  "11p1p12.pdf" 1745779420.54088 114536 35e9b25e7ca627f33a10ba28708a006c ""
-  "11p1p5.jpg" 1745779371.9904 191311 cd2b888065e935af35790d0d40e4b408 ""
-  "Homework11.tex" 1745942632.07482 8265 a51401b7f879b539c64a15a98baf20db ""
-  "build/Homework11.aux" 1745942829.88322 757 1f32c845d9750e4a62d1a9661e82b8d2 "pdflatex"
-  "build/Homework11.out" 1745942829.88322 428 93663e2d58257ef6f154b70a8f51a000 "pdflatex"
+  "Homework12.tex" 1745859731.00259 8375 ff6f72996a87768fcce7ae2ab6a33414 ""
+  "build/Homework12.aux" 1745859768.87628 757 113a2f9d94cbf0f7956bc23856836ab0 "pdflatex"
+  "build/Homework12.out" 1745859768.87628 428 9d02b62c567f0ff7e899571cdcdb0608 "pdflatex"
   (generated)
-  "build/Homework11.aux"
-  "build/Homework11.log"
-  "build/Homework11.out"
-  "build/Homework11.pdf"
+  "build/Homework12.aux"
+  "build/Homework12.log"
+  "build/Homework12.out"
+  "build/Homework12.pdf"
   (rewritten before read)

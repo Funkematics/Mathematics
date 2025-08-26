@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.1.28)  29 APR 2025 07:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  29 APR 2025 09:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,18 +624,266 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fon
 ts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
+LaTeX Warning: Command \r invalid in math mode on input line 146.
+
+
+! LaTeX Error: Unicode character ∈ (U+2208)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 We need to show that A={(m,n)∈
+                                      N×N:m≤n}A = \{ (m, n) \in \mathbb{N...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≤ (U+2264)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 We need to show that A={(m,n)∈N×N:m≤
+                                               n}A = \{ (m, n) \in \mathbb{N...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+60.
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 160.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.160 ...t A={(m,n)∈N×N:m≤n}A = \{ (m, n) \in
+                                                   \mathbb{N} \times \mathbb...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Unicode character ∈ (U+2208)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161 ...finite. First, observe that for each n∈
+                                                  Nn \in \mathbb{N}n \in \ma...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ∈ (U+2208)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.162 , the pair (n,n)∈
+                         A(n, n) \in A(n, n) \in A
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textrightarrow invalid in math mode on input line 163.
+
+
+LaTeX Warning: Command \textrightarrow invalid in math mode on input line 163.
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164  by ordering pairs such that $f(m,n)=(m+n−
+                                                  2)(m+n−1)2+mf(m, n) = \f...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 ... pairs such that $f(m,n)=(m+n−2)(m+n−
+                                                  1)2+mf(m, n) = \frac{(m + ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.164 ...(m, n) = \frac{(m + n - 2)(m + n - 1)}{2}
+                                                   + mf(m, n) = \frac{(m + n...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\frac  #1#2->{\begingroup #1\endgroup \@@over #2}
+                                                 
+l.164 ...(m, n) = \frac{(m + n - 2)(m + n - 1)}{2}
+                                                   + mf(m, n) = \frac{(m + n...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: Unicode character ≤ (U+2264)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.165  for$ m≤
+                nm \leq nm \leq n$
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≤ (U+2264)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.167 ...antor pairing function restricted to m≤
+                                                  nm \leq nm \leq n
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...airing function restricted to m≤nm \leq
+                                                   nm \leq n
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Unicode character ∈ (U+2208)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 ...r. Thus, ( f ) is injective. For any k∈
+                                                  Nk \in \mathbb{N}k \in \ma...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≤ (U+2264)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.169 , there exists a pair ( (m, n) ) with m≤
+                                                nm \leq nm \leq n
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 171.
+
+
+LaTeX Warning: Command \texttimes invalid in math mode on input line 171.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.173 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.173 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no � in font cmr12!
+
+Overfull \hbox (103.93394pt too wide) in paragraph at lines 160--173
+\U/msb/m/n/12 N\OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 N\OML/cmm/m/
+it/12 ; thepair\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n; n\OT1/cmr/m/n/12 )\OML/cmm/
+m/it/12 A\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n; n\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/
+12 2 \OML/cmm/m/it/12 A\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n; n\OT1/cmr/m/n/12 ) 
+\OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 A; so\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT
+1/cmr/m/n/12 )\OML/cmm/m/it/12 isinfinite:Toshow\OT1/cmr/m/n/12 (\OML/cmm/m/it/
+12 A\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 iscountable; defineafunctionf \OT1/cmr/m/
+n/12 :
  []
 
 
-Overfull \hbox (13.21458pt too wide) in paragraph at lines 213--213
-[]
+Overfull \hbox (269.79659pt too wide) in paragraph at lines 160--173
+\OT1/cmr/m/n/12 Can-tor pair-ing func-tion re-stricted to mnm $\OMS/cmsy/m/n/12
+ ^^T \OML/cmm/m/it/12 nm \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 n; eachpair\OT1/
+cmr/m/n/12 ((\OML/cmm/m/it/12 m; n\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 mapstoauni
+quenaturalnumber:Thus; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 )\OML
+/cmm/m/it/12 isinjective:ForanykNk \OMS/cmsy/m/n/12 2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--213
+Overfull \hbox (2.99084pt too wide) in paragraph at lines 160--173
+\U/msb/m/n/12 N\OML/cmm/m/it/12 k \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 N\OML/cmm/m/
+it/12 ; thereexistsapair\OT1/cmr/m/n/12 ((\OML/cmm/m/it/12 m; n\OT1/cmr/m/n/12 
+))\OML/cmm/m/it/12 withmnm \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 nm \OMS/cmsy/m
+/n/12 ^^T \OML/cmm/m/it/12 nsuchthatf\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m; n\OT1
+/cmr/m/n/12 ) = \OML/cmm/m/it/12 kf\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m; n\OT1/c
+mr/m/n/12 ) =
+ []
 
+
+Overfull \hbox (8.69484pt too wide) in paragraph at lines 160--173
+\OML/cmm/m/it/12 kf\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m; n\OT1/cmr/m/n/12 ) = \O
+ML/cmm/m/it/12 k; asthepairingfunctioncoversallnaturalnumberswhenextendedtoNN\U
+/msb/m/n/12 N \OMS/cmsy/m/n/12 ^^B
+ []
+
+
+Overfull \hbox (38.44826pt too wide) in paragraph at lines 160--173
+\U/msb/m/n/12 NN \OMS/cmsy/m/n/12 ^^B \U/msb/m/n/12 N\OML/cmm/m/it/12 :Thus; \O
+T1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 issurjective
+:Since\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 isbi
+jectiveand\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 
+isinfinite; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 )\OML/cmm/m/it/1
+2 iscountablyinfinite:[]$ 
  []
 
 
@@ -652,6 +900,10 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{14.0pt}.
 
 [2]
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (8.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -665,7 +917,30 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 14.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.0pt}.
 
-[3] (build/Homework14.aux)
+[3]
+Overfull \hbox (13.21458pt too wide) in paragraph at lines 232--232
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (8.0pt): 
+(fancyhdr)                Make it at least 14.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.0pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-6.0pt}.
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{14.0pt}.
+
+[4] (build/Homework14.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -674,28 +949,31 @@ Package rerunfilecheck Info: File `Homework14.out' has not changed.
 (rerunfilecheck)             Checksum: DC040DA692BFCC73B05B79C9E43ABF9C;522.
  ) 
 Here is how much of TeX's memory you used:
- 14122 strings out of 476182
- 202334 string characters out of 5796232
- 1940975 words of memory out of 5000000
- 35719 multiletter control sequences out of 15000+600000
+ 14152 strings out of 476182
+ 202830 string characters out of 5796232
+ 1942975 words of memory out of 5000000
+ 35745 multiletter control sequences out of 15000+600000
  568103 words of font info for 82 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
- 75i,11n,79p,3242b,644s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,16n,79p,3242b,684s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam1
-0.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></u
-sr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on build/Homework14.pdf (3 pages, 135377 bytes).
+nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-sup
+er/sfrm1200.pfb>
+Output written on build/Homework14.pdf (4 pages, 173157 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
