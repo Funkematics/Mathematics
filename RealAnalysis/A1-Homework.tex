@@ -42,11 +42,11 @@ Assume, for contradiction, that there exist integers $p$ and $q$ satisfying
 where $p/q$ is a rational number in lowest terms.  By squaring, this is the same as $\frac{p^2}{q^2} = 2$, and by clearing denominators it is the same as
 	$$p^2 = 2 q^2.$$
 % CONTINUE FROM HERE
-	Thus $p^2$ is divisible by 2, an even number. This implies that $p$ is also divisible by 2 and can be expressed in the form $p = 2k$ for some $k \in \ZZ$. If we sbustitute the $p$ in $p^2 = 2q^2$ for $2k$, we get
+	Thus $p^2$ is divisible by 2, an even number. This implies that $p$ is also divisible by 2 and can be expressed in the form $p = 2k$ for some $k \in \ZZ$. If we substitute the $p$ in $p^2 = 2q^2$ for $2k$, we get
 	$$(2k)^2 = 4(k^2) = 2q^2$$
 	Further reducing this gives us
 	$$2(k^2) = q^2$$
-	This is a contradiction as the result implies that $q^2$ is also even and thus $q$ is even. Therefore $p$ and $q$ are both even and are irreducible.
+	This is a contradiction as the result implies that $q^2$ is also even and thus $q$ is even. Therefore $p$ and $q$ are both even, contradiction the assumption that $\frac{p}{q}$ is in lowest terms.
 
 \end{proof}
 
@@ -56,13 +56,13 @@ where $p/q$ is a rational number in lowest terms.  By squaring, this is the same
 % PLEASE READ:  Fill-in the PUT NEGATION HERE blanks.  The idea is to negate the statement "for all x in S, P(x) is true" into "there exists x in S for which P(x) is false", and so on.  (Here P(x) is a proposition.)  This problem does not ask you to assess whether these propositions are true or false; please just negate for exercise.
 
 \begin{itemize}
-	\item[(a)] The negation of ``For all real numbers satisfying $a<b$, there exists $n\in\NN$ such that $a+(1/n)<b$'' is "There exists a real number satisfying $a<b$ such that for all $n \in \NN$, $a + (1/n) \geq b$.
+	\item[(a)] The negation of ``For all real numbers satisfying $a<b$, there exists $n\in\NN$ such that $a+(1/n)<b$'' is "There exists a real number $a,b$ satisfying $a<b$ such that for all $n \in \NN$, $a + (1/n) \geq b$.
 
 % PUT NEGATION HERE, BETWEEN QUOTATION MARKS LIKE ``...''
 \item[(b)] The negation of ``There exists a real number $x>0$ such that $x<1/n$ for all $n\in\NN$'' is "For all real numbers $x > 0$, there exists an $n \in \NN$ such that $x \geq 1/n$.
 
 % PUT NEGATION HERE, BETWEEN QUOTATION MARKS LIKE ``...''
-\item[(b)] The negation of ``Between every two distinct real numbers there is a rational number'' is "There exists an $x,y \in \RR$, where $x \neq y$, such that there is no $n \in \QQ$ that satisfies $ x < n < y$.
+\item[(b)] The negation of ``Between every two distinct real numbers there is a rational number'' is "There exists $x,y \in \RR$, where $x \neq y$, such that there is no $n \in \QQ$ that satisfies $ x < n < y$.
 % PUT NEGATION HERE, BETWEEN QUOTATION MARKS LIKE ``...''
 \end{itemize}
 \end{problem}
@@ -75,7 +75,7 @@ Suppose $a$ and $b$ are real numbers.  Then
 \item[(a)] $|a-b| \le |a|+|b|$
 	\begin{proof}
 		\textbf{Case 1:} Suppose $a > b$, then $|a - b| = a - b \text{ (since $a-b > 0$)}$. If $a > 0$ is true, then $|a - b| = a - b = |a| - b$. Since $-b \leq |b|$(because $-b = |b|$ if $b$ is negative and $-b \leq b = |b|$ if $b$ is non-negative), we have $$|a - b| = |a| - b \leq |a| + |b|$$. On the other hand, if $a < 0$, then $$|a - b| = a - b \leq |a| - b \leq |a| + |b|$$ (since $a \leq |a|$, as before). \newline
-		\textbf{Case 2:} Suppose $b \geq a$, then $|a - b| = b - a$ (since $b - a > 0$). If $b > 0$ is also true, then $|a-b| = b- a \leq b + |a|$ (since $-a \leq |a|$). \newline
+		\textbf{Case 2:} Suppose $b > a$, then $|a - b| = b - a$ (since $b - a > 0$). If $b > 0$ is also true, then $|a-b| = b- a \leq b + |a|$ (since $-a \leq |a|$). \newline
 		If $b \geq 0$, then $|b| = b$, so $$|a-b| = b - a \leq b + |a| = |a| + |b| $$ (since $-a \leq |a|$). \newline If $b < 0$, then since $b > a$, we have $a < b < 0$, so $|a| = -a$ and $|b| = -b$. Thus $$|a-b| = b - a = b + (-a) \leq -b + (-a) = |b| + |a| = |a|+|b|$$ or more briefly
 		$$|a-b| \leq |a | + |b|$$. \newline
 		\textbf{Case 3:} Suppose $a = b$, then $|a - b| = 0 \leq |a| + |b|$ Since absolute values are non-negative.
@@ -84,9 +84,9 @@ Suppose $a$ and $b$ are real numbers.  Then
 	\begin{proof}
 		Observe that $a = (a - b) + b$. It follows that
 		$$	|a| = |(a - b) + b| \leq |a - b| + |b|$$
-		by the triangle inequality. Subtracting $|b|$ from the right and left side of the inequality gives us
+		by the triangle inequality. Subtracting $|b|$ from the right and left sides of the inequality gives us
 		$|a| - |b| \leq |a - b|$. Likewise observe that $b = (b - a) - a$. It follows that
-		$$ |b| = |(b-a) + a| \leq |b - a| + |a|$$ by the triangle inequality. Since $|b - a | = |a - b|$, subtracting $|a|$ from either side of the inequality above gives us $|b| - |a| \leq |a - b|$. Since $||a|| - |b||$ is either $|a| - |b|$ or $|b| - |a|$, and both are at most $|a - b|$, it follows that $||a| - |b|| \leq |a - b|$.
+		$$ |b| = |(b-a) + a| \leq |b - a| + |a|$$ by the triangle inequality. Since $|b - a | = |a - b|$, subtracting $|a|$ from either sides of the inequality above gives us $|b| - |a| \leq |a - b|$. Since $||a|| - |b||$ is either $|a| - |b|$ or $|b| - |a|$, and both are at most $|a - b|$, it follows that $||a| - |b|| \leq |a - b|$.
 	\end{proof}
 \end{itemize}
 \end{problem}
@@ -103,13 +103,13 @@ Give an example of each, or state that it is impossible.
 % EXAMPLE OR STATEMENT HERE
 \item[(b)] $f:\NN\to\NN$ that is onto but not one-to-one.
 
-	\textbf{My Answer: } The function $f(n) = \lfloor\frac{n+1}{2}\rfloor$ (For clarity sake this is a floor function) is onto since every $m \in \NN$ is hit, but not one-to one because $f(1) = f(2) = 1 $. 
+	\textbf{My Answer: } The function $f(n) = \lfloor\frac{n+1}{2}\rfloor$ (For clarity's sake this is a floor function) is onto since every $m \in \NN$ is hit, but not one-to one because $f(1) = f(2) = 1 $. 
 % EXAMPLE OR STATEMENT HERE
 \item[(d)] $f:\NN\to\ZZ$ that is one-to-one and onto.
 
 	\textbf{My Answer: } The piecewise function $$f(n) =\begin{cases} \frac{n}{2} & \text{If n is even} \\
 	-\frac{n-1}{2} & \text{If n is odd}\end{cases} $$
-		Is a mapping from $\NN \rightarrow \ZZ$ that is both one-to-one and onto since it uniquely maps even $n$ to non-negative integers and ood $n$ to negative integers, this covers all of $\ZZ$.
+		Is a mapping from $\NN \rightarrow \ZZ$ that is both one-to-one and onto since it uniquely maps even $n$ to non-negative integers and odd $n$ to negative integers, this covers all of $\ZZ$.
 	
 
 % EXAMPLE OR STATEMENT HERE
@@ -124,7 +124,7 @@ There exists an infinite collection of sets $A_1,A_2,A_3,\dots$ with the propert
 
 \begin{proof}
 	A natural number is k-almost-prime if it has $k$ prime factors where $k \in \NN$.
-	Let $A_1 \subseteq \NN$ be the union of the sets $\{1\}$ and the set containing all k-almost-prime numbers $\{2,3,5,7,11,17, ...\}$, where $k = 1$ so that $A_1 = \{1,2,3,5,6,11,17,...\}$. Let $A_2 \subset \NN$ be the set containing all k-almost-prime numbers $\{4,6,9,10,14,15,21,22,...\}$, where $k = 2$. Let $A_3 \subseteq \NN$ be set containing all k-almost-prime numbers $\{8, 12, 18, 20, 27, 28, 30, … \}$, where $k = 3$. Similarly let $A_k \subseteq \NN$ be the set containing all k-almost-prime numbers for some $k \in \NN$. Suppose $m \in \NN$ and $m \in A_i \cap A_j$ for some $i, j \in \NN$. Note that by the uniqueness of prime decompositions, $m$ has a unique prime decomposition of a fixed length. Thus $i = j$. Since $A_n \subseteq \NN$ for all $n \in \NN$, it follows that $\cup_{n=1}^{\infty}A_n \subseteq \NN$. Similarly by fundamental theorem of arithmetic, $n$ has a unique prime decomposition of a fixed length $m$. Therefore $n \in A_m$ and $\NN \subseteq \cup_{n=1}^{\infty} A_n$. Thus $\cup_{n=1}^{\infty} A_n = \NN$.
+	Let $A_1 \subseteq \NN$ be the union of the sets $\{1\}$ and the set containing all k-almost-prime numbers $\{2,3,5,7,11,17, ...\}$, where $k = 1$ so that $A_1 = \{1,2,3,5,7,11,17,...\}$. Let $A_2 \subset \NN$ be the set containing all k-almost-prime numbers $\{4,6,9,10,14,15,21,22,...\}$, where $k = 2$. Let $A_3 \subseteq \NN$ be set containing all k-almost-prime numbers $\{8, 12, 18, 20, 27, 28, 30, … \}$, where $k = 3$. Similarly let $A_k \subseteq \NN$ be the set containing all k-almost-prime numbers for some $k \in \NN$. Suppose $m \in \NN$ and $m \in A_i \cap A_j$ for some $i, j \in \NN$. Note that by the uniqueness of prime decompositions, $m$ has a unique prime decomposition of a fixed length. Thus $i = j$. Since $A_n \subseteq \NN$ for all $n \in \NN$, it follows that $\cup_{n=1}^{\infty}A_n \subseteq \NN$. Similarly by fundamental theorem of arithmetic, $n$ has a unique prime decomposition of a fixed length $m$. Therefore $n \in A_m$ and $\NN \subseteq \cup_{n=1}^{\infty} A_n$. Thus $\cup_{n=1}^{\infty} A_n = \NN$.
 \end{proof}
 
 \end{document}

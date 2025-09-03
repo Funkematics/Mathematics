@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  3 SEP 2025 12:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  3 SEP 2025 12:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -466,7 +466,7 @@ Package rerunfilecheck Info: File `A1-Homework.out' has not changed.
 Here is how much of TeX's memory you used:
  10591 strings out of 476182
  159973 string characters out of 5796232
- 1937975 words of memory out of 5000000
+ 1938975 words of memory out of 5000000
  32441 multiletter control sequences out of 15000+600000
  571524 words of font info for 73 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -482,7 +482,7 @@ lic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino
 /uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/font
 s/type1/urw/palatino/uplri8a.pfb>
-Output written on build/A1-Homework.pdf (3 pages, 151012 bytes).
+Output written on build/A1-Homework.pdf (3 pages, 151184 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
