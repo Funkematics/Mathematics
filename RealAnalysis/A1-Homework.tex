@@ -73,7 +73,12 @@ where $p/q$ is a rational number in lowest terms.  By squaring, this is the same
 Suppose $a$ and $b$ are real numbers.  Then
 \begin{itemize}
 \item[(a)] $|a-b| \le |a|+|b|$
-\item[(b)] $\big||a-b|\big| \le |a-b|$
+	\begin{proof}
+		\textbf{Case 1:} Suppose $a > b$, then $|a - b| = a - b \text{ (since $a-b > 0$)}$. If $a > 0$ is true, then $|a - b| = a - b = |a| - b$. But $-b \leq |b|$ since $-b = b$ if $b$ is negative and $-b \leq 0 \leq b$ if $b$ is non-negative, So $|a - b| = |a| - b \leq |a| + |b|$. On the other hand, if $a < 0$, then $|a - b| = a - b \leq |a| - b \leq |a| - |b|$ (since $a \leq |a|$, as before). \newline
+		\textbf{Case 2:} Suppose $b > a$, then $|a - b| = b - a$ (since $b - a > 0$). If $b > 0$ is also true, then $|a-b| = b- a \leq b + |a|$ (since $-a \leq |a|$). If $b \geq 0$, then $|b| = b$, so $|a-b| = b - a \leq b + |a| = |a| + |b| $ (since $-a \leq |a|$). If $b < 0$, then since $b > a$, we have $a < b < 0$, so $|a| = -a$ and $|b| = -b$. Thus, $|a-b| = b - a = b + (-a) \leq -b + (-a) = |b| + |a|$. \newline
+		\textbf{Case 3:} Suppose $a = b$, then $|a - b| = 0 \leq |a| + |b|$ Since absolute values are non-negative.
+	\end{proof}
+\item[(b)] $\big||a|-|b|\big| \le |a-b|$
 \end{itemize}
 \end{problem}
 
@@ -89,11 +94,18 @@ Give an example of each, or state that it is impossible.
 \begin{itemize}
 \item[(a)] $f:\NN\to\NN$ that is one-to-one but not onto.
 
+	\textbf{My Answer: } The function $f(n) = 2n$ is a mapping from $\NN \rightarrow \NN$ That is one-to-one but not onto.
 % EXAMPLE OR STATEMENT HERE
 \item[(b)] $f:\NN\to\NN$ that is onto but not one-to-one.
 
+	\textbf{My Answer: } The function $f(n) = [(n+1)/2]$ is onto but not one-to one.
 % EXAMPLE OR STATEMENT HERE
 \item[(d)] $f:\NN\to\ZZ$ that is one-to-one and onto.
+
+	\textbf{My Answer: } The piecewise function $$f(n) =\begin{cases} \frac{n}{2} & \text{If n is even} \\
+	-\frac{n+1}{2} & \text{If n is odd}\end{cases} $$
+		Is a mapping from $\NN \rightarrow \ZZ$ that is both one-to-one and onto.
+	
 
 % EXAMPLE OR STATEMENT HERE
 \end{itemize}
