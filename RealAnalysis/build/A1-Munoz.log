@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  3 SEP 2025 14:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  3 SEP 2025 12:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**A1-Homework.tex
-(./A1-Homework.tex
+**A1-Munoz.tex
+(./A1-Munoz.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -321,8 +321,8 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box54
 )
-(build/A1-Homework.aux)
-\openout1 = `A1-Homework.aux'.
+(build/A1-Munoz.aux)
+\openout1 = `A1-Munoz.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
@@ -409,15 +409,14 @@ Package color Info: Driver file: pdftex.def on input line 149.
 
 (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 Package hyperref Info: Link coloring ON on input line 22.
-
-(build/A1-Homework.out) (build/A1-Homework.out)
+ (build/A1-Munoz.out)
+(build/A1-Munoz.out)
 \@outlinefile=\write3
-\openout3 = `A1-Homework.out'.
+\openout3 = `A1-Munoz.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
 
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
@@ -455,22 +454,22 @@ L/cmm/m/it/12 ; \OT1/cmr/m/n/12 28\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 30\OML/cmm
 /m/it/12 ; :::\OMS/cmsy/m/n/12 g$\OT1/ppl/m/n/12 ,
  []
 
-[3] (build/A1-Homework.aux)
+[3] (build/A1-Munoz.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `A1-Homework.out' has not changed.
+Package rerunfilecheck Info: File `A1-Munoz.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  10591 strings out of 476182
- 159973 string characters out of 5796232
- 1937975 words of memory out of 5000000
+ 159916 string characters out of 5796232
+ 1938975 words of memory out of 5000000
  32441 multiletter control sequences out of 15000+600000
  571524 words of font info for 73 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,9n,79p,1078b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,9n,79p,1075b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -482,7 +481,7 @@ lic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino
 /uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/font
 s/type1/urw/palatino/uplri8a.pfb>
-Output written on build/A1-Homework.pdf (3 pages, 151102 bytes).
+Output written on build/A1-Munoz.pdf (3 pages, 151184 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
