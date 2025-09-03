@@ -99,17 +99,17 @@ Give an example of each, or state that it is impossible.
 \begin{itemize}
 \item[(a)] $f:\NN\to\NN$ that is one-to-one but not onto.
 
-	\textbf{My Answer: } The function $f(n) = 2n$ is a mapping from $\NN \rightarrow \NN$ That is one-to-one but not onto.
+	\textbf{My Answer: } The function $f(n) = 2n$ is a mapping from $\NN \rightarrow \NN$ That is one-to-one since distinct $n$ produce distinct even numbers, but not onto because it misses odd numbers.
 % EXAMPLE OR STATEMENT HERE
 \item[(b)] $f:\NN\to\NN$ that is onto but not one-to-one.
 
-	\textbf{My Answer: } The function $f(n) = [(n+1)/2]$ is onto but not one-to one.
+	\textbf{My Answer: } The function $f(n) = \lfloor\frac{n+1}{2}\rfloor$ (For clarity sake this is a floor function) is onto since every $m \in \NN$ is hit, but not one-to one because $f(1) = f(2) = 1 $. 
 % EXAMPLE OR STATEMENT HERE
 \item[(d)] $f:\NN\to\ZZ$ that is one-to-one and onto.
 
 	\textbf{My Answer: } The piecewise function $$f(n) =\begin{cases} \frac{n}{2} & \text{If n is even} \\
-	-\frac{n+1}{2} & \text{If n is odd}\end{cases} $$
-		Is a mapping from $\NN \rightarrow \ZZ$ that is both one-to-one and onto.
+	-\frac{n-1}{2} & \text{If n is odd}\end{cases} $$
+		Is a mapping from $\NN \rightarrow \ZZ$ that is both one-to-one and onto since it uniquely maps even $n$ to non-negative integers and ood $n$ to negative integers, this covers all of $\ZZ$.
 	
 
 % EXAMPLE OR STATEMENT HERE
