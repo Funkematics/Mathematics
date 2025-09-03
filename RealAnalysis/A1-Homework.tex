@@ -79,6 +79,13 @@ Suppose $a$ and $b$ are real numbers.  Then
 		\textbf{Case 3:} Suppose $a = b$, then $|a - b| = 0 \leq |a| + |b|$ Since absolute values are non-negative.
 	\end{proof}
 \item[(b)] $\big||a|-|b|\big| \le |a-b|$
+	\begin{proof}
+		Observe that $a = (a - b) + b$. It follows that
+		$$	|a| = |(a - b) + b| \leq |a - b| + |b|$$
+		by the triangle inequality. Subtractive $|b|$ from the right and left side of the inequality gives us
+		$|a| - |b| \leq |a - b|$. Likewise observe that $b = (b - a) - a$. It follows that
+		$$ |b| = |(b-a) + a| \leq |b - a| + |a|$$ by the triangle inequality. Subtracting $|a|$ from either side of this inequality gives us $|b| - |a| \leq |a - b|$. Thus $||a| - |b|| \leq |a - b|$.
+	\end{proof}
 \end{itemize}
 \end{problem}
 
@@ -118,7 +125,8 @@ Give an example of each, or state that it is impossible.
 There exists an infinite collection of sets $A_1,A_2,A_3,\dots$ with the properties that every $A_i$ has an infinite number of elements, and $A_i\cap A_j=\emptyset$ for all $i\ne j$, and $\bigcup_{i=1}^\infty A_i=\NN$. \end{problem}
 
 \begin{proof}
-% FILL IN
+	A natural number is k-almost-prime if it has $k$ prime factors where $k \in \NN$.
+	Let $A_1 \subseteq \NN$ be the union of the sets $\{1\}$ and the set containing all k-almost-prime numbers $\{2,3,5,7,11,17, ...\}$, where $k = 1$ so that $A_1 = \{1,2,3,5,6,11,17,...\}$. Let $A_2 \subset \NN$ be the set containing all k-almost-prime numbers $\{4,6,9,10,14,15,21,22,...\}$, where $k = 2$. Let $A_3 \subseteq \NN$ be set containing all k-almost-prime numbers $\{8, 12, 18, 20, 27, 28, 30, … \}$, where $k = 3$. Similarly let $A_k \subseteq \NN$ be the set containing all k-almost-prime numbers for some $k \in \NN$. Suppose $m \in \NN$ and $m \in A_i \cap A_j$ for some $i, j \in \NN$. Note that by the uniqueness of prime decompositions, $m$ has a unique prime decomposition of a fixed length. Thus $i = j$. Since $A_n \subseteq \NN$ for all $n \in \NN$, it follows that $\cup_{n=1}^{\infty}A_n \subseteq \NN$. Similarly by fundamental theorem of arithmetic, $n$ has a unique prime decomposition of a fixed length $m$. Therefore $n \in A_m$ and $\NN \subseteq \cup_{n=1}^{\infty} A_n$. Thus $\cup_{n=1}^{\infty} A_n = \NN$.
 \end{proof}
 
 \end{document}
