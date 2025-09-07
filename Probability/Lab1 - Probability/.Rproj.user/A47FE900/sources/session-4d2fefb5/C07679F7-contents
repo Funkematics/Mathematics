@@ -1,0 +1,44 @@
+---
+title: "Lab1 Probability"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+# Lab 1: Descriptive Statistics 
+### Christopher Munoz
+
+1.  What is the population under study?\
+    **The population under study are the 50 states of the U.S.A.**
+2.  Why is the ‘gun death RATE’ reported, rather than simply the number of gun deaths in each state?\
+    **This is due to the human population size differences between states. The gun death rate is reported to standardize the data across states with different population sizes since the raw number of gun deaths would naturally be skewed towards states with larger human population sizes.**
+3.  Make a boxplot and histogram for the variable Gun Death Rate per 100K, and include the plots below.
+
+```{r}
+data <- read.csv("/home/funky/Downloads/GiffordsLawCenterGunDeathRateData.csv")
+boxplot(data$Gun_Death_Rate_per_100K, main="Boxplot of Gun Death Rate per 100K", 
+        ylab="Gun Death Rate per 100,000", col="lightblue")
+```
+
+```{r}
+hist(data$Gun_Death_Rate_per_100K, main="Histogram of Gun Death Rate per 100K", 
+     xlab="Gun Death Rate per 100,000", col="lightgreen", breaks=10)
+```
+
+4.  Compute the Min, Q1, Median, Mean, Q3, Max for the numerical variable Gun Death Rate per 100K and record them below. Do the mean and median differ substantially? Discuss briefly.
+
+```{r}
+summary_stats <- summary(data$Gun_Death_Rate_per_100K)
+print(summary_stats)
+
+
+```
+
+**The median and the mean are relatively close together with a 0.71 difference, a slight skew towards the mean likely being the result of some states like Mississipi having a far larger gun deaths rate per 100k than the other states.**
+
+5.  Looking at the data for Alaska, how does it compare to other states? Do you think Alaska is typical? Can you think of any factors that might explain the data for Alaska in comparison with the other states?\
+    **\
+    Alaska ranks 5th in our Gun Death Rate per 100K overall ranking from highest to lowest,\
+    taking into account its low population it stands out a bit but not exceptionally so in my opinion. Factors that might explain the data for Alaska might be demographics and whether the gun deaths were self-inflicted or not.**
+6.  Having explored these data, discuss them. Can you draw any conclusions from it? How confident are you in your conclusions? Is there more data collection you would like to do\
+    \
+    **I can conclude that there is quite a lot of gun violence in the state but not much more than that without considering other factors such as culture and demographics. If I were to collect more data I would personally change the population to per-county rather than state as well.**

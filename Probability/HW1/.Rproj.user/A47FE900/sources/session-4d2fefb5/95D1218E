@@ -1,0 +1,31 @@
+{
+    "id": "95D1218E",
+    "path": "~/Documents/Lab-Stats/HW1.Rmd",
+    "project_path": null,
+    "type": "r_markdown",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1757112183603.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "rmdVisualMode": "true",
+        "rmdVisualWrapConfigured": "true",
+        "docOutlineVisible": "1",
+        "rmdVisualCollapsedChunks": "",
+        "cursorPosition": "0,0",
+        "scrollLine": "85",
+        "rmdVisualModeLocation": "4435:2765"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1757112305,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1757112305231,
+    "read_only": false,
+    "read_only_alternatives": []
+}

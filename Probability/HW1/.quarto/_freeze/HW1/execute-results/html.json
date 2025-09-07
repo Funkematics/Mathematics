@@ -1,0 +1,17 @@
+{
+  "hash": "0f1ff27380a6cffff92352f5739753bf",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"HW1\"\n---\n\n\n\n## Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nwind_speeds_full <- c(8.9, 12.4, 8.6, 11.3, 9.2, 8.8, 35.1, 6.2, 7.0, 7.1, 11.8, 10.7, 7.6, 9.1, 9.2, 8.2, 9.0, 8.7, 9.1, 10.9, 10.3, 9.6, 7.8, 11.5, 9.3, 7.9, 8.8, 8.8, 12.7, 8.4, 7.8, 5.7, 10.5, 10.5, 9.6, 8.9, 10.2, 10.3, 7.7, 10.6, 8.3, 8.8, 9.5, 8.8, 9.4)\n\n# Set up class boundaries to cover the full range (min = 5.7, max = 35.1)\n# Use a reasonable bin width, e.g., 5 mph, to accommodate the outlier\nbreaks <- seq(1, 40, by=1)\n\n# Create a relative frequency histogram\nhist_data <- hist(wind_speeds_full, breaks=breaks, plot=FALSE)  # Compute histogram data\nrel_freq <- hist_data$counts / length(wind_speeds_full)  # Calculate relative frequencies\n\n# Plot the histogram\nbarplot(rel_freq, names.arg=hist_data$mids, space=0, \n        main=\"Relative Frequency Histogram of Wind Speeds (Including 35.1)\", \n        xlab=\"Wind Speed (mph)\", ylab=\"Relative Frequency\", col=\"lightblue\")\n```\n\n::: {.cell-output-display}\n![](HW1_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "HW1_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,2 @@
+"0","hist(data$Gun_Death_Rate_per_100K, main=""Histogram of Gun Death Rate per 100K"", "
+"0","     xlab=""Gun Death Rate per 100,000"", col=""lightgreen"", breaks=10)"
