@@ -1,0 +1,35 @@
+---
+title: "Probability Homework 2"
+output:
+  pdf_document: default
+  html_notebook: default
+  html_document:
+    df_print: paged
+---
+
+### Christopher Munoz
+
+2.1) Suppose a family contains two children of different ages, and we are interested in the gender of these children. Let $F$ denote that a child is female and $M$ that the child is male and let a pair such as $F,M$ denote that the older child is female and the younger is male. There are four points in the set S of possible observations:$$S = \{F F, F M, M F, M M\}.$$Let $A$ denote the subset of possibilities containing no males; $B$, the subset containing two males; and $C$, the subset containing at least one male. List the elements of $A, B, C, A  B, A  B, A  C, A  C, B  C, B  C,$ and $C  \overline{B}$.\
+\
+$$ A = \{FF\} \qquad B = \{MM\} \qquad C = \{FM, MF, MM\}$$ $$A \cap B = \emptyset \qquad A\cup B = \{MM,FF\} \qquad A \cap C = \emptyset$$ $$A \cup C = S = \{FF, FM, MF, MM\} \qquad B \cap C = \{MM\} $$ $$
+B \cup C = C = \{FM, MF, MM\} \qquad C \cap \overline{B} = \{FM, MF\} $$\
+
+2.2) Suppose that A and B are two events. Write expressions involving unions, intersections, and complements that describe the following:\
+a Both events occur.\
+b At least one occurs.\
+c Neither occurs.\
+d Exactly one occurs.\
+\
+$$a = A \cap B \qquad b = A \cup B \qquad C = \overline{A \cap B} \qquad d = (A \cap \overline{B} \cup B \cap \overline{A})$$
+
+2.8)From a survey of 60 students attending a university, it was found that 9 were living off campus, 36 were undergraduates, and 3 were undergraduates living off campus. Find the number of these students who were \
+a undergraduates, were living off campus, or both. \
+b undergraduates living on campus.\
+c graduate students living on campus.\
+
+$$
+a = 42 \qquad b = 33 \qquad c = 24 - 6 = 18
+$$
+
+\
+Every person’s blood type is A, B, AB, or O. In addition, each individual either has the Rhesus (Rh) factor (+) or does not (−). A medical technician records a person’s blood type and Rh factor. List the sample space for this experiment.

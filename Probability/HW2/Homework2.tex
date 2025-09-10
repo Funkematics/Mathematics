@@ -1,0 +1,119 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Probability Homework 2},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Probability Homework 2}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\subsubsection{Christopher Munoz}\label{christopher-munoz}
+
+2.1) Suppose a family contains two children of different ages, and we
+are interested in the gender of these children. Let \(F\) denote that a
+child is female and \(M\) that the child is male and let a pair such as
+\(F,M\) denote that the older child is female and the younger is male.
+There are four points in the set S of possible
+observations:\[S = \{F F, F M, M F, M M\}.\]Let \(A\) denote the subset
+of possibilities containing no males; \(B\), the subset containing two
+males; and \(C\), the subset containing at least one male. List the
+elements of \(A, B, C, A  B, A  B, A  C, A  C, B  C, B  C,\) and
+\(C  \overline{B}\).\\
+\strut \\
+\[ A = \{FF\} \qquad B = \{MM\} \qquad C = \{FM, MF, MM\}\]
+\[A \cap B = \emptyset \qquad A\cup B = \{MM,FF\} \qquad A \cap C = \emptyset\]
+\[A \cup C = S = \{FF, FM, MF, MM\} \qquad B \cap C = \{MM\} \] \[
+B \cup C = C = \{FM, MF, MM\} \qquad C \cap \overline{B} = \{FM, MF\} \]\\
+
+2.2) Suppose that A and B are two events. Write expressions involving
+unions, intersections, and complements that describe the following:\\
+a Both events occur.\\
+b At least one occurs.\\
+c Neither occurs.\\
+d Exactly one occurs.\\
+\strut \\
+\[a = A \cap B \qquad b = A \cup B \qquad C = \overline{A \cap B} \qquad d = (A \cap \overline{B} \cup B \cap \overline{A})\]
+
+2.8)From a survey of 60 students attending a university, it was found
+that 9 were living off campus, 36 were undergraduates, and 3 were
+undergraduates living off campus. Find the number of these students who
+were\\
+a undergraduates, were living off campus, or both.\\
+b undergraduates living on campus.\\
+c graduate students living on campus.\\
+
+\[
+a = 42 \qquad b = 33 \qquad c = 24 - 6 = 18
+\]
+
+\hfill\break
+Every person's blood type is A, B, AB, or O. In addition, each
+individual either has the Rhesus (Rh) factor (+) or does not (−). A
+medical technician records a person's blood type and Rh factor. List the
+sample space for this experiment.
+
+\end{document}
