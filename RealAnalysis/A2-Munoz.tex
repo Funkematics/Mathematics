@@ -72,8 +72,11 @@ If $a\in\RR$ is an upper bound for $A\subset \RR$, and if $a$ is also an element
 \end{problem}
 
 \begin{proof}
-Choose $b \in \RR$ to be an upper bound for A. This means that if we choose an arbitrary $c \in \RR$ such that $c \in A$, then $b \geq c$.
-But since $a \in A$ is also an upper bound, by definition it must be the case that $b \geq a$.
+	Since $a$ is an upper bound for $A$, we know that $x \leq a$ for all $x \in A$.
+
+We want to show that $a = \sup A$, we need to prove that $a$ is the least upper bound. Choose $b$ be any upper bound for $A$. Since $a \in A$ and we know that $a$ is an upper bound and $b$ is an upper bound for $A$, it must be the case that $a \leq b$ and $b \leq a$ since by definition an upper bound for a subset is an element greater than or equal to every element within that subset. 
+
+Therefore, $b = a = \sup A$.
 \end{proof}
 
 
@@ -163,6 +166,15 @@ Examples for $st$:
 - If $s = \sqrt{2}$ and $t = \sqrt{2}$, then $st = 2 \in \QQ$.
 - If $s = \sqrt{2}$ and $t = \sqrt{3}$, then $st = \sqrt{6} \in \II$ (since if $\sqrt{6} = r \in \QQ$, then $6 = r^2 \in \QQ$, but $r^2 = 6$ has no rational solutions).
 
+\begin{proof}
+When $s, t \in \II$, both $st$ and $s + t$ can be either rational or irrational.
+
+For $s + t$: If $s = \sqrt{2}$ and $t = -\sqrt{2}$, then $s + t = 0 \in \QQ$. However, if $s = \sqrt{2}$ and $t = \sqrt{3}$, then $s + t = \sqrt{2} + \sqrt{3} \in \II$. To see this, suppose $\sqrt{2} + \sqrt{3} = r \in \QQ$. Then $\sqrt{3} = r - \sqrt{2}$, and squaring both sides gives $3 = r^2 - 2r\sqrt{2} + 2$, which implies $\sqrt{2} = \frac{r^2 - 1}{2r} \in \QQ$, a contradiction.
+
+For $st$: If $s = \sqrt{2}$ and $t = \sqrt{2}$, then $st = 2 \in \QQ$. However, if $s = \sqrt{2}$ and $t = \sqrt{3}$, then $st = \sqrt{6} \in \II$, since if $\sqrt{6} \in \QQ$, then $6$ would be a perfect square, which it is not.
+
+Therefore, the irrational numbers are not closed under addition or multiplication.
+\end{proof}
 Therefore, the irrational numbers are not closed under addition or multiplication.
 \end{enumerate}
 \end{problem}
@@ -223,28 +235,32 @@ Therefore, by mathematical induction, $y_n \ge -6$ for all $n \in \NN$.
 
 \begin{proof}
 % FILL IN THE PROOF.  USE INDUCTION.
-	We prove by induction that $y_{n+1} < y_n$ for all $n \in \NN$.
+We prove by induction that $y_{n+1} < y_n$ for all $n \in \NN$.
 
-First, we show $y_2 < y_1$:
-$y_2 = \frac{2(6) - 6}{3} = \frac{6}{3} = 2 < 6 = y_1$.
+Base case: For $n = 1$, we have:
+\begin{align*}
+y_2 &= \frac{2y_1 - 6}{3} = \frac{2(6) - 6}{3} = \frac{6}{3} = 2 \\
+y_1 &= 6
+\end{align*}
+Since $2 < 6$, we have $y_2 < y_1$.
 
-Now we prove by induction that if $y_n < y_{n-1}$, then $y_{n+1} < y_n$.
-
-Assume $y_k < y_{k-1}$ for some $k \ge 2$. We need to show $y_{k+1} < y_k$.
+Inductive step: Assume $y_{k+1} < y_k$ for some $k \in \NN$. We need to show $y_{k+2} < y_{k+1}$.
 
 We have:
 \begin{align*}
-y_{k+1} - y_k &= \frac{2y_k - 6}{3} - y_k \\
-&= \frac{2y_k - 6 - 3y_k}{3} \\
-&= \frac{-y_k - 6}{3} \\
-&= -\frac{y_k + 6}{3}
+y_{k+2} - y_{k+1} &= \frac{2y_{k+1} - 6}{3} - y_{k+1} \\
+&= \frac{2y_{k+1} - 6 - 3y_{k+1}}{3} \\
+&= \frac{-y_{k+1} - 6}{3} \\
+&= -\frac{y_{k+1} + 6}{3}
 \end{align*}
 
-From part (a), we know $y_k \ge -6$, so $y_k + 6 \ge 0$. Since $y_1 = 6 > -6$ and each step moves closer to $-6$ (but never reaches it), we have $y_k > -6$ for all $k$, so $y_k + 6 > 0$.
+From part (a), we know $y_{k+1} \geq -6$, so $y_{k+1} + 6 \geq 0$.
+Since $y_1 = 6 > -6$ and the recurrence relation preserves this (as shown in part (a)), we actually have $y_{k+1} > -6$, which means $y_{k+1} + 6 > 0$.
 
-Therefore, $y_{k+1} - y_k = -\frac{y_k + 6}{3} < 0$, which means $y_{k+1} < y_k$.
+Therefore, $y_{k+2} - y_{k+1} = -\frac{y_{k+1} + 6}{3} < 0$, so $y_{k+2} < y_{k+1}$.
 
-By induction, the sequence is decreasing.
+By mathematical induction, $y_{n+1} < y_n$ for all $n \in \NN$.
+
 \end{proof}
 \end{enumerate}
 \end{problem}
