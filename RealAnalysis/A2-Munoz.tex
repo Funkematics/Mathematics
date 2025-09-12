@@ -41,8 +41,8 @@
 \begin{proof}
 	Let $S = \bigcap\limits_{i=1}^{\infty} (0,1/n) = \emptyset$. Let $x \in \RR$. Consider the following 3 cases. \newline
 	\textbf{Case 1: } Suppose $x \leq 0$, then $x \notin S$ as $x \notin (0,1)$. \newline
-	\textbf{Case 2: } Suppose $x \geq 0$, then $x \notin S$ as $x \notin (0,1)$. \newline
-	\textbf{Case 3: } Suppose $0 < x < 1$, Choose $n \in \NN$ so that $n > \frac{1}{x}$. Then $x > \frac{1}{n}$. so $x \in (0, \frac{1}{n})$, thus $x \notin S$
+	\textbf{Case 2: } Suppose $x \geq 1$, then $x \notin S$ as $x \notin (0,1)$. \newline
+	\textbf{Case 3: } Suppose $0 < x < 1$, Choose $n \in \NN$ so that $n > \frac{1}{x}$. Then $x > \frac{1}{n}$. so $x \notin (0, \frac{1}{n})$, thus $x \notin S$
 	\newline
 	These cases show that an arbitrary $x \in R$ is not in $S$.
 \end{proof}
@@ -56,12 +56,12 @@ Given a function $f$ and a subset $A$ of its domain, consider the image $f(A) = 
 
 % PUT EXAMPLE HERE.  When you give an example you need to clearly say what $f$ is as a function, including its precise domain.  That domain must include $A$ and $B$ as subsets.  Of course you must be precise about the sets $f(A),f(B),f(A\cap B)$ too.
 	$$f(x) = |x|$$
-		where set $A$ is a subset of the domain defined by $A = \{x \in \RR \mid 0 < x\}$ and where set $B$ is a subset of the domain defined by $B = \{x \in \RR \mid x \geq 0\}$.
+	where set $A$ is a subset of the domain defined by $A = \{-2,-1\}$ and where set $B$ is a subset of the domain defined by $B = \{1,2\}$. Observe that $f(A \cap B) = \emptyset$ and $f(A) \cap f(B) = \{1,2\}$.
 % IN PART (b), FORM A CONJECTURE, AND THEN PROVE AS A PROPOSITION, A RELATIONSHIP BETWEEN  f(A \cup B) AND f(A) \cup f(B)
 \item[(b)] If $A$, $B$ are subsets of the domain of $f$ then $f(A \cup B)$ IS RELATED IN SOME WAY TO $f(A) \cup f(B)$.
-
+\newline \newline	Proposition: If $f$ is a function and $A,B$ are subsets of the domain of $f$, then $f(A \cup B) = f(A) \cup f(B)$.
 \begin{proof}
-% FILL IN THE PROOF
+Let $y \in f(A \cup B)$. Then there exists $x \in A \cup B$ such that $f(x) = y$. Since $x \in A \cup B$, then either $x \in A$ or $x \in B$. If $x \in A$, then $y = f(x) \in f(A) \subseteq f(A) \cup f(B)$. If $x \in B$, then $y = f(x) \in f(B) \subseteq f(A) \cup f(B)$. Thus $f(A \cup B) \subseteq f(A) \cup f(B)$. \newline\newline Conversely, let $y \in f(A) \cup f(B)$. Then either $y \in f(A)$ or $y \in f(B)$. If $y \in f(A)$, then there exists $x \in A$ such that $f(x) = y$. Since $A \subseteq A \cup B$, we have $x \in A \cup B$, so $y \in f(A \cup B)$. Similarly, if $y \in f(B)$, then $y \in f(A \cup B)$. Therefore $f(A) \cup f(B) \subseteq f(A \cup B).$ \newline \newline Since  $f(A \cup B) \subseteq f(A) \cup f(B)$ and $f(A \cup B) \supseteq f(A) \cup f(B)$ have been shown to be true, it follows that $f(A \cup B) = f(A) \cup f(B)$.
 \end{proof}
 \end{itemize}
 \end{problem}
@@ -72,7 +72,8 @@ If $a\in\RR$ is an upper bound for $A\subset \RR$, and if $a$ is also an element
 \end{problem}
 
 \begin{proof}
-% FILL IN THE PROOF
+Choose $b \in \RR$ to be an upper bound for A. This means that if we choose an arbitrary $c \in \RR$ such that $c \in A$, then $b \geq c$.
+But since $a \in A$ is also an upper bound, by definition it must be the case that $b \geq a$.
 \end{proof}
 
 
@@ -81,10 +82,10 @@ If $a\in\RR$ is an upper bound for $A\subset \RR$, and if $a$ is also an element
 % FOR EACH PART, FILL IN THE INFIMA AND SUPREMA.  YOU DO NOT HAVE TO PROVE ANYTHING.
 
 \begin{enumerate}[(a)]
-\item Let $A=\{m/n: \text{ $m,n\in\NN$ with $m<n$} \}$.  Then $\inf A = $ and $\sup A = $.
-\item Let $B=\{(-1)^m/n: n,m\in\NN\}$.  Then $\inf B = $ and $\sup B = $.
-\item Let $C=\{n/(3n+1): n\in\NN\}$.  Then $\inf C = $ and $\sup C = $.
-\item Let $D=\{m/(m+n):m,n\in\NN\}$.  Then $\inf D = $ and $\sup D = $.
+\item Let $A=\{m/n: \text{ $m,n\in\NN$ with $m<n$} \}$.  Then $\inf A = 0 $ and $\sup A = 1 $.
+\item Let $B=\{(-1)^m/n: n,m\in\NN\}$.  Then $\inf B = -1 $ and $\sup B = 1 $.
+\item Let $C=\{n/(3n+1): n\in\NN\}$.  Then $\inf C = 1/4 $ and $\sup C = 1/3$.
+\item Let $D=\{m/(m+n):m,n\in\NN\}$.  Then $\inf D = 0 $ and $\sup D = 1 $.
 \end{enumerate}
 \end{problem}
 
@@ -98,14 +99,20 @@ If $a\in\RR$ is an upper bound for $A\subset \RR$, and if $a$ is also an element
 then $\sup A\le \sup B$.
 
 % UNCOMMENT AND FILL-IN ONE OF THESE
-% \begin{proof}  \end{proof}
+ \begin{proof} True: Given $A \subseteq B$, every element of $A$ is also an element of $B$. Since $B$ is bounded above, $\sup B$ exists and is an upper bound for $B$. Therefore, $\sup B$ is also an upper bound for $A$. \newline
+Since $\sup A$ is the least upper bound of $A$, then $\sup B$ is an upper bound for $A$, it must be the case that $\sup A \leq \sup B$.\end{proof}
 % \bigskip This is false because
 
 \item If $\sup A< \inf B$ for nonempty sets $A$ and $B$, then there exists
 $c\in\RR$ such that $a<c<b$ for all $a\in A$ and $b\in B$.
 
 % UNCOMMENT AND FILL-IN ONE OF THESE
-% \begin{proof}  \end{proof}
+\begin{proof} Given that $\sup A < \inf B$, we can choose any $c$ such that $\sup A < c < \inf B$. Choose $c$ to be the average of $\sup A$ and $\inf B$ such that $c = \frac{\sup A + \inf B}{2}$.
+\newline \newline
+Since $c > \sup A$ and $\sup A$ is an upper bound for $A$, we have $a \leq \sup A < c$ for all $a \in A$. \newline 
+Since $c < \inf B$ and $\inf B$ is a lower bound for $B$, we have $c < \inf B \leq b$ for all $b \in B$. \newline \newline 
+Therefore $a < c < b$ for all $a \in A$ and $b \in B$.
+\end{proof}
 % \bigskip This is false because
 
 \item If there exists $c\in\RR$ satisfying $a<c<b$ for all
@@ -113,7 +120,7 @@ $a\in A$ and $b\in B$ then $\sup A< \inf B$.
 
 % UNCOMMENT AND FILL-IN ONE OF THESE
 % \begin{proof}  \end{proof}
-% \bigskip This is false because
+ \bigskip This is false because we could have $\sup A = c$ or $\inf B = c$ which would give us $\sup A = \inf B$.
 
 \end{enumerate}
 \end{problem}
@@ -126,18 +133,37 @@ Denote the irrational numbers by $\II = \RR \setminus \QQ$.
 \item If $a,b\in\QQ$ then $ab\in\QQ$ and $a+b\in\QQ$.
 
 \begin{proof}
-% FILL IN THE PROOF
+Since $a, b \in \QQ$, we can write $a = \frac{p}{q}$ and $b = \frac{r}{s}$ where $p, r \in \ZZ$ and $q, s \in \NN$.
+
+For multiplication: $ab = \frac{p}{q} \cdot \frac{r}{s} = \frac{pr}{qs}$. Since $pr \in \ZZ$ (integers are closed under multiplication) and $qs \in \NN$ (positive integers are closed under multiplication), we have $ab \in \QQ$.
+
+For addition: $a + b = \frac{p}{q} + \frac{r}{s} = \frac{ps + qr}{qs}$. Since $ps + qr \in \ZZ$ (integers are closed under multiplication and addition) and $qs \in \NN$, we have $a + b \in \QQ$.
 \end{proof}
 
 \item If $a\in\QQ$ and $t\in\II$ then $a+t\in\II$.  If also $a\neq 0$ then $at\in\II$.
 
 \begin{proof}
-% FILL IN THE PROOF
+We prove both claims by contradiction.
+
+For addition: Suppose $a + t \in \QQ$. Since $a \in \QQ$ and $a + t \in \QQ$, by part (a) we have $(a + t) + (-a) \in \QQ$. But $(a + t) + (-a) = t$, so $t \in \QQ$, contradicting that $t \in \II$. Therefore, $a + t \in \II$.
+
+For multiplication (with $a \neq 0$): Suppose $at \in \QQ$. Since $a \in \QQ$ with $a \neq 0$, we have $\frac{1}{a} \in \QQ$. By part (a), $(at) \cdot \frac{1}{a} \in \QQ$. But $(at) \cdot \frac{1}{a} = t$, so $t \in \QQ$, contradicting that $t \in \II$. Therefore, $at \in \II$.
 \end{proof}
 
 \item Suppose $s,t\in\II$.  Then PROPOSITION ABOUT WHETHER $st$ AND $s+t$ ARE EITHER RATIONAL OR IRRATIONAL IN GENERAL.
 
 % PLEASE READ: Part (a) says that the rational numbers are closed under multiplication and addition.  What can be said about $st$ and $s+t$ when $s,t\in\II$?  Formulate a conjecture and/or example and prove it.
+	When $s, t \in \II$, both $st$ and $s + t$ can be either rational or irrational.
+
+Examples for $s + t$:
+- If $s = \sqrt{2}$ and $t = -\sqrt{2}$, then $s + t = 0 \in \QQ$.
+- If $s = \sqrt{2}$ and $t = \sqrt{3}$, then $s + t = \sqrt{2} + \sqrt{3} \in \II$ (since if $\sqrt{2} + \sqrt{3} = r \in \QQ$, then $\sqrt{3} = r - \sqrt{2}$, and squaring gives $3 = r^2 - 2r\sqrt{2} + 2$, implying $\sqrt{2} = \frac{r^2 - 1}{2r} \in \QQ$, a contradiction).
+
+Examples for $st$:
+- If $s = \sqrt{2}$ and $t = \sqrt{2}$, then $st = 2 \in \QQ$.
+- If $s = \sqrt{2}$ and $t = \sqrt{3}$, then $st = \sqrt{6} \in \II$ (since if $\sqrt{6} = r \in \QQ$, then $6 = r^2 \in \QQ$, but $r^2 = 6$ has no rational solutions).
+
+Therefore, the irrational numbers are not closed under addition or multiplication.
 \end{enumerate}
 \end{problem}
 
@@ -148,6 +174,22 @@ For all $n\in\NN$, $2^n \ge n$.
 
 \begin{proof}
 % FILL IN THE PROOF: Maybe one could just say ``this is obvious.''  Don't do that.  The careful way to prove this infinite collection of propositions (i.e. 2^1 \ge 1, 2^2 \ge 2, 2^3 \ge 3, ...) is to use induction.
+	We prove by induction on $n$.
+
+Base case: For $n = 1$, we have $2^1 = 2 \ge 1$, which is true.
+
+Inductive step: Assume $2^k \ge k$ for some $k \in \NN$. We need to show $2^{k+1} \ge k + 1$.
+
+Starting from the inductive hypothesis:
+\begin{align*}
+2^k &\ge k \\
+2 \cdot 2^k &\ge 2k \quad \text{(multiplying both sides by 2)} \\
+2^{k+1} &\ge 2k \\
+2^{k+1} &\ge k + k \\
+2^{k+1} &\ge k + 1 \quad \text{(since $k \ge 1$ for all $k \in \NN$)}
+\end{align*}
+
+Therefore, by mathematical induction, $2^n \ge n$ for all $n \in \NN$.
 \end{proof}
 
 
@@ -159,12 +201,50 @@ Let $y_1=6$ and, for each $n\in\NN$, let $y_{n+1} = (2 y_n - 6) / 3$.
 
 \begin{proof}
 % FILL IN THE PROOF.  USE INDUCTION.
+	We prove by induction on $n$.
+
+Base case: For $n = 1$, we have $y_1 = 6 \ge -6$, which is true.
+
+Inductive step: Assume $y_k \ge -6$ for some $k \in \NN$. We need to show $y_{k+1} \ge -6$.
+
+From the inductive hypothesis: $y_k \ge -6$
+\begin{align*}
+y_k &\ge -6 \\
+2y_k &\ge -12 \\
+2y_k - 6 &\ge -18 \\
+\frac{2y_k - 6}{3} &\ge -6 \\
+y_{k+1} &\ge -6
+\end{align*}
+
+Therefore, by mathematical induction, $y_n \ge -6$ for all $n \in \NN$.
 \end{proof}
 
 \item The sequence $(y_1,y_2,y_3,\dots)$ is decreasing.
 
 \begin{proof}
 % FILL IN THE PROOF.  USE INDUCTION.
+	We prove by induction that $y_{n+1} < y_n$ for all $n \in \NN$.
+
+First, we show $y_2 < y_1$:
+$y_2 = \frac{2(6) - 6}{3} = \frac{6}{3} = 2 < 6 = y_1$.
+
+Now we prove by induction that if $y_n < y_{n-1}$, then $y_{n+1} < y_n$.
+
+Assume $y_k < y_{k-1}$ for some $k \ge 2$. We need to show $y_{k+1} < y_k$.
+
+We have:
+\begin{align*}
+y_{k+1} - y_k &= \frac{2y_k - 6}{3} - y_k \\
+&= \frac{2y_k - 6 - 3y_k}{3} \\
+&= \frac{-y_k - 6}{3} \\
+&= -\frac{y_k + 6}{3}
+\end{align*}
+
+From part (a), we know $y_k \ge -6$, so $y_k + 6 \ge 0$. Since $y_1 = 6 > -6$ and each step moves closer to $-6$ (but never reaches it), we have $y_k > -6$ for all $k$, so $y_k + 6 > 0$.
+
+Therefore, $y_{k+1} - y_k = -\frac{y_k + 6}{3} < 0$, which means $y_{k+1} < y_k$.
+
+By induction, the sequence is decreasing.
 \end{proof}
 \end{enumerate}
 \end{problem}

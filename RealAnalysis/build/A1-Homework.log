@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  3 SEP 2025 14:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023 Gentoo Linux) (preloaded format=pdflatex 2025.2.24)  12 SEP 2025 08:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -431,10 +431,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 /enc/dvips/base/8r.enc}]
 [2]
 
-LaTeX Warning: Command \textellipsis invalid in math mode on input line 127.
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 128.
 
 
-Overfull \hbox (8.39821pt too wide) in paragraph at lines 126--128
+Overfull \hbox (8.39821pt too wide) in paragraph at lines 127--129
 \OML/cmm/m/it/12 A[] \OMS/cmsy/m/n/12 ^^Z \U/msb/m/n/12 N$ \OT1/ppl/m/n/12 be t
 he set con-tain-ing all k-almost-prime num-bers $\OMS/cmsy/m/n/12 f\OT1/cmr/m/n
 /12 4\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 6\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 9\O
@@ -445,7 +445,7 @@ t/12 ; \OT1/cmr/m/n/12 22\OML/cmm/m/it/12 ; :::\OMS/cmsy/m/n/12 g$\OT1/ppl/m/n/
  []
 
 
-Overfull \hbox (78.84825pt too wide) in paragraph at lines 126--128
+Overfull \hbox (78.84825pt too wide) in paragraph at lines 127--129
 \OT1/ppl/m/n/12 where $\OML/cmm/m/it/12 k \OT1/cmr/m/n/12 = 2$\OT1/ppl/m/n/12 .
  Let $\OML/cmm/m/it/12 A[] \OMS/cmsy/m/n/12 ^^R \U/msb/m/n/12 N$ \OT1/ppl/m/n/1
 2 be set con-tain-ing all k-almost-prime num-bers $\OMS/cmsy/m/n/12 f\OT1/cmr/m
@@ -482,7 +482,7 @@ lic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino
 /uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/font
 s/type1/urw/palatino/uplri8a.pfb>
-Output written on build/A1-Homework.pdf (3 pages, 151102 bytes).
+Output written on build/A1-Homework.pdf (3 pages, 151107 bytes).
 PDF statistics:
  94 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream
