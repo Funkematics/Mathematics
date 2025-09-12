@@ -39,7 +39,7 @@
 % PLEASE READ:  Some suggestions for the proof:  Give the set a name, e.g. $S = \bigcap_{n=1}^\infty (0,1/n)$.  Then show by contradiction that $x\in S$ is false for every $x\in\RR$.  What property of the real numbers helps to show that, however small, a positive number is not in $S$?
 
 \begin{proof}
-	Let $S = \bigcap\limits_{i=1}^{\infty} (0,1/n) = \emptyset$. Let $x \in \RR$. Consider the following 3 cases. \newline
+	Let $S = \bigcap\limits_{n=1}^{\infty} (0,1/n) = \emptyset$. Let $x \in \RR$. Consider the following 3 cases. \newline
 	\textbf{Case 1: } Suppose $x \leq 0$, then $x \notin S$ as $x \notin (0,1)$. \newline
 	\textbf{Case 2: } Suppose $x \geq 1$, then $x \notin S$ as $x \notin (0,1)$. \newline
 	\textbf{Case 3: } Suppose $0 < x < 1$, Choose $n \in \NN$ so that $n > \frac{1}{x}$. Then $x > \frac{1}{n}$. so $x \notin (0, \frac{1}{n})$, thus $x \notin S$
