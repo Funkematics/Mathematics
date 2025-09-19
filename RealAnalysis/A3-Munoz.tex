@@ -1,0 +1,137 @@
+% <-- a percent symbol indicates a comment which does not affect the output of LaTeX
+% you can leave the preamble alone, from here ...
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{enumerate,palatino}
+\usepackage[final]{graphicx}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+
+\newtheorem{problem}{Problem}
+% ... to here
+
+% shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\II}{\ensuremath{\mathbb I}}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+
+% feel free to add more shortcuts here
+
+
+\begin{document}
+% replace with your name, but otherwise leave this header alone, from here ...
+\small
+\noindent \textsc{Math 401: Homework Assignment 3} \hfill YOUR NAME HERE
+
+\normalsize
+\bigskip
+% ... to here
+
+\setcounter{problem}{13}
+
+
+\begin{problem} % Problem 14
+Suppose $A,B$ are disjoint sets with $A\cup B = \RR$, and suppose that $a<b$ for all $a\in A$ and $b\in B$.  Then there exists $c\in\RR$ such that $x\le c$ for $x\in A$ and $x\ge c$ for $x\in B$.
+\end{problem}
+
+% PLEASE READ:  This is a cleaner version of Exercise 1.3.10 (a).  Prove the above claim using the Axiom of Completeness.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 15
+Here is an example which shows that the claim in Problem 14 is false if $\RR$ is replaced, in both instances, by the set of rationals $\QQ$:
+% PLEASE READ:  This is a cleaner version of Exercise 1.3.10 (c).
+% FILL IN YOUR EXAMPLE
+\end{problem}
+
+
+\begin{problem} % Problem 16
+Let $a<b$ be real numbers.  Define the set $T=\QQ \cap [a,b]$.  Then $\sup T = b$.
+\end{problem}
+
+% PLEASE READ:  This is Exercise 1.4.4.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 17
+By definition, a set $C\subseteq \RR$ is \emph{dense} if for any real numbers $a<b$ there is $c\in C$ so that $a<c<b$.  Let $T$ be the set of all rational numbers $p/q$, with $p\in\ZZ$, for which $q=2^k$ for some $k\in\NN$.  Then $T$ is dense.
+\end{problem}
+
+% PLEASE READ:  This is a cleaner version of Exercise 1.4.6 (b).  Equivalently to the definition above, a set is dense if every nonempty open interval of the real line intersects the set.  As a hint on showing T is dense, you might look at the beginning of the proof of Theorem 1.4.3, but your proof will need to come up with a rational number in (a,b) which has a power of 2 in the denominator.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 18
+\phantom{foo}
+% PLEASE READ:  This is a cleaner version of Exercise 1.4.8 (a)--(c).
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item An example of two real sets $A,B$ with $A\cap B=\emptyset$, $\sup A = \sup B$, $\sup A \notin A$, and $\sup B \notin B$ is
+% FILL IN YOUR EXAMPLE
+\item An example of a sequence of nested open intervals $J_1\supseteq J_2 \subseteq J_3 \supseteq \dots$, with $S=\bigcap_{n=1}^\infty J_n$ nonempty and of finite cardinality, is
+% FILL IN YOUR EXAMPLE
+\item By definition, an unbounded closed interval is of the form $[a,\infty) = \{x\in\RR \,:\, x \ge a\}$.  An example of a sequence of nested unbounded closed intervals $L_1\supseteq L_2 \subseteq L_3 \supseteq \dots$, with $\bigcap_{n=1}^\infty L_n = \emptyset$, is
+% FILL IN YOUR EXAMPLE
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem} % Problem 19
+If $A\subseteq B$ and $B$ is countable then $A$ is either countable or finite.
+\end{problem}
+
+% PLEASE READ:  See Exercise 1.5.1 for suggestions on the proof.  I have written the first 3 sentences of the proof.
+
+\begin{proof}
+Assume $B$ is countable.  If $|A|<\infty$ then $A$ is finite and we are done.  So we will consider an infinite subset $A\subseteq B$ and show it is countable.
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 20
+\phantom{foo}
+% PLEASE READ:  This is a shorter version of Exercise 1.5.4 (a) and (c).  For (b) below I was able to do the proof starting from (a), and from the idea of splitting S=[0,1) into disjoint rational and irrational portions: S = (S \cap \QQ) \cup (S \cap \II)
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item For any $a<b$ it follows that $(a,b) \sim \RR$.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+\item $[0,1) \sim (0,1)$
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem} % Problem 21
+If $A\sim B$ and $B\sim C$ then $A\sim C$.
+\end{problem}
+
+% PLEASE READ:  This is Exercise 1.5.5 (c), that is, showing the transitive part of showing that $\sim$ is an equivalence relation.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\end{document}

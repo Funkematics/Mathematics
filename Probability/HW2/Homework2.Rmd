@@ -154,7 +154,7 @@ $$GLLG,LGLG,LLGG,GLLL,LGLL,LLGL,LLLG,LLLL\}$$
 
 b Identify the simple events in each of the following events: A: At least two had incomes exceeding \$43,318. B: Exactly two had incomes exceeding \$43,318. C: Exactly one had income less than or equal to \$43,318.\
 
-$$A = S_1, S_2,S_3,S_4,...S_{11} \qquad B = S_6,S_7,S_8,...S_{11} \qquad C = S_2,S_3,S_4,S_5 $$ \
+$$A = S_1, S_2,S_3,S_4,...S_{11} \qquad B = S_6,S_7,S_8,...S_{11} \qquad C = S_2,S_3,S_4,S_5 $$\
 c Make use of the given interpretation for the median to assign probabilities to the simple events and find P(A), P(B), and P(C).\
 \
 $$P(A) = 11/16 \qquad P(B) = 6/16 \qquad P(C) = 4/16$$
@@ -181,14 +181,14 @@ $$10^7 - 1,000,000 = 9,000,000$$\
 
 $${9 \choose 3} * {6 \choose 5} * {1 \choose 1} = {9 \choose 3,5,1} = 504 $$\
 \
-2.49)Students attending the University of Florida can select from 130 major areas of study. A student’s major is identified in the registrar’s records with a two-or three-letter code (for example, statistics majors are identified by STA, math majors by MS). Some students opt for a double major and complete the requirements for both of the major areas before graduation. The registrar was asked to consider assigning these double majors a distinct two- or three-letter code so that they could be identified through the student records’ system. \
+2.49)Students attending the University of Florida can select from 130 major areas of study. A student’s major is identified in the registrar’s records with a two-or three-letter code (for example, statistics majors are identified by STA, math majors by MS). Some students opt for a double major and complete the requirements for both of the major areas before graduation. The registrar was asked to consider assigning these double majors a distinct two- or three-letter code so that they could be identified through the student records’ system.\
 a What is the maximum number of possible double majors available to University of Florida students?
 
 $${130 \choose 2} = 8385$$\
 b If any two- or three-letter code is available to identify majors or double majors, how many major codes are available?
 
 $$26^2 + 26^3 = 18252$$\
-c How many major codes are required to identify students who have either a single major or a double major? \
+c How many major codes are required to identify students who have either a single major or a double major?\
 
 $$8385 + 130 =  8515$$\
 d Are there enough major codes available to identify all single and double majors at the University of Florida?\
@@ -196,7 +196,7 @@ d Are there enough major codes available to identify all single and double major
 $$\text{Yes there are}$$\
 \
 2.51) local fraternity is conducting a raffle where 50 tickets are to be sold—one per customer. There are three prizes to be awarded. If the four organizers of the raffle each buy one ticket, what is the probability that the four organizers win\
-a all of the prizes? \
+a all of the prizes?\
 $$\text{Total is } {50 \choose 3} = 19600 \text{ so, }$$\
 $$4/19600.$$\
 b exactly two of the prizes?\
@@ -208,7 +208,7 @@ $${46 \choose 2} * {4 \choose 1} = 4140, \text{ so, } 4140/19600.$$\
 d none of the prizes?\
 
 $${46 \choose 3} = 15,180, \text{ so, } 15180,19600.$$\
-2.55) A study is to be conducted in a hospital to determine the attitudes of nurses toward various administrative procedures. A sample of 10 nurses is to be selected from a total of the 90 nurses employed by the hospital. \
+2.55) A study is to be conducted in a hospital to determine the attitudes of nurses toward various administrative procedures. A sample of 10 nurses is to be selected from a total of the 90 nurses employed by the hospital.\
 a How many different samples of 10 nurses can be selected?
 
 $${90 \choose 10}$$\
@@ -222,7 +222,7 @@ $${52 \choose 2} = 1326$$\
 $$4* 12 / 1326 = 0.0362$$\
 \
 \
-2.59) Five cards are dealt from a standard 52-card deck. What is the probability that we draw \
+2.59) Five cards are dealt from a standard 52-card deck. What is the probability that we draw\
 a 1 ace, 1 two, 1 three, 1 four, and 1 five (this is one way to get a “straight”)?\
 $${52 \choose 5} = 2598960$$\
 $$4^5 /2598960 = 0.000394$$\
