@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1757695405.23644 "A1-Homework.tex" "build/A1-Homework.pdf" "A1-Homework" 1757695405.51877 0
+["pdflatex"] 1758362476.394 "A1-Homework.tex" "build/A1-Homework.pdf" "A1-Homework" 1758362476.65673 0
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm" 1136768653 1616 371d1ee60c04b008c8fd760060cd34f1 ""
@@ -109,8 +109,8 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1740469224.94382 327964 66947494ae0b30df692aba42aa1c43ce ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1740469205 6800595 69d9fb263956deba8491ea26f3edc411 ""
   "A1-Homework.tex" 1756941213.50449 8621 db4a7c800cc81cf75b963725513bad9b ""
-  "build/A1-Homework.aux" 1757695405.45433 162 fa61bf9ecf9314f94d51aa32222a725c "pdflatex"
-  "build/A1-Homework.out" 1757695405.43433 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "build/A1-Homework.aux" 1758362476.61327 162 fa61bf9ecf9314f94d51aa32222a725c "pdflatex"
+  "build/A1-Homework.out" 1758362476.59327 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "build/A1-Homework.aux"
   "build/A1-Homework.log"
