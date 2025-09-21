@@ -84,7 +84,12 @@ By definition, a set $C\subseteq \RR$ is \emph{dense} if for any real numbers $a
 % PLEASE READ:  This is a cleaner version of Exercise 1.4.6 (b).  Equivalently to the definition above, a set is dense if every nonempty open interval of the real line intersects the set.  As a hint on showing T is dense, you might look at the beginning of the proof of Theorem 1.4.3, but your proof will need to come up with a rational number in (a,b) which has a power of 2 in the denominator.
 
 \begin{proof}
-% FILL IN
+  Let $a < b$ where $a \in \RR$ and $b \in \RR$. We want to show that there exists $p \in \ZZ$ and $k \in \NN$ such that $a < \frac{p}{2^k} < b$. Note that by the Archimedean Property of $\RR$, there exists a $k \in \NN$ such that $\frac{1}{2^k} < b - a$ which is equivalent to $2^k > \frac{1}{b -a}$.
+  Consider the open interval $(a2^k, b2^k) \subseteq \RR$. The length of this interval is
+  \begin{align*}
+    b2^k - a2^k =2^k(b - a) > 2^k * \frac{1}{2^k} = 1
+  \end{align*}
+  Since this interval has a length greater than 1, by the density of integers in $\RR$, there exists $p \in \ZZ$ such that $a2^k < p < b2^k$. Dividing the strict inequality by $2^k$ preserves the inequality direction so that $a < \frac{p}{2^k} < b$. Since $p \in \ZZ$ and $k \in \NN$, we have $\frac{p}{2^k} \in T$. Therefore, every open interval $(a, b)$ contains an element of $T$, thus $T$ is dense in $\RR$.
 \end{proof}
 
 
@@ -95,11 +100,23 @@ By definition, a set $C\subseteq \RR$ is \emph{dense} if for any real numbers $a
 \renewcommand{\labelenumi}{(\alph{enumi})}
 \begin{enumerate}
 \item An example of two real sets $A,B$ with $A\cap B=\emptyset$, $\sup A = \sup B$, $\sup A \notin A$, and $\sup B \notin B$ is
-% FILL IN YOUR EXAMPLE
+  \begin{align*}
+    A &= \{1 - \frac{1}{2k} : k \in \NN\} = \{\frac{1}{2}, \frac{3}{4}, \frac{5}{6}, \frac{7}{8},...\} \\
+    B &= \{1 - \frac{1}{2k+1} : k \in \NN\} = \{\frac{2}{3}, \frac{4}{5}, \frac{6}{7}, \frac{8}{9},... \}
+\end{align*}
+  The sets above satisfy the properties of $A \cap B = \emptyset$ (disjoint) and $\sup A = 1 = \sup B$, with $1$ being in neither of the sets.
 \item An example of a sequence of nested open intervals $J_1\supseteq J_2 \subseteq J_3 \supseteq \dots$, with $S=\bigcap_{n=1}^\infty J_n$ nonempty and of finite cardinality, is
-% FILL IN YOUR EXAMPLE
+\begin{align*}
+  J_{2n-1} &= (-\frac{1}{n}, \frac{1}{n})\\
+  J_{2n} &= (-1,1) 
+\end{align*}
+This satisfies the properties $J_1 \supseteq J_2 \subseteq J_3 \supseteq \dots$ property by having every odd indexed interval be a subset of the even indexed intervals. It satisfies the second property because $S=\bigcap_{n=1}^\infty J_n = \{0\}$. It satisfies the third property by having a cardinality of $1$. 
 \item By definition, an unbounded closed interval is of the form $[a,\infty) = \{x\in\RR \,:\, x \ge a\}$.  An example of a sequence of nested unbounded closed intervals $L_1\supseteq L_2 \subseteq L_3 \supseteq \dots$, with $\bigcap_{n=1}^\infty L_n = \emptyset$, is
-% FILL IN YOUR EXAMPLE
+\begin{align*}
+  L_{2n-1} &= [n, \infty) \\
+  L_{2n} &= [1, \infty)
+\end{align*}
+This satisfies the first property as our odd indexed intervals will be subsets to our even indexed intervals. It satisfies the second property because odd indexed intervals will just keep starting further right. Every point eventually gets excluded this way.
 \end{enumerate}
 \end{problem}
 
@@ -112,7 +129,8 @@ If $A\subseteq B$ and $B$ is countable then $A$ is either countable or finite.
 
 \begin{proof}
 Assume $B$ is countable.  If $|A|<\infty$ then $A$ is finite and we are done.  So we will consider an infinite subset $A\subseteq B$ and show it is countable.
-% FILL IN
+
+Since $B$ is countable, we can enumerate the elements of $B = \{b_1, b_2, b_3, \dots\}$. Since $A \subseteq B$, we can similarly enumerate the elements of $A$ by taking them in the order they appear in the enumeration of $B$. This gives us a bijection between $\NN$ and $A$, so $A$ is countable.
 \end{proof}
 
 
@@ -125,13 +143,46 @@ Assume $B$ is countable.  If $|A|<\infty$ then $A$ is finite and we are done.  S
 \item For any $a<b$ it follows that $(a,b) \sim \RR$.
 
 \begin{proof}
-% FILL IN
+We define $f : (-1,1) \rightarrow \RR$ as
+\begin{align*}
+  f(x) = \frac{x}{x^2 - 1}
+\end{align*}
+Note that for $x \in (-1,1)$ we have $x^2 < 1$, so $x^2 - 1 < 0$ and the function is well-defined. We will show that $f$ is bijective: \newline
+\textbf{Injective: } First we will examine the derivative $$f'(x) = \frac{-x^2 - 1}{(x^2 - 1)^2}$$ Since the numerator is negative and denominator is positive, we have $f'(x) < 0$ for all $x \in (-1, 1)$, so $f$ is strictly decreasing, thus injective. \newline
+\textbf{Surjective: } Observe that
+\begin{align*}
+  \lim_{x \to 1^-} \frac{x}{x^2-1} = -\infty \\
+  \lim_{x \to (-1)^+} \frac{x}{x^2-1} = +\infty
+\end{align*}
+By the intermediate Value Theorem, $f$ takes on every value, thus surjective. \newline \newline
+Now we define $g : (a,b) \rightarrow (-1,1)$ as
+\begin{align*}
+  g(x) = \frac{2x - (a + b)}{b - a}
+\end{align*}
+This function linearly maps $(a, b)$ to $(-1, 1)$ and is bijective. The composition $f \circ g : (a, b) \to \RR$ is a bijection, so $(a,b)$ has the same cardinality as $\RR$.
 \end{proof}
 
 \item $[0,1) \sim (0,1)$
 
 \begin{proof}
-% FILL IN
+We want a bijective function from $[0,1)$ to $(0,1)$. We'll use composition of bijections.
+
+First, define $g: [0,1) \to [0,\infty)$ by:
+$$g(x) = \frac{x}{1-x}$$
+
+This maps $[0,1)$ bijectively to $[0,\infty)$ since $g(0) = 0$ and $\lim_{x \to 1^-} g(x) = \infty$.
+
+Next, define $h: [0,\infty) \to (0,1)$ by:
+$$h(x) = \frac{1}{x+2}$$
+
+This maps $[0,\infty)$ bijectively to $(0,\frac{1}{2}]$ since $h(0) = \frac{1}{2}$ and $\lim_{x \to \infty} h(x) = 0$.
+
+Finally, define $k: (0,\frac{1}{2}] \to (0,1)$ by:
+$$k(x) = 2x$$
+
+This is clearly a bijection.
+
+The composition $k \circ h \circ g: [0,1) \to (0,1)$ is a bijection, so $[0,1)$ has the same cardinality as $(0,1)$.
 \end{proof}
 
 \end{enumerate}
@@ -145,7 +196,16 @@ If $A\sim B$ and $B\sim C$ then $A\sim C$.
 % PLEASE READ:  This is Exercise 1.5.5 (c), that is, showing the transitive part of showing that $\sim$ is an equivalence relation.
 
 \begin{proof}
-% FILL IN
+Since $A$ has the same cardinality as $B$, there exists a bijection $f: A \to B$.
+Since $B$ has the same cardinality as $C$, there exists a bijection $g: B \to C$.
+Consider the composition $h = g \circ f: A \to C$ defined by $h(x) = g(f(x))$ for all $x \in A$.
+We show $h$ is a bijection:
+\newline
+\textbf{Injective:} Suppose $h(x_1) = h(x_2)$ for some $x_1, x_2 \in A$. Then $g(f(x_1)) = g(f(x_2))$. Since $g$ is injective, we have $f(x_1) = f(x_2)$. Since $f$ is injective, we have $x_1 = x_2$. Therefore $h$ is injective.
+\newline
+\textbf{Surjective:} Let $z \in C$. Since $g$ is surjective, there exists $y \in B$ such that $g(y) = z$. Since $f$ is surjective, there exists $x \in A$ such that $f(x) = y$. Therefore $h(x) = g(f(x)) = g(y) = z$. This shows $h$ is surjective.
+\newline\newline
+Thus $h: A \to C$ is a bijection, and $A$ has the same cardinality as $C$.
 \end{proof}
 
 
