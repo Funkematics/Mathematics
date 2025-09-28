@@ -40,10 +40,26 @@ If $f:A\to B$ has an inverse function then $f$ is onto and $f$ is one-to-one.
 \end{problem}
 
 % PLEASE READ:  Recall that g:B->A is an inverse function of f:A->B if g(f(a))=a for all a in A and if f(g(b))=b for all b in B.  You will want to write separate paragraphs in your proof for the two results, something like "First, to prove $f$ is onto we ..." and then "To prove $f$ is one-to-one ..."
-
 \begin{proof}
-% FILL IN
-\end{proof}
+Suppose $f : A \to B$ has an inverse function $g : B \to A$. By definition of an inverse function this means that 
+\begin{flalign*}
+	g(f(a)) &= a, \text{ for all } a \in A \\
+	f(g(b)) &= b, \text{ for all } b \in B
+\end{flalign*}
+\textbf{one-to-one : }Let $a_1, a_2 \in A$ such that $f(a_1) = f(a_2)$. To prove $f$ is one-to-one(injective) we must show that $a_1 = a_2$. Observe that composing the inverse $g$ with $f$ gives
+\begin{align*}
+	g(f(a_1) &= g(f(a_2)) 
+\end{align*}
+As a result of applying the definition of inverse $g(f(a)) = a$, we get
+$$a_1 = a_2$$
+Therefore $f$ is injective. \newline
+\textbf{onto : } To prove that $f$ is onto, we must show that there exists an $a \in A$ such that $f(a) = b$. Since $g : B \to A$, we know that $g(b) \in A$. Let $a = g(b)$. Substituting $a$ in $f(a)$ gives
+$$f(a) = f(g(b)) = b$$
+As a result of applying the definition of inverse $f(g(b)) = b$.
+Therefore, for every $b \in B$, there exists $a =g(b) \in A$ such that $f(a) = b$.
+Hence $f$ is onto. \newline \newline
+Since $f$ is both one-to-one and onto, it follows that $f$ is bijective.
+\end{proof} 
 
 
 
