@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1759056951.77029 "A4-Munoz.tex" "build/A4-Munoz.pdf" "A4-Munoz" 1759056952.01671 0
+["pdflatex"] 1759073302.31103 "A4-Munoz.tex" "build/A4-Munoz.pdf" "A4-Munoz" 1759073302.55727 0
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm" 1136768653 1616 371d1ee60c04b008c8fd760060cd34f1 ""
@@ -105,9 +105,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1758847103.35677 39447 2134d78a2da0cee52270db0ec417a200 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1758846987 5318290 3f0be5c5419f95449a735044e993c9ca ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1758846870.42717 1917600 903146e364dbcf08632fa0eafc3bb517 ""
-  "A4-Munoz.tex" 1759056949.80116 7999 a2fb3d879a822e689127351a0ce33d8c ""
-  "build/A4-Munoz.aux" 1759056951.97785 162 fa61bf9ecf9314f94d51aa32222a725c "pdflatex"
-  "build/A4-Munoz.out" 1759056951.92118 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "A4-Munoz.tex" 1759073301.02934 8154 99c3f64ac55b8c2052a7711a1806a355 ""
+  "build/A4-Munoz.aux" 1759073302.51936 162 fa61bf9ecf9314f94d51aa32222a725c "pdflatex"
+  "build/A4-Munoz.out" 1759073302.45936 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "build/A4-Munoz.aux"
   "build/A4-Munoz.log"
