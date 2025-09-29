@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{enumitem,palatino}
+\usepackage[final]{graphicx}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+
+% shortcuts for blackboard bold number sets
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+
+\begin{document}
+
+\small
+\noindent \textsc{Chapter 2 Summary for Probability} \hfill Christopher Munoz
+\normalsize
+\bigskip
+
+\section*{Chapter 2: Probability}
+
+Chapter 2 establishes the foundational framework for probability theory, providing both conceptual understanding and computational tools necessary for statistical inference.
+
+\subsection*{Introduction and Inference (Sections 2.1-2.2)}
+The chapter begins by defining probability as a measure of belief in future events, grounded in the relative frequency interpretation. For random events that cannot be predicted with certainty, probability represents the stable long-term frequency of occurrence. This concept connects directly to statistical inference: we evaluate hypotheses by calculating the probability of observed data under assumed conditions. When this probability is sufficiently small, we can likely reject the hypothesis as inconsistent with our observations.
+
+\subsection*{Set Theory Foundation (Section 2.3)}
+Set theory provides the mathematical language for probability. Key operations include:
+\begin{itemize}
+\item Union ($A \cup B$): events where A or B (or both) occur
+\item Intersection ($A \cap B$): events where both A and B occur simultaneously  
+\item Complement ($\overline{A}$): events where A does not occur
+\item Mutually exclusive sets: $A \cap B = \emptyset$
+\end{itemize}
+
+Important identities include the distributive laws and DeMorgan's laws, which allow manipulation of complex event expressions.
+
+\subsection*{Discrete Probabilistic Models (Section 2.4)}
+This section formalizes experiments as processes that generate observable outcomes. The sample space $S$ contains all possible outcomes, and events correspond to subsets of $S$. For discrete cases, we can enumerate all possible outcomes explicitly.
+
+\subsection*{Computing Probabilities (Sections 2.5-2.6)}
+The sample-point method assigns probabilities to individual outcomes, then sums these for complex events. Section 2.6 introduces counting techniques essential for determining the number of ways events can occur:
+\begin{itemize}
+\item Multiplication principle for sequential choices
+\item Permutations for ordered arrangements: $P_n^r = \frac{n!}{(n-r)!}$
+\item Combinations for unordered selections: $\binom{n}{r} = \frac{n!}{r!(n-r)!}$
+\end{itemize}
+
+\subsection*{Conditional Probability and Independence (Section 2.7)}
+Conditional probability $P(A|B) = \frac{P(A \cap B)}{P(B)}$ measures the probability of A given that B has occurred. Events are independent when $P(A|B) = P(A)$, or equivalently, when $P(A \cap B) = P(A)P(B)$.
+
+\subsection*{Fundamental Laws (Section 2.8)}
+Two key probability laws govern all calculations:
+\begin{itemize}
+\item Addition rule: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+\item Multiplication rule: $P(A \cap B) = P(A)P(B|A) = P(B)P(A|B)$
+\end{itemize}
+
+\subsection*{Event Composition Method (Section 2.9)}
+Rather than counting sample points directly, this approach decomposes complex events into simpler components using set operations, then applies probability laws to find the result.
+
+\subsection*{Total Probability and Bayes' Rule (Section 2.10)}
+The law of total probability partitions the sample space: $P(A) = \sum_i P(A|B_i)P(B_i)$ for mutually exclusive, exhaustive events $B_i$. Bayes' rule reverses conditional probabilities: $P(B_i|A) = \frac{P(A|B_i)P(B_i)}{P(A)}$. 
+
+\subsection*{Random Variables and Sampling (Sections 2.11-2.12)}
+Section 2.11 introduces random variables as functions that assign numerical values to experimental outcomes, bridging the gap between abstract probability and numerical analysis. Section 2.12 addresses random sampling, establishing the connection between theoretical probability models and practical data collection procedures.
+
+\subsection*{Chapter 2 in nutshell}
+In Chapter 2 we reviewed the fundamentals of set theory and mapped it into a more useful "empirical" context. We begin with how to model our problems first before we move onto extracting useful information using Bayes Rule, addition and multiplication rules, and various counting methods before moving on to Random Variables. We also informally discussed the two philosophies of probability, the frequentists and the bayesians in class though my personal philosophy asserts that it doesn't matter and that you should use whatever philosophy/tools is necessary given the context. 
+\end{document}

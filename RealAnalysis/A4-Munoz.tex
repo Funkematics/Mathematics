@@ -103,9 +103,11 @@ Let $p(x) = x^2 - 2$. We verify that $\sqrt{2}$ is a root of this polynomial:
 \item For fixed $n\in\NN$, let $A_n$ be the set of algebraic numbers which are roots of polynomials, with integer coefficients, of degree $n$.  Then $A_n$ is countable.
 
 \begin{proof}
-A polynomial of degree $n$ with integer coefficients is defined as 
-	$$a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0 = 0$$ 
-	where $a_i \in \ZZ$ and $a_n \neq 0$.
+A polynomial $P \in P_n$ of degree $n$ with integer coefficients is defined as 
+	$$P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0 = 0$$ 
+	where $a_i \in \ZZ$ and $a_n \neq 0$. Let $P_n$ denote the set of all such degree-n polynomials. Each polynomial is uniquely determined by the $(n+1)$-tuple $(a_n, a_{n-1}, \dots, a_1, a_0)$ where $a_n \neq 0$. This is a bijection between $P_n$ and a subset of $Z^{n+1}$. Since $Z^{n+1}$ is countable, any subset of $Z^{n+1}$ is at most countable. Therefore $P_n$ is countable. We can thus enumerate $P_n = \{P_1, P_2, P_3, \dots\}$. \newline \newline
+	By the Fundamental Theorem of Algebra, each polynomial of degree $n$ has at most $n$ roots. For each $i \in \NN$, let $R_i$ denote the set of all roots of $P_i$. Then $|R_i| \leq n \leq \infty$. \newline \newline
+	Every algebraic number in $A_n$ is, by definition a root of some polynomial in $P_n$. Therefore $A_n = \cup_{i=0}^{\infty} R_i$.
 \end{proof}
 
 \item The set of all algebraic numbers is countable.
