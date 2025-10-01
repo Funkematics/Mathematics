@@ -26,7 +26,8 @@
 \begin{document}
 % replace with your name, but otherwise leave this header alone, from here ...
 \small
-\noindent \textsc{Math 401: Homework Assignment 4} \hfill YOUR NAME HERE
+\noindent \textsc{Math 401: Homework Assignment 4} \hfill Christopher Munoz
+%Forgot this last time
 
 \normalsize
 \bigskip
@@ -106,14 +107,17 @@ Let $p(x) = x^2 - 2$. We verify that $\sqrt{2}$ is a root of this polynomial:
 A polynomial $P \in P_n$ of degree $n$ with integer coefficients is defined as 
 	$$P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0 = 0$$ 
 	where $a_i \in \ZZ$ and $a_n \neq 0$. Let $P_n$ denote the set of all such degree-n polynomials. Each polynomial is uniquely determined by the $(n+1)$-tuple $(a_n, a_{n-1}, \dots, a_1, a_0)$ where $a_n \neq 0$. This is a bijection between $P_n$ and a subset of $Z^{n+1}$. Since $Z^{n+1}$ is countable, any subset of $Z^{n+1}$ is at most countable. Therefore $P_n$ is countable. We can thus enumerate $P_n = \{P_1, P_2, P_3, \dots\}$. \newline \newline
-	By the Fundamental Theorem of Algebra, each polynomial of degree $n$ has at most $n$ roots. For each $i \in \NN$, let $R_i$ denote the set of all roots of $P_i$. Then $|R_i| \leq n \leq \infty$. \newline \newline
-	Every algebraic number in $A_n$ is, by definition a root of some polynomial in $P_n$. Therefore $A_n = \cup_{i=0}^{\infty} R_i$.
+	By the Fundamental Theorem of Algebra, each polynomial of degree $n$ has at most $n$ roots. For each $i \in \NN$, let $R_i$ denote the set of all roots of $P_i$. Then $|R_i| \leq n < \infty$. \newline \newline
+	Every algebraic number in $A_n$ is, by definition a root of some polynomial in $P_n$. Therefore $A_n = \cup_{i=1}^{\infty} R_i$.
+	Since $A_n$ is a countable union of finite sets, $A_n$ is countable.
 \end{proof}
 
 \item The set of all algebraic numbers is countable.
 
 \begin{proof}
-% FILL IN
+For each $n \in \NN$, let $A_n$ be the set of roots of all degree-n polynomials with integer coefficients. From the previous problem we know that each $A_n$ is countable. The set of all algebraic numbers is 
+$$A = \cup_{n=1}^\infty A_n$$
+Since $A$ is a countable union of countable sets, A is countable. Therefore the set of all algebraic numbers is countable.
 \end{proof}
 \end{enumerate}
 \end{problem}
@@ -126,7 +130,18 @@ There is an onto function $f:(0,1) \to S$ where $S=\{(x,y)\,:\,0<x,y<1\}$ is the
 % PLEASE READ:  My hint is to start with $u\in (0,1)$ and $v\in (0,1)$ and consider their decimal expansions.  How might you combine the decimal expansions to generate one number in $(0,1)$?  Use this idea to define $x$ so that $f(x)=(u,v)$.  Of course, the plane $\RR^2$ is the set of pairs $(u,v)$ where $u$ and $v$ are any real numbers, so $S$ is just the part of the plane where each coordinate has a decimal expansion $0.b_1 b_2 b_3 \dots$ starting with zero.  Note that there is no claim that this function $f$ is continuous, but you should show it is well-defined and onto.  This function is a bit surprising because $S$ would seem to be so much larger than $(0,1)$.
 
 \begin{proof}
-% FILL IN
+Let $(u,v) \in S$ be arbitrary. Since $u,v \in (0,1)$, each has a decimal expansion:
+\begin{align*}
+  u &= 0.a_1a_2a_3a_4\dots \\
+  v &= 0.b_1b_2b_3b_4\dots
+\end{align*}
+where $a_i, b_i \in \{0,1,2,\dots,9\}$. If u or v has two representations, we choose the non-terminating one.\newline
+We construct $x \in (0,1)$ by interleaving the decimal digits:
+$$x = 0.a_1b_1a_2b_2a_3b_3a_4b_4\dots$$
+Now define $f: (0,1) \to S$ as follows: For any $x = 0.d_1d_2d_3d_4\dots \in (0,1)$, let
+$$f(x) = (0.d_1d_3d_5d_7\dots, 0.d_2d_4d_6d_8\dots)$$
+Then f(x) = (u,v) by construction, since the odd-positioned digits of x are precisely $a_1,a_2,a_3,\dots$ and the even-positioned digits are $b_1,b_2,b_3,\dots$.
+Since (u,v) was arbitrary, f is onto.
 \end{proof}
 
 
@@ -137,19 +152,61 @@ There is an onto function $f:(0,1) \to S$ where $S=\{(x,y)\,:\,0<x,y<1\}$ is the
 \item $\displaystyle \lim_{n\to\infty} \frac{2n+1}{5n+3} = \frac{2}{5}$
 
 \begin{proof}
-Let $\eps>0$.  % FILL IN
+Let $\eps>0$. We compute:
+\begin{align*}
+\left|\frac{2n+1}{5n+3} - \frac{2}{5}\right| &= \left|\frac{5(2n+1) - 2(5n+3)}{5(5n+3)}\right| \\
+&= \frac{1}{5(5n+3)} \\
+&= \frac{1}{25n+15}
+\end{align*}
+
+For $n \geq 1$, we have $25n + 15 \geq 25n$, so:
+$$\frac{1}{25n+15} \leq \frac{1}{25n} < \eps$$
+
+The last inequality holds when $n > \frac{1}{25\eps}$.
+
+Choose $N \in \mathbb{N}$ such that $N > \frac{1}{25\eps}$.
+
+Then for all $n \geq N$, we have $\left|\frac{2n+1}{5n+3} - \frac{2}{5}\right| < \eps$.
 \end{proof}
 
 \item $\displaystyle \lim_{n\to\infty} \frac{2n^2}{n^3 + 1} = 0$
 
 \begin{proof}
-Let $\eps>0$.  % FILL IN
+Let $\eps>0$. We compute:
+\begin{align*}
+\left|\frac{2n^2}{n^3+1} - 0\right| &= \frac{2n^2}{n^3+1}
+\end{align*}
+
+For $n \geq 1$, we have $n^3 + 1 \geq n^3$, so:
+$$\frac{2n^2}{n^3+1} \leq \frac{2n^2}{n^3} = \frac{2}{n} < \eps$$
+
+The last inequality holds when $n > \frac{2}{\eps}$.
+
+Choose $N \in \mathbb{N}$ such that $N > \frac{2}{\eps}$.
+
+Then for all $n \geq N$, we have $\left|\frac{2n^2}{n^3+1}\right| < \eps$.
+
+Therefore $\displaystyle \lim_{n\to\infty} \frac{2n^2}{n^3 + 1} = 0$.
 \end{proof}
 
-\item $\displaystyle \lim_{n\to\infty} \frac{\sin(n)}{\sqrt{n}} = o$
+\item $\displaystyle \lim_{n\to\infty} \frac{\sin(n)}{\sqrt{n}} = 0$
 
 \begin{proof}
-Let $\eps>0$.  % FILL IN
+Let $\eps>0$. We compute:
+\begin{align*}
+\left|\frac{\sin(n)}{\sqrt{n}} - 0\right| &= \frac{|\sin(n)|}{\sqrt{n}}
+\end{align*}
+
+Since $|\sin(n)| \leq 1$ for all $n$, we have:
+$$\frac{|\sin(n)|}{\sqrt{n}} \leq \frac{1}{\sqrt{n}} < \eps$$
+
+The last inequality holds when $\sqrt{n} > \frac{1}{\eps}$, or equivalently, $n > \frac{1}{\eps^2}$.
+
+Choose $N \in \mathbb{N}$ such that $N > \frac{1}{\eps^2}$.
+
+Then for all $n \geq N$, we have $\left|\frac{\sin(n)}{\sqrt{n}}\right| < \eps$.
+
+Therefore $\displaystyle \lim_{n\to\infty} \frac{\sin(n)}{\sqrt{n}} = 0$.
 \end{proof}
 \end{enumerate}
 \end{problem}
@@ -160,10 +217,39 @@ Let $\eps>0$.  % FILL IN
 \begin{problem} % Problem 26
 \begin{enumerate}
 \item A sequence with an infinite number of ones that does not converge to one.
-
-\bigskip
+	\newline\newline
+	Define $a_n = \sin( \frac{n \pi}{2})$ where $n \in \NN$. This sequence looks like $1, 0, -1, 0, 1, 0, -1, 0, \dots$ and contains infinitely many ones when $n = 1, 5, 9, 13, \dots$.
+\begin{proof}
+We show this sequence does not converge to 1. Let $\eps = \frac{1}{2}$. For any $N \in \mathbb{N}$, we can find $n > N$ with $n \equiv 3 \pmod{4}$. For such $n$, $a_n = \sin\left(\frac{n\pi}{2}\right) = -1$, so $|a_n - 1| = |-1 - 1| = 2 > \eps$. Therefore the sequence does not converge to 1.
+\end{proof}
+	\bigskip
 \item A sequence with an infinite number of ones that converges to a limit not equal to one.
 
+\begin{proof}
+Suppose, for the sake of contradiction, that there exists a sequence $(a_n)$ that:
+\begin{enumerate}
+\item Contains infinitely many ones, and
+\item Converges to some limit $L$ where $L \neq 1$
+\end{enumerate}
+
+Since $L \neq 1$, the distance between $L$ and $1$ is positive. Let $d = |L - 1| > 0$.
+
+Choose $\eps = \frac{d}{2} = \frac{|L-1|}{2}$. This is half the distance from $L$ to $1$.
+
+Since $(a_n)$ converges to $L$, by definition of convergence, there exists some $N \in \mathbb{N}$ such that:
+$$\text{for all } n \geq N, \quad |a_n - L| < \eps$$
+
+This means that all terms after position $N$ must lie within distance $\eps$ of $L$.
+
+However, the sequence contains infinitely many ones. Therefore, there must exist some $n \geq N$ where $a_n = 1$.
+
+For this particular $n$, we compute:
+$$|a_n - L| = |1 - L| = |L - 1| = d = 2\eps$$
+
+But this contradicts the requirement that $|a_n - L| < \eps$.
+
+Therefore, our assumption must be false. No such sequence can exist.
+\end{proof}
 \bigskip
 \end{enumerate}
 \end{problem}
@@ -177,7 +263,30 @@ Let $(x_n)$ be a sequence that converges to $x$.  Suppose $p(x)$ is a polynomial
 % PLEASE READ:  Prove this using the algebraic limit theorem (Theorem 2.3.3).  You will want to induct on the degree of the polynomial.  You can assume $p(x)$ is either in standard form or in Horner's nested form.
 
 \begin{proof}
-% FILL IN
+We prove by induction on the degree $k$ of the polynomial $p(x)$.
+\newline
+\textbf{Base case} ($k = 0$): If $p(x) = a_0$ is a constant polynomial, then $p(x_n) = a_0$ for all $n$, so:
+$$\lim_{n\to\infty} p(x_n) = \lim_{n\to\infty} a_0 = a_0 = p(x)$$
+
+\textbf{Inductive step}: Assume the result holds for all polynomials of degree at most $k-1$. Let $p(x)$ be a polynomial of degree $k$:
+$$p(x) = a_k x^k + q(x)$$
+where $q(x) = a_{k-1}x^{k-1} + \cdots + a_1 x + a_0$ is a polynomial of degree at most $k-1$.
+\newline
+By the inductive hypothesis, $\lim_{n\to\infty} q(x_n) = q(x)$.
+\newline
+For the term $a_k x^k$, we can write:
+$$x_n^k = x_n \cdot x_n^{k-1}$$
+\newline
+By the Algebraic Limit Theorem (product rule), since $\lim_{n\to\infty} x_n = x$ and $\lim_{n\to\infty} x_n^{k-1} = x^{k-1}$ (by applying the product rule inductively), we have:
+$$\lim_{n\to\infty} x_n^k = x \cdot x^{k-1} = x^k$$
+\newline
+By the Algebraic Limit Theorem (constant multiple rule):
+$$\lim_{n\to\infty} a_k x_n^k = a_k x^k$$
+\newline
+Finally, by the Algebraic Limit Theorem (sum rule):
+$$\lim_{n\to\infty} p(x_n) = \lim_{n\to\infty} (a_k x_n^k + q(x_n)) = a_k x^k + q(x) = p(x)$$
+\newline
+By induction, the result holds for all polynomials.
 \end{proof}
 
 
@@ -188,7 +297,33 @@ Consider three sequences $(x_n)$, $(y_n)$, and $(z_n)$ for which $x_n \le y_n \l
 % PLEASE READ:  This is the squeeze theorem.  This is not just an application of the order limit theorem (Theorem 2.3.4) because you need to prove that $\lim y_n$ exists.  I would just prove from the original Definition 2.2.3.
 
 \begin{proof}
-% FILL IN
+Let $\eps > 0$. We must show there exists $N$ such that for all $n \geq N$, $|y_n - \ell| < \eps$.
+
+Since $x_n \to \ell$, there exists $N_1 \in \mathbb{N}$ such that for all $n \geq N_1$:
+$$|x_n - \ell| < \eps$$
+which implies:
+$$-\eps < x_n - \ell < \eps$$
+or equivalently:
+$$\ell - \eps < x_n < \ell + \eps$$
+\newline
+Since $z_n \to \ell$, there exists $N_2 \in \mathbb{N}$ such that for all $n \geq N_2$:
+$$|z_n - \ell| < \eps$$
+which implies:
+$$-\eps < z_n - \ell < \eps$$
+or equivalently:
+$$\ell - \eps < z_n < \ell + \eps$$
+\newline
+Choose $N = \max\{N_1, N_2\}$. For any $n \geq N$, we have both $n \geq N_1$ and $n \geq N_2$.
+\newline
+Therefore, using the given condition $x_n \leq y_n \leq z_n$:
+$$\ell - \eps < x_n \leq y_n \leq z_n < \ell + \eps$$
+\newline
+This gives us:
+$$\ell - \eps < y_n < \ell + \eps$$
+which is equivalent to:
+$$|y_n - \ell| < \eps$$
+\newline
+Since $\eps$ was arbitrary, we conclude that $y_n \to \ell$.
 \end{proof}
 
 \end{document}
