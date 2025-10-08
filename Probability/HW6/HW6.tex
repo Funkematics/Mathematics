@@ -9,9 +9,7 @@
 \usepackage[normalem]{ulem}
 \usepackage{setspace} %used for doublespacing, etc.
 \usepackage{hyperref}
-\usepackage{cancel}
 \usepackage[dvipsnames,usenames]{color}
-\usepackage[all]{xy}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 	\renewcommand{\headrulewidth}{0.5pt} % and the line
@@ -99,7 +97,7 @@
 \definecolor{MidnightBlue}{rgb}{.3,.4,.6}
 \newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
 
-\chead{MATH 265F}
+\chead{MATH 371}
 \pagestyle{fancy}
 %Modify these items:
 \rhead{\emph{Christopher Munoz}}
@@ -210,24 +208,59 @@ Event 2(Choose 2 no cocaine) $X_2::N_2 = 16, K_2 = 11, n_2 = 2, k_1 = 0$
 \end{proof}
 \end{exercise}
 
-\begin{exercise}[3.107] 
-Seed are often treated with fungicides to protect them in poor draining, wet environments.
-A small-scale trial, involving five treated and five untreated seeds, was conducted prior to a
-large-scale experiment to explore how much fungicide to apply. The seeds were planted in wet
-soil, and the number of emerging plants were counted. If the solution was not effective and
-four plants actually sprouted, what is the probability that
-
-a
-all four plants emerged from treated seeds?
-
-b
-three or fewer emerged from treated seeds?
-
-c
-at least one emerged from untreated seeds?
+\begin{exercise}[3.107] A group of six software packages available to solve a linear programming problem has been
+ranked from 1 to 6 (best to worst). An engineering firm, unaware of the rankings, randomly se-
+lected and then purchased two of the packages. Let Y denote the number of packages purchased
+by the firm that are ranked 3, 4, 5, or 6. Give the probability distribution for Y.
 \begin{proof}[Solution]
-Write your answer here.
+Our variables for hypergeometric distribution $N = 6, K = 4, n = 2$ so our probability distribution is
+	$$P(Y=k) = \frac{{4 \choose k}{6 - 4 \choose 2 - k}}{{6 \choose 2}}$$
 \end{proof}
+\end{exercise}
+
+\begin{exercise}[3.113]A jury of 6 persons was selected from a group of 20 potential jurors, of whom 8 were African
+American and 12 were white. The jury was supposedly randomly selected, but it contained
+only 1 African American member. Do you have any reason to doubt the randomness of the
+selection?
+	\begin{proof}[Solution]
+		Our variables for Hypergeometric distribution is $N = 20, K = 8, n = 6, k = \{1,0\}$.
+		\begin{align*}
+			P(K \leq 1) &= P(k = 0) + P(k = 1) \\
+			&= \frac{{8 \choose 3}{12 \choose 5}}{{20 \choose 6}} + \frac{{8 \choose 0}{12 \choose 6}}{{20 \choose 6}} \\
+			&= .187
+		\end{align*}
+	\end{proof}
+	That probability seems pretty reasonable to me.
+\end{exercise}
+
+\begin{exercise}[3.117] In an assembly-line production of industrial robots, gearbox assemblies can be installed in
+one minute each if holes have been properly drilled in the boxes and in ten minutes if
+the holes must be redrilled. Twenty gearboxes are in stock, 2 with improperly drilled holes.
+Five gearboxes must be selected from the 20 that are available for installation in the next five
+robots.
+
+	a
+Find the probability that all 5 gearboxes will fit properly.
+	\begin{proof}[Solution]
+		Hypergeometric distribution with variables $N =20, K =18 ,n = 5,k = 5$.
+		\begin{align*}
+			P(X=k) &= \frac{{K \choose k}{N - K \choose n - k}}{{N \choose n}} \\
+			P(X=5) &= \frac{{18 \choose 5}{2 \choose 0}}{{20 \choose 5}} \\
+				&= 0.5526316
+		\end{align*}
+	\end{proof}
+
+	b
+Find the mean, variance, and standard deviation of the time it takes to install these
+5 gearboxes.
+	\begin{proof}[Solution]
+		Installation time is $T = 5 + 9X$
+		\begin{align*}
+			E(T) &= E(5 + 9X) = 5 + 9E(X) = 5 + 9(0.5) = 9.5 \text{ minutes} \\
+			\text{Var}(T) &= \text{Var}(5 + 9X) = 9^2 \cdot \text{Var}(X) = 81(0.3553) = 28.78 \\
+			\text{SD}(T) &= \sqrt{\text{Var}(T)} = \sqrt{28.78} = 5.36 \text{ minutes}
+		\end{align*}
+	\end{proof}
 \end{exercise}
 
 \textbf{Below is an exercise I did by accident and I didn't feel like omitting it.}
