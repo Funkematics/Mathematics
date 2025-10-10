@@ -1,0 +1,135 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some shortcuts helpful for our assignments
+\newcommand{\bx}{\begin{exercise}}
+\newcommand{\ex}{\end{exercise}}
+
+%Some useful shortcuts for our favorite sets of numbers.
+%Note, you can use these WITHOUT entering math mode
+\def\RR{\ensuremath{\mathbb R}} 
+\def\NN{\ensuremath{\mathbb N}}
+\def\ZZ{\ensuremath{\mathbb Z}}
+\def\QQ{{\ensuremath\mathbb Q}}
+\def\CC{\ensuremath{\mathbb C}}
+\def\EE{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Code for formatting the proofs a little nicer for submitted homework
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par\doublespacing
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \list{}{%
+    \settowidth{\leftmargin}{\itshape\proofname:\hskip\labelsep}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\itemindent}{-\leftmargin}%
+  }%
+  \item[\hskip\labelsep\itshape#1\@addpunct{:}]\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+  \singlespacing
+}
+\makeatother
+
+
+%Commenting tools for the professor
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\begin{document}
+\title{\Large Probability Lab 2}
+\author{Christopher Munoz}
+\maketitle
+\begin{center}
+\textbf{Introduction}
+\end{center}
+
+\begin{center}
+	In this laboratory we are tasked with investigating the nature of games of chance, in particular games involving dice and coin flips. We are tasked with using R in our investigation. 
+\end{center}
+
+
+\vspace{1cm}
+
+\begin{center}
+	\textbf{Problem 1}
+\end{center}
+In this problem, we will explore the sum of the roll of five(the sheet had an error) dice for sample sizes n = 10, 25, 50, 100.
+
+\begin{exercise}[a]
+Suppose we roll the five dice and sum the outcomes repeatedly. In this game we earn \$0.25 times this
+	sum, for instance, a roll of 1,1,1,1,2 earns \$1.50. We want to find the expected earnings on average of this game. Let $E(Y)$ represent our expected earnings and $E(D)$ represent our expected value for the roll of 1 die. For 5 dice rolls our expected earnings is
+	\begin{align*}
+		E(D) &= \sum_{k=1}^{6} \frac{k}{6} = \frac{1}{6} + \frac{2}{6} + \frac{3}{6} + \frac{4}{6} + \frac{5}{6} + \frac{6}{6} = \frac{21}{6} = 3.5 \\
+		E(Y) &= 0.25 * 5 * E(D) \\
+		     &= 0.25 * 5 * 3.5 \\
+		     &= 4.375 \\
+	\end{align*}
+	So we are expected to earn $ \$4.375$ dollars in a game where we roll 5 die
+	For a general case, the function for our expected earnings is $$E(Y) = 0.25 * n * 3.5$$ Where $n \in \NN$ is the number of dice rolls.
+\end{exercise}
+\begin{exercise}[b]
+\end{exercise}
+\end{document}
+
