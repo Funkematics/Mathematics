@@ -26,7 +26,7 @@
 \begin{document}
 % replace with your name, but otherwise leave this header alone, from here ...
 \small
-\noindent \textsc{Math 401: Homework Assignment 5} \hfill YOUR NAME HERE
+\noindent \textsc{Math 401: Homework Assignment 5} \hfill Christopher Munoz
 
 \normalsize
 \bigskip
@@ -41,9 +41,9 @@ Suppose $(x_n)_{n=1}^\infty$ converges.  Let $k \in \NN$.  The new sequence $(x_
 % PLEASE READ:  You will have to prove this directly from the definition of the convergence of sequences.
 
 \begin{proof}
-% FILL IN
+	Let $\eps > 0$. 
+	Since the sequence $(x_n)_{n=1}^\infty$ converges to $L$, there exists $N \in \NN$ such that for all $n > N$, $|x_n - L| < \eps$. Now choose $M = N$ for our shifted sequence. Then for all $n > M$, we have $n+k > N$(since $k \geq 1$), so $|x_{n+k} - L| < \eps$. Therefore $(x_{n+k})$ converges to $L$.
 \end{proof}
-
 
 \begin{problem} % Problem 30
 Give an example of each of the following, or state that such a request is impossible.  In the latter case, identify specific theorem(s) that justify your statement.
@@ -52,8 +52,19 @@ Give an example of each of the following, or state that such a request is imposs
 \begin{enumerate}
 \item sequences $(x_n)$ and $(y_n)$, which both diverge, where the sum $(x_n+y_n)$ converges
 
-% FILL IN
-
+	We take the alternating harmonic series $\sum_{k=1}^\infty \frac{(-1)^{n+1}}{n}$ which famously converges to $\ln(2)$ and define $x_n$ as the sequence of positive terms and $y_n$ as the sequence of negative terms.
+	\begin{align*}
+		x_n = 
+	\begin{cases}
+		\frac{1}{n} &\text{if } n \text{ is odd} \\
+		0 & \text{if } n \text{ is even}
+	\end{cases} && y_n =
+	\begin{cases}
+		\frac{-1}{n} &\text{if } n \text{ is even} \\
+		0 & \text{if } n \text{ is odd}
+	\end{cases}
+\end{align*}
+These two sequence of partial sums converge when combined and each diverge when split this way.
 \item a convergent sequence $(x_n)$, and a divergent sequence $(y_n)$, where $(x_n+y_n)$ converges
 
 % FILL IN
