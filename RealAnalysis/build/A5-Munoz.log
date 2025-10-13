@@ -2,8 +2,8 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (pr
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**foundationaltreatise.tex
-(./foundationaltreatise.tex
+**A5-Munoz.tex
+(./A5-Munoz.tex
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -306,7 +306,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip57
 )
 \c@problem=\count297
-\c@theorem=\count298
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 2
 6.
 
@@ -315,11 +314,11 @@ File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count299
+\l__color_backend_stack_int=\count298
 \l__pdf_internal_box=\box54
 )
-(build/foundationaltreatise.aux)
-\openout1 = `foundationaltreatise.aux'.
+(build/A5-Munoz.aux)
+\openout1 = `A5-Munoz.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
@@ -376,16 +375,16 @@ LaTeX Font Info:    ... okay on input line 26.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count300
+\scratchcounter=\count299
 \scratchdimen=\dimen165
 \scratchbox=\box55
-\nofMPsegments=\count301
-\nofMParguments=\count302
+\nofMPsegments=\count300
+\nofMParguments=\count301
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count303
+\MPscratchCnt=\count302
 \MPscratchDim=\dimen166
-\MPnumerator=\count304
-\makeMPintoPDFobject=\count305
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
 \everyMPtoPDFconversion=\toks33
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -406,18 +405,17 @@ Package color Info: Driver file: pdftex.def on input line 149.
 
 (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 Package hyperref Info: Link coloring ON on input line 26.
-
-(build/foundationaltreatise.out) (build/foundationaltreatise.out)
+ (build/A5-Munoz.out)
+(build/A5-Munoz.out)
 \@outlinefile=\write3
-\openout3 = `foundationaltreatise.out'.
+\openout3 = `A5-Munoz.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 38.
 
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 38.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -427,33 +425,37 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
-/enc/dvips/base/8r.enc}] (build/foundationaltreatise.aux)
+/enc/dvips/base/8r.enc}]
+
+[2] (build/A5-Munoz.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-Package rerunfilecheck Info: File `foundationaltreatise.out' has not changed.
+Package rerunfilecheck Info: File `A5-Munoz.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10407 strings out of 475322
- 157129 string characters out of 5767664
- 560408 words of memory out of 5000000
- 33119 multiletter control sequences out of 15000+600000
- 568922 words of font info for 66 fonts, out of 8000000 for 9000
+ 10415 strings out of 475322
+ 156935 string characters out of 5767664
+ 567272 words of memory out of 5000000
+ 33111 multiletter control sequences out of 15000+600000
+ 568104 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,10n,79p,557b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/t
-exmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type
-1/urw/palatino/uplri8a.pfb>
-Output written on build/foundationaltreatise.pdf (1 page, 95221 bytes).
+ 75i,5n,79p,545b,713s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/upl
+r8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on build/A5-Munoz.pdf (2 pages, 114012 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
+ 95 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
