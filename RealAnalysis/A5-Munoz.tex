@@ -153,7 +153,7 @@ By the Monotone Convergence Theorem, $(x_n)$ converges. Let $L = \lim_{n\to\inft
 We now take the limit of both sides of the recurrence relation:
 $$\lim_{n\to\infty} x_{n+1} = \lim_{n\to\infty} \frac{1}{2}\left(x_n + \frac{2}{x_n}\right)$$
 
-We proved in problem 29 that, $\lim_{n\to\infty} x_{n+1} = L$. By the Algebraic Limit Theorem:
+by problem 29 we know that, $\lim_{n\to\infty} x_{n+1} = L$. By the Algebraic Limit Theorem:
 $$L = \frac{1}{2}\left(L + \frac{2}{L}\right)$$
 
 Multiplying by $2L$ (note $L \geq \sqrt{2} > 0$):
@@ -176,20 +176,20 @@ The sequence $\displaystyle \sqrt{2}, \sqrt{2+\sqrt{2}}, \sqrt{2 + \sqrt{2+\sqrt
 
 \begin{proof}
 Let $x_1 = \sqrt{2}$ and $x_{n+1} = \sqrt{2 + x_n}$ for $n \geq 1$. This gives the recurrence relation for our sequence.
-\newline \newline
+
 We will first show that $(x_n)$ is bounded above. We claim $x_n < 2$ for all $n$. 
-\newline \newline
+
 For $n = 1$: $x_1 = \sqrt{2} < 2$. 
-\newline \newline
+
 Assume $x_n < 2$. Then $x_{n+1} = \sqrt{2 + x_n} < \sqrt{2 + 2} = \sqrt{4} = 2$. By induction, $x_n < 2$ for all $n$.
 We next show that $(x_n)$ is increasing. We need $x_{n+1} > x_n$, i.e., $\sqrt{2 + x_n} > x_n$.
-\newline \newline
+
 Squaring both sides (valid since both are positive):
 $$2 + x_n > x_n^2$$
 $$x_n^2 - x_n - 2 < 0$$
 $$(x_n - 2)(x_n + 1) < 0$$
 Since $x_n > 0$, we have $x_n + 1 > 0$, so we need $x_n - 2 < 0$, i.e., $x_n < 2$. This holds by Step 1, so $(x_n)$ is increasing.
-\newline \newline
+
 By the Monotone Convergence Theorem, $(x_n)$ converges. Let $X = \lim_{n\to\infty} x_n$.
 Taking the limit of $x_{n+1} = \sqrt{2 + x_n}$:
 $$X = \sqrt{2 + X}$$

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2025.9.25)  13 OCT 2025 12:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2025.9.25)  13 OCT 2025 13:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,31 +428,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 /enc/dvips/base/8r.enc}]
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 178--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--188
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 190--195
-
- []
-
-
 
 [3]
 
@@ -485,7 +460,7 @@ lic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sy
 mbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></u
 sr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/
 fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/A5-Munoz.pdf (5 pages, 159798 bytes).
+Output written on build/A5-Munoz.pdf (5 pages, 159832 bytes).
 PDF statistics:
  117 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
