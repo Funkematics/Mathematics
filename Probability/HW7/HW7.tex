@@ -1,0 +1,592 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some shortcuts helpful for our assignments
+\newcommand{\bx}{\begin{exercise}}
+\newcommand{\ex}{\end{exercise}}
+
+%Some useful shortcuts for our favorite sets of numbers.
+%Note, you can use these WITHOUT entering math mode
+\def\RR{\ensuremath{\mathbb R}} 
+\def\NN{\ensuremath{\mathbb N}}
+\def\ZZ{\ensuremath{\mathbb Z}}
+\def\QQ{{\ensuremath\mathbb Q}}
+\def\CC{\ensuremath{\mathbb C}}
+\def\EE{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Code for formatting the proofs a little nicer for submitted homework
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par\doublespacing
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \list{}{%
+    \settowidth{\leftmargin}{\itshape\proofname:\hskip\labelsep}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\itemindent}{-\leftmargin}%
+  }%
+  \item[\hskip\labelsep\itshape#1\@addpunct{:}]\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+  \singlespacing
+}
+\makeatother
+
+
+%Commenting tools for the professor
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH 371}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Christopher Munoz}}
+\lhead{\emph{HW 7}}
+
+\begin{document}
+
+\thispagestyle{fancy}
+%§12.1 1, 3, 7, 9, 12.
+\section*{Section 3.8} 
+
+
+
+\begin{exercise}[3.121]Let $Y$ denote a random variable that has a Poisson distribution with mean $\lambda = 2$. Find:
+
+\begin{enumerate}
+    \item[(a)] $P(Y = 4)$
+\begin{proof}[Solution]
+	Poisson distribution function is $$P(Y=y)= \frac{e^{-\lambda} \lambda^y}{y!}$$
+	$$P(Y=4) = \frac{e^{-2}(-2)^4}{4!} = 0.09022352$$
+\end{proof}
+    \item[(b)] $P(Y \geq 4)$
+\begin{proof}[Solution]
+	\begin{align*}
+		P(Y \geq 4) &= 1 - [P(Y=3) + P(Y=2) + P(Y=1) + P(Y=0)] \\
+			&= 1 - [\frac{e^{-2}(-2)^3}{3!} + \frac{e^{-2}(-2)^2}{2!} + \frac{e^{-2}(-2)^1}{1!} + \frac{e^{-2}(-2)^0}{0!}] \\
+			&= 1 - [0.180447 + 0.2706706 + 0.2706706 + 0.1353353] \\
+			&= 0.1428765
+	\end{align*} 
+	(table gives me 1-0.857 = 0.143 but wanted to do it full at least once)
+\end{proof}
+    \item[(c)] $P(Y < 4)$
+\begin{proof}[Solution]
+	\begin{align*}
+		P(Y < 4) = P(Y \leq 3) = 0.857
+	\end{align*}
+	(table)
+\end{proof}
+    \item[(d)] $P(Y \geq 4 \mid Y \geq 2)$
+\begin{proof}[Solution]
+	\begin{align*}
+		P(Y \geq 4 \mid Y \geq 2) = \frac{ P(Y \geq 4) \cap P(Y \geq 2)}{P(Y \geq 2)} = \frac{P(Y \geq 4)}{P(Y \geq 2)} = \frac{0.143}{1-0.406} = 0.241
+	\end{align*}
+	(table and prev prob)
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+\begin{exercise}[3.122]
+Customers arrive at a checkout counter in a department store according to a Poisson distribution at an average of seven per hour. During a given hour, what are the probabilities that:
+ 
+\begin{enumerate}
+    \item[(a)] no more than three customers arrive?
+\begin{proof}[Solution]
+	$$P(Y \leq 3) =  0.082$$
+	(table)
+\end{proof}
+    \item[(b)] at least two customers arrive?
+\begin{proof}[Solution]
+	$$P(Y \geq 2) = 1 - P(Y \leq 1) = 1 - 0.007 = 0.993 $$
+ 
+\end{proof}
+    \item[(c)] exactly five customers arrive?
+\begin{proof}[Solution]
+	$$P(Y = 5) = \frac{e^{-7}7^5}{5!} = 0.1277167$$ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[3.125]
+Refer to Exercise 3.122. If it takes approximately ten minutes to serve each customer, find the mean and variance of the total service time for customers arriving during a 1-hour period. (Assume that a sufficient number of servers are available so that no customer must wait for service.) Is it likely that the total service time will exceed 2.5 hours?
+
+\begin{proof}[Solution]
+	Note that $10$ minutes = $1/6$ of an hour, $E(Y) = \lambda$ and $V(Y) = \lambda$ for Poisson.
+	\begin{align*}
+		E(\frac{1}{6}Y) &= \frac{1}{6} E(Y) = \frac{1}{6} * 7 = 1.166667 \\
+		V(\frac{1}{6}Y) &= (\frac{1}{6})^2V(Y) = \frac{1}{36} * 7 = 0.1944444 
+	\end{align*}
+	Not likely to exceed 2.5 hours of total service time since the variance is already so small, the standard deviation would be smaller
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.127]
+The number of typing errors made by a typist has a Poisson distribution with an average of four errors per page. If more than four errors appear on a given page, the typist must retype the whole page. What is the probability that a randomly selected page does not need to be retyped?
+
+\begin{proof}[Solution]
+	$\lambda = 4$ and $Y \leq 4$ for this one.
+	$$P(Y \leq 4) = 0.629$$ 
+	(table)
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.131]
+The number of knots in a particular type of wood has a Poisson distribution with an average of 1.5 knots in 10 cubic feet of the wood. Find the probability that a 10-cubic-foot block of the wood has at most 1 knot.
+
+\begin{proof}[Solution]
+	$\lambda = 1.5$ and $Y \leq 1$.
+	$$P(Y \leq 1) = 0.558 $$
+	(table really has everything doesn't it) 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.134]
+Consider a binomial experiment for $n = 20$, $p = .05$. Use Table 1, Appendix 3, to calculate the binomial probabilities for $Y = 0, 1, 2, 3$, and $4$. Calculate the same probabilities by using the Poisson approximation with $\lambda = np$. Compare.
+
+\begin{proof}[Solution]
+	Binomial Distribution for $P(Y \leq 4)$ for $n = 20$ and $p = 0.5$ is $0.997$ according to back table. For 
+	our Poisson Distribution $\lambda = 20*0.05 = 1$, we refer to the table in the back and calculate it.
+	\begin{align*}
+		P(Y \leq 4) &= 0.996 \text{ (table)} \\
+		P(Y \leq 4) &= P(Y = 0) + P(Y = 1) + P(Y = 2) + P(Y=3) + P(Y = 4) \\
+			&= e^{-1}[\frac{1}{0!} + \frac{1}{1!} + \frac{1}{2!}+ \frac{1}{3!}+ \frac{1}{4!}] \\
+			&= 0.9963402 \text{ (full calculation)}
+	\end{align*}
+	Depending on who you are, they are pretty close.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.135]
+A salesperson has found that the probability of a sale on a single contact is approximately .03. If the salesperson contacts 100 prospects, what is the approximate probability of making at least one sale?
+
+\begin{proof}[Solution]
+We use Poisson Approximation
+	$$P(Y \geq 1) = 1 - P(Y = 0)$$
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.139]
+In the daily production of a certain kind of rope, the number of defects per foot $Y$ is assumed to have a Poisson distribution with mean $\lambda = 2$. The profit per foot when the rope is sold is given by $X$, where $X = 50 - 2Y - Y^2$. Find the expected profit per foot.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.141]
+A food manufacturer uses an extruder (a machine that produces bite-size cookies and snack food) that yields revenue for the firm at a rate of \$200 per hour when in operation. However, the extruder breaks down an average of two times every day it operates. If $Y$ denotes the number of breakdowns per day, the daily revenue generated by the machine is $R = 1600 - 50Y^2$. Find the expected daily revenue for the extruder.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+\section*{Section 3.9}
+
+\begin{exercise}[3.145]
+If $Y$ has a binomial distribution with $n$ trials and probability of success $p$, show that the moment-generating function for $Y$ is
+$$m(t) = (pe^t + q)^n, \text{ where } q = 1 - p.$$
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.146]
+Differentiate the moment-generating function in Exercise 3.145 to find $E(Y)$ and $E(Y^2)$. Then find $V(Y)$.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.147]
+If $Y$ has a geometric distribution with probability of success $p$, show that the moment-generating function for $Y$ is
+$$m(t) = \frac{pe^t}{1 - qe^t}, \text{ where } q = 1 - p.$$
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.149]
+Refer to Exercise 3.145. Use the uniqueness of moment-generating functions to give the distribution of a random variable with moment-generating function $m(t) = (0.6e^t + 0.4)^3$.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.151]
+Refer to Exercise 3.145. If $Y$ has moment-generating function $m(t) = (0.7e^t + 0.3)^{10}$, what is $P(Y \leq 5)$?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[3.153]
+Find the distributions of the random variables that have each of the following moment-generating functions:
+
+\begin{enumerate}
+    \item[(a)] $m(t) = [(1/3)e^t + (2/3)]^5$
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] $m(t) = \frac{e^t}{2 - e^t}$
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] $m(t) = e^{2(e^t - 1)}$
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[3.155]
+Let $m(t) = \frac{1}{6}e^t + \frac{2}{6}e^{2t} + \frac{3}{6}e^{3t}$. Find the following:
+
+\begin{enumerate}
+    \item[(a)] $E(Y)$
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] $V(Y)$
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] The distribution of $Y$
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\section*{3.11}
+
+\begin{exercise}[3.167]
+Let $Y$ be a random variable with mean 11 and variance 9. Using Tchebysheff's theorem, find:
+
+\begin{enumerate}
+    \item[(a)] a lower bound for $P(6 < Y < 16)$
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] the value of $C$ such that $P(|Y - 11| \geq C) \leq 0.09$
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[3.168]
+Would you rather take a multiple-choice test or a full-recall test? If you have absolutely no knowledge of the test material, you will score zero on a full-recall test. However, if you are given 5 choices for each multiple-choice question, you have at least one chance in five of guessing each correct answer! Suppose that a multiple-choice exam contains 100 questions, each with 5 possible answers, and you guess the answer to each of the questions.
+
+\begin{enumerate}
+    \item[(a)] What is the expected value of the number $Y$ of questions that will be correctly answered?
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Find the standard deviation of $Y$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] Calculate the intervals $\mu \pm 2\sigma$ and $\mu \pm 3\sigma$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(d)] If the results of the exam are curved so that 50 correct answers is a passing score, are you likely to receive a passing score? Explain.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[3.171]
+For a certain type of soil the number of wireworms per cubic foot has a mean of 100. Assuming a Poisson distribution of wireworms, give an interval that will include at least $5/9$ of the sample values of wireworm counts obtained from a large number of 1-cubic-foot samples.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\section*{4.2}
+\begin{exercise}[4.1]
+Let $Y$ be a random variable with $p(y)$ given in the table below.
+\begin{center}
+\begin{tabular}{c|cccc}
+$y$ & 1 & 2 & 3 & 4 \\
+\hline
+$p(y)$ & .4 & .3 & .2 & .1
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+    \item[(a)] Give the distribution function, $F(y)$. Be sure to specify the value of $F(y)$ for all $y$, $-\infty < y < \infty$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Sketch the distribution function given in part (a).
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[4.3]
+A Bernoulli random variable is one that assumes only two values, 0 and 1 with $p(1) = p$ and $p(0) = 1 - p \equiv q$.
+
+\begin{enumerate}
+    \item[(a)] Sketch the corresponding distribution function.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Show that this distribution function has the properties given in Theorem 4.1.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[4.5]
+Suppose that $Y$ is a random variable that takes on only integer values $1, 2, \ldots$ and has distribution function $F(y)$. Show that the probability function $p(y) = P(Y = y)$ is given by
+$$p(y) = \begin{cases}
+F(1), & y = 1, \\
+F(y) - F(y-1), & y = 2, 3, \ldots
+\end{cases}$$
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[4.7]
+Let $Y$ be a binomial random variable with $n = 10$ and $p = 0.2$.
+
+\begin{enumerate}
+    \item[(a)] Use Table 1, Appendix 3, to obtain $P(2 < Y < 5)$ and $P(2 \leq Y < 5)$. Are the probabilities that $Y$ falls in the intervals $(2, 5)$ and $[2, 5)$ equal? Why or why not?
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Use Table 1, Appendix 3, to obtain $P(2 < Y \leq 5)$ and $P(2 \leq Y \leq 5)$. Are these two probabilities equal? Why or why not?
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] Earlier in this section, we argued that if $Y$ is continuous and $a < b$, then $P(a < Y < b) = P(a \leq Y < b)$. Does the result in part (a) contradict this claim? Why?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[4.9]
+A random variable $Y$ has the following distribution function:
+$$F(y) = P(Y \leq y) = \begin{cases}
+0, & \text{for } y < 2, \\
+1/8, & \text{for } 2 \leq y < 2.5, \\
+3/16, & \text{for } 2.5 \leq y < 4, \\
+1/2, & \text{for } 4 \leq y < 5.5, \\
+5/8, & \text{for } 5.5 \leq y < 6, \\
+11/16, & \text{for } 6 \leq y < 7, \\
+1, & \text{for } y \geq 7.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Is $Y$ a continuous or discrete random variable? Why?
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] What values of $Y$ are assigned positive probabilities?
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] Find the probability function for $Y$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(d)] What is the median, $\phi_{.5}$, of $Y$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[4.11]
+Suppose that $Y$ possesses the density function
+$$f(y) = \begin{cases}
+cy, & 0 \leq y \leq 2, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the value of $c$ that makes $f(y)$ a probability density function.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Find $F(y)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] Graph $f(y)$ and $F(y)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(d)] Use $F(y)$ to find $P(1 \leq Y \leq 2)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(e)] Use $f(y)$ and geometry to find $P(1 \leq Y \leq 2)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[4.13]
+A supplier of kerosene has a 150-gallon tank that is filled at the beginning of each week. His weekly demand shows a relative frequency behavior that increases steadily up to 100 gallons and then levels off between 100 and 150 gallons. If $Y$ denotes weekly demand in hundreds of gallons, the relative frequency of demand can be modeled by
+$$f(y) = \begin{cases}
+y, & 0 \leq y \leq 1, \\
+1, & 1 < y \leq 1.5, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find $F(y)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Find $P(0 \leq Y \leq 0.5)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] Find $P(0.5 \leq Y \leq 1.2)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[4.17]
+The length of time required by students to complete a one-hour exam is a random variable with a density function given by
+$$f(y) = \begin{cases}
+cy^2 + y, & 0 \leq y \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find $c$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Find $F(y)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] Graph $f(y)$ and $F(y)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(d)] Use $F(y)$ in part (b) to find $F(-1)$, $F(0)$, and $F(1)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(e)] Find the probability that a randomly selected student will finish in less than half an hour.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(f)] Given that a particular student needs at least 15 minutes to complete the exam, find the probability that she will require at least 30 minutes to finish.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+\begin{exercise}[4.19]
+Let the distribution function of a random variable $Y$ be
+$$F(y) = \begin{cases}
+0, & y \leq 0, \\
+\frac{y}{8}, & 0 < y < 2, \\
+\frac{y^2}{16}, & 2 \leq y < 4, \\
+1, & y \geq 4.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the density function of $Y$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Find $P(1 \leq Y \leq 3)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] Find $P(Y \geq 1.5)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(d)] Find $P(Y \geq 1 \mid Y \leq 3)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate} 
+\end{exercise}
+
+ \end{document} 
