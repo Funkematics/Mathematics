@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1760530056.94884 "HW7.tex" "build/HW7.pdf" "HW7" 1760530057.44177 0
+["pdflatex"] 1760531771.1098 "HW7.tex" "build/HW7.pdf" "HW7" 1760531771.61369 0
   "/home/funky/.texlive2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1756197889.69371 1329200 9032d8f008dbb908c2eef8494d7b1bb1 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1687470159 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1687470159 4887201 b2e37e43fd1e9ced8365e67a4993c3f7 ""
@@ -106,9 +106,9 @@
   "/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty" 1687470161 22913 a27d7908fc6f0385466454a966a316eb ""
   "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty" 1687470161 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1687470165 39615 4ca7b2be4e89b50848d4f0b4d97130bb ""
-  "HW7.tex" 1760530054.51824 18982 5f5aa47e8d93a64e1409c59435f66039 ""
-  "build/HW7.aux" 1760530057.35824 1263 cb11a090e2a18dce9301c3a9293e1b56 "pdflatex"
-  "build/HW7.out" 1760530057.35824 327 75ba480278ee7dd61de295ece633ff99 "pdflatex"
+  "HW7.tex" 1760531769.77096 19352 bc0649892363362b29e71fdf76e8c42e ""
+  "build/HW7.aux" 1760531771.52596 1263 85b506d613be8d8a89e960359d3e315c "pdflatex"
+  "build/HW7.out" 1760531771.52596 327 75ba480278ee7dd61de295ece633ff99 "pdflatex"
   (generated)
   "build/HW7.aux"
   "build/HW7.log"
