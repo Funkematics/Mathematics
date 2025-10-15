@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1759643163.84126 "foundationaltreatise.tex" "build/foundationaltreatise.pdf" "foundationaltreatise" 1759643164.07986 0
+["pdflatex"] 1760318724.87416 "foundationaltreatise.tex" "build/foundationaltreatise.pdf" "foundationaltreatise" 1760318725.11546 0
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/adobe/palatino/pplb7t.tfm" 1136768653 1616 371d1ee60c04b008c8fd760060cd34f1 ""
@@ -98,9 +98,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1758847103.35677 39447 2134d78a2da0cee52270db0ec417a200 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1758846987 5318290 3f0be5c5419f95449a735044e993c9ca ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1758846870.42717 1917600 903146e364dbcf08632fa0eafc3bb517 ""
-  "build/foundationaltreatise.aux" 1759643164.04734 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
-  "build/foundationaltreatise.out" 1759643163.99401 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "foundationaltreatise.tex" 1759643162.76399 2343 fa9270d0357ecf4f0852751e37650e58 ""
+  "build/foundationaltreatise.aux" 1760318725.08259 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
+  "build/foundationaltreatise.out" 1760318725.02926 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "foundationaltreatise.tex" 1759654559.53383 2290 33f06e7e6e9d2a028e0524caa32d72e0 ""
   (generated)
   "build/foundationaltreatise.aux"
   "build/foundationaltreatise.log"
