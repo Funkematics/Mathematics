@@ -1,4 +1,4 @@
-# ComputationalMath
+# LeanTest
 
 ## GitHub configuration
 
