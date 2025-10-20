@@ -70,3 +70,73 @@ universe u
 #check fun x y => if (!y) = true then x + 1 else x + 2
 
 --These three above are logically equivalent statements
+
+#check let y := 2 + 2; y * y
+#eval let y := 2 + 2; y * y
+
+def twice_double (x : ℕ) : ℕ :=
+  let y := x + x; y * y
+
+#eval twice_double 10
+
+#check let y := 2 + 2; let z := y + y; z * z
+#eval let y := 2 + 2; let z := y + y; z * z
+
+#check let a := 2 + 2
+  let b := a + a
+  b * b
+
+#eval let a := 2 + 2
+  let b := a + a
+  b * b
+
+def t (x : ℕ) : ℕ :=
+  let y := x + x
+  y * y
+
+#eval t 3
+
+--Variables and Sections
+
+def compose (α β γ : Type) (g : β → γ) (f : α → β) (x : α) : γ :=
+  g (f x)
+
+def doTwice (h : α → α) (x : α) : α :=
+  h (h x)
+
+def doThrice (h : α → α) (x : α) : α :=
+  h (h (h x))
+
+variable (α β γ : Type)
+variable (g : β → γ) (f : α → β) (h : α → α)
+variable (x : α)
+
+def compose_1 := g ( f x)
+def doTwice_1 := h ( h x)
+def doThrice_1 := h (h (h x))
+
+#print compose_1
+
+
+--Section can limit scope/private stuff
+
+section useful
+
+variable (α β γ : Type)
+variable (g : β → γ) (f : α → β) (h : α → α)
+variable (x : α)
+
+def compose_2 := g (f x)
+def doTwice_2 := h (h x)
+def doThrice_2 := h (h (h x))
+
+end useful
+
+namespace Foo
+  def a_1 : ℕ := 5
+  def f_1 (x : ℕ) : ℕ := x + 7
+end Foo
+
+#check List.nil
+#check List.cons
+#check List.map
