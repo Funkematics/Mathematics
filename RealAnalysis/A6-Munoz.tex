@@ -1,0 +1,180 @@
+% <-- a percent symbol indicates a comment which does not affect the output of LaTeX
+% you can leave the preamble alone, from here ...
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{enumerate,palatino}
+\usepackage[final]{graphicx}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+
+\newtheorem{problem}{Problem}
+% ... to here
+
+% shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\II}{\ensuremath{\mathbb I}}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+
+\newcommand{\eps}{\ensuremath{\epsilon}}
+\newcommand{\ds}{\displaystyle}
+
+% feel free to add more shortcuts here
+
+
+\begin{document}
+% replace with your name, but otherwise leave this header alone, from here ...
+\small
+\noindent \textsc{Math 401: Homework Assignment 6} \hfill Christopher Munoz
+
+\normalsize
+\bigskip
+% ... to here
+
+\setcounter{problem}{35}
+
+\begin{problem} % Problem 36
+Give a justified example of each, or argue (prove) that it is impossible.
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item A sequence that has a subsequence that is bounded, but which contains no subsequence which converges.
+
+This is impossible by Bolzano Weierstrass. Every bounded sequence has at least one convergent subsequence.
+
+\item A sequence that does not contain $0$ or $1$ as a term, but which contains subsequences which converge to each of these values.
+
+$$a_n = \frac{1 + (-1)^n}{2} + \frac{1}{n}$$ is such a sequence, we can set $n$ to even or odd numbers to converge to $0$ or $1$.
+
+\item A sequence that contains subsequences converging to every point in the infinite set $\{1,1/2,1/3,1/4,\dots\}$.
+
+  Consider that we can construct a subsequence that convergest to a chosen arbitrary value with $k - \frac{1}{n}$ where $k$ is any number we want to converge to and $\frac{1}{n}$ just going to zero. Let our sequence be defined by $a_n = \frac{1}{k} - \frac{1}{n}$. For $k, n \in \NN$ this converges to every point in the infinite set.
+
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem} % Problem 37
+Let $(a_n)$ be a bounded sequence.  Define the set
+	$$S = \left\{x\in\RR\,:\, x < a_n \,\text{ for infinitely many terms } a_n\right\}.$$
+Then $S$ is bounded above, and there exists a subsequence $(a_{n_k})$ which converges to $\sup S$.
+\end{problem}
+
+\begin{proof}
+Since $(a_n)$ is a bounded sequence, there exists an $N \in \NN$ such that $a_n \leq N$ for all $n \in \NN$. From this we have
+$$x < a_n < N$$
+by transitivity $x < N$ for all $x \in S$, so $S$ is bounded above by $N$. Since $S$ is a non-empty real set and bounded above, By Axiom of completeness, $sup S$ exists.
+\end{proof}
+
+
+\begin{problem} % Problem 38
+Every convergent sequence is a Cauchy sequence.
+\end{problem}
+
+% PLEASE READ:  Provide a complete proof.  Note that a partial proof is offered in the textbook, for Theorem 2.6.2.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 39
+Give a justified example of each, or argue (prove) that it is impossible.
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item A Cauchy sequence that is not monotone.
+
+Since all convergent sequences are Cauchy sequences, we just need to find any sequence that converges that is not monotone.
+Let $a_n = \frac{(-1)^n}{n}$. 
+
+\item A Cauchy sequence containing an unbounded subsequence.
+
+Boundedness is a criteria for convergence so this is impossible
+
+\item An unbounded sequence containing a Cauchy subsequence.
+
+Impossible for the same reason as above
+
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem} % Problem 40
+Give a justified example of each, or explain (prove) why the request is impossible, by referencing the proper theorem(s).
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item Two series $\sum x_n$ and $\sum y_n$ which both diverge, but where $\sum x_n y_n$ converges.
+
+% FILL IN
+
+\item A convergent series $\sum x_n$ and a bounded sequence $(y_n)$, such that $\sum x_n y_n$ diverges.
+
+% FILL IN
+
+\item Two sequences $(x_n)$ and $(y_n)$ where $\sum x_n$ and $\sum (x_n+y_n)$ both converge, but $\sum y_n$ diverges.
+
+% FILL IN
+
+\item A sequence $(x_n)$ satisfying $0\le x_n \le 1/n$ where $\sum (-1)^n x_n$ diverges.
+
+% FILL IN
+
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem} % Problem 41
+If $\sum a_n$ converges absolutely then $\sum a_n^2$ converges absolutely.
+\end{problem}
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 42
+Ratio test:  For a series $\sum a_n$, if the sequence of terms $(a_n)$ satisfies $a_n\ne 0$ for all $n$, and if
+	$$\lim_{n\to\infty} \frac{|a_{n+1}|}{|a_n|} = r < 1,$$
+then the series converges absolutely.
+\end{problem}
+
+% PLEASE READ:  Flesh out the following sketch of the proof.  For any $r'$ with $r < r' < 1$, explain why there exists $N$ so that if $n\ge N$ then $|a_{n+1}| \le r' |a_n|$.  Induct to get a bound on $|a_n|$, for $n\ge N$, in terms of a power of $r'$.  Explain why $|a_N| \sum_{n=N}^\infty (r')^{n-N}$ converges.  Then explain why this shows $\sum a_n$ converges absolutely.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 43
+Do the following series converge or diverge?  A careful proof is not needed, but a logical and correct justification or explanation is required, possibly using Theorems from Sections 2.1--2.7, or Problems above.
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item $\sum_{n=1}^\infty \frac{1}{2^n+n}$
+
+% FILL IN
+
+\item $\sum_{n=1}^\infty \frac{\sin(n)}{n^2}$
+
+% FILL IN
+
+\item $1 - \frac{3}{4} + \frac{4}{6} - \frac{5}{8} + \frac{6}{10} - \frac{7}{12} + \frac{8}{14} + \dots$
+
+% FILL IN
+
+\item $1 - \frac{1}{2^2} + \frac{1}{3} - \frac{1}{4^2} + \frac{1}{5} - \frac{1}{6^2} + \frac{1}{7} - \frac{1}{8^2} + \frac{1}{9} - \dots$
+
+% FILL IN
+
+\item $\sum_{n=1}^\infty \frac{n^2}{2^n}$
+
+% FILL IN
+
+\end{enumerate}
+\end{problem}
+
+\end{document}
