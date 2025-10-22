@@ -52,6 +52,7 @@ $$a_n = \frac{1 + (-1)^n}{2} + \frac{1}{n}$$ is such a sequence, we can set $n$ 
 
   Consider that we can construct a subsequence that convergest to a chosen arbitrary value with $k - \frac{1}{n}$ where $k$ is any number we want to converge to and $\frac{1}{n}$ just going to zero. Let our sequence be defined by $a_n = \frac{1}{k} - \frac{1}{n}$. For $k, n \in \NN$ this converges to every point in the infinite set.
 
+  incomplete
 \end{enumerate}
 \end{problem}
 
@@ -61,11 +62,15 @@ Let $(a_n)$ be a bounded sequence.  Define the set
 	$$S = \left\{x\in\RR\,:\, x < a_n \,\text{ for infinitely many terms } a_n\right\}.$$
 Then $S$ is bounded above, and there exists a subsequence $(a_{n_k})$ which converges to $\sup S$.
 \end{problem}
-
+% Screw this problem in particular
 \begin{proof}
-Since $(a_n)$ is a bounded sequence, there exists an $N \in \NN$ such that $a_n \leq N$ for all $n \in \NN$. From this we have
-$$x < a_n < N$$
-by transitivity $x < N$ for all $x \in S$, so $S$ is bounded above by $N$. Since $S$ is a non-empty real set and bounded above, By Axiom of completeness, $sup S$ exists.
+Since $(a_n)$ is a bounded sequence, there exists an $M \in \RR$ such that $a_n \leq M$ for all $n \in \NN$. From this we have
+$$x < a_n < M$$
+by transitivity $x < M$ for all $x \in S$, so $S$ is bounded above by $M$. Since $S$ is a non-empty real set and bounded above, By Axiom of completeness, $s = \sup S$ exists.
+
+Choose an arbitrary $k \in \NN$ so that we create an interval around the supremum $s$: $$s-\frac{1}{k} < s < s+\frac{1}{k}$$ Since any number smaller than $s$ is not an upper bound of $S$, there exists an $s' \in S$ so that $s-\frac{1}{k} < s'$($s'$ is in the interval below $s$). Since $s' \in S$, it follows by transitivity that $s-\frac{1}{k} < s' < a_n$, thus $s-\frac{1}{k} < a_n$ for infinitely many terms $a_n$. So we have $$s-\frac{1}{k} < a_n < s + \frac{1}{k}$$ Satisfied by every $k \in \NN$. We construct the subsequence $a_{n_k}$ recursively.
+
+For $k = 1$, choose any $n_1 \in \NN$ such that 
 \end{proof}
 
 
