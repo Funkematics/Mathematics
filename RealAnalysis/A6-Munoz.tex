@@ -69,8 +69,15 @@ $$x < a_n < M$$
 by transitivity $x < M$ for all $x \in S$, so $S$ is bounded above by $M$. Since $S$ is a non-empty real set and bounded above, By Axiom of completeness, $s = \sup S$ exists.
 
 Choose an arbitrary $k \in \NN$ so that we create an interval around the supremum $s$: $$s-\frac{1}{k} < s < s+\frac{1}{k}$$ Since any number smaller than $s$ is not an upper bound of $S$, there exists an $s' \in S$ so that $s-\frac{1}{k} < s'$($s'$ is in the interval below $s$). Since $s' \in S$, it follows by transitivity that $s-\frac{1}{k} < s' < a_n$, thus $s-\frac{1}{k} < a_n$ for infinitely many terms $a_n$. So we have $$s-\frac{1}{k} < a_n < s + \frac{1}{k}$$ Satisfied by every $k \in \NN$. We construct the subsequence $a_{n_k}$ recursively.
-
-For $k = 1$, choose any $n_1 \in \NN$ such that 
+For $k = 1$, choose any $n_1 \in \NN$ such that $s - 1 < a_{n_1} \leq s + 1$. Having chosen 
+$n_1 < n_2 < \cdots < n_k$, we choose $n_{k+1} > n_k$ such that 
+$$s - \frac{1}{k+1} < a_{n_{k+1}} < s + \frac{1}{k+1}.$$ Now we show convergence, Let $\eps > 0$, choose $K \in \NN$ such that $\frac{1}{K} < \eps$. Then for all $k \geq K$, we have
+$$\frac{1}{k} \leq \frac{1}{K} < \eps$$
+By construction
+$$s = \frac{1}{k} < a_{n_k} \leq s + \frac{1}{k}$$
+Since $\frac{1}{k} < \eps$, we have
+$$ s- \eps < s - \frac{1}{k} < a_{n_k} \leq s + \frac{1}{k} < s + \eps$$
+thus $|a_{n_k} - s| < \eps$ meaning by definition there is a subsequence $a_{n_k}$ that converges to $\sup S$.
 \end{proof}
 
 
