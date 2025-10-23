@@ -88,7 +88,17 @@ Every convergent sequence is a Cauchy sequence.
 % PLEASE READ:  Provide a complete proof.  Note that a partial proof is offered in the textbook, for Theorem 2.6.2.
 
 \begin{proof}
-% FILL IN
+A sequence is Cauchy iff for every $\eps > 0$, there exists an $N \in \NN$ such that for every $m, n \in \NN$ when $m,n > N$ we have $|a_n - a_m| < \eps$.
+\newline
+\newline
+Let $(a_n)$ be a convergent sequence and let $(a_n) \to a$. By definition this means that for $\eps > 0$, there exists an $N \in \NN$ such that when $n > N$ we have $|a_n - a| < \frac{\eps}{2}$. We now show that this is a Cauchy sequence. Let $\eps > 0$ and let $m,n > N$. Observe that
+\begin{align*}
+  \mid a_n - a_m \mid &= \mid (a_n - a) + (a - a_m) \mid \\
+                      &= \mid a_n - a \mid + \mid a - a_m \mid \\
+                      &< \frac{\eps}{2} + \frac{\eps}{2} \\
+                      &= \eps
+\end{align*}
+Thus $(a_n)$ is a Cauchy sequence.
 \end{proof}
 
 
@@ -121,19 +131,29 @@ Give a justified example of each, or explain (prove) why the request is impossib
 \begin{enumerate}
 \item Two series $\sum x_n$ and $\sum y_n$ which both diverge, but where $\sum x_n y_n$ converges.
 
-% FILL IN
+  Let $x_n = y_n = \frac{1}{n}$, then $\sum x_n$ and $\sum y_n$ diverge. Consider the product $\sum x_n y_n = \sum \frac{1}{n} * \frac{1}{n} = \frac{1}{n^2}$.
+  This is a $p$ series where $p > 1$ and thus converges.
 
 \item A convergent series $\sum x_n$ and a bounded sequence $(y_n)$, such that $\sum x_n y_n$ diverges.
 
-% FILL IN
+  Let $x_n = \frac{(-1)^n}{n}$ and let $y_n = (-1)^n$. The sum $\sum x_n = \sum \frac{(-1)^n}{n}$ is an alternating harmonic series so it converges.. The sum $\sum y_n = \sum (-1)^n$ just flips between $-1$ if odd and $1$ if even, this is also the greatest lower bound and least upper bound respectively.The product $\sum x_ny_n = \sum [\frac{(-1)^n}{n} * (-1)^n] =  \sum [\frac{(-1)^{2n}}{n}] = \sum \frac{1}{n} $ diverges.
 
 \item Two sequences $(x_n)$ and $(y_n)$ where $\sum x_n$ and $\sum (x_n+y_n)$ both converge, but $\sum y_n$ diverges.
 
-% FILL IN
+  Impossible
+  \begin{proof}Suppose $(x_n)$ converges and $\sum (x_n + y_n)$ converge with $(y_n)$ diverging. Observe that $\sum y_n = \sum (x_n + y_n) - \sum x_n$, by the algebraic rule for series. A consequence is that $(y_n)$ converges. But this is a contradiction since we assumed $(y_n)$ diverges. Thus this is impossible. 
+  \end{proof}
 
 \item A sequence $(x_n)$ satisfying $0\le x_n \le 1/n$ where $\sum (-1)^n x_n$ diverges.
 
-% FILL IN
+  Let 
+  \begin{align*}x_n =
+    \begin{cases}
+      \frac{1}{n} & \text{if n is odd} \\
+      0 & \text{if n even}
+    \end{cases}
+  \end{align*}
+  This is just $\sum (-\frac{1}{n})$ which diverges without the even numbers.
 
 \end{enumerate}
 \end{problem}
@@ -144,7 +164,13 @@ If $\sum a_n$ converges absolutely then $\sum a_n^2$ converges absolutely.
 \end{problem}
 
 \begin{proof}
-% FILL IN
+If $\sum |a_n|$ converges then $\lim |a_n| = 0$. It follows that there exists an $N \in \NN$ such that for all $n \geq N$ that $|a_n| < 1$. Since 
+$|a_n|$ is positive(absolute value) we have
+$$0 < |a_n| < 1$$
+Being that $|a_n|$ is between $0$ and $1$, we have
+$$|a_n^2| = |a_n|^2 \leq |a_n|$$
+Since $\sum |a_n|$ converges and $|a_n^2| < |a_n|$, then by the Comparison Test, for all sufficiently large $n$, the sum $\sum |a_n^2|$ converges.
+Thus $\sum a_n^2$ converges absolutely.
 \end{proof}
 
 
@@ -157,7 +183,7 @@ then the series converges absolutely.
 % PLEASE READ:  Flesh out the following sketch of the proof.  For any $r'$ with $r < r' < 1$, explain why there exists $N$ so that if $n\ge N$ then $|a_{n+1}| \le r' |a_n|$.  Induct to get a bound on $|a_n|$, for $n\ge N$, in terms of a power of $r'$.  Explain why $|a_N| \sum_{n=N}^\infty (r')^{n-N}$ converges.  Then explain why this shows $\sum a_n$ converges absolutely.
 
 \begin{proof}
-% FILL IN
+Suppose $\lim_{n\to\infty} \frac{|a_{n+1}|}{|a_n|} = r < 1$
 \end{proof}
 
 
