@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2025.9.25)  23 OCT 2025 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2025.9.25)  23 OCT 2025 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -435,8 +435,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--95
 [2]
 
 [3]
+Underfull \hbox (badness 10000) in paragraph at lines 186--191
 
-[4] (build/A6-Munoz.aux)
+ []
+
+
+
+[4]
+
+[5] (build/A6-Munoz.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
@@ -445,8 +452,8 @@ Package rerunfilecheck Info: File `A6-Munoz.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10429 strings out of 475322
- 157125 string characters out of 5767664
+ 10430 strings out of 475322
+ 157131 string characters out of 5767664
  564275 words of memory out of 5000000
  33118 multiletter control sequences out of 15000+600000
  568922 words of font info for 66 fonts, out of 8000000 for 9000
@@ -463,10 +470,10 @@ lic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/sy
 mbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></u
 sr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/
 fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/A6-Munoz.pdf (4 pages, 157127 bytes).
+Output written on build/A6-Munoz.pdf (5 pages, 164180 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
- 28 named destinations out of 1000 (max. 500000)
+ 123 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
+ 29 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
