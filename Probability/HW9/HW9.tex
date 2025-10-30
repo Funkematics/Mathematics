@@ -1,4 +1,4 @@
-% !TEX TS-program = pdflatexmk
+%https://uafrcs.atlassian.net/browse/RCS-14891 !TEX TS-program = pdflatexmk
 \documentclass[12pt]{amsart}
 
 %\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
@@ -101,13 +101,13 @@
 \pagestyle{fancy}
 %Modify these items:
 \rhead{\emph{Christopher Munoz}}
-\lhead{\emph{HW 8}}
+\lhead{\emph{HW 9}}
 
 \begin{document}
 
 \thispagestyle{fancy}
 %§12.1 1, 3, 7, 9, 12.
-\section*{4.2}
+\section*{Section 4.5}
 
 \begin{exercise}[4.58]
 Use Table 4, Appendix 3, to find the following probabilities for a standard normal random variable $Z$:
@@ -222,11 +222,13 @@ A machining operation produces bearings with diameters that are normally distrib
 \begin{enumerate}
     \item[(a)] Answer the question, using Table 4, Appendix 3.
 \begin{proof}[Solution]
- 
-\end{proof}
-    \item[(b)] Applet Exercise Obtain the answer, using the applet Normal Probabilities.
-\begin{proof}[Solution]
- 
+	\begin{align*}
+		(z_0 + z_1) &= \frac{\gamma_0 - \mu}{\sigma} + \frac{\gamma_1 - \mu}{\sigma} \\
+		&= \frac{3.0020 - 3.0005}{.0010} + \frac{2.9980 - 3.0005}{.0010} \\
+		&\to P(Z>1.5) + P(Z < -2.5) \\
+		&= .0668 + .0062 \\
+		&= .0730
+	\end{align*}
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -237,11 +239,10 @@ The grade point averages (GPAs) of a large population of college students are ap
 \begin{enumerate}
     \item[(a)] Answer the question, using Table 4, Appendix 3.
 \begin{proof}[Solution]
- 
-\end{proof}
-    \item[(b)] Applet Exercise Obtain the answer, using the applet Normal Tail Areas and Quantiles.
-\begin{proof}[Solution]
- 
+	\begin{align*}
+		z = \frac{\gamma - \mu}{\sigma} = \frac{3.0 - 2.4}{.8} = 0.75 \\
+		P(Z > .75) = .2266
+	\end{align*}
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -250,7 +251,10 @@ The grade point averages (GPAs) of a large population of college students are ap
 Refer to Exercise 4.68. If students possessing a GPA less than 1.9 are dropped from college, what percentage of the students will be dropped?
 
 \begin{proof}[Solution]
- 
+ \begin{align*}
+	 z = \frac{\gamma - \mu}{\sigma} = \frac{1.9 - 2.4}{.8} = -0.625 \\
+	 P(Z < -0.625) = (.2676 + .2643)/2 = 0.26595
+ \end{align*}
 \end{proof}
 \end{exercise}
 
@@ -258,7 +262,7 @@ Refer to Exercise 4.68. If students possessing a GPA less than 1.9 are dropped f
 Refer to Exercise 4.68. Suppose that three students are randomly selected from the student body. What is the probability that all three will possess a GPA in excess of 3.0?
 
 \begin{proof}[Solution]
- 
+$.2266^3 = 0.01163536$ 
 \end{proof}
 \end{exercise}
 
@@ -268,11 +272,20 @@ The width of bolts of fabric is normally distributed with mean 950 mm (millimete
 \begin{enumerate}
     \item[(a)] What is the probability that a randomly chosen bolt has a width of between 947 and 958 mm?
 \begin{proof}[Solution]
- 
+  \begin{align*}
+    z_0 &= \frac{\gamma_0 - \mu}{\sigma} = \frac{947 - 950}{10} = -0.3 \\
+    z_1 &= \frac{\gamma_1 - \mu}{\sigma} = \frac{958 - 950}{10} = 0.8  \\
+        &  P(-0.3 \leq Z \leq 0.8) = 1 - (.3821 + .2119) = 0.406
+  \end{align*}
 \end{proof}
     \item[(b)] What is the appropriate value for $C$ such that a randomly chosen bolt has a width less than $C$ with probability .8531?
 \begin{proof}[Solution]
- 
+  \begin{align*}
+    P(z_0 \leq Z) & = (1-.8531) = .1469 \\
+                  & \to z_0 = 1.5 \\
+                  & \to \frac{\gamma - 950}{10} = 1.05 \\
+                  & \gamma = 10.5 + 950 = 960.5 = C
+  \end{align*}
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -283,9 +296,282 @@ The SAT and ACT college entrance exams are taken by thousands of students each y
 \begin{enumerate}
     \item[(a)] An engineering school sets 550 as the minimum SAT math score for new students. What percentage of students will score below 550 in a typical year?
 \begin{proof}[Solution]
- 
+  \begin{align*}
+    z = \frac{\gamma - \mu}{\sigma} = \frac{550 - 480}{100} = 0.7 \\
+    P(Z < 0.7) = 1 - .2420 = 0.758 
+  \end{align*}
 \end{proof}
     \item[(b)] What score should the engineering school set as a comparable standard on the ACT math test?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+\section*{Section 4.6}
+\begin{exercise}[4.85]
+Applet Exercise Use the applet Comparison of Gamma Density Functions to compare gamma density functions with $(\alpha = 1, \beta = 1)$, $(\alpha = 1, \beta = 2)$, and $(\alpha = 1, \beta = 4)$.
+
+\begin{enumerate}
+    \item[(a)] What is another name for the density functions that you observed?
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Do these densities have the same general shape?
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] The parameter $\beta$ is a ``scale'' parameter. What do you observe about the ``spread'' of these three density functions?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.89]
+The operator of a pumping station has observed that demand for water during early afternoon hours has an approximately exponential distribution with mean 100 cfs (cubic feet per second).
+
+\begin{enumerate}
+    \item[(a)] Find the probability that the demand will exceed 200 cfs during the early afternoon on a randomly selected day.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] What water-pumping capacity should the station maintain during early afternoons so that the probability that demand will exceed capacity on a randomly selected day is only .01?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.91]
+If $Y$ has an exponential distribution and $P(Y > 2) = .0821$, what is
+
+\begin{enumerate}
+    \item[(a)] $\beta = E(Y)$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] $P(Y \leq 1.7)$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.93]
+Historical evidence indicates that times between fatal accidents on scheduled American domestic passenger flights have an approximately exponential distribution. Assume that the mean time between accidents is 44 days.
+
+\begin{enumerate}
+    \item[(a)] If one of the accidents occurred on July 1 of a randomly selected year in the study period, what is the probability that another accident occurred that same month?
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] What is the variance of the times between accidents?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.94]
+One-hour carbon monoxide concentrations in air samples from a large city have an approximately exponential distribution with mean 3.6 ppm (parts per million).
+
+\begin{enumerate}
+    \item[(a)] Find the probability that the carbon monoxide concentration exceeds 9 ppm during a randomly selected one-hour period.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] A traffic-control strategy reduced the mean to 2.5 ppm. Now find the probability that the concentration exceeds 9 ppm.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.97]
+A manufacturing plant uses a specific bulk product. The amount of product used in one day can be modeled by an exponential distribution with $\beta = 4$ (measurements in tons). Find the probability that the plant will use more than 4 tons on a given day.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[4.104]
+The lifetime (in hours) $Y$ of an electronic component is a random variable with density function given by
+$$f(y) = \begin{cases}
+\frac{1}{100}e^{-y/100}, & y > 0, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+Three of these components operate independently in a piece of equipment. The equipment fails if at least two of the components fail. Find the probability that the equipment will operate for at least 200 hours without failure.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[4.105]
+Four-week summer rainfall totals in a section of the Midwest United States have approximately a gamma distribution with $\alpha = 1.6$ and $\beta = 2.0$.
+
+\begin{enumerate}
+    \item[(a)] Find the mean and variance of the four-week rainfall totals.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Applet Exercise What is the probability that the four-week rainfall total exceeds 4 inches?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.109]
+The weekly amount of downtime $Y$ (in hours) for an industrial machine has approximately a gamma distribution with $\alpha = 3$ and $\beta = 2$. The loss $L$ (in dollars) to the industrial operation as a result of this downtime is given by $L = 30Y + 2Y^2$. Find the expected value and variance of $L$.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+\section*{Section 4.7}
+\begin{exercise}[4.123]
+The relative humidity $Y$, when measured at a location, has a probability density function given by
+$$f(y) = \begin{cases}
+ky^3(1 - y)^2, & 0 \leq y \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the value of $k$ that makes $f(y)$ a density function.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.124]
+The percentage of impurities per batch in a chemical product is a random variable $Y$ with density function
+$$f(y) = \begin{cases}
+12y^2(1 - y), & 0 \leq y \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+A batch with more than 40\% impurities cannot be sold.
+
+\begin{enumerate}
+    \item[(a)] Integrate the density directly to determine the probability that a randomly selected batch cannot be sold because of excessive impurities.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.126]
+The weekly repair cost $Y$ for a machine has a probability density function given by
+$$f(y) = \begin{cases}
+3(1 - y)^2, & 0 < y < 1, \\
+0, & \text{elsewhere},
+\end{cases}$$
+with measurements in hundreds of dollars. How much money should be budgeted each week for repair costs so that the actual cost will exceed the budgeted amount only 10\% of the time?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[4.129]
+During an eight-hour shift, the proportion of time $Y$ that a sheet-metal stamping machine is down for maintenance or repairs has a beta distribution with $\alpha = 1$ and $\beta = 2$. That is,
+$$f(y) = \begin{cases}
+2(1 - y), & 0 \leq y \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+The cost (in hundreds of dollars) of this downtime, due to lost production and cost of maintenance and repair, is given by $C = 10 + 20Y + 4Y^2$. Find the mean and variance of $C$.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[4.131]
+Errors in measuring the time of arrival of a wave front from an acoustic source sometimes have an approximate beta distribution. Suppose that these errors, measured in microseconds, have approximately a beta distribution with $\alpha = 1$ and $\beta = 2$.
+
+\begin{enumerate}
+    \item[(a)] What is the probability that the measurement error in a randomly selected instance is less than .5 $\mu$s?
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Give the mean and standard deviation of the measurement errors.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.133]
+The proportion of time per day that all checkout counters in a supermarket are busy is a random variable $Y$ with a density function given by
+$$f(y) = \begin{cases}
+cy^2(1 - y)^4, & 0 \leq y \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the value of $c$ that makes $f(y)$ a probability density function.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Find $E(Y)$. (Use what you have learned about the beta-type distribution. Compare your answers to those obtained in Exercise 4.28.)
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] Calculate the standard deviation of $Y$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\section*{Section 4.9}
+
+\begin{exercise}[4.140]
+Identify the distributions of the random variables with the following moment-generating functions:
+
+\begin{enumerate}
+    \item[(a)] $m(t) = (1 - 4t)^{-2}$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] $m(t) = 1/(1 - 3.2t)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] $m(t) = e^{-5t+6t^2}$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.141]
+If $\theta_1 < \theta_2$, derive the moment-generating function of a random variable that has a uniform distribution on the interval $(\theta_1, \theta_2)$.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[4.145]
+A random variable $Y$ has the density function
+$$f(y) = \begin{cases}
+e^y, & y < 0, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find $E(e^{3Y/2})$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(b)] Find the moment-generating function for $Y$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+    \item[(c)] Find $V(Y)$.
 \begin{proof}[Solution]
  
 \end{proof}
