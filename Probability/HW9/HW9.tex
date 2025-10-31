@@ -303,29 +303,15 @@ The SAT and ACT college entrance exams are taken by thousands of students each y
 \end{proof}
     \item[(b)] What score should the engineering school set as a comparable standard on the ACT math test?
 \begin{proof}[Solution]
- 
+  \begin{align*}
+    z = \frac{\gamma - 18}{6} &= 0.7 \\
+    \gamma - 18 &= 4.2 \\
+    \gamma &= 22.2 \\
+  \end{align*}
 \end{proof}
 \end{enumerate}
 \end{exercise}
 \section*{Section 4.6}
-\begin{exercise}[4.85]
-Applet Exercise Use the applet Comparison of Gamma Density Functions to compare gamma density functions with $(\alpha = 1, \beta = 1)$, $(\alpha = 1, \beta = 2)$, and $(\alpha = 1, \beta = 4)$.
-
-\begin{enumerate}
-    \item[(a)] What is another name for the density functions that you observed?
-\begin{proof}[Solution]
- 
-\end{proof}
-    \item[(b)] Do these densities have the same general shape?
-\begin{proof}[Solution]
- 
-\end{proof}
-    \item[(c)] The parameter $\beta$ is a ``scale'' parameter. What do you observe about the ``spread'' of these three density functions?
-\begin{proof}[Solution]
- 
-\end{proof}
-\end{enumerate}
-\end{exercise}
 
 \begin{exercise}[4.89]
 The operator of a pumping station has observed that demand for water during early afternoon hours has an approximately exponential distribution with mean 100 cfs (cubic feet per second).
@@ -333,11 +319,20 @@ The operator of a pumping station has observed that demand for water during earl
 \begin{enumerate}
     \item[(a)] Find the probability that the demand will exceed 200 cfs during the early afternoon on a randomly selected day.
 \begin{proof}[Solution]
- 
+  \begin{align*}
+  \int_\alpha^{\infty} \frac{1}{\beta} e^{-\gamma/\beta} dy = - e^{-\alpha/\beta} \bigg]_\alpha^\infty = 1 - e^{-\alpha/\beta} = 1 - e^{-200/100} = 0.8646647
+  \end{align*}
 \end{proof}
     \item[(b)] What water-pumping capacity should the station maintain during early afternoons so that the probability that demand will exceed capacity on a randomly selected day is only .01?
 \begin{proof}[Solution]
- 
+  \begin{align*}
+    1 - e^{-n/100} &= .01 \\
+    -e^{-n/100} &=-.99 \\
+    e^{-n/100} &= .99 \\
+    -n/100 &= ln(.99) \\
+    n &= -100ln(.99) \\
+    n &= 1.005034
+  \end{align*}
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -348,11 +343,16 @@ If $Y$ has an exponential distribution and $P(Y > 2) = .0821$, what is
 \begin{enumerate}
     \item[(a)] $\beta = E(Y)$?
 \begin{proof}[Solution]
- 
+  \begin{align*}
+    f(x) = e^{-2/x} &= .0821 \\
+               -2/x &= ln(0.0821) \\
+       -2/ln(0.0821) &= x \\
+            .8000585 &= x
+  \end{align*}
 \end{proof}
     \item[(b)] $P(Y \leq 1.7)$?
 \begin{proof}[Solution]
- 
+  $ 1 - e^{-1.7/.800585} = 0.8803814$ 
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -363,11 +363,11 @@ Historical evidence indicates that times between fatal accidents on scheduled Am
 \begin{enumerate}
     \item[(a)] If one of the accidents occurred on July 1 of a randomly selected year in the study period, what is the probability that another accident occurred that same month?
 \begin{proof}[Solution]
- 
+  $P(Y \leq 31) = \int_0^{31} \frac{1}{44} e^{-y/44} dy = e^{0/44} - e^{-31/44} = .5057$
 \end{proof}
     \item[(b)] What is the variance of the times between accidents?
 \begin{proof}[Solution]
- 
+  $44 = \frac{1}{\lambda}$ so $\lambda = 1/44$ so $V[X] = 1/((1/44)^2) = 1936$
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -378,11 +378,12 @@ One-hour carbon monoxide concentrations in air samples from a large city have an
 \begin{enumerate}
     \item[(a)] Find the probability that the carbon monoxide concentration exceeds 9 ppm during a randomly selected one-hour period.
 \begin{proof}[Solution]
- 
+  $P(Y > 9) = \int_9^\infty \frac{1}{3.6} e^{-y/3.6} dy = 0 - e^{-9/3.6} = 0.082085$ 
 \end{proof}
     \item[(b)] A traffic-control strategy reduced the mean to 2.5 ppm. Now find the probability that the concentration exceeds 9 ppm.
 \begin{proof}[Solution]
- 
+  $P(Y > 9) = \int_9^\infty \frac{1}{2.5} e^{-y/2.5} dy = 0 - e^{-9/2.5} = 0.02732372$ 
+
 \end{proof}
 \end{enumerate}
 \end{exercise}

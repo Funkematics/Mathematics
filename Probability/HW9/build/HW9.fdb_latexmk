@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1761797577.12672 "HW9.tex" "build/HW9.pdf" "HW9" 1761797577.41526 0
+["pdflatex"] 1761876085.28348 "HW9.tex" "build/HW9.pdf" "HW9" 1761876085.58903 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -107,9 +107,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1758847103.35677 39447 2134d78a2da0cee52270db0ec417a200 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1758846987 5318290 3f0be5c5419f95449a735044e993c9ca ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1758846870.42717 1917600 903146e364dbcf08632fa0eafc3bb517 ""
-  "HW9.tex" 1761797575.96623 19763 23f46d6b50509ce97879a8e8706e671b ""
-  "build/HW9.aux" 1761797577.36624 754 4323e61a1dcddcc6dfda8b99f45391dc "pdflatex"
-  "build/HW9.out" 1761797577.36624 408 d5e4e93d7d1c26c736b3e097523ba5e1 "pdflatex"
+  "HW9.tex" 1761876083.80943 20109 36f4c46cd5bfe655c2adcffb1a35aaaf ""
+  "build/HW9.aux" 1761876085.54278 755 46780b4cbb22b5968d59dd81a36ad9df "pdflatex"
+  "build/HW9.out" 1761876085.54278 408 d5e4e93d7d1c26c736b3e097523ba5e1 "pdflatex"
   (generated)
   "build/HW9.aux"
   "build/HW9.log"
