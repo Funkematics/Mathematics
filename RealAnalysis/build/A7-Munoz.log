@@ -2,8 +2,8 @@ This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**A6-Munoz.tex
-(./A6-Munoz.tex
+**A7-Munoz.tex
+(./A7-Munoz.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -304,8 +304,8 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count279
 \l__pdf_internal_box=\box49
 )
-(build/A6-Munoz.aux)
-\openout1 = `A6-Munoz.aux'.
+(build/A7-Munoz.aux)
+\openout1 = `A7-Munoz.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
@@ -407,62 +407,51 @@ LaTeX Info: Redefining \ref on input line 27.
 LaTeX Info: Redefining \pageref on input line 27.
 LaTeX Info: Redefining \nameref on input line 27.
 
-(build/A6-Munoz.out) (build/A6-Munoz.out)
+(build/A7-Munoz.out) (build/A7-Munoz.out)
 \@outlinefile=\write3
-\openout3 = `A6-Munoz.out'.
+\openout3 = `A7-Munoz.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 91--95
-
- []
-
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
-
- []
-
-[4] [5] (build/A6-Munoz.aux)
-Package rerunfilecheck Info: File `A6-Munoz.out' has not changed.
+{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}] [2] (build/
+A7-Munoz.aux)
+Package rerunfilecheck Info: File `A7-Munoz.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9524 strings out of 481008
- 136698 string characters out of 5909439
- 450997 words of memory out of 5000000
- 26543 multiletter control sequences out of 15000+600000
- 414283 words of font info for 57 fonts, out of 8000000 for 9000
+ 9519 strings out of 481008
+ 136649 string characters out of 5909439
+ 448997 words of memory out of 5000000
+ 26541 multiletter control sequences out of 15000+600000
+ 413465 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 71i,16n,74p,576b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,8n,74p,426b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/A6-Munoz.pdf (5 pages, 153488 bytes).
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on build/A7-Munoz.pdf (2 pages, 114275 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 29 named destinations out of 1000 (max. 500000)
+ 90 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
+ 26 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

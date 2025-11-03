@@ -1,0 +1,183 @@
+% <-- a percent symbol indicates a comment which does not affect the output of LaTeX
+% you can leave the preamble alone, from here ...
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{enumerate,palatino}
+\usepackage[final]{graphicx}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+
+\newtheorem{problem}{Problem}
+% ... to here
+
+% shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\II}{\ensuremath{\mathbb I}}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+
+\newcommand{\eps}{\ensuremath{\epsilon}}
+\newcommand{\ds}{\displaystyle}
+
+% feel free to add more shortcuts here
+
+
+\begin{document}
+% replace with your name, but otherwise leave this header alone, from here ...
+\small
+\noindent \textsc{Math 401: Homework Assignment 7} \hfill YOUR NAME HERE
+
+\normalsize
+\bigskip
+% ... to here
+
+\setcounter{problem}{43}
+
+\begin{problem} % Problem 44
+(Comparison Test)
+
+\medskip
+\noindent Assume $(a_k)$ and $(b_k)$ are sequences satisfying $0\le a_k \le b_k$ for all $k\in\NN$.
+
+\renewcommand{\labelenumi}{\emph{(\roman{enumi})}}
+\begin{enumerate}
+\item If $\sum_{k=1}^\infty b_k$ converges then $\sum_{k=1}^\infty a_k$ converges.
+\item If $\sum_{k=1}^\infty a_k$ diverges then $\sum_{k=1}^\infty b_k$ diverges.
+\end{enumerate}
+\end{problem}
+
+% PLEASE READ: This is Theorem 2.7.4 in the textbook.  The textbook suggests a proof using the Cauchy Criterion for series, namely Theorem 2.7.2.  Please flesh this out, giving separate, complete proofs for (i) and (ii).
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 45
+(Alternating Series Test)
+
+\medskip
+\noindent Suppose $(a_n)$ is a \emph{nonnegative} sequence which satisfies
+\renewcommand{\labelenumi}{\emph{(\roman{enumi})}}
+\begin{enumerate}
+\item $(a_n)$ is decreasing, and
+\item $\ds \lim_{n\to\infty} a_n = 0$.
+\end{enumerate}
+Then the alternating series $\ds \sum_{n=1}^\infty (-1)^{n+1} a_n$ converges.
+\end{problem}
+
+% PLEASE READ: The Alternating Series Test is Theorem 2.7.7 in the textbook.  As the textbook points out in Exercise 2.7.1, you can build proofs based on any of three strategies:
+% (a) proving that the partial sums form a Cauchy sequence and then using the Cauchy Criterion for sequences, or
+% (b) building nested intervals and applying the Nested Interval Property to get a candidate limit and then proving that the partial sums converge to that candidate limit, or
+% (c) considering the even-index and odd-index subsequences of the sequence of partial sums and showing that the Monotone Convergence Theorem gives candidate limits which you show are the same and are thus the limit of the partial sums.
+% Instructions:  Prove using one of these strategies!
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 46
+For each of the subsets of $\RR$ below, decide whether it is open, closed, or neither.  If a set is not open, find a point in the set for which there is no $\eps$-neighborhood contained in the set.  If a set is not closed, find a limit point that is not contained in the set.
+
+\renewcommand{\labelenumi}{\emph{(\alph{enumi})}}
+\begin{enumerate}
+\item $\QQ$
+
+% FILL IN
+
+\item $\NN$
+
+% FILL IN
+
+\item $\{x\in\RR\,:\,x \ne 0\}$
+
+% FILL IN
+
+\item $\{1 + 1/4 + 1/9 + \dots + 1/n^2\,:\,n\in \NN\}$
+
+% FILL IN
+
+\item $\{1 + 1/2 + 1/3 + \dots + 1/n \,:\,n \in \NN\}$
+
+% FILL IN
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem} % Problem 47
+Let $A\subset \RR$ be nonempty and bounded above, and let $s=\sup A$.  Then
+\renewcommand{\labelenumi}{\emph{(\roman{enumi})}}
+\begin{enumerate}
+\item $s \in \overline{A}$, but
+\item if $A$ is open then $s \notin A$.
+\end{enumerate}
+\end{problem}
+
+% PLEASE READ: 
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 48
+Decide whether the following statements are true or false.  Provide proofs for those that are true, and counterexamples for those that are false.
+
+\renewcommand{\labelenumi}{\emph{(\alph{enumi})}}
+\begin{enumerate}
+\item Every nonempty open set contains a rational number.
+
+% FILL IN
+
+\item The Cantor set is closed.
+
+% FILL IN
+
+\item If $A\subseteq \RR$ is an open set which contains every rational ($\QQ \subset A$) then $A=\RR$.
+
+% FILL IN
+
+% PLEASE READ:  Part (c) here will require quite a bit of thought.
+
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem} % Problem 49
+(De Morgan's Laws for arbitrary unions and intersections)
+
+\medskip
+\noindent Let $X$ be a set, which we call the universe set.  For any $A\subset X$ we write
+    $$A^c = \{x\in X\,:\,x \notin A\}$$
+for the complement set.  Also let $\Lambda$ be any set, which will be used as a set of indices.  Consider
+	$$\mathcal{E} = \left\{E_\lambda\subset X \,:\,\lambda \in \Lambda \right\},$$
+a collection of sets.  The following equalities hold:
+\renewcommand{\labelenumi}{\emph{(\roman{enumi})}}
+\begin{enumerate}
+\item $\ds \left(\bigcup_{\lambda\in\Lambda} E_\lambda\right)^c = \bigcap_{\lambda\in\Lambda} E_\lambda^{\,\,c}$
+\item $\ds \left(\bigcap_{\lambda\in\Lambda} E_\lambda\right)^c = \bigcup_{\lambda\in\Lambda} E_\lambda^{\,\,c}$
+\end{enumerate}
+\end{problem}
+
+% PLEASE READ:  Basically, chase elements from left to right and back, for each equality?  The one thing you *do not* want to do is assume that \Lambda is either finite or countable.  The whole point here is that *arbitrary* collections of sets have this property.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 50
+If $A \subset \RR$ is both open and closed then either $A=\emptyset$ or $A=\RR$.
+\end{problem}
+
+% PLEASE READ: It is straightfoward to confirm that the empty set and R itself are both open and closed; say a bit about that first.  Then consider any other set A.  Now both A and A^c are nonempty, right?  Thus you can pick x \noeq y where x \in A and y \in A^c.  Consider the bounded interval [x,y], noting (x,y) is nonempty.  Find a point within that interval which must both be in A and A^c, a contradition.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\end{document}
