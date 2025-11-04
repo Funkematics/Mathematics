@@ -27,7 +27,7 @@
 \begin{document}
 % replace with your name, but otherwise leave this header alone, from here ...
 \small
-\noindent \textsc{Math 401: Homework Assignment 7} \hfill YOUR NAME HERE
+\noindent \textsc{Math 401: Homework Assignment 7} \hfill Christopher Munoz
 
 \normalsize
 \bigskip
@@ -49,12 +49,30 @@
 \end{problem}
 
 % PLEASE READ: This is Theorem 2.7.4 in the textbook.  The textbook suggests a proof using the Cauchy Criterion for series, namely Theorem 2.7.2.  Please flesh this out, giving separate, complete proofs for (i) and (ii).
-
+\iffalse
 \begin{proof}
-% FILL IN
+	\textbf{For (i):} Define the sequences of partial sums: 
+	$$A_n = \sum_{k=1}^n a_k \quad \text{and} \quad B_n = \sum_{k=1}^n b_k$$
+	Since $0 \leq a_k$ for all $k$, we have $A_{n+1} = A_n + a_{n+1} \geq A_n$ for all $n \in \NN$. This means our sequence of partial sums $A_n$ is monotone and increasing. Since $0 \leq a_k \leq b_k$ for all $k \in \NN$, we have 
+	$$A_n = \sum_{k=1}^n a_k \leq \sum_{k=1}^n b_k = B_n $$
+	for all $n \in \NN$. Since $\sum_{k=1}^n b_k$ converges, the sequence of partial sums $B_n$ converges to a finite limit we denote with $L_b$ and is thus bounded. By definition there exists an $M > 0$ such that $B_n \leq M$ for all $n$. Therefore
+	$$A_n \leq B_n \leq M$$
+	for all $n \in \NN$. Thus $A_n$ is monotone increasing and bounded above. By the Monotone Convergence Theorem, $A_n$ converges which means $\sum_{k=1}^\infty a_k$ converges. \newline \newline
+	\textbf{For (ii):} Since this is the contrapositive statement of part $(i)$, it is logically equivalent and already proven, we are done.
 \end{proof}
-
-
+\fi
+% The above prove I did before actually reading the comments. its commented out, I used the Monotone Convergence Theorem and kept it because I quite like this proof and it was so far in my comfort zone that it almost made me feel smart, proof using Cauchy Criterion is below
+\begin{proof}
+	\textbf{For (i)} Let $\eps > 0$, Since $\sum_{k=1}^\infty b_k$ converges, by the Cauchy criterion, there exists an $N \in \NN$ such that for all $n > m \geq N$:
+	$$|\sum_{k=m+1}^n b_k| = |b_{m+1} + b_{m+2} + \cdots b_n| < \eps$$ 
+	Since $ 0 \leq a_k \leq b_k$ for all $k$, for all $n > m \geq N$ we have:
+	$$|a_{m+1} + a_{m+2} + \cdots a_n| \leq |b_{m+1} + b_{m+2} + \cdots b_n| < \eps$$ equivalently
+	$$\sum_{k = m+1}^n a_k \leq \sum_{k = m+1}^n b_k < \eps$$ 
+	Since $a_k \geq 0$, we have 
+	$$|\sum_{k = m+1}^n a_k |= \sum_{k = m+1}^n a_k < \eps$$
+	This satisfies the Cauchy criterion, thus $\sum_{k=1}^\infty a_k$ converges. \newline \newline
+	\textbf{For (ii)} Since this is a contrapositive statement for (i), it is logically equivalent and we have proved above, we are done.
+\end{proof}
 \begin{problem} % Problem 45
 (Alternating Series Test)
 
@@ -75,7 +93,22 @@ Then the alternating series $\ds \sum_{n=1}^\infty (-1)^{n+1} a_n$ converges.
 % Instructions:  Prove using one of these strategies!
 
 \begin{proof}
-% FILL IN
+	Let $\eps > 0$. Since $\lim_{n \to \infty} a_n = 0$, there exists $N \in \NN$ such that for all $n \geq N$:
+	$$a_n < \eps$$
+	Let $n > m \geq N$. We want to show that $$|\sum_{k = m+1}^n(-1)^{k+1}a_k| < \eps$$
+	The sum $\sum_{k = m+1}^n(-1)^{k+1}a_k$ is a finite alternating sum that starts with either $+a_{m+1}$ or $-a_{m+1}$. 
+
+\noindent	Without loss of generality suppose the finite sum starts with $+a_{m+1}$ (the case with $-a_{m+1}$ is identical). Then:
+	$$\sum_{k=m+1}^n (-1)^{k+1} a_k = a_{m+1} - a_{m+2} + a_{m+3} - a_{m+4} + \cdots $$
+	Since $(a_n)$ is decreasing we can write this as:
+	$$\sum_{k=m+1}^n (-1)^{k+1} a_k = (a_{m+1} - a_{m+2}) + (a_{m+3} - a_{m+4}) + \cdots $$
+	Each pair satisfies $a_k - a_{k+1} \geq 0$ by the decreasing property. Therefore the sum is non-negative. Observe that we can also write
+	$$a_{m+1} - a_{m+2} + a_{m+3} - a_{m+4} + \cdots = a_{m+1} - (a_{m+2} - a_{m+3}) - (a_{m+4} - a_{m+5}) - \cdots$$
+	Since we are subtracting non-negative quantities from $a_{m+1}$, the sum is at most $a_{m+1}$. Thus:
+	$$0 \leq \sum_{k=m+1}^{n} (-1)^{k+1} a_k \leq a_{m+1}$$
+	Therefore
+	$$| \sum_{k = m+1}^n (-1)^{k+1} a_k | \leq a_{m+1} < \eps$$
+	Since $m \geq N$, we have $a_{m+1} < \eps$. By the Cauchy criterion, $\sum_{n=1}^\infty (-1)^{n+1} a_n$ converges.
 \end{proof}
 
 
@@ -86,22 +119,23 @@ For each of the subsets of $\RR$ below, decide whether it is open, closed, or ne
 \begin{enumerate}
 \item $\QQ$
 
-% FILL IN
+	This is neither open or closed, take for example $0 \in \QQ$, the $\eps$-neighborhood $(0 - \eps, 0 + \eps)$ contains irrational numbers like $\eps/\sqrt{2}$. In this particular case $\sqrt{2}$ is a limit point and not in $\QQ$.
 
 \item $\NN$
 
-% FILL IN
+	This one is closed, not open. Take any number, suppose $1 \in \NN$. For any $\eps > 0$ the nighborhood $(1 - \eps, 1 + \eps)$ contains nothing and it has no limit point since every Natual number is an isolated point.
 
 \item $\{x\in\RR\,:\,x \ne 0\}$
 
-% FILL IN
+	This set is open, not closed. Consider the $\eps$-neighborhood for an $x \neq 0$. Choose $\eps = |x|/2$, then for the neighborhood $(x - \eps, x + \eps)$, $0$ will never be in this neighborhood, and since 0 is the limit point for this set, it is not closed.
 
 \item $\{1 + 1/4 + 1/9 + \dots + 1/n^2\,:\,n\in \NN\}$
 
-% FILL IN
+Neither open or closed, The smallest element is $1$ and neighborhoods go below $1$. It also is bounded and monotone decreasing to a limit point not in the set $\pi^2 / 6$.
 
 \item $\{1 + 1/2 + 1/3 + \dots + 1/n \,:\,n \in \NN\}$
 
+Closed, not open, the smallest element is $1$ and neighborhoods go below $1$. It is also a Harmonic series that diverges so no limit point exists.
 % FILL IN
 \end{enumerate}
 \end{problem}
@@ -119,7 +153,14 @@ Let $A\subset \RR$ be nonempty and bounded above, and let $s=\sup A$.  Then
 % PLEASE READ: 
 
 \begin{proof}
-% FILL IN
+	\textbf{For (i): } We show that $s \in \overline{A}$ directly. Let $\eps > 0$. Since $s = \sup A$, we know that $s$ is the least upper bound of $A$. This means $s - \eps$ is not an upper bound of $A$. Therefore there exists an $a \in A$ such that 
+	$$s - \eps < a \leq s$$
+	since $a \leq s < s + \eps$, we have $a \in (s - \eps, s + \eps)$.
+	This shows that every $\eps$-neighborhood of $s$ contains at least one point of $A$. By definition of closure, this means $s \in \overline{A}$. \newline \newline
+	\textbf{For (ii): } Suppose $A$ is open. We prove by contradiction that $s \notin A$. Assume $s \in A$. Since $A$ is open, there exists $\eps > 0$ such that
+	$$(s - \eps, s + \eps) \subseteq A$$
+	Choose $s+\frac{\eps}{2} \in A$. Since $s+\frac{\eps}{2} > s$, this contradicts the fact that $s = \sup A$ is an upper bound of $A$.
+	Thus if $A$ is open, then $s \notin A$.
 \end{proof}
 
 
@@ -130,16 +171,34 @@ Decide whether the following statements are true or false.  Provide proofs for t
 \begin{enumerate}
 \item Every nonempty open set contains a rational number.
 
-% FILL IN
+Assuming the nonempty open set is a subset of $\RR$ then true because of the density of $\QQ$ in $\RR$.
+\begin{proof}
+	Let $A \subseteq \RR$ be a nonempty open set. Since $A$ is nonempty, there exists $x \in A$.
+	Since $A$ is open, there exists $\eps > 0$ such that $(x - \eps, x + \eps) \subseteq A$.
+	By the density of $\QQ$ in $\RR$, there exists a rational number $r \in (x - \eps, x + \eps)$.
+	Therefore, $r \in A$ and $r \in \QQ$, so $A$ contains a rational number.
+\end{proof}
 
 \item The Cantor set is closed.
 
-% FILL IN
-
+	This one is true, we can  show this by considering the compliment of the Cantor set.
+\begin{proof}
+	The Cantor Set $C$ is constructed by starting with the interval $[0,1]$ and iteratively removing the open middle third of each remaining intervals. At each stage $n$, we remove a collection of open intervals like this:
+	\begin{align*}
+			C_0 &= [0,1]\\
+			C_1 &= [0,1] \setminus (1/3, 2/3)\\
+			C_2 &= C_1 \setminus \left[(1/9, 2/9) \cup (7/9, 8/9)\right]\\
+			&\vdots
+		\end{align*}
+	The Cantor set is the intersection of all of these denoted as $C = \cap_{n=0}^\infty C_n$. The compliment of $C$ is
+	$$\RR \setminus C = \RR \setminus \cap_{n=0}^\infty C_n = \cup_{n=0}^\infty (\RR \setminus C_n)$$
+	Each $\RR \setminus C_n$ is a union of open intervals. Since a union of open sets is open, then the compliment of the Cantor set is open.
+	Therefore the Cantor set is closed.
+\end{proof}
 \item If $A\subseteq \RR$ is an open set which contains every rational ($\QQ \subset A$) then $A=\RR$.
-
-% FILL IN
-
+	\begin{proof}
+This is true, proof omitted, something about density and connectedness.  
+	\end{proof}
 % PLEASE READ:  Part (c) here will require quite a bit of thought.
 
 \end{enumerate}
@@ -165,7 +224,21 @@ a collection of sets.  The following equalities hold:
 % PLEASE READ:  Basically, chase elements from left to right and back, for each equality?  The one thing you *do not* want to do is assume that \Lambda is either finite or countable.  The whole point here is that *arbitrary* collections of sets have this property.
 
 \begin{proof}
-% FILL IN
+	\textbf{For (i) :} We will prove $(\bigcup_{\lambda \in \Lambda} E_\lambda)^c = \bigcap_{\lambda \in \Lambda} E_\lambda^c$ directly.\newline
+
+	\noindent$(\subseteq)$ direction: Let $x \in (\bigcup_{\lambda \in \Lambda} E_\lambda)^c$. Then by definition $x \notin \bigcup_{\lambda \in \Lambda} E_\lambda$. It follows that $x \notin E_\lambda$ for all $\lambda \in \Lambda$. Therefore $x \in E_\lambda^c$ for all $\lambda \in \Lambda$. By definition of intersection this means $x \in \bigcap_{\lambda \in \Lambda} E_\lambda^c$ for all $\lambda \in \Lambda$. 
+	\newline
+	\noindent $(\supseteq)$ direction: Let $x \in \bigcap_{\lambda \in \Lambda} E_\lambda^c$. Then $x \in E_\lambda^c$ for all $\lambda \in \Lambda$. This means $x \notin E_\lambda$ for all $\lambda \in \Lambda$. Therefore $x \notin \bigcup_{\lambda \in \Lambda} E_\lambda$. Thus $x \in (\bigcup_{\lambda \in \Lambda} E_\lambda)^c$.  \newline\newline
+	Since both directions hold  $(\bigcup_{\lambda \in \Lambda} E_\lambda)^c = \bigcap_{\lambda \in \Lambda} E_\lambda^c$
+\newline \newline
+\textbf{For (ii):} We will prove $\left(\bigcap_{\lambda \in \Lambda} E_\lambda\right)^c = \bigcup_{\lambda \in \Lambda} E_\lambda^c$ directly.\newline
+
+\noindent$(\subseteq)$ direction: Let $x \in \left(\bigcap_{\lambda \in \Lambda} E_\lambda\right)^c$. Then by definition $x \notin \bigcap_{\lambda \in \Lambda} E_\lambda$. It follows that there exists some $\lambda_0 \in \Lambda$ such that $x \notin E_{\lambda_0}$. Therefore $x \in E_{\lambda_0}^c$. Since $x$ is in at least one of the sets $E_\lambda^c$, by definition of union we have $x \in \bigcup_{\lambda \in \Lambda} E_\lambda^c$.
+\newline
+
+\noindent$(\supseteq)$ direction: Let $x \in \bigcup_{\lambda \in \Lambda} E_\lambda^c$. Then there exists some $\lambda_0 \in \Lambda$ such that $x \in E_{\lambda_0}^c$. This means $x \notin E_{\lambda_0}$. Since $x$ is not in all of the sets $E_\lambda$, we have $x \notin \bigcap_{\lambda \in \Lambda} E_\lambda$. Thus $x \in \left(\bigcap_{\lambda \in \Lambda} E_\lambda\right)^c$. \newline
+
+\noindent Since both directions hold, $\left(\bigcap_{\lambda \in \Lambda} E_\lambda\right)^c = \bigcup_{\lambda \in \Lambda} E_\lambda^c$.
 \end{proof}
 
 
@@ -176,7 +249,19 @@ If $A \subset \RR$ is both open and closed then either $A=\emptyset$ or $A=\RR$.
 % PLEASE READ: It is straightfoward to confirm that the empty set and R itself are both open and closed; say a bit about that first.  Then consider any other set A.  Now both A and A^c are nonempty, right?  Thus you can pick x \noeq y where x \in A and y \in A^c.  Consider the bounded interval [x,y], noting (x,y) is nonempty.  Find a point within that interval which must both be in A and A^c, a contradition.
 
 \begin{proof}
-% FILL IN
+We will begin by noting that the empty set $\emptyset$ is open because it vacuously satisfies the definition and it is closed because its compliment $\RR$ is open. Similarly $\RR$ is also both open and closed for vacuous reasons. 
+\newline\newline
+Suppose $A \subseteq \RR$ is both open and closed, and suppose for the sake of contradiction that $A \neq \emptyset$ and $A \neq \RR$. Then both $A$ and $A^c = \RR \setminus A$ are nonempty. Thus there exists $x \in A$ and $y \in A^c$ with $x \neq y$. Without loss of generality, suppose $x < y$. Consider the set:
+	$$S = \{t \in [x,y] : t \in A\}$$
+	Since $x \in A$, we have $x \in S$, so $S$ is nonempty. Also $S$ is bounded above by $y$. By completeness of the real numbers, the supremum $s = \sup S$ exists, and $x \leq s \leq y$. We will show that $s \in A$ and $s \in A^c$ leading to a contradiction. \newline\newline
+	($s \in A$): Since $s = \sup S$ and $s \leq y$, for every $\eps > 0$, there exists $t \in S$ with $s - \eps < t \leq s$.
+	Since $t \in S$, we have $t \in A$. Thus, every $\eps$-neighborhood of $s$ contains a point of $A$, so $s \in \overline{A}$.
+	Since $A$ is closed, $\overline{A} = A$, so $s \in A$. \newline
+
+	\noindent$(s \in A^c)$: Since $s = \sup S$ and $y \in A^c$, we have $s < y$ (this is because if $s = y$, then $y$ would be a limit point of $A$, and since $A$ is closed, $y \in A$, contradicting $y \in A^c$). Since $s < y$ and $s = \sup S$, for any $t \in (s, y]$, we have $t \notin S$, which means $t \notin A$, so $t \in A^c$. Thus, every neighborhood of $s$ of the form $(s - \eps, s + \eps)$ with small enough $\eps$ contains points of $A^c$, specifically points in $(s, s+\eps)$. This means $s \in \overline{A^c}$. Since $A^c$ is closed (because $A$ is open), we have $s \in A^c$. \newline 
+
+	\noindent Thus $s \in A$ and $s \in A^c$, which isn't possible since $A$ and $A^c$ are disjoint, a contradiction.
+	Therefore, either $A = \emptyset$ or $A = \RR$.
 \end{proof}
 
 

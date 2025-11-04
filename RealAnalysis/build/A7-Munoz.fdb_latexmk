@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1762138566.25259 "A7-Munoz.tex" "build/A7-Munoz.pdf" "A7-Munoz" 1762138566.71241 0
+["pdflatex"] 1762220430.50148 "A7-Munoz.tex" "build/A7-Munoz.pdf" "A7-Munoz" 1762220430.95978 0
   "/home/funky/.texlive2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1756197889.69371 1329200 9032d8f008dbb908c2eef8494d7b1bb1 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1687470159 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1687470159 4887201 b2e37e43fd1e9ced8365e67a4993c3f7 ""
@@ -30,6 +30,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1687470160 36741 fa121aac0049305630cf160b86157ee4 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1687470160 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1687470160 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1687470160 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1687470160 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1687470160 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1687470160 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
@@ -101,9 +102,9 @@
   "/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty" 1687470161 3469 19b6cb25f21abe53fb90b9fe27615441 ""
   "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty" 1687470161 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1687470165 39615 4ca7b2be4e89b50848d4f0b4d97130bb ""
-  "A7-Munoz.tex" 1762138537.59016 6182 0295ddf4d2e2d19ba5282fc4778e39c6 ""
-  "build/A7-Munoz.aux" 1762138566.64093 686 4ce905362b6645b598ea182482e9aeed "pdflatex"
-  "build/A7-Munoz.out" 1762138566.55293 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "A7-Munoz.tex" 1762220429.12848 16979 c04dfa00b4784dbbef5548b7eb6265e3 ""
+  "build/A7-Munoz.aux" 1762220430.88748 686 f5f198c058c66ca883888f7edab63f30 "pdflatex"
+  "build/A7-Munoz.out" 1762220430.79348 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "build/A7-Munoz.aux"
   "build/A7-Munoz.log"
