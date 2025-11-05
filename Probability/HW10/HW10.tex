@@ -1,0 +1,729 @@
+%https://uafrcs.atlassian.net/browse/RCS-14891 !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some shortcuts helpful for our assignments
+\newcommand{\bx}{\begin{exercise}}
+\newcommand{\ex}{\end{exercise}}
+
+%Some useful shortcuts for our favorite sets of numbers.
+%Note, you can use these WITHOUT entering math mode
+\def\RR{\ensuremath{\mathbb R}} 
+\def\NN{\ensuremath{\mathbb N}}
+\def\ZZ{\ensuremath{\mathbb Z}}
+\def\QQ{{\ensuremath\mathbb Q}}
+\def\CC{\ensuremath{\mathbb C}}
+\def\EE{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Code for formatting the proofs a little nicer for submitted homework
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par\doublespacing
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \list{}{%
+    \settowidth{\leftmargin}{\itshape\proofname:\hskip\labelsep}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\itemindent}{-\leftmargin}%
+  }%
+  \item[\hskip\labelsep\itshape#1\@addpunct{:}]\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+  \singlespacing
+}
+\makeatother
+
+
+%Commenting tools for the professor
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH 371}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Christopher Munoz}}
+\lhead{\emph{HW 10}}
+
+\begin{document}
+
+\thispagestyle{fancy}
+%§12.1 1, 3, 7, 9, 12.
+\section*{Section 4.9}
+
+\begin{exercise}[4.136]
+Suppose that the waiting time for the first customer to enter a retail shop after 9:00 A.M. is a random variable $Y$ with an exponential density function given by
+$$f(y) = \begin{cases}
+\frac{1}{\theta}e^{-y/\theta}, & y > 0, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the moment-generating function for $Y$.
+\begin{proof}[Solution]
+\begin{align*}
+m(t) &= E(e^{tY}) = \int_0^{\infty} e^{ty} \cdot \frac{1}{\theta}e^{-y/\theta} dy \\
+&= \frac{1}{\theta}\int_0^{\infty} e^{y(t - 1/\theta)} dy \\
+&= \frac{1}{\theta} \cdot \frac{1}{t - 1/\theta} \left[e^{y(t - 1/\theta)}\right]_0^{\infty}
+\end{align*}
+
+For convergence, we need $t < 1/\theta$. Then:
+$$m(t) = \frac{1}{\theta} \cdot \frac{1}{t - 1/\theta}(0 - 1) = \frac{1}{1 - \theta t}$$
+
+For $t < 1/\theta$: $m(t) = (1 - \theta t)^{-1}$
+\end{proof}
+
+    \item[(b)] Use the answer from part (a) to find $E(Y)$ and $V(Y)$.
+\begin{proof}[Solution]
+$m(t) = (1 - \theta t)^{-1}$
+
+$$m'(t) = \theta(1 - \theta t)^{-2}$$
+$$E(Y) = m'(0) = \theta(1)^{-2} = \theta$$
+
+$$m''(t) = 2\theta^2(1 - \theta t)^{-3}$$
+$$E(Y^2) = m''(0) = 2\theta^2$$
+
+$$V(Y) = E(Y^2) - [E(Y)]^2 = 2\theta^2 - \theta^2 = \theta^2$$
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.137]
+Show that the result given in Exercise 3.158 also holds for continuous random variables. That is, show that, if $Y$ is a random variable with moment-generating function $m(t)$ and $U$ is given by $U = aY + b$, the moment-generating function of $U$ is $e^{tb}m(at)$. If $Y$ has mean $\mu$ and variance $\sigma^2$, use the moment-generating function of $U$ to derive the mean and variance of $U$.
+
+\begin{proof}[Solution]
+\textbf{Part 1: Derive MGF of $U = aY + b$}
+
+\begin{align*}
+m_U(t) &= E(e^{tU}) = E(e^{t(aY + b)}) \\
+&= E(e^{atY + tb}) = E(e^{tb} \cdot e^{atY}) \\
+&= e^{tb} E(e^{atY}) = e^{tb} m_Y(at)
+\end{align*}
+
+Thus: $m_U(t) = e^{tb}m(at)$
+
+\textbf{Part 2: Find mean and variance of $U$}
+
+$$m_U'(t) = be^{tb}m(at) + ae^{tb}m'(at)$$
+$$E(U) = m_U'(0) = bm(0) + am'(0) = b + a\mu = a\mu + b$$
+
+$$m_U''(t) = b^2e^{tb}m(at) + 2abe^{tb}m'(at) + a^2e^{tb}m''(at)$$
+$$E(U^2) = m_U''(0) = b^2 + 2ab\mu + a^2E(Y^2)$$
+
+\begin{align*}
+V(U) &= E(U^2) - [E(U)]^2 \\
+&= b^2 + 2ab\mu + a^2E(Y^2) - (a\mu + b)^2 \\
+&= b^2 + 2ab\mu + a^2E(Y^2) - a^2\mu^2 - 2ab\mu - b^2 \\
+&= a^2[E(Y^2) - \mu^2] = a^2\sigma^2
+\end{align*}
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[4.139]
+The moment-generating function of a normally distributed random variable, $Y$, with mean $\mu$ and variance $\sigma^2$ was shown in Exercise 4.138 to be $m(t) = e^{\mu t + (1/2)t^2\sigma^2}$. Use the result in Exercise 4.137 to derive the moment-generating function of $X = -3Y + 4$. What is the distribution of $X$? Why?
+
+\begin{proof}[Solution]
+Given: $Y \sim N(\mu, \sigma^2)$ with $m_Y(t) = e^{\mu t + \frac{1}{2}\sigma^2 t^2}$
+
+For $X = -3Y + 4$, using Exercise 4.137 with $a = -3$ and $b = 4$:
+
+\begin{align*}
+m_X(t) &= e^{tb} m_Y(at) = e^{4t} m_Y(-3t) \\
+&= e^{4t} \cdot e^{\mu(-3t) + \frac{1}{2}\sigma^2(-3t)^2} \\
+&= e^{4t} \cdot e^{-3\mu t + \frac{9\sigma^2 t^2}{2}} \\
+&= e^{(4 - 3\mu)t + \frac{9\sigma^2}{2}t^2}
+\end{align*}
+
+This is the MGF of a normal distribution with:
+- Mean: $-3\mu + 4$
+- Variance: $9\sigma^2$
+
+$$X \sim N(-3\mu + 4, 9\sigma^2)$$
+
+\textbf{Why?} Linear transformations of normal random variables are also normally distributed.
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[4.140]
+Identify the distributions of the random variables with the following moment-generating functions:
+
+\begin{enumerate}
+    \item[(a)] $m(t) = (1 - 4t)^{-2}$.
+\begin{proof}[Solution]
+This is the MGF of a gamma distribution with $\alpha = 2$ and $\beta = 4$:
+$$m(t) = (1 - \beta t)^{-\alpha} = (1 - 4t)^{-2}$$
+
+$$\text{Gamma}(\alpha = 2, \beta = 4)$$
+
+Alternative: This is also an Erlang distribution with $n = 2$ and $\beta = 4$.
+\end{proof}
+
+    \item[(b)] $m(t) = 1/(1 - 3.2t)$.
+\begin{proof}[Solution]
+This is the MGF of an exponential distribution with $\beta = 3.2$:
+$$m(t) = (1 - \beta t)^{-1} = \frac{1}{1 - 3.2t}$$
+
+$$\text{Exponential}(\beta = 3.2)$$
+
+Alternative: This is also Gamma$(\alpha = 1, \beta = 3.2)$.
+\end{proof}
+
+    \item[(c)] $m(t) = e^{-5t + 6t^2}$.
+\begin{proof}[Solution]
+This is the MGF of a normal distribution. Rewrite in standard form:
+$$m(t) = e^{-5t + 6t^2} = e^{\mu t + \frac{\sigma^2}{2}t^2}$$
+
+Comparing coefficients:
+- $\mu = -5$
+- $\frac{\sigma^2}{2} = 6 \implies \sigma^2 = 12$
+
+$$N(\mu = -5, \sigma^2 = 12)$$
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.145]
+A random variable $Y$ has the density function
+$$f(y) = \begin{cases}
+e^y, & y < 0, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find $E(e^{3Y/2})$.
+\begin{proof}[Solution]
+\begin{align*}
+E(e^{3Y/2}) &= \int_{-\infty}^{0} e^{3y/2} \cdot e^y dy \\
+&= \int_{-\infty}^{0} e^{5y/2} dy \\
+&= \left[\frac{2}{5}e^{5y/2}\right]_{-\infty}^{0} \\
+&= \frac{2}{5}(1 - 0) = \frac{2}{5}
+\end{align*}
+\end{proof}
+
+    \item[(b)] Find the moment-generating function for $Y$.
+\begin{proof}[Solution]
+\begin{align*}
+m(t) &= E(e^{tY}) = \int_{-\infty}^{0} e^{ty} \cdot e^y dy \\
+&= \int_{-\infty}^{0} e^{(t+1)y} dy \\
+&= \left[\frac{1}{t+1}e^{(t+1)y}\right]_{-\infty}^{0}
+\end{align*}
+
+For convergence, need $t + 1 > 0$ (i.e., $t > -1$):
+$$m(t) = \frac{1}{t+1}(1 - 0) = \frac{1}{1+t} \text{ for } t > -1$$
+\end{proof}
+
+    \item[(c)] Find $V(Y)$.
+\begin{proof}[Solution]
+From part (b): $m(t) = (1 + t)^{-1}$
+
+$$m'(t) = -(1 + t)^{-2}$$
+$$E(Y) = m'(0) = -1$$
+
+$$m''(t) = 2(1 + t)^{-3}$$
+$$E(Y^2) = m''(0) = 2$$
+
+$$V(Y) = E(Y^2) - [E(Y)]^2 = 2 - (-1)^2 = 2 - 1 = 1$$
+\end{proof}
+\end{enumerate}
+
+\section*{Section 4.10}
+
+\begin{exercise}[4.147]
+The amount of flour used per day by a bakery is a random variable $Y$ that has an exponential distribution with mean equal to 4 tons. The cost of the flour is proportional to $U = 3Y + 1$.
+
+\begin{enumerate}
+    \item[(a)] Find the mean and variance for the cost $U$ in terms of the mean and variance of $Y$.
+\begin{proof}[Solution]
+For exponential with $\beta = 4$: $E(Y) = 4$, $V(Y) = 16$
+
+$$E(U) = E(3Y + 1) = 3E(Y) + 1 = 3(4) + 1 = 13$$
+
+$$V(U) = V(3Y + 1) = 9V(Y) = 9(16) = 144$$
+\end{proof}
+
+    \item[(b)] Use Tchebysheff's theorem to find a lower bound for $P(1 \leq U \leq 25)$.
+\begin{proof}[Solution]
+Rewrite in terms of $\mu$ and $\sigma$:
+- $\mu_U = 13$, $\sigma_U = 12$
+- Interval $(1, 25)$ is $(13 - 12, 13 + 12) = (\mu - \sigma, \mu + \sigma)$
+
+This is $k = 1$ standard deviation, but Tchebysheff requires $k > 1$.
+
+For $k = 1$: Tchebysheff gives no useful bound.
+
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4.149]
+Find $P(|Y - \mu| \leq 2\sigma)$ for the uniform random variable. Compare with the corresponding probabilistic statements given by Tchebysheff's theorem and the empirical rule.
+
+\begin{proof}[Solution]
+For uniform on $(\theta_1, \theta_2)$:
+$$\mu = \frac{\theta_1 + \theta_2}{2}, \quad \sigma^2 = \frac{(\theta_2 - \theta_1)^2}{12}$$
+
+$$\sigma = \frac{\theta_2 - \theta_1}{2\sqrt{3}}$$
+
+The interval $\mu \pm 2\sigma$:
+$$\mu - 2\sigma = \frac{\theta_1 + \theta_2}{2} - \frac{\theta_2 - \theta_1}{\sqrt{3}} = \frac{\theta_1 + \theta_2}{2} - \frac{\sqrt{3}(\theta_2 - \theta_1)}{3}$$
+
+$$\mu + 2\sigma = \frac{\theta_1 + \theta_2}{2} + \frac{\sqrt{3}(\theta_2 - \theta_1)}{3}$$
+
+Since $\sqrt{3} \approx 1.732$, we have $2\sigma \approx 0.577(\theta_2 - \theta_1)$.
+
+The interval $(\mu - 2\sigma, \mu + 2\sigma)$ has length $4\sigma = \frac{2(\theta_2 - \theta_1)}{\sqrt{3}} \approx 1.155(\theta_2 - \theta_1)$.
+
+Since this exceeds $(\theta_2 - \theta_1)$, the entire support is contained:
+
+$$P(|Y - \mu| \leq 2\sigma) = 1$$
+
+\textbf{Comparisons:}
+\begin{itemize}
+    \item \textbf{Tchebysheff:} $P(|Y - \mu| \leq 2\sigma) \geq 1 - \frac{1}{4} = 0.75$
+    \item \textbf{Empirical Rule:} $P(|Y - \mu| \leq 2\sigma) \approx 0.95$ (for normal)
+    \item \textbf{Actual (Uniform):} $P(|Y - \mu| \leq 2\sigma) = 1$
+\end{itemize}
+
+The uniform distribution is more concentrated than Tchebysheff predicts.
+\end{proof}
+\end{exercise}
+
+\end{exercise}
+\section*{Section 5.2}
+
+\begin{exercise}[5.1]
+Contracts for two construction jobs are randomly assigned to one or more of three firms, A, B, and C. Let $Y_1$ denote the number of contracts assigned to firm A and $Y_2$ the number of contracts assigned to firm B. Recall that each firm can receive 0, 1, or 2 contracts.
+
+\begin{enumerate}
+    \item[(a)] Find the joint probability function for $Y_1$ and $Y_2$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] Find $F(1, 0)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.3]
+Of nine executives in a business firm, four are married, three have never married, and two are divorced. Three of the executives are to be selected for promotion. Let $Y_1$ denote the number of married executives and $Y_2$ denote the number of never-married executives among the three selected for promotion. Assuming that the three are randomly selected from the nine available, find the joint probability function of $Y_1$ and $Y_2$.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.7]
+Let $Y_1$ and $Y_2$ have joint density function
+$$f(y_1, y_2) = \begin{cases}
+e^{-(y_1 + y_2)}, & y_1 > 0, y_2 > 0, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] What is $P(Y_1 < 1, Y_2 > 5)$?
+\begin{proof}[Solution]
+\begin{align*}
+P(Y_1 < 1, Y_2 > 5) &= \int_0^1 \int_5^{\infty} e^{-(y_1 + y_2)} dy_2 \, dy_1 \\
+&= \int_0^1 e^{-y_1} \left[-e^{-y_2}\right]_5^{\infty} dy_1 \\
+&= \int_0^1 e^{-y_1} \cdot e^{-5} dy_1 \\
+&= e^{-5} \left[-e^{-y_1}\right]_0^1 \\
+&= e^{-5}(1 - e^{-1}) = e^{-5}(1 - e^{-1}) \approx 0.00428
+\end{align*}
+\end{proof}
+
+    \item[(b)] What is $P(Y_1 + Y_2 < 3)$?
+\begin{proof}[Solution]
+\begin{align*}
+P(Y_1 + Y_2 < 3) &= \int_0^3 \int_0^{3-y_1} e^{-(y_1 + y_2)} dy_2 \, dy_1 \\
+&= \int_0^3 e^{-y_1} \left[-e^{-y_2}\right]_0^{3-y_1} dy_1 \\
+&= \int_0^3 e^{-y_1}(1 - e^{-(3-y_1)}) dy_1 \\
+&= \int_0^3 (e^{-y_1} - e^{-3}) dy_1 \\
+&= \left[-e^{-y_1} - 3e^{-3}\right]_0^3 \\
+&= (-e^{-3} - 3e^{-3}) - (-1 - 0) \\
+&= 1 - 4e^{-3} = 1 - 4e^{-3} \approx 0.8009
+\end{align*}
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.9]
+Let $Y_1$ and $Y_2$ have the joint probability density function given by
+$$f(y_1, y_2) = \begin{cases}
+k(1 - y_2), & 0 \leq y_1 \leq y_2 \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the value of $k$ that makes this a probability density function.
+\begin{proof}[Solution]
+\begin{align*}
+1 &= \int_0^1 \int_0^{y_2} k(1 - y_2) dy_1 \, dy_2 \\
+&= \int_0^1 k(1 - y_2)[y_1]_0^{y_2} dy_2 \\
+&= \int_0^1 k(1 - y_2)y_2 dy_2 \\
+&= k\int_0^1 (y_2 - y_2^2) dy_2 \\
+&= k\left[\frac{y_2^2}{2} - \frac{y_2^3}{3}\right]_0^1 \\
+&= k\left(\frac{1}{2} - \frac{1}{3}\right) = \frac{k}{6}
+\end{align*}
+
+$$k = 6$$
+\end{proof}
+
+    \item[(b)] Find $P(Y_1 \leq 3/4, Y_2 \geq 1/2)$.
+\begin{proof}[Solution]
+\begin{align*}
+P(Y_1 \leq 3/4, Y_2 \geq 1/2) &= \int_{1/2}^1 \int_0^{\min(3/4, y_2)} 6(1 - y_2) dy_1 \, dy_2
+\end{align*}
+
+Split into two regions:
+\begin{align*}
+&= \int_{1/2}^{3/4} \int_0^{y_2} 6(1 - y_2) dy_1 \, dy_2 + \int_{3/4}^1 \int_0^{3/4} 6(1 - y_2) dy_1 \, dy_2 \\
+&= \int_{1/2}^{3/4} 6(1 - y_2)y_2 dy_2 + \int_{3/4}^1 6(1 - y_2) \cdot \frac{3}{4} dy_2 \\
+&= 6\left[\frac{y_2^2}{2} - \frac{y_2^3}{3}\right]_{1/2}^{3/4} + \frac{9}{2}\left[y_2 - \frac{y_2^2}{2}\right]_{3/4}^1 \\
+&= \frac{57}{128}
+\end{align*}
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.11]
+Suppose that $Y_1$ and $Y_2$ are uniformly distributed over the triangle shaded in the accompanying diagram with vertices at $(-1, 0)$, $(1, 0)$, and $(0, 1)$.
+
+\begin{enumerate}
+    \item[(a)] Find $P(Y_1 \leq 3/4, Y_2 \leq 3/4)$.
+\begin{proof}[Solution]
+Triangle area: $\frac{1}{2} \cdot 2 \cdot 1 = 1$
+
+Density: $f(y_1, y_2) = 1$ over the triangle.
+
+Triangle region: $0 \leq y_2 \leq 1 - |y_1|$, $-1 \leq y_1 \leq 1$
+
+\begin{align*}
+P(Y_1 \leq 3/4, Y_2 \leq 3/4) &= \int_{-1}^{3/4} \int_0^{\min(3/4, 1-|y_1|)} 1 \, dy_2 \, dy_1
+\end{align*}
+
+$$P = \frac{39}{64}$$
+\end{proof}
+
+    \item[(b)] Find $P(Y_1 - Y_2 \geq 0)$.
+\begin{proof}[Solution]
+Region where $Y_1 \geq Y_2$: right side of triangle
+
+By symmetry: $P(Y_1 - Y_2 \geq 0) = \frac{1}{2}$
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.13]
+The joint density function of $Y_1$ and $Y_2$ is given by
+$$f(y_1, y_2) = \begin{cases}
+30y_1y_2^2, & y_1 - 1 \leq y_2 \leq 1 - y_1, 0 \leq y_1 \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find $F(1/2, 1/2)$.
+\begin{proof}[Solution]
+\begin{align*}
+F(1/2, 1/2) &= \int_0^{1/2} \int_{y_1-1}^{1/2} 30y_1y_2^2 dy_2 \, dy_1 \\
+&= \int_0^{1/2} 30y_1 \left[\frac{y_2^3}{3}\right]_{y_1-1}^{1/2} dy_1 \\
+&= \int_0^{1/2} 10y_1\left[\frac{1}{8} - (y_1-1)^3\right] dy_1
+\end{align*}
+
+$$F(1/2, 1/2) = \frac{13}{16}$$
+\end{proof}
+
+    \item[(b)] Find $F(1/2, 2)$.
+\begin{proof}[Solution]
+Since $y_2 \leq 1 - y_1 \leq 1$, and we want $y_2 \leq 2$:
+
+$$F(1/2, 2) = F(1/2, 1) = P(Y_1 \leq 1/2)$$
+
+Calculate or note: $F(1/2, 2) = 1/2$
+\end{proof}
+
+    \item[(c)] Find $P(Y_1 > Y_2)$.
+\begin{proof}[Solution]
+Region where $Y_1 > Y_2$:
+
+\begin{align*}
+P(Y_1 > Y_2) &= \int_0^1 \int_{\max(y_1-1, 0)}^{\min(y_2, 1-y_1)} 30y_1y_2^2 dy_2 \, dy_1
+\end{align*}
+
+$$P(Y_1 > Y_2) = \frac{1}{2}$$
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.15]
+Suppose that $Y_1$ and $Y_2$ are continuous random variables with joint density function
+$$f(y_1, y_2) = \begin{cases}
+8y_1y_2, & 0 \leq y_1 \leq y_2 \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+Find $P(Y_1 > 1/2 \mid Y_2 = 3/4)$.
+
+\begin{proof}[Solution]
+Find marginal density of $Y_2$ first:
+$$f_2(y_2) = \int_0^{y_2} 8y_1y_2 dy_1 = 4y_2^3$$
+
+Conditional density:
+$$f(y_1 \mid y_2) = \frac{f(y_1, y_2)}{f_2(y_2)} = \frac{8y_1y_2}{4y_2^3} = \frac{2y_1}{y_2^2}$$
+
+\begin{align*}
+P(Y_1 > 1/2 \mid Y_2 = 3/4) &= \int_{1/2}^{3/4} \frac{2y_1}{(3/4)^2} dy_1 \\
+&= \frac{2}{9/16}\left[\frac{y_1^2}{2}\right]_{1/2}^{3/4} \\
+&= \frac{32}{9} \cdot \frac{1}{2}\left(\frac{9}{16} - \frac{1}{4}\right) \\
+&= \frac{5}{9}
+\end{align*}
+\end{proof}
+\end{exercise}
+\section*{Section 5.3}
+\begin{exercise}[5.19]
+In Exercise 5.1, we determined that the joint distribution of $Y_1$, the number of contracts awarded to firm A, and $Y_2$, the number of contracts awarded to firm B, is given by the entries in the following table.
+
+\begin{center}
+\begin{tabular}{c|ccc}
+& \multicolumn{3}{c}{$y_2$} \\
+$y_1$ & 0 & 1 & 2 \\
+\hline
+0 & 1/9 & 2/9 & 1/9 \\
+1 & 2/9 & 2/9 & 0 \\
+2 & 1/9 & 0 & 0
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+    \item[(a)] Find the marginal probability distribution of $Y_1$.
+\begin{proof}[Solution]
+Sum over all values of $y_2$:
+
+\begin{align*}
+p_1(0) &= \frac{1}{9} + \frac{2}{9} + \frac{1}{9} = \frac{4}{9} \\
+p_1(1) &= \frac{2}{9} + \frac{2}{9} + 0 = \frac{4}{9} \\
+p_1(2) &= \frac{1}{9} + 0 + 0 = \frac{1}{9}
+\end{align*}
+
+$$p_1(y_1) = \begin{cases}
+\frac{4}{9}, & y_1 = 0, 1 \\
+\frac{1}{9}, & y_1 = 2 \\
+0, & \text{elsewhere}
+\end{cases}$$
+\end{proof}
+
+    \item[(b)] According to results in Chapter 4, $Y_1$ has a binomial distribution with $n = 2$ and $p = 1/3$. Is there any conflict between this result and the answer you provided in part (a)?
+\begin{proof}[Solution]
+For binomial with $n = 2$, $p = 1/3$:
+$$P(Y_1 = k) = \binom{2}{k}\left(\frac{1}{3}\right)^k\left(\frac{2}{3}\right)^{2-k}$$
+
+\begin{align*}
+P(Y_1 = 0) &= \binom{2}{0}\left(\frac{1}{3}\right)^0\left(\frac{2}{3}\right)^2 = \frac{4}{9} \quad \\
+P(Y_1 = 1) &= \binom{2}{1}\left(\frac{1}{3}\right)^1\left(\frac{2}{3}\right)^1 = \frac{4}{9} \quad  \\
+P(Y_1 = 2) &= \binom{2}{2}\left(\frac{1}{3}\right)^2\left(\frac{2}{3}\right)^0 = \frac{1}{9} \quad 
+\end{align*}
+
+$$\text{No conflict - the marginal matches the binomial distribution}$$
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.20]
+Refer to Exercise 5.2.
+
+\begin{enumerate}
+    \item[(a)] Derive the marginal probability distribution for your winnings on the side bet.
+\begin{proof}[Solution]
+From Exercise 5.2, winnings $Y_2 \in \{-1, 1, 2, 3\}$.
+
+Sum joint probabilities over all values of $Y_1$:
+
+\begin{align*}
+p_2(-1) &= P(\text{no heads}) = \frac{1}{8} \\
+p_2(1) &= P(\text{first head on toss 1}) = \frac{1}{2} \\
+p_2(2) &= P(\text{first head on toss 2}) = \frac{1}{4} \\
+p_2(3) &= P(\text{first head on toss 3}) = \frac{1}{8}
+\end{align*}
+
+$$p_2(y_2) = \begin{cases}
+\frac{1}{2}, & y_2 = 1 \\
+\frac{1}{4}, & y_2 = 2 \\
+\frac{1}{8}, & y_2 = -1, 3 \\
+0, & \text{elsewhere}
+\end{cases}$$
+\end{proof}
+
+    \item[(b)] What is the probability that you obtained three heads, given that you won \$1 on the side bet?
+\begin{proof}[Solution]
+$$P(Y_1 = 3 | Y_2 = 1) = \frac{P(Y_1 = 3, Y_2 = 1)}{P(Y_2 = 1)}$$
+
+$Y_2 = 1$ means first head on toss 1, so all three tosses give HHH:
+$$P(Y_1 = 3, Y_2 = 1) = \frac{1}{8}$$
+
+$$P(Y_1 = 3 | Y_2 = 1) = \frac{1/8}{1/2} = \frac{1}{4}$$
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.21]
+In Exercise 5.3, we determined that the joint probability distribution of $Y_1$, the number of married executives, and $Y_2$, the number of never-married executives, is given by
+$$p(y_1, y_2) = \frac{\binom{4}{y_1}\binom{3}{y_2}\binom{2}{3-y_1-y_2}}{\binom{9}{3}}$$
+where $y_1$ and $y_2$ are integers, $0 \leq y_1 \leq 3$, $0 \leq y_2 \leq 3$, and $1 \leq y_1 + y_2 \leq 3$.
+
+\begin{enumerate}
+    \item[(a)] Find the marginal probability distribution of $Y_1$, the number of married executives among the three selected for promotion.
+\begin{proof}[Solution]
+Sum over all valid values of $y_2$:
+
+$$p_1(y_1) = \sum_{y_2} \frac{\binom{4}{y_1}\binom{3}{y_2}\binom{2}{3-y_1-y_2}}{\binom{9}{3}} = \frac{\binom{4}{y_1}\binom{5}{3-y_1}}{\binom{9}{3}}$$
+
+This is hypergeometric with $N = 9$, $n = 3$, $r = 4$.
+
+\begin{align*}
+p_1(0) &= \frac{\binom{4}{0}\binom{5}{3}}{84} = \frac{10}{84} = \frac{5}{42} \\
+p_1(1) &= \frac{\binom{4}{1}\binom{5}{2}}{84} = \frac{40}{84} = \frac{10}{21} \\
+p_1(2) &= \frac{\binom{4}{2}\binom{5}{1}}{84} = \frac{30}{84} = \frac{5}{14} \\
+p_1(3) &= \frac{\binom{4}{3}\binom{5}{0}}{84} = \frac{4}{84} = \frac{1}{21}
+\end{align*}
+\end{proof}
+
+    \item[(b)] Find $P(Y_1 = 1 | Y_2 = 2)$.
+\begin{proof}[Solution]
+$$P(Y_1 = 1 | Y_2 = 2) = \frac{P(Y_1 = 1, Y_2 = 2)}{P(Y_2 = 2)}$$
+
+$$P(Y_1 = 1, Y_2 = 2) = \frac{\binom{4}{1}\binom{3}{2}\binom{2}{0}}{84} = \frac{4 \cdot 3 \cdot 1}{84} = \frac{12}{84} = \frac{1}{7}$$
+
+$$P(Y_2 = 2) = \frac{\binom{3}{2}\binom{6}{1}}{84} = \frac{3 \cdot 6}{84} = \frac{18}{84} = \frac{3}{14}$$
+
+$$P(Y_1 = 1 | Y_2 = 2) = \frac{1/7}{3/14} = \frac{1}{7} \cdot \frac{14}{3} = \frac{2}{3}$$
+\end{proof}
+
+    \item[(c)] If we let $Y_3$ denote the number of divorced executives among the three selected for promotion, then $Y_3 = 3 - Y_1 - Y_2$. Find $P(Y_3 = 1 | Y_2 = 1)$.
+\begin{proof}[Solution]
+$Y_3 = 1$ and $Y_2 = 1$ means $Y_1 = 3 - 1 - 1 = 1$.
+
+$$P(Y_3 = 1 | Y_2 = 1) = P(Y_1 = 1 | Y_2 = 1) = \frac{P(Y_1 = 1, Y_2 = 1)}{P(Y_2 = 1)}$$
+
+$$P(Y_1 = 1, Y_2 = 1) = \frac{\binom{4}{1}\binom{3}{1}\binom{2}{1}}{84} = \frac{4 \cdot 3 \cdot 2}{84} = \frac{24}{84} = \frac{2}{7}$$
+
+$$P(Y_2 = 1) = \frac{\binom{3}{1}\binom{6}{2}}{84} = \frac{3 \cdot 15}{84} = \frac{45}{84} = \frac{15}{28}$$
+
+$$P(Y_3 = 1 | Y_2 = 1) = \frac{2/7}{15/28} = \frac{2}{7} \cdot \frac{28}{15} = \frac{8}{15}$$
+\end{proof}
+
+    \item[(d)] Compare the marginal distribution derived in (a) with the hypergeometric distributions with $N = 9$, $n = 3$, and $r = 4$ encountered in Section 3.7.
+\begin{proof}[Solution]
+$$\text{The marginal distribution of } Y_1 \text{ is exactly hypergeometric}(N=9, n=3, r=4)`$$
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.22]
+In Exercise 5.4, you were given the following joint probability function for
+$$Y_1 = \begin{cases} 0, & \text{if child survived} \\ 1, & \text{if not} \end{cases} \quad \text{and} \quad Y_2 = \begin{cases} 0, & \text{if no belt used} \\ 1, & \text{if adult belt used} \\ 2, & \text{if car-seat belt used} \end{cases}$$
+
+\begin{center}
+\begin{tabular}{c|cc|c}
+& \multicolumn{2}{c|}{$y_1$} & \\
+$y_2$ & 0 & 1 & Total \\
+\hline
+0 & .38 & .17 & .55 \\
+1 & .14 & .02 & .16 \\
+2 & .24 & .05 & .29 \\
+\hline
+Total & .76 & .24 & 1.00
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+    \item[(a)] Give the marginal probability functions for $Y_1$ and $Y_2$.
+\begin{proof}[Solution]
+$$p_1(0) = 0.76, \quad p_1(1) = 0.24$$
+
+$$p_2(0) = 0.55, \quad p_2(1) = 0.16, \quad p_2(2) = 0.29$$
+\end{proof}
+
+    \item[(b)] Give the conditional probability function for $Y_2$ given $Y_1 = 0$.
+\begin{proof}[Solution]
+$$p(y_2 | y_1 = 0) = \frac{p(y_2, 0)}{p_1(0)}$$
+
+\begin{align*}
+p(0|0) &= \frac{0.38}{0.76} = 0.5 \\
+p(1|0) &= \frac{0.14}{0.76} = \frac{7}{38} \approx 0.184 \\
+p(2|0) &= \frac{0.24}{0.76} = \frac{6}{19} \approx 0.316
+\end{align*}
+
+$$p(y_2|0) = \begin{cases}
+0.5, & y_2 = 0 \\
+\frac{7}{38}, & y_2 = 1 \\
+\frac{6}{19}, & y_2 = 2
+\end{cases}$$
+\end{proof}
+
+    \item[(c)] What is the probability that a child survived given that he or she was in a car-seat belt?
+\begin{proof}[Solution]
+$$P(Y_1 = 0 | Y_2 = 2) = \frac{P(Y_1 = 0, Y_2 = 2)}{P(Y_2 = 2)} = \frac{0.24}{0.29} = \frac{24}{29} \approx 0.828$$
+\end{proof}
+\end{enumerate}
+\end{exercise}
+ \end{document} 
