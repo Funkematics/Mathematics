@@ -1,0 +1,171 @@
+% <-- a percent symbol indicates a comment which does not affect the output of LaTeX
+% you can leave the preamble alone, from here ...
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{enumerate,palatino}
+\usepackage[final]{graphicx}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+
+\newtheorem{problem}{Problem}
+% ... to here
+
+% shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\II}{\ensuremath{\mathbb I}}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+
+\newcommand{\eps}{\ensuremath{\epsilon}}
+\newcommand{\ds}{\displaystyle}
+
+% feel free to add more shortcuts here
+
+
+\begin{document}
+% replace with your name, but otherwise leave this header alone, from here ...
+\small
+\noindent \textsc{Math 401: Exam2 stuff} \hfill Christopher Munoz
+
+\normalsize
+\bigskip
+% ... to here
+
+
+
+\begin{problem}
+	Definition. A set $A \subseteq \RR$ is open if
+
+	For any $x \in A$, there is an $\eps > 0$ such that $V_\eps (x) = |x-\eps, x + \eps| \subseteq eq A$.
+\end{problem}
+
+\begin{problem}
+	Prove that a finite intersection of open sets is open
+	\begin{proof}
+		Suppose $A_1, \cdots A_n$ are a collection open sets. Let $A = \bigcap^{n} A_n$ and let $x$ be an arbitrary element of $A_n$. Since $A_n$ is open then by definition there exists $V_\eps (x) \subseteq A_n$. Since $x$ is in all $A_n$ it is the intersection of all $A_n$. Thus $V_\eps (x) \subseteq A$.(rough)
+	\end{proof}
+\end{problem}
+
+\begin{problem}
+	State the Monotone Convergence Theorem
+
+	If a sequence is bounded and if it is monotone, then it converges.
+\end{problem}
+
+\begin{problem}
+	Prove the Monotone Convergence Theorem, but restrict your proof to the case that the sequence is increasing.
+	\begin{proof}
+		Suppose $(a_n)$ is bounded and increasing. Let
+		$$A = \{a_n : n \in \NN\}$$
+		Since $(a_n)$ is bounded, then A is bounded. Let $s = \sup A$.
+		Let $\eps > 0$. From the property of sup, there is an $a_N \in A$ such that $a_N > s - \eps$. Also $A_N \leq s$.
+		If $n \geq N$, then because $(a_n)$ is increasing we have
+		$$s-\eps < a_N \leq a_n$$
+		Note that $s - a_n < \eps$. But also 
+		$$-\eps < 0 \leq s - a_n$$
+		because $s$ os an upper bound on $A$. Thus
+		$$-\eps < 0 \leq s-a_n$$
+		or 
+		$$|s-a_n| < \eps$$.
+		Thus $(a_n)$ converges to $s$.
+	\end{proof}
+\end{problem}
+
+\begin{problem}
+	State the Bolzano-Weierstrauss Theorem
+
+	A bounded sequence has convergent subsequence
+\end{problem}
+
+\begin{problem}
+	Prove that if $(a_n)$ is a convergent sequence then it is Cauchy.
+	\begin{proof}
+		Let $\eps > 0.$ Since $(a_n)$ converges to a a point we denote as $a \in \RR$, there exists an $N \in \NN$ such that for
+		$n \geq N$ we have
+		$$|a_n - a| < \eps/2$$
+		Choose $m,n \geq N$. Then by the triangle inequality
+		\begin{align*}
+			|a_n - a_m| &= |a_n - a + a - a_m| \\
+			&\leq |a_n - a| + |a-a_m| \\ 
+			&< \eps/2 + \eps/2 = \eps
+		\end{align*}
+		Thus $(a_n)$ is Cauchy.
+	\end{proof}
+\end{problem}
+
+\begin{problem}
+	(a) Compute and simplify the partial sums of the geometric series $\sum_{n=0}^\infty ar^n$, assuming $r \neq 1$.
+	 \begin{proof}
+		 \begin{align*}
+			 s_m = \sum_{n=0}^m ar^n &= a(1 + r + r^2 + \cdots + r^m) \\
+			 rs_m &= a(r + r^2 + \cdots + r^{m+1}) \\
+			 (1-r)s_m &= a(1 - r^{m+1}) \\
+			 s_m &= \frac{a(1-r^{m+1}}{1-r}
+		 \end{align*}
+	 \end{proof}
+	 (b) Under what assumptions does the geometric series in part (a) converge? State a theorem and prove it.
+
+	 Theorem: The geometric series $\sum_{n=0}^\infty ar^n$ converges if $|r| < 1$, and it converges to $a/(1-r)$.
+	 \begin{proof}
+		 By The Algebraic Limit Theorem
+		 \begin{align*}
+			 \lim_{m \to \infty} s_m &= \lim_{m \to \infty} \frac{a(1-r^{m+1)}}{1-r} \\
+			 &= \frac{a(1-0)}{1-r} = \frac{a}{1-r}
+		 \end{align*}
+		 since $\lim_{m \to \infty} r^{m+1} = 0$.
+	 \end{proof}
+\end{problem}
+\begin{problem}
+	Consider an infinite series $\sum_{n=1}^\infty a_n$. Define what it means for it to converge.
+
+	Definition: Let $s_m = \sum_{n=1}^m a_n$. The series converges if $\lim_{m \to \infty} s_m$ exists, in other words if the sequence of partiaul sums converges.
+\end{problem}
+
+\begin{problem}
+	Give a justified example, or argue (prove) that it is impossible
+
+	\noindent(a) A uninon of closed sets which is not closed
+	\begin{proof}
+		Consider the closed set $F_n = [ \frac{1}{n}, 1 - \frac{1}{n}]$ for $n = 2, 3, 4, \cdots$.
+		Observe that $F = \cup_{n=2}^\infty F_n = (0,1)$ is not closed and that $0$ is a limit point of $F$ but $0 \notin F$.
+	\end{proof}
+	\noindent(b) A sequence $(y_n)$ satisfying $0 \leq y_n \leq \frac{1}{n}$ where $\sum_{n = 1}^\infty (-1)^{n+1} y_n$ diverges.
+
+	Consider the sequence 
+	\begin{align*}
+		y_n = 
+	\begin{cases}
+		\frac{1}{n}, & n \text{ even } \\
+		0, &  n \text{ odd}
+	\end{cases}
+	\end{align*}
+	then 
+	\begin{align*}
+		\sum_{n=1}^\infty (-1)^{n+1} y_n &= \sum_{k = 1}^\infty (-1)^{2k+1} \frac{1}{2k} \\
+			&= -\frac{1}{2} ( \sum_{k = 1}^\infty \frac{1}{k})
+	\end{align*}
+	But the harmonic series diverges.
+\end{problem}
+
+\begin{problem}
+	State the alternating Series Test
+
+	Theorem: If $(a_n)$ is a nonnegative sqeuence, and if $\lim_{n \to \infty} a_n = 0$ and $(a_n)$ is decreasing then $\sum_{n=1}^\infty (-1)^n a_n$ converges.
+\end{problem}
+
+\begin{problem}
+	Prove that if $x$ is a limit point of set $A \subset \RR$ then there is a sequence $(a_n)$ such that $a_n \in A$ and $a_n \neq x$, for all $n$ such that $a_n \to x$.
+	\begin{proof}
+		Suppose $x \in A$ is a limit point. Let $\eps_1 = 1$. Then there is $a_1 \in A$ such that $a_1 \neq x$ and 
+		$a_1 \in V_\eps (x) = V_1 (x)$, so $|a_1 - x| < 1$.
+
+		Let $\eps_2 = \frac{1}{2}$. Then there is an $a_2 \in A$ such that $a_2 \neq x$ and 
+		$a_2 \in V_\eps (x) = V_2 (x)$, so $|a_2 - x| < \frac{1}{2}$. Continuing in this way we construct a
+		sequence $(a_n)$ so that $a_n \neq x$ for all $x$, and $|a_n = x|< \frac{1}{n}$.
+		Let $\eps > 0$, and choose $N$ such that $\frac{1}{N} < \eps$. For $n \geq N$ we have
+		$|a_n - x| < \frac{1}{n} < \frac{1}{N} < \eps$. Thus $(a_n)$ converges to x.
+	\end{proof}
+\end{problem}
+\end{document}
