@@ -1,0 +1,728 @@
+%https://uafrcs.atlassian.net/browse/RCS-14891 !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some shortcuts helpful for our assignments
+\newcommand{\bx}{\begin{exercise}}
+\newcommand{\ex}{\end{exercise}}
+
+%Some useful shortcuts for our favorite sets of numbers.
+%Note, you can use these WITHOUT entering math mode
+\def\RR{\ensuremath{\mathbb R}} 
+\def\NN{\ensuremath{\mathbb N}}
+\def\ZZ{\ensuremath{\mathbb Z}}
+\def\QQ{{\ensuremath\mathbb Q}}
+\def\CC{\ensuremath{\mathbb C}}
+\def\EE{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Code for formatting the proofs a little nicer for submitted homework
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par\doublespacing
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \list{}{%
+    \settowidth{\leftmargin}{\itshape\proofname:\hskip\labelsep}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\itemindent}{-\leftmargin}%
+  }%
+  \item[\hskip\labelsep\itshape#1\@addpunct{:}]\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+  \singlespacing
+}
+\makeatother
+
+
+%Commenting tools for the professor
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH 371}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Christopher Munoz}}
+\lhead{\emph{HW 11}}
+
+\begin{document}
+
+\thispagestyle{fancy}
+%§12.1 1, 3, 7, 9, 12.
+\section*{Section 5.3: Marginal and Conditional Probability Distributions}
+
+\begin{exercise}[5.23]
+In Example 5.4 and Exercise 5.5, we considered the joint density of $Y_1$, the proportion of the capacity of the tank that is stocked at the beginning of the week, and $Y_2$, the proportion of the capacity sold during the week, given by
+$$f(y_1, y_2) = \begin{cases}
+3y_1, & 0 \leq y_2 \leq y_1 \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the marginal density function for $Y_2$.
+\begin{proof}[Solution]
+\begin{align*}
+f_2(y_2) &= \int_{y_2}^{\infty} 3y_1 dy_1 = \frac{3y_1^2}{2} \Biggr]^1_{y_2} = \frac{3}{2} - \frac{3y_2^2}{2} \\
+         &= \frac{3}{2}(1-y_2^2)
+\end{align*}
+\end{proof}
+    \item[(b)] For what values of $y_2$ is the conditional density $f(y_1|y_2)$ defined?
+\begin{proof}[Solution]
+  \begin{align*}
+    f(y_1|y_2) &= \frac{f(y_1,y_2)}{f_2(y_2)} = \frac{3y_1}{\frac{3}{2}(1 - y_2^2)} = \frac{2y_1}{1-y_2^2} \\
+               &= \begin{cases}
+                 \frac{2y_1}{1-y_2^2}, & y_2 \leq y_1 \leq 1 \\
+                 0, & \text{elsewhere}
+               \end{cases}
+  \end{align*}
+  So its defined for $0 \leq y_2 < 1$ to avoid division by $0$.
+\end{proof}
+
+    \item[(c)] What is the probability that more than half a tank is sold given that three-fourths of a tank is stocked?
+\begin{proof}[Solution]
+  \begin{align*}
+    f_1(y_1) = \int_0^{y_1} 3y_1 dy_2  
+  \end{align*}
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.24]
+In Exercise 5.6, we assumed that if a radioactive particle is randomly located in a square with sides of unit length, a reasonable model for the joint density function for $Y_1$ and $Y_2$ is
+$$f(y_1, y_2) = \begin{cases}
+1, & 0 \leq y_1 \leq 1, 0 \leq y_2 \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the marginal density functions for $Y_1$ and $Y_2$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] What is $P(.3 < Y_1 < .5)$? $P(.3 < Y_2 < .5)$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(c)] For what values of $y_2$ is the conditional density $f(y_1|y_2)$ defined?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(d)] For any $y_2$, $0 \leq y_2 \leq 1$ what is the conditional density function of $Y_1$ given that $Y_2 = y_2$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(e)] Find $P(.3 < Y_1 < .5|Y_2 = .3)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(f)] Find $P(.3 < Y_1 < .5|Y_2 = .5)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(g)] Compare the answers that you obtained in parts (a), (d), and (e). For any $y_2$, $0 \leq y_2 \leq 1$ how does $P(.3 < Y_1 < .5)$ compare to $P(.3 < Y_1 < .5|Y_2 = y_2)$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.25]
+Let $Y_1$ and $Y_2$ have joint density function first encountered in Exercise 5.7:
+$$f(y_1, y_2) = \begin{cases}
+e^{-(y_1+y_2)}, & y_1 > 0, y_2 > 0, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the marginal density functions for $Y_1$ and $Y_2$. Identify these densities as one of those studied in Chapter 4.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] What is $P(1 < Y_1 < 2.5)$? $P(1 < Y_2 < 2.5)$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(c)] For what values of $y_2$ is the conditional density $f(y_1|y_2)$ defined?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(d)] For any $y_2 > 0$, what is the conditional density function of $Y_1$ given that $Y_2 = y_2$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(e)] For any $y_1 > 0$, what is the conditional density function of $Y_2$ given that $Y_1 = y_1$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(f)] For any $y_2 > 0$, how does the conditional density function $f(y_1|y_2)$ that you obtained in part (d) compare to the marginal density function $f_1(y_1)$ found in part (a)?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(g)] What does your answer to part (f) imply about marginal and conditional probabilities that $Y_1$ falls in any interval?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.27]
+In Exercise 5.9, we determined that
+$$f(y_1, y_2) = \begin{cases}
+6(1 - y_2), & 0 \leq y_1 \leq y_2 \leq 1, \\
+0, & \text{elsewhere}
+\end{cases}$$
+is a valid joint probability density function. Find
+
+\begin{enumerate}
+    \item[(a)] the marginal density functions for $Y_1$ and $Y_2$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] $P(Y_2 \leq 1/2|Y_1 \leq 3/4)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(c)] the conditional density function of $Y_1$ given $Y_2 = y_2$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(d)] the conditional density function of $Y_2$ given $Y_1 = y_1$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(e)] $P(Y_2 \geq 3/4|Y_1 = 1/2)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.29]
+Refer to Exercise 5.11. Find
+
+\begin{enumerate}
+    \item[(a)] the marginal density functions for $Y_1$ and $Y_2$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] $P(Y_2 > 1/2|Y_1 = 1/4)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.32]
+Suppose that the random variables $Y_1$ and $Y_2$ have joint probability density function, $f(y_1, y_2)$, given by (see Exercise 5.14)
+$$f(y_1, y_2) = \begin{cases}
+6y_1^2 y_2, & 0 \leq y_1 \leq y_2, y_1 + y_2 \leq 2, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Show that the marginal density of $Y_1$ is a beta density with $\alpha = 3$ and $\beta = 2$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] Derive the marginal density of $Y_2$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(c)] Derive the conditional density of $Y_2$ given $Y_1 = y_1$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(d)] Find $P(Y_2 < 1.1|Y_1 = .60)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.33]
+Suppose that $Y_1$ is the total time between a customer's arrival in the store and departure from the service window, $Y_2$ is the time spent in line before reaching the window, and the joint density of these variables (as was given in Exercise 5.15) is
+$$f(y_1, y_2) = \begin{cases}
+e^{-y_1}, & 0 \leq y_2 \leq y_1 \leq \infty, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the marginal density functions for $Y_1$ and $Y_2$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] What is the conditional density function of $Y_1$ given that $Y_2 = y_2$? Be sure to specify the values of $y_2$ for which this conditional density is defined.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(c)] What is the conditional density function of $Y_2$ given that $Y_1 = y_1$? Be sure to specify the values of $y_1$ for which this conditional density is defined.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(d)] Is the conditional density function $f(y_1|y_2)$ that you obtained in part (b) the same as the marginal density function $f_1(y_1)$ found in part (a)?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(e)] What does your answer to part (d) imply about marginal and conditional probabilities that $Y_1$ falls in any interval?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.35]
+Refer to Exercise 5.33. If two minutes elapse between a customer's arrival at the store and his departure from the service window, find the probability that he waited in line less than one minute to reach the window.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.37]
+In Exercise 5.18, $Y_1$ and $Y_2$ denoted the lengths of life, in hundreds of hours, for components of types I and II, respectively, in an electronic system. The joint density of $Y_1$ and $Y_2$ is given by
+$$f(y_1, y_2) = \begin{cases}
+(1/8)y_1e^{-(y_1+y_2)/2}, & y_1 > 0, y_2 > 0 \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+Find the probability that a component of type II will have a life length in excess of 200 hours.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\section*{Section 5.4: Independent Random Variables}
+
+\begin{exercise}[5.43]
+Let $Y_1$ and $Y_2$ have joint density function $f(y_1, y_2)$ and marginal densities $f_1(y_1)$ and $f_2(y_2)$, respectively. Show that $Y_1$ and $Y_2$ are independent if and only if $f(y_1|y_2) = f_1(y_1)$ for all values of $y_1$ and for all $y_2$ such that $f_2(y_2) > 0$. A completely analogous argument establishes that $Y_1$ and $Y_2$ are independent if and only if $f(y_2|y_1) = f_2(y_2)$ for all values of $y_2$ and for all $y_1$ such that $f_1(y_1) > 0$.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.45]
+In Exercise 5.1, we determined that the joint distribution of $Y_1$, the number of contracts awarded to firm A, and $Y_2$, the number of contracts awarded to firm B, is given by the entries in the following table.
+
+\begin{center}
+\begin{tabular}{c|ccc}
+& \multicolumn{3}{c}{$y_2$} \\
+$y_1$ & 0 & 1 & 2 \\
+\hline
+0 & 1/9 & 2/9 & 1/9 \\
+1 & 2/9 & 2/9 & 0 \\
+2 & 1/9 & 0 & 0
+\end{tabular}
+\end{center}
+
+The marginal probability function of $Y_1$ was derived in Exercise 5.19 to be binomial with $n = 2$ and $p = 1/3$. Are $Y_1$ and $Y_2$ independent? Why?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.47]
+In Exercise 5.3, we determined that the joint probability distribution of $Y_1$, the number of married executives, and $Y_2$, the number of never-married executives, is given by
+$$p(y_1, y_2) = \frac{\binom{4}{y_1}\binom{3}{y_2}\binom{2}{3-y_1-y_2}}{\binom{9}{3}},$$
+where $y_1$ and $y_2$ are integers, $0 \leq y_1 \leq 3$, $0 \leq y_2 \leq 3$, and $1 \leq y_1 + y_2 \leq 3$. Are $Y_1$ and $Y_2$ independent? (Recall your answer to Exercise 5.21.)
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.49]
+In Example 5.4 and Exercise 5.5, we considered the joint density of $Y_1$, the proportion of the capacity of the tank that is stocked at the beginning of the week and $Y_2$, the proportion of the capacity sold during the week, given by
+$$f(y_1, y_2) = \begin{cases}
+3y_1, & 0 \leq y_2 \leq y_1 \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+Show that $Y_1$ and $Y_2$ are dependent.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.51]
+In Exercise 5.7, we considered $Y_1$ and $Y_2$ with joint density function
+$$f(y_1, y_2) = \begin{cases}
+e^{-(y_1+y_2)}, & y_1 > 0, y_2 > 0, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Are $Y_1$ and $Y_2$ independent?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] Does the result from part (a) explain the results you obtained in Exercise 5.25 (d)–(f)? Why?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.53]
+In Exercise 5.9, we determined that
+$$f(y_1, y_2) = \begin{cases}
+6(1 - y_2), & 0 \leq y_1 \leq y_2 \leq 1, \\
+0, & \text{elsewhere}
+\end{cases}$$
+is a valid joint probability density function. Are $Y_1$ and $Y_2$ independent?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.55]
+Suppose that, as in Exercise 5.11, $Y_1$ and $Y_2$ are uniformly distributed over the triangle shaded in the accompanying diagram. Are $Y_1$ and $Y_2$ independent?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.57]
+In Exercises 5.13 and 5.31, the joint density function of $Y_1$ and $Y_2$ was given by
+$$f(y_1, y_2) = \begin{cases}
+30y_1y_2^2, & y_1 - 1 \leq y_2 \leq 1 - y_1, 0 \leq y_1 \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+Are the random variables $Y_1$ and $Y_2$ independent?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.59]
+If $Y_1$ is the total time between a customer's arrival in the store and leaving the service window and if $Y_2$ is the time spent in line before reaching the window, the joint density of these variables, according to Exercise 5.15, is
+$$f(y_1, y_2) = \begin{cases}
+e^{-y_1}, & 0 \leq y_2 \leq y_1 \leq \infty \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+Are $Y_1$ and $Y_2$ independent?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.61]
+In Exercise 5.18, $Y_1$ and $Y_2$ denoted the lengths of life, in hundreds of hours, for components of types I and II, respectively, in an electronic system. The joint density of $Y_1$ and $Y_2$ is
+$$f(y_1, y_2) = \begin{cases}
+(1/8)y_1e^{-(y_1+y_2)/2}, & y_1 > 0, y_2 > 0, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+Are $Y_1$ and $Y_2$ independent?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.63]
+Let $Y_1$ and $Y_2$ be independent exponentially distributed random variables, each with mean 1. Find $P(Y_1 > Y_2 | Y_1 < 2Y_2)$.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\section*{Section 5.6: Expected Value of a Function of Random Variables}
+
+\begin{exercise}[5.73]
+In Exercise 5.3, we determined that the joint probability distribution of $Y_1$, the number of married executives, and $Y_2$, the number of never-married executives, is given by
+$$p(y_1, y_2) = \frac{\binom{4}{y_1}\binom{3}{y_2}\binom{2}{3-y_1-y_2}}{\binom{9}{3}},$$
+where $y_1$ and $y_2$ are integers, $0 \leq y_1 \leq 3$, $0 \leq y_2 \leq 3$, and $1 \leq y_1 + y_2 \leq 3$. Find the expected number of married executives among the three selected for promotion. (See Exercise 5.21.)
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.75]
+Refer to Exercises 5.7, 5.25, and 5.51. Let $Y_1$ and $Y_2$ have joint density function
+$$f(y_1, y_2) = \begin{cases}
+e^{-(y_1+y_2)}, & y_1 > 0, y_2 > 0 \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] What are $E(Y_1 + Y_2)$ and $V(Y_1 + Y_2)$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] What is $P(Y_1 - Y_2 > 3)$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(c)] What is $P(Y_1 - Y_2 < -3)$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(d)] What are $E(Y_1 - Y_2)$ and $V(Y_1 - Y_2)$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(e)] What do you notice about $V(Y_1 + Y_2)$ and $V(Y_1 - Y_2)$?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.77]
+In Exercise 5.9, we determined that
+$$f(y_1, y_2) = \begin{cases}
+6(1 - y_2), & 0 \leq y_1 \leq y_2 \leq 1, \\
+0, & \text{elsewhere}
+\end{cases}$$
+is a valid joint probability density function. Find
+
+\begin{enumerate}
+    \item[(a)] $E(Y_1)$ and $E(Y_2)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] $V(Y_1)$ and $V(Y_2)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(c)] $E(Y_1 - 3Y_2)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.79]
+Suppose that, as in Exercise 5.11, $Y_1$ and $Y_2$ are uniformly distributed over the triangle shaded in the accompanying diagram with vertices at $(-1, 0)$, $(1, 0)$, and $(0, 1)$. Find $E(Y_1Y_2)$.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.81]
+In Exercise 5.18, $Y_1$ and $Y_2$ denoted the lengths of life, in hundreds of hours, for components of types I and II, respectively, in an electronic system. The joint density of $Y_1$ and $Y_2$ is
+$$f(y_1, y_2) = \begin{cases}
+(1/8)y_1e^{-(y_1+y_2)/2}, & y_1 > 0, y_2 > 0, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+One way to measure the relative efficiency of the two components is to compute the ratio $Y_2/Y_1$. Find $E(Y_2/Y_1)$. [Hint: In Exercise 5.61, we proved that $Y_1$ and $Y_2$ are independent.]
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.87]
+Suppose that $Y_1$ and $Y_2$ are independent $\chi^2$ random variables with $\nu_1$ and $\nu_2$ degrees of freedom, respectively. Find
+
+\begin{enumerate}
+    \item[(a)] $E(Y_1 + Y_2)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] $V(Y_1 + Y_2)$. [Hint: Use Theorem 5.9 and the result of Exercise 4.112(a).]
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\section*{Section 5.7: The Covariance of Two Random Variables}
+
+\begin{exercise}[5.89]
+In Exercise 5.1, we determined that the joint distribution of $Y_1$, the number of contracts awarded to firm A, and $Y_2$, the number of contracts awarded to firm B, is given by the entries in the following table.
+
+\begin{center}
+\begin{tabular}{c|ccc}
+& \multicolumn{3}{c}{$y_2$} \\
+$y_1$ & 0 & 1 & 2 \\
+\hline
+0 & 1/9 & 2/9 & 1/9 \\
+1 & 2/9 & 2/9 & 0 \\
+2 & 1/9 & 0 & 0
+\end{tabular}
+\end{center}
+
+Find $\text{Cov}(Y_1, Y_2)$. Does it surprise you that $\text{Cov}(Y_1, Y_2)$ is negative? Why?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.91]
+In Exercise 5.8, we derived the fact that
+$$f(y_1, y_2) = \begin{cases}
+4y_1y_2, & 0 \leq y_1 \leq 1, 0 \leq y_2 \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+Show that $\text{Cov}(Y_1, Y_2) = 0$. Does it surprise you that $\text{Cov}(Y_1, Y_2)$ is zero? Why?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.92]
+In Exercise 5.9, we determined that
+$$f(y_1, y_2) = \begin{cases}
+6(1 - y_2), & 0 \leq y_1 \leq y_2 \leq 1, \\
+0, & \text{elsewhere}
+\end{cases}$$
+is a valid joint probability density function. Find $\text{Cov}(Y_1, Y_2)$. Are $Y_1$ and $Y_2$ independent?
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.93]
+Let the discrete random variables $Y_1$ and $Y_2$ have the joint probability function
+$$p(y_1, y_2) = 1/3, \text{ for } (y_1, y_2) = (-1, 0), (0, 1), (1, 0).$$
+
+Find $\text{Cov}(Y_1, Y_2)$. Notice that $Y_1$ and $Y_2$ are dependent. (Why?) This is another example of uncorrelated random variables that are not independent.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[5.95]
+Suppose that, as in Exercises 5.11 and 5.79, $Y_1$ and $Y_2$ are uniformly distributed over the triangle shaded in the accompanying diagram with vertices at $(-1, 0)$, $(1, 0)$, and $(0, 1)$.
+
+\begin{enumerate}
+    \item[(a)] Find $\text{Cov}(Y_1, Y_2)$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(b)] Are $Y_1$ and $Y_2$ independent? (See Exercise 5.55.)
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(c)] Find the coefficient of correlation for $Y_1$ and $Y_2$.
+\begin{proof}[Solution]
+ 
+\end{proof}
+
+    \item[(d)] Does your answer to part (b) lead you to doubt your answer to part (a)? Why or why not?
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[5.99]
+If $c$ is any constant and $Y$ is a random variable such that $E(Y)$ exists, show that $\text{Cov}(c, Y) = 0$.
+
+\begin{proof}[Solution]
+ 
+\end{proof}
+\end{exercise}
+ \end{document} 

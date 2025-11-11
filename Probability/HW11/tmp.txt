@@ -1,0 +1,578 @@
+Exercises
+5.19 In Exercise 5.1, we determined that the joint distribution of Y1 , the number of contracts awarded
+to firm A, and Y2 , the number of contracts awarded to firm B, is given by the entries in the
+following table.
+y1
+y2 0 1 2
+0 1/9 2/9 1/9
+1 2/9 2/9 0
+2 1/9 0 0
+a Find the marginal probability distribution of Y1 .
+b According to results in Chapter 4, Y1 has a binomial distribution with n = 2 and p = 1/3.
+Is there any conflict between this result and the answer you provided in part (a)?
+5.20 Refer to Exercise 5.2.
+a Derive the marginal probability distribution for your winnings on the side bet.
+b What is the probability that you obtained three heads, given that you won $1 on the side bet?
+5.21 In Exercise 5.3, we determined that the joint probability distribution of Y1 , the number of
+married executives, and Y2 , the number of never-married executives, is given by
+p(y1, y2) =
+( 4
+y1
+) ( 3
+y2
+) ( 2
+3 − y1 − y2
+)
+( 9
+3
+)
+where y1 and y2 are integers, 0 ≤ y1 ≤ 3, 0 ≤ y2 ≤ 3, and 1 ≤ y1 + y2 ≤ 3.
+a Find the marginal probability distribution of Y1 , the number of married executives among
+the three selected for promotion.
+b Find P(Y1 = 1|Y2 = 2).
+c If we let Y3 denote the number of divorced executives among the three selected for promo-
+tion, then Y3 = 3 − Y1 − Y2 . Find P(Y3 = 1|Y2 = 1).
+d Compare the marginal distribution derived in (a) with the hypergeometric distributions with
+N = 9, n = 3, and r = 4 encountered in Section 3.7.
+5.22 In Exercise 5.4, you were given the following joint probability function for
+Y1 =
+{ 0, if child survived,
+1, if not, and Y2 =
+
+
+
+0, if no belt used,
+1, if adult belt used,
+2, if car-seat belt used.
+Exercises 243
+y1
+y2 0 1 Total
+0 .38 .17 .55
+1 .14 .02 .16
+2 .24 .05 .29
+Total .76 .24 1.00
+a Give the marginal probability functions for Y1 and Y2 .
+b Give the conditional probability function for Y2 given Y1 = 0.
+c What is the probability that a child survived given that he or she was in a car-seat belt?
+5.23 In Example 5.4 and Exercise 5.5, we considered the joint density of Y1 , the proportion of the
+capacity of the tank that is stocked at the beginning of the week, and Y2 , the proportion of the
+capacity sold during the week, given by
+f (y1, y2) =
+{ 3y1, 0 ≤ y2 ≤ y1 ≤ 1,
+0, elsewhere.
+a Find the marginal density function for Y2 .
+b For what values of y2 is the conditional density f (y1|y2) defined?
+c What is the probability that more than half a tank is sold given that three-fourths of a tank
+is stocked?
+5.24 In Exercise 5.6, we assumed that if a radioactive particle is randomly located in a square with
+sides of unit length, a reasonable model for the joint density function for Y1 and Y2 is
+f (y1, y2) =
+{ 1, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1,
+0, elsewhere.
+a Find the marginal density functions for Y1 and Y2 .
+b What is P(.3 < Y1 < .5)? P(.3 < Y2 < .5)?
+c For what values of y2 is the conditional density f (y1|y2) defined?
+d For any y2, 0 ≤ y2 ≤ 1 what is the conditional density function of Y1 given that Y2 = y2 ?
+e Find P(.3 < Y1 < .5|Y2 = .3).
+f Find P(.3 < Y1 < .5|Y2 = .5).
+g Compare the answers that you obtained in parts (a), (d), and (e). For any y2, 0 ≤ y2 ≤ 1
+how does P(.3 < Y1 < .5) compare to P(.3 < Y1 < .5|Y2 = y2)?
+5.25 Let Y1 and Y2 have joint density function first encountered in Exercise 5.7:
+f (y1, y2) =
+{ e−(y1+y2) , y1 > 0, y2 > 0,
+0, elsewhere.
+a Find the marginal density functions for Y1 and Y2 . Identify these densities as one of those
+studied in Chapter 4.
+b What is P(1 < Y1 < 2.5)? P(1 < Y2 < 2.5)?
+c For what values of y2 is the conditional density f (y1|y2) defined?
+d For any y2 > 0, what is the conditional density function of Y1 given that Y2 = y2 ?
+e For any y1 > 0, what is the conditional density function of Y2 given that Y1 = y1 ?
+244 Chapter 5 Multivariate Probability Distributions
+f For any y2 > 0, how does the conditional density function f (y1|y2) that you obtained in
+part (d) compare to the marginal density function f1(y1) found in part (a)?
+g What does your answer to part (f ) imply about marginal and conditional probabilities that
+Y1 falls in any interval?
+5.26 In Exercise 5.8, we derived the fact that
+f (y1, y2) =
+{ 4y1 y2, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1,
+0, elsewhere
+is a valid joint probability density function. Find
+a the marginal density functions for Y1 and Y2 .
+b P(Y1 ≤ 1/2|Y2 ≥ 3/4).
+c the conditional density function of Y1 given Y2 = y2 .
+d the conditional density function of Y2 given Y1 = y1 .
+e P(Y1 ≤ 3/4|Y2 = 1/2).
+5.27 In Exercise 5.9, we determined that
+f (y1, y2) =
+{ 6(1 − y2), 0 ≤ y1 ≤ y2 ≤ 1,
+0, elsewhere
+is a valid joint probability density function. Find
+a the marginal density functions for Y1 and Y2 .
+b P(Y2 ≤ 1/2|Y1 ≤ 3/4).
+c the conditional density function of Y1 given Y2 = y2 .
+d the conditional density function of Y2 given Y1 = y1 .
+e P(Y2 ≥ 3/4|Y1 = 1/2).
+5.28 In Exercise 5.10, we proved that
+f (y1, y2) =
+{ 1, 0 ≤ y1 ≤ 2, 0 ≤ y2 ≤ 1, 2y2 ≤ y1,
+0, elsewhere
+is a valid joint probability density function for Y1 , the amount of pollutant per sample collected
+above the stack without the cleaning device, and for Y2 , the amount collected above the stack
+with the cleaner.
+a If we consider the stack with the cleaner installed, find the probability that the amount of
+pollutant in a given sample will exceed .5.
+b Given that the amount of pollutant in a sample taken above the stack with the cleaner is
+observed to be 0.5, find the probability that the amount of pollutant exceeds 1.5 above the
+other stack (without the cleaner).
+5.29 Refer to Exercise 5.11. Find
+a the marginal density functions for Y1 and Y2 .
+b P(Y2 > 1/2|Y1 = 1/4).
+5.30 In Exercise 5.12, we were given the following joint probability density function for the random
+variables Y1 and Y2 , which were the proportions of two components in a sample from a mixture
+Exercises 245
+of insecticide:
+f (y1, y2) =
+{ 2, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1, 0 ≤ y1 + y2 ≤ 1,
+0, elsewhere.
+a Find P(Y1 ≥ 1/2|Y2 ≤ 1/4).
+b Find P(Y1 ≥ 1/2|Y2 = 1/4).
+5.31 In Exercise 5.13, the joint density function of Y1 and Y2 is given by
+f (y1, y2) =
+{ 30y1 y2
+2 , y1 − 1 ≤ y2 ≤ 1 − y1, 0 ≤ y1 ≤ 1,
+0, elsewhere.
+a Show that the marginal density of Y1 is a beta density with α = 2 and β = 4.
+b Derive the marginal density of Y2 .
+c Derive the conditional density of Y2 given Y1 = y1 .
+d Find P(Y2 > 0|Y1 = .75).
+5.32 Suppose that the random variables Y1 and Y2 have joint probability density function, f (y1, y2),
+given by (see Exercise 5.14)
+f (y1, y2) =
+{ 6y2
+1 y2, 0 ≤ y1 ≤ y2, y1 + y2 ≤ 2,
+0, elsewhere.
+a Show that the marginal density of Y1 is a beta density with α = 3 and β = 2.
+b Derive the marginal density of Y2 .
+c Derive the conditional density of Y2 given Y1 = y1 .
+d Find P(Y2 < 1.1|Y1 = .60).
+5.33 Suppose that Y1 is the total time between a customer’s arrival in the store and departure from the
+service window, Y2 is the time spent in line before reaching the window, and the joint density
+of these variables (as was given in Exercise 5.15) is
+f (y1, y2) =
+{ e−y1 , 0 ≤ y2 ≤ y1 ≤ ∞,
+0, elsewhere.
+a Find the marginal density functions for Y1 and Y2 .
+b What is the conditional density function of Y1 given that Y2 = y2 ? Be sure to specify the
+values of y2 for which this conditional density is defined.
+c What is the conditional density function of Y2 given that Y1 = y1 ? Be sure to specify the
+values of y1 for which this conditional density is defined.
+d Is the conditional density function f (y1|y2) that you obtained in part (b) the same as the
+marginal density function f1(y1) found in part (a)?
+e What does your answer to part (d) imply about marginal and conditional probabilities that
+Y1 falls in any interval?
+5.34 If Y1 is uniformly distributed on the interval (0, 1) and, for 0 < y1 < 1,
+f (y2|y1) =
+{ 1/y1, 0 ≤ y2 ≤ y1,
+0, elsewhere,
+a what is the “name” of the conditional distribution of Y2 given Y1 = y1 ?
+b find the joint density function of Y1 and Y2 .
+c find the marginal density function for Y2 .
+246 Chapter 5 Multivariate Probability Distributions
+5.35 Refer to Exercise 5.33. If two minutes elapse between a customer’s arrival at the store and his
+departure from the service window, find the probability that he waited in line less than one
+minute to reach the window.
+5.36 In Exercise 5.16, Y1 and Y2 denoted the proportions of time during which employees I and II
+actually performed their assigned tasks during a workday. The joint density of Y1 and Y2 is
+given by
+f (y1, y2) =
+{ y1 + y2, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1,
+0, elsewhere.
+a Find the marginal density functions for Y1 and Y2 .
+b Find P(Y1 ≥ 1/2|Y2 ≥ 1/2).
+c If employee II spends exactly 50% of the day working on assigned duties, find the probability
+that employee I spends more than 75% of the day working on similar duties.
+5.37 In Exercise 5.18, Y1 and Y2 denoted the lengths of life, in hundreds of hours, for components of
+types I and II, respectively, in an electronic system. The joint density of Y1 and Y2 is given by
+f (y1, y2) =
+{ (1/8)y1e−(y1+y2)/2, y1 > 0, y2 > 0
+0, elsewhere
+
+
+5.43 Let Y1 and Y2 have joint density function f (y1, y2) and marginal densities f1(y1) and f2(y2),
+respectively. Show that Y1 and Y2 are independent if and only if f (y1|y2) = f1(y1) for all
+values of y1 and for all y2 such that f2(y2) > 0. A completely analogous argument establishes
+that Y1 and Y2 are independent if and only if f (y2|y1) = f2(y2) for all values of y2 and for all
+y1 such that f1(y1) > 0.
+5.44 Prove that the results in Exercise 5.43 also hold for discrete random variables.
+5.45 In Exercise 5.1, we determined that the joint distribution of Y1 , the number of contracts awarded
+to firm A, and Y2 , the number of contracts awarded to firm B, is given by the entries in the
+following table.
+y1
+y2 0 1 2
+0 1/9 2/9 1/9
+1 2/9 2/9 0
+2 1/9 0 0
+The marginal probability function of Y1 was derived in Exercise 5.19 to be binomial with n = 2
+and p = 1/3. Are Y1 and Y2 independent? Why?
+252 Chapter 5 Multivariate Probability Distributions
+5.46 Refer to Exercise 5.2. The number of heads in three coin tosses is binomially distributed with
+n = 3, p = 1/2. Are the total number of heads and your winnings on the side bet independent?
+[Examine your answer to Exercise 5.20(b).]
+5.47 In Exercise 5.3, we determined that the joint probability distribution of Y1 , the number of
+married executives, and Y2 , the number of never-married executives, is given by
+p(y1, y2) =
+( 4
+y1
+) ( 3
+y2
+) ( 2
+3 − y1 − y2
+)
+( 9
+3
+) ,
+where y1 and y2 are integers, 0 ≤ y1 ≤ 3, 0 ≤ y2 ≤ 3, and 1 ≤ y1 + y2 ≤ 3. Are Y1 and Y2
+independent? (Recall your answer to Exercise 5.21.)
+5.48 In Exercise 5.4, you were given the following joint probability function for
+Y1 =
+{ 0, if child survived,
+1, if not, and Y2 =
+
+
+
+0, if no belt used,
+1, if adult belt used,
+2, if car-seat belt used.
+y1
+y2 0 1 Total
+0 .38 .17 .55
+1 .14 .02 .16
+2 .24 .05 .29
+Total .76 .24 1.00
+Are Y1 and Y2 independent? Why or why not?
+5.49 In Example 5.4 and Exercise 5.5, we considered the joint density of Y1 , the proportion of the
+capacity of the tank that is stocked at the beginning of the week and Y2 , the proportion of the
+capacity sold during the week, given by
+f (y1, y2) =
+{ 3y1, 0 ≤ y2 ≤ y1 ≤ 1,
+0, elsewhere.
+Show that Y1 and Y2 are dependent.
+5.50 In Exercise 5.6, we assumed that if a radioactive particle is randomly located in a square with
+sides of unit length, a reasonable model for the joint density function for Y1 and Y2 is
+f (y1, y2) =
+{ 1, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1,
+0, elsewhere.
+a Are Y1 and Y2 independent?
+b Does the result from part (a) explain the results you obtained in Exercise 5.24 (d)–(f )?
+Why?
+5.51 In Exercise 5.7, we considered Y1 and Y2 with joint density function
+f (y1, y2) =
+{ e−(y1+y2) , y1 > 0, y2 > 0,
+0, elsewhere.
+a Are Y1 and Y2 independent?
+b Does the result from part (a) explain the results you obtained in Exercise 5.25 (d)–(f )? Why?
+Exercises 253
+5.52 In Exercise 5.8, we derived the fact that
+f (y1, y2) =
+{ 4y1 y2, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1,
+0, elsewhere
+is a valid joint probability density function. Are Y1 and Y2 independent?
+5.53 In Exercise 5.9, we determined that
+f (y1, y2) =
+{ 6(1 − y2), 0 ≤ y1 ≤ y2 ≤ 1,
+0, elsewhere
+is a valid joint probability density function. Are Y1 and Y2 independent?
+5.54 In Exercise 5.10, we proved that
+f (y1, y2) =
+{ 1, 0 ≤ y1 ≤ 2, 0 ≤ y2 ≤ 1, 2y2 ≤ y1,
+0, elsewhere
+is a valid joint probability density function for Y1 , the amount of pollutant per sample collected
+above the stack without the cleaning device, and Y2 , the amount collected above the stack with
+the cleaner. Are the amounts of pollutants per sample collected with and without the cleaning
+device independent?
+5.55 Suppose that, as in Exercise 5.11, Y1 and Y2 are uniformly distributed over the triangle shaded
+in the accompanying diagram. Are Y1 and Y2 independent?
+5.56 In Exercise 5.12, we were given the following joint probability density function for the random
+variables Y1 and Y2 , which were the proportions of two components in a sample from a mixture
+of insecticide:
+f (y1, y2) =
+{ 2, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1, 0 ≤ y1 + y2 ≤ 1,
+0, elsewhere.
+Are Y1 and Y2 independent?
+5.57 In Exercises 5.13 and 5.31, the joint density function of Y1 and Y2 was given by
+f (y1, y2) =
+{ 30y1 y2
+2 , y1 − 1 ≤ y2 ≤ 1 − y1, 0 ≤ y1 ≤ 1,
+0, elsewhere.
+Are the random variables Y1 and Y2 independent?
+5.58 Suppose that the random variables Y1 and Y2 have joint probability density function, f (y1, y2),
+given by (see Exercises 5.14 and 5.32)
+f (y1, y2) =
+{ 6y2
+1 y2, 0 ≤ y1 ≤ y2, y1 + y2 ≤ 2,
+0, elsewhere.
+Show that Y1 and Y2 are dependent random variables.
+5.59 If Y1 is the total time between a customer’s arrival in the store and leaving the service window
+and if Y2 is the time spent in line before reaching the window, the joint density of these variables,
+according to Exercise 5.15, is
+f (y1, y2) =
+{ e−y1 , 0 ≤ y2 ≤ y1 ≤ ∞
+0, elsewhere.
+Are Y1 and Y2 independent?
+254 Chapter 5 Multivariate Probability Distributions
+5.60 In Exercise 5.16, Y1 and Y2 denoted the proportions of time that employees I and II actually
+spent working on their assigned tasks during a workday. The joint density of Y1 and Y2 is given
+by
+f (y1, y2) =
+{ y1 + y2, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1,
+0, elsewhere.
+Are Y1 and Y2 independent?
+5.61 In Exercise 5.18, Y1 and Y2 denoted the lengths of life, in hundreds of hours, for components
+of types I and II, respectively, in an electronic system. The joint density of Y1 and Y2 is
+f (y1, y2) =
+{ (1/8)y1e−(y1+y2)/2, y1 > 0, y2 > 0,
+0, elsewhere.
+Are Y1 and Y2 independent?
+5.62 Suppose that the probability that a head appears when a coin is tossed is p and the probability
+that a tail occurs is q = 1 − p. Person A tosses the coin until the first head appears and
+stops. Person B does likewise. The results obtained by persons A and B are assumed to be
+independent. What is the probability that A and B stop on exactly the same number toss?
+5.63 Let Y1 and Y2 be independent exponentially distributed random variables, each with mean 1.
+Find P( Y1 > Y2 | Y1 < 2Y2).
+
+Exercises
+5.72 In Exercise 5.1, we determined that the joint distribution of Y1 , the number of contracts awarded
+to firm A, and Y2 , the number of contracts awarded to firm B, is given by the entries in the
+following table.
+y1
+y2 0 1 2
+0 1/9 2/9 1/9
+1 2/9 2/9 0
+2 1/9 0 0
+The marginal probability function of Y1 was derived in Exercise 5.19 to be binomial with n = 2
+and p = 1/3. Find
+a E(Y1).
+b V (Y1).
+c E(Y1 − Y2).
+5.73 In Exercise 5.3, we determined that the joint probability distribution of Y1 , the number of
+married executives, and Y2 , the number of never-married executives, is given by
+p(y1, y2) =
+( 4
+y1
+) ( 3
+y2
+) ( 2
+3 − y1 − y2
+)
+( 9
+3
+) ,
+where y1 and y2 are integers, 0 ≤ y1 ≤ 3, 0 ≤ y2 ≤ 3, and 1 ≤ y1 + y2 ≤ 3. Find the expected
+number of married executives among the three selected for promotion. (See Exercise 5.21.)
+5.74 Refer to Exercises 5.6, 5.24, and 5.50. Suppose that a radioactive particle is randomly located
+in a square with sides of unit length. A reasonable model for the joint density function for Y1
+and Y2 is
+f (y1, y2) =
+{ 1, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1,
+0, elsewhere.
+a What is E(Y1 − Y2)?
+b What is E(Y1Y2)?
+c What is E(Y 2
+1 + Y 2
+2 )?
+d What is V (Y1Y2)?
+5.75 Refer to Exercises 5.7, 5.25, and 5.51. Let Y1 and Y2 have joint density function
+f (y1, y2) =
+{ e−(y1+y2) , y1 > 0, y2 > 0
+0, elsewhere.
+262 Chapter 5 Multivariate Probability Distributions
+a What are E(Y1 + Y2) and V (Y1 + Y2)?
+b What is P(Y1 − Y2 > 3)?
+c What is P(Y1 − Y2 < −3)?
+d What are E(Y1 − Y2) and V (Y1 − Y2)?
+e What do you notice about V (Y1 + Y2) and V (Y1 − Y2)?
+5.76 In Exercise 5.8, we derived the fact that
+f (y1, y2) =
+{ 4y1 y2, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1,
+0, elsewhere.
+a Find E(Y1).
+b Find V (Y1).
+c Find E(Y1 − Y2).
+5.77 In Exercise 5.9, we determined that
+f (y1, y2) =
+{ 6(1 − y2), 0 ≤ y1 ≤ y2 ≤ 1,
+0, elsewhere
+is a valid joint probability density function. Find
+a E(Y1) and E(Y2).
+b V (Y1) and V (Y2).
+c E(Y1 − 3Y2).
+5.78 In Exercise 5.10, we proved that
+f (y1, y2) =
+{ 1, 0 ≤ y1 ≤ 2, 0 ≤ y2 ≤ 1, 2y2 ≤ y1,
+0, elsewhere
+is a valid joint probability density function for Y1 , the amount of pollutant per sample collected
+above the stack without the cleaning device, and Y2 , the amount collected above the stack with
+the cleaner.
+a Find E(Y1) and E(Y2).
+b Find V (Y1) and V (Y2).
+c The random variable Y1 − Y2 represents the amount by which the weight of pollutant can
+be reduced by using the cleaning device. Find E(Y1 − Y2).
+d Find V (Y1 − Y2). Within what limits would you expect Y1 − Y2 to fall?
+5.79 Suppose that, as in Exercise 5.11, Y1 and Y2 are uniformly distributed over the triangle shaded
+in the accompanying diagram. Find E(Y1Y2).
+(–1, 0) (1, 0)
+(0, 1)
+y1
+y2
+5.80 In Exercise 5.16, Y1 and Y2 denoted the proportions of time that employees I and II actually
+spent working on their assigned tasks during a workday. The joint density of Y1 and Y2 is
+Exercises 263
+given by
+f (y1, y2) =
+{ y1 + y2, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1,
+0, elsewhere.
+Employee I has a higher productivity rating than employee II and a measure of the total
+productivity of the pair of employees is 30Y1 + 25Y2 . Find the expected value of this measure
+of productivity.
+5.81 In Exercise 5.18, Y1 and Y2 denoted the lengths of life, in hundreds of hours, for components
+of types I and II, respectively, in an electronic system. The joint density of Y1 and Y2 is
+f (y1, y2) =
+{ (1/8)y1e−(y1+y2)/2, y1 > 0, y2 > 0,
+0, elsewhere.
+One way to measure the relative efficiency of the two components is to compute the ratio Y2/Y1 .
+Find E(Y2/Y1). [Hint: In Exercise 5.61, we proved that Y1 and Y2 are independent.]
+5.82 In Exercise 5.38, we determined that the joint density function for Y1 , the weight in tons of a
+bulk item stocked by a supplier, and Y2 , the weight of the item sold by the supplier, has joint
+density
+f (y1, y2) =
+{ 1/y1, 0 ≤ y2 ≤ y1 ≤ 1,
+0, elsewhere.
+In this case, the random variable Y1 − Y2 measures the amount of stock remaining at the end
+of the week, a quantity of great importance to the supplier. Find E(Y1 − Y2).
+5.83 In Exercise 5.42, we determined that the unconditional probability distribution for Y , the
+number of defects per yard in a certain fabric, is
+p(y) = (1/2)y+1, y = 0, 1, 2, . . . .
+Find the expected number of defects per yard.
+5.84 In Exercise 5.62, we considered two individuals who each tossed a coin until the first head
+appears. Let Y1 and Y2 denote the number of times that persons A and B toss the coin, respec-
+tively. If heads occurs with probability p and tails occurs with probability q = 1 − p, it is
+reasonable to conclude that Y1 and Y2 are independent and that each has a geometric distribution
+with parameter p. Consider Y1 − Y2 , the difference in the number of tosses required by the two
+individuals.
+a Find E(Y1), E(Y2), and E(Y1 − Y2).
+b Find E(Y 2
+1 ), E(Y 2
+2 ), and E(Y1Y2) (recall that Y1 and Y2 are independent).
+c Find E(Y1 − Y2)2 and V (Y1 − Y2).
+d Give an interval that will contain Y1 − Y2 with probability at least 8/9.
+5.85 In Exercise 5.65, we considered random variables Y1 and Y2 that, for −1 ≤ α ≤ 1, have joint
+density function given by
+f (y1, y2) =
+{ [1 − α{(1 − 2e−y1 )(1 − 2e−y2 )}]e−y1−y2 , 0 ≤ y1, 0 ≤ y2,
+0, elsewhere
+and established that the marginal distributions of Y1 and Y2 are both exponential with mean 1.
+Find
+a E(Y1) and E(Y2).
+b V (Y1) and V (Y2).
+264 Chapter 5 Multivariate Probability Distributions
+c E(Y1 − Y2).
+d E(Y1Y2).
+e V (Y1 − Y2). Within what limits would you expect Y1 − Y2 to fall?
+*5.86 Suppose that Z is a standard normal random variable and that Y1 and Y2 are χ2 -distributed
+random variables with ν1 and ν2 degrees of freedom, respectively. Further, assume that Z , Y1 ,
+and Y2 are independent.
+a Define W = Z /√Y1 . Find E(W ) and V (W ). What assumptions do you need about the
+value of ν1 ? [Hint: W = Z (1/√Y1) = g(Z )h(Y1). Use Theorem 5.9. The results of
+Exercise 4.112(d) will also be useful.]
+b Define U = Y1/Y2 . Find E(U ) and V (U ). What assumptions about ν1 and ν2 do you need?
+Use the hint from part (a).
+5.87 Suppose that Y1 and Y2 are independent χ2 random variables with ν1 and ν2 degrees of freedom,
+respectively. Find
+a E(Y1 + Y2).
+b V (Y1 + Y2). [Hint: Use Theorem 5.9 and the result of Exercise 4.112(a).]
+5.88 Suppose that you are told to toss a die until you have observed each of the six faces. What is
+the expected number of tosses required to complete your assignment? [Hint: If Y is the number
+of trials to complete the assignment, Y = Y1 + Y2 + Y3 + Y4 + Y5 + Y6 , where Y1 is the trial on
+which the first face is tossed, Y1 = 1, Y2 is the number of additional tosses required to get a face
+different than the first, Y3 is the number of additional tosses required to get a face different than
+the first two distinct faces, . . . , Y6 is the number of additional tosses to get the last remaining
+face after all other faces have been observed. Notice further that for i = 1, 2, . . . , 6, Yi has a
+geometric distribution with success probability (7 − i)/6.]
+
+5.89 In Exercise 5.1, we determined that the joint distribution of Y1 , the number of contracts awarded
+to firm A, and Y2 , the number of contracts awarded to firm B, is given by the entries in the
+following table.
+y1
+y2 0 1 2
+0 1/9 2/9 1/9
+1 2/9 2/9 0
+2 1/9 0 0
+Find Cov(Y1, Y2). Does it surprise you that Cov(Y1, Y2) is negative? Why?
+5.90 In Exercise 5.3, we determined that the joint probability distribution of Y1 , the number of
+married executives, and Y2 , the number of never-married executives, is given by
+p(y1, y2) =
+( 4
+y1
+) ( 3
+y2
+) ( 2
+3 − y1 − y2
+)
+( 9
+3
+) ,
+where y1 and y2 are integers, 0 ≤ y1 ≤ 3, 0 ≤ y2 ≤ 3, and 1 ≤ y1 + y2 ≤ 3. Find Cov(Y1, Y2).
+5.91 In Exercise 5.8, we derived the fact that
+f (y1, y2) =
+{ 4y1 y2, 0 ≤ y1 ≤ 1, 0 ≤ y2 ≤ 1,
+0, elsewhere.
+Show that Cov(Y1, Y2) = 0. Does it surprise you that Cov(Y1, Y2) is zero? Why?
+Exercises 269
+5.92 In Exercise 5.9, we determined that
+f (y1, y2) =
+{ 6(1 − y2), 0 ≤ y1 ≤ y2 ≤ 1,
+0, elsewhere
+is a valid joint probability density function. Find Cov(Y1, Y2). Are Y1 and Y2 independent?
+5.93 Let the discrete random variables Y1 and Y2 have the joint probability function
+p(y1, y2) = 1/3, for (y1, y2) = (−1, 0), (0, 1), (1, 0).
+Find Cov(Y1, Y2). Notice that Y1 and Y2 are dependent. (Why?) This is another example of
+uncorrelated random variables that are not independent.
+5.94 Let Y1 and Y2 be uncorrelated random variables and consider U1 = Y1 + Y2 and U2 = Y1 − Y2 .
+a Find the Cov(U1, U2) in terms of the variances of Y1 and Y2 .
+b Find an expression for the coefficient of correlation between U1 and U2 .
+c Is it possible that Cov(U1, U2) = 0? When does this occur?
+5.95 Suppose that, as in Exercises 5.11 and 5.79, Y1 and Y2 are uniformly distributed over the triangle
+shaded in the accompanying diagram.
+(–1, 0) (1, 0)
+(0, 1)
+y1
+y2
+a Find Cov(Y1, Y2).
+b Are Y1 and Y2 independent? (See Exercise 5.55.)
+c Find the coefficient of correlation for Y1 and Y2 .
+d Does your answer to part (b) lead you to doubt your answer to part (a)? Why or why
+not?
+5.96 Suppose that the random variables Y1 and Y2 have means μ1 and μ2 and variances σ 2
+1 and
+σ 2
+2 , respectively. Use the basic definition of the covariance of two random variables to
+establish that
+a Cov(Y1, Y2) = Cov(Y2, Y1).
+b Cov(Y1, Y1) = V (Y1) = σ 2
+1 . That is, the covariance of a random variable and itself is just
+the variance of the random variable.
+5.97 The random variables Y1 and Y2 are such that E(Y1) = 4, E(Y2) = −1, V (Y1) = 2 and
+V (Y2) = 8.
+a What is Cov(Y1, Y1)?
+b Assuming that the means and variances are correct, as given, is it possible that Cov(Y1,
+Y2) = 7? [Hint: If Cov(Y1, Y2) = 7, what is the value of ρ, the coefficient of correlation?]
+c Assuming that the means and variances are correct, what is the largest possible value for
+Cov(Y1, Y2)? If Cov(Y1, Y2) achieves this largest value, what does that imply about the
+relationship between Y1 and Y2 ?
+270 Chapter 5 Multivariate Probability Distributions
+d Assuming that the means and variances are correct, what is the smallest possible value for
+Cov(Y1, Y2)? If Cov(Y1, Y2) achieves this smallest value, what does that imply about the
+relationship between Y1 and Y2 ?
+5.98 How big or small can Cov(Y1, Y2) be? Use the fact that ρ2 ≤ 1 to show that
+−√V (Y1) × V (Y2) ≤ Cov(Y1, Y2) ≤ √V (Y1) × V (Y2).
+5.99 If c is any constant and Y is a random variable such that E(Y ) exists, show that Cov(c, Y ) = 0.
