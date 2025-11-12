@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1762840130.37651 "HW11.tex" "build/HW11.pdf" "HW11" 1762840130.66684 0
+["pdflatex"] 1762901299.5888 "HW11.tex" "build/HW11.pdf" "HW11" 1762901299.91917 0
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -104,9 +104,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1758847103.35677 39447 2134d78a2da0cee52270db0ec417a200 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1758846987 5318290 3f0be5c5419f95449a735044e993c9ca ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1758846870.42717 1917600 903146e364dbcf08632fa0eafc3bb517 ""
-  "HW11.tex" 1762840129.03586 22281 1d9758f36999375095ab8b84cfb2f6c7 ""
-  "build/HW11.aux" 1762840130.61921 926 fe8994d94dec72590ebe3d399f49540f "pdflatex"
-  "build/HW11.out" 1762840130.61921 1334 f59f3a4bfc7535f8d88db9e7151edfc3 "pdflatex"
+  "HW11.tex" 1762901298.42236 23342 3b77be1e003c4fedb1c8c94a668637dd ""
+  "build/HW11.aux" 1762901299.86237 927 af40f2cac7a1b082b61723d2a54615ac "pdflatex"
+  "build/HW11.out" 1762901299.86237 1334 f59f3a4bfc7535f8d88db9e7151edfc3 "pdflatex"
   (generated)
   "build/HW11.aux"
   "build/HW11.log"

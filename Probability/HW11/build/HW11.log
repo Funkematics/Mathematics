@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2025.9.25)  10 NOV 2025 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2025.9.25)  11 NOV 2025 13:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -489,7 +489,7 @@ Package hyperref Info: Link coloring OFF on input line 106.
 \openout3 = `HW11.out'.
 
 
-Underfull \vbox (badness 2197) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -507,6 +507,9 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{14.0pt}.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 
 Package fancyhdr Warning: \headheight is too small (8.0pt): 
@@ -641,7 +644,22 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 14.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{14.0pt}.
 
-[10] (build/HW11.aux)
+[10]
+
+
+Package fancyhdr Warning: \headheight is too small (8.0pt): 
+(fancyhdr)                Make it at least 14.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.0pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-6.0pt}.
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{14.0pt}.
+
+[11] (build/HW11.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
@@ -650,13 +668,13 @@ Package rerunfilecheck Info: File `HW11.out' has not changed.
 (rerunfilecheck)             Checksum: F59F3A4BFC7535F8D88DB9E7151EDFC3;1334.
  ) 
 Here is how much of TeX's memory you used:
- 11536 strings out of 475322
- 170892 string characters out of 5767664
+ 11537 strings out of 475322
+ 170899 string characters out of 5767664
  585154 words of memory out of 5000000
  34060 multiletter control sequences out of 15000+600000
  566010 words of font info for 71 fonts, out of 8000000 for 9000
  175 hyphenation exceptions out of 8191
- 75i,16n,79p,593b,692s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,16n,79p,593b,697s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publ
@@ -667,10 +685,10 @@ share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist
 ublic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10
 .pfb>
-Output written on build/HW11.pdf (10 pages, 146128 bytes).
+Output written on build/HW11.pdf (11 pages, 148366 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
+ 130 PDF objects out of 1000 (max. 8388607)
+ 94 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
