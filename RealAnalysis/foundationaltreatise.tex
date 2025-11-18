@@ -18,6 +18,7 @@
 \newcommand{\RR}{\ensuremath{\mathbb R}}
 \newcommand{\ZZ}{\ensuremath{\mathbb Z}}
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}{Definition}
 \newcommand{\eps}{\ensuremath{\epsilon}}
 
 % feel free to add more shortcuts here
@@ -34,17 +35,36 @@
 % ... to here
 We will begin by building theorems from the ground up from basic rules
 
-\begin{theorem} Convergence: For $A_n \to L$ means: For all $\eps > 0$, there exists $N$ such that for all $n \geq N$, $\mid a_n - L\mid < \eps$.
-\end{theorem}
+\begin{definition} Convergence: For $A_n \to L$ means: For all $\eps > 0$, there exists $N$ such that for all $n > N$, implies $\mid a_n - L\mid < \eps$.
+\end{definition}
 
-\begin{theorem} Triangle inequality
+\begin{definition} Bounded: $(a_n)$ is bounded if there exists $M > 0$ such that $|a_n| \leq M$ for all $n$.
+\end{definition}
+
+\begin{definition} Triangle inequality
   \begin{align*}
     \text{Triangle inequality :} && \mid a + b \mid \leq \mid a \mid + \mid b \mid \\
     \text{Reverse triangle :} && ||a| - |b|| \leq |a - b| \\
     \text{Product bound :} && |ab| = |a||b|
   \end{align*}
+\end{definition}
+
+
+\begin{theorem} If $(a_n)$ converges to $L$, then $(a_n)$ is bounded.
+  \begin{proof}
+    Since $(a_n)$ converges to $L$, this means that for an $\eps > 0$, there exists $N$ such that for all $n > N$, implies $\mid a_n - L\mid < \eps$. From this we get the following inequality:
+    \begin{align*}
+      |a_n| = |a_n - L + L| \leq |a_n - L| + |L| && \text{ By Triangle Inequality}
+    \end{align*}
+    Now let $\eps  = 1$, then there exists an $n > N$ such that $|a_n - L | < 1$, it follows from this that
+    \begin{align*}
+      |a_n| = |a_n - L + L| \leq |a_n - L| + |L| < 1 + |L|
+    \end{align*}
+    for $n \leq N$, let $M_1 = \max\{|a_1|, |a_2|, \cdots, |a_N|\}$.
+    Now let $M = \{M_1, 1 + |L|\}$.
+    Then $|a_n| \leq M$ for all $n$.
+  \end{proof}
 \end{theorem}
-We will now prove our first theorem
 
 \begin{theorem} (Uniqueness of Limits) If $a_n \to L$ and $a_n \to M$ then $L = M$.
 \end{theorem}
@@ -60,4 +80,7 @@ We will now prove our first theorem
   Since this holds for arbitrary $\eps > 0$, we must have $|L - M| = 0$, so L = M.
 
 \end{proof}
+
+\begin{definition}
+\end{definition}
 \end{document}
