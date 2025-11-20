@@ -14,6 +14,8 @@
 \pagestyle{fancy}
 	\renewcommand{\headrulewidth}{0.5pt} % and the line
 	\headsep=1cm
+	\setlength{\headheight}{14pt}
+	\setlength{\footskip}{14pt}
 	
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
@@ -323,12 +325,19 @@ Refer to Exercise 5.11. Find
 \begin{enumerate}
     \item[(a)] the marginal density functions for $Y_1$ and $Y_2$.
 \begin{proof}[Solution]
- 
+Triangle with vertices $(-1,0), (1,0), (0,1)$ has area $1$ so $f(y_1,y_2) = 1$.
+\begin{align*}
+  f_1(y_1) &= \int_0^{1-|y_1|} 1 dy_2 = 1-|y_1|, \quad -1 \leq y_1 \leq 1\\
+  f_2(y_2) &= \int_{-(1-y_2)}^{1-y_2} 1 dy_1 = 2(1-y_2), \quad 0 \leq y_2 \leq 1
+\end{align*}
 \end{proof}
 
     \item[(b)] $P(Y_2 > 1/2|Y_1 = 1/4)$.
 \begin{proof}[Solution]
- 
+\begin{align*}
+  f(y_2|y_1) &= \frac{1}{1-|y_1|} = \frac{1}{3/4} = \frac{4}{3}, \quad 0 \leq y_2 \leq 3/4\\
+  P(Y_2 > 1/2|Y_1 = 1/4) &= \int_{1/2}^{3/4} \frac{4}{3} dy_2 = \frac{4}{3} \cdot \frac{1}{4} = \frac{1}{3}
+\end{align*}
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -343,22 +352,34 @@ $$f(y_1, y_2) = \begin{cases}
 \begin{enumerate}
     \item[(a)] Show that the marginal density of $Y_1$ is a beta density with $\alpha = 3$ and $\beta = 2$.
 \begin{proof}[Solution]
- 
+\begin{align*}
+  f_1(y_1) &= \int_{y_1}^{2-y_1} 6y_1^2 y_2 dy_2 = 3y_1^2 [y_2^2]_{y_1}^{2-y_1} = 3y_1^2[(2-y_1)^2 - y_1^2] \\
+           &= 3y_1^2[4-4y_1] = 12y_1^2(1-y_1), \quad 0 \leq y_1 \leq 1
+\end{align*}
+Beta$(\alpha=3, \beta=2)$ has density $\frac{\Gamma(5)}{\Gamma(3)\Gamma(2)} y^2(1-y) = \frac{24}{2} y^2(1-y) = 12y^2(1-y)$.
 \end{proof}
 
     \item[(b)] Derive the marginal density of $Y_2$.
 \begin{proof}[Solution]
- 
+\begin{align*}
+  f_2(y_2) = \begin{cases}
+    \int_0^{y_2} 6y_1^2 y_2 dy_1 = 2y_2 y_1^3 \biggr]_0^{y_2} = 2y_2^4, & 0 \leq y_2 \leq 1 \\
+    \int_0^{2-y_2} 6y_1^2 y_2 dy_1 = 2y_2(2-y_2)^3, & 1 < y_2 \leq 2
+  \end{cases}
+\end{align*}
 \end{proof}
 
     \item[(c)] Derive the conditional density of $Y_2$ given $Y_1 = y_1$.
 \begin{proof}[Solution]
- 
+$$f(y_2|y_1) = \frac{6y_1^2 y_2}{12y_1^2(1-y_1)} = \frac{y_2}{2(1-y_1)}, \quad y_1 \leq y_2 \leq 2-y_1$$
 \end{proof}
 
     \item[(d)] Find $P(Y_2 < 1.1|Y_1 = .60)$.
 \begin{proof}[Solution]
- 
+\begin{align*}
+  f(y_2|y_1=0.6) &= \frac{y_2}{2(0.4)} = 1.25y_2, \quad 0.6 \leq y_2 \leq 1.4\\
+  P(Y_2 < 1.1|Y_1=0.6) &= \int_{0.6}^{1.1} 1.25y_2 dy_2 = 0.625[y_2^2]_{0.6}^{1.1} = 0.625(1.21-0.36) = 0.53125
+\end{align*}
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -373,27 +394,32 @@ e^{-y_1}, & 0 \leq y_2 \leq y_1 \leq \infty, \\
 \begin{enumerate}
     \item[(a)] Find the marginal density functions for $Y_1$ and $Y_2$.
 \begin{proof}[Solution]
- 
+\begin{align*}
+  f_1(y_1) &= \int_0^{y_1} e^{-y_1} dy_2 = y_1 e^{-y_1}, \quad y_1 > 0\\
+  f_2(y_2) &= \int_{y_2}^\infty e^{-y_1} dy_1 = -e^{-y_1}\biggr]_{y_2}^\infty = e^{-y_2}, \quad y_2 > 0
+\end{align*}
 \end{proof}
 
     \item[(b)] What is the conditional density function of $Y_1$ given that $Y_2 = y_2$? Be sure to specify the values of $y_2$ for which this conditional density is defined.
 \begin{proof}[Solution]
- 
+$$f(y_1|y_2) = \frac{e^{-y_1}}{e^{-y_2}} = e^{-(y_1-y_2)}, \quad y_1 \geq y_2$$
+Defined for $y_2 > 0$.
 \end{proof}
 
     \item[(c)] What is the conditional density function of $Y_2$ given that $Y_1 = y_1$? Be sure to specify the values of $y_1$ for which this conditional density is defined.
 \begin{proof}[Solution]
- 
+$$f(y_2|y_1) = \frac{e^{-y_1}}{y_1 e^{-y_1}} = \frac{1}{y_1}, \quad 0 \leq y_2 \leq y_1$$
+Defined for $y_1 > 0$.
 \end{proof}
 
     \item[(d)] Is the conditional density function $f(y_1|y_2)$ that you obtained in part (b) the same as the marginal density function $f_1(y_1)$ found in part (a)?
 \begin{proof}[Solution]
- 
+No. $f_1(y_1) = y_1 e^{-y_1}$ while $f(y_1|y_2) = e^{-(y_1-y_2)}$.
 \end{proof}
 
     \item[(e)] What does your answer to part (d) imply about marginal and conditional probabilities that $Y_1$ falls in any interval?
 \begin{proof}[Solution]
- 
+They are different, so $Y_1$ and $Y_2$ are dependent.
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -402,7 +428,8 @@ e^{-y_1}, & 0 \leq y_2 \leq y_1 \leq \infty, \\
 Refer to Exercise 5.33. If two minutes elapse between a customer's arrival at the store and his departure from the service window, find the probability that he waited in line less than one minute to reach the window.
 
 \begin{proof}[Solution]
- 
+From 5.33(c), $f(y_2|y_1) = \frac{1}{y_1}$ for $0 \leq y_2 \leq y_1$.
+$$P(Y_2 < 1|Y_1=2) = \int_0^1 \frac{1}{2} dy_2 = \frac{1}{2}$$
 \end{proof}
 \end{exercise}
 
@@ -416,7 +443,11 @@ $$f(y_1, y_2) = \begin{cases}
 Find the probability that a component of type II will have a life length in excess of 200 hours.
 
 \begin{proof}[Solution]
- 
+\begin{align*}
+  f_2(y_2) &= \int_0^\infty \frac{1}{8}y_1 e^{-(y_1+y_2)/2} dy_1 = \frac{1}{8}e^{-y_2/2} \int_0^\infty y_1 e^{-y_1/2} dy_1\\
+           &= \frac{1}{8}e^{-y_2/2} \cdot 4 = \frac{1}{2}e^{-y_2/2}\\
+  P(Y_2 > 2) &= \int_2^\infty \frac{1}{2}e^{-y_2/2} dy_2 = -e^{-y_2/2}\biggr]_2^\infty = e^{-1} \approx 0.368
+\end{align*}
 \end{proof}
 \end{exercise}
 
@@ -426,7 +457,9 @@ Find the probability that a component of type II will have a life length in exce
 Let $Y_1$ and $Y_2$ have joint density function $f(y_1, y_2)$ and marginal densities $f_1(y_1)$ and $f_2(y_2)$, respectively. Show that $Y_1$ and $Y_2$ are independent if and only if $f(y_1|y_2) = f_1(y_1)$ for all values of $y_1$ and for all $y_2$ such that $f_2(y_2) > 0$. A completely analogous argument establishes that $Y_1$ and $Y_2$ are independent if and only if $f(y_2|y_1) = f_2(y_2)$ for all values of $y_2$ and for all $y_1$ such that $f_1(y_1) > 0$.
 
 \begin{proof}[Solution]
- 
+($\Rightarrow$) If independent, $f(y_1,y_2) = f_1(y_1)f_2(y_2)$, so $f(y_1|y_2) = \frac{f(y_1,y_2)}{f_2(y_2)} = \frac{f_1(y_1)f_2(y_2)}{f_2(y_2)} = f_1(y_1)$.
+
+($\Leftarrow$) If $f(y_1|y_2) = f_1(y_1)$, then $\frac{f(y_1,y_2)}{f_2(y_2)} = f_1(y_1)$, so $f(y_1,y_2) = f_1(y_1)f_2(y_2)$, which means independent.
 \end{proof}
 \end{exercise}
 
@@ -447,7 +480,7 @@ $y_1$ & 0 & 1 & 2 \\
 The marginal probability function of $Y_1$ was derived in Exercise 5.19 to be binomial with $n = 2$ and $p = 1/3$. Are $Y_1$ and $Y_2$ independent? Why?
 
 \begin{proof}[Solution]
- 
+No. For independence we need $p(y_1,y_2) = p_1(y_1)p_2(y_2)$ for all $(y_1,y_2)$. We have $p_1(2) = \binom{2}{2}(1/3)^2 = 1/9$ and $p(2,0) = 1/9$. If independent, $p_2(0) = 1$. But $p(0,0) = 1/9 \neq p_1(0)p_2(0) = (4/9)(1) = 4/9$. Not independent.
 \end{proof}
 \end{exercise}
 
@@ -457,7 +490,7 @@ $$p(y_1, y_2) = \frac{\binom{4}{y_1}\binom{3}{y_2}\binom{2}{3-y_1-y_2}}{\binom{9
 where $y_1$ and $y_2$ are integers, $0 \leq y_1 \leq 3$, $0 \leq y_2 \leq 3$, and $1 \leq y_1 + y_2 \leq 3$. Are $Y_1$ and $Y_2$ independent? (Recall your answer to Exercise 5.21.)
 
 \begin{proof}[Solution]
- 
+No. Sampling without replacement, so dependent.
 \end{proof}
 \end{exercise}
 
@@ -471,7 +504,7 @@ $$f(y_1, y_2) = \begin{cases}
 Show that $Y_1$ and $Y_2$ are dependent.
 
 \begin{proof}[Solution]
- 
+From 5.23: $f_1(y_1) = 3y_1^2$, $f_2(y_2) = \frac{3}{2}(1-y_2^2)$. Since $f(y_1,y_2) = 3y_1 \neq f_1(y_1)f_2(y_2)$, dependent.
 \end{proof}
 \end{exercise}
 
@@ -485,12 +518,12 @@ e^{-(y_1+y_2)}, & y_1 > 0, y_2 > 0, \\
 \begin{enumerate}
     \item[(a)] Are $Y_1$ and $Y_2$ independent?
 \begin{proof}[Solution]
- 
+Yes. $f(y_1,y_2) = e^{-(y_1+y_2)} = e^{-y_1} \cdot e^{-y_2} = f_1(y_1)f_2(y_2)$ from 5.25.
 \end{proof}
 
     \item[(b)] Does the result from part (a) explain the results you obtained in Exercise 5.25 (d)–(f)? Why?
 \begin{proof}[Solution]
- 
+Yes. Independence implies $f(y_1|y_2) = f_1(y_1)$, which is what we found in 5.25.
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -504,7 +537,7 @@ $$f(y_1, y_2) = \begin{cases}
 is a valid joint probability density function. Are $Y_1$ and $Y_2$ independent?
 
 \begin{proof}[Solution]
- 
+No. Support region depends on both variables.
 \end{proof}
 \end{exercise}
 
@@ -512,7 +545,7 @@ is a valid joint probability density function. Are $Y_1$ and $Y_2$ independent?
 Suppose that, as in Exercise 5.11, $Y_1$ and $Y_2$ are uniformly distributed over the triangle shaded in the accompanying diagram. Are $Y_1$ and $Y_2$ independent?
 
 \begin{proof}[Solution]
- 
+No. Support region depends on both variables.
 \end{proof}
 \end{exercise}
 
@@ -526,7 +559,7 @@ $$f(y_1, y_2) = \begin{cases}
 Are the random variables $Y_1$ and $Y_2$ independent?
 
 \begin{proof}[Solution]
- 
+No. Support region depends on both variables.
 \end{proof}
 \end{exercise}
 
@@ -540,7 +573,7 @@ e^{-y_1}, & 0 \leq y_2 \leq y_1 \leq \infty \\
 Are $Y_1$ and $Y_2$ independent?
 
 \begin{proof}[Solution]
- 
+No. From 5.33, $f(y_1|y_2) \neq f_1(y_1)$, so dependent.
 \end{proof}
 \end{exercise}
 
@@ -554,7 +587,7 @@ $$f(y_1, y_2) = \begin{cases}
 Are $Y_1$ and $Y_2$ independent?
 
 \begin{proof}[Solution]
- 
+No. Cannot factor as $g(y_1)h(y_2)$ due to $y_1$ term.
 \end{proof}
 \end{exercise}
 
@@ -562,7 +595,12 @@ Are $Y_1$ and $Y_2$ independent?
 Let $Y_1$ and $Y_2$ be independent exponentially distributed random variables, each with mean 1. Find $P(Y_1 > Y_2 | Y_1 < 2Y_2)$.
 
 \begin{proof}[Solution]
- 
+\begin{align*}
+P(Y_1 > Y_2, Y_1 < 2Y_2) &= \int_0^\infty \int_{y_2}^{2y_2} e^{-y_1}e^{-y_2} dy_1dy_2 = \int_0^\infty e^{-y_2}(e^{-y_2}-e^{-2y_2})dy_2 \\
+&= \int_0^\infty (e^{-2y_2} - e^{-3y_2})dy_2 = \frac{1}{2} - \frac{1}{3} = \frac{1}{6}\\
+P(Y_1 < 2Y_2) &= \int_0^\infty \int_0^{2y_2} e^{-y_1}e^{-y_2} dy_1dy_2 = \int_0^\infty e^{-y_2}(1-e^{-2y_2})dy_2 = 1 - \frac{1}{3} = \frac{2}{3}\\
+P(Y_1 > Y_2|Y_1 < 2Y_2) &= \frac{1/6}{2/3} = \frac{1}{4}
+\end{align*}
 \end{proof}
 \end{exercise}
 
@@ -574,7 +612,7 @@ $$p(y_1, y_2) = \frac{\binom{4}{y_1}\binom{3}{y_2}\binom{2}{3-y_1-y_2}}{\binom{9
 where $y_1$ and $y_2$ are integers, $0 \leq y_1 \leq 3$, $0 \leq y_2 \leq 3$, and $1 \leq y_1 + y_2 \leq 3$. Find the expected number of married executives among the three selected for promotion. (See Exercise 5.21.)
 
 \begin{proof}[Solution]
- 
+Hypergeometric: $\EE(Y_1) = n \cdot \frac{r}{N} = 3 \cdot \frac{4}{9} = \frac{4}{3}$.
 \end{proof}
 \end{exercise}
 
@@ -588,27 +626,28 @@ e^{-(y_1+y_2)}, & y_1 > 0, y_2 > 0 \\
 \begin{enumerate}
     \item[(a)] What are $E(Y_1 + Y_2)$ and $V(Y_1 + Y_2)$?
 \begin{proof}[Solution]
- 
+$Y_1, Y_2$ independent Exp(1), so $\EE(Y_1) = \EE(Y_2) = 1$, $V(Y_1) = V(Y_2) = 1$.
+$$\EE(Y_1+Y_2) = 2, \quad V(Y_1+Y_2) = 2$$
 \end{proof}
 
     \item[(b)] What is $P(Y_1 - Y_2 > 3)$?
 \begin{proof}[Solution]
- 
+$$P(Y_1-Y_2>3) = \int_3^\infty \int_0^{y_1-3} e^{-y_1}e^{-y_2}dy_2dy_1 = \int_3^\infty e^{-y_1}(1-e^{-(y_1-3)})dy_1 = e^{-3}$$
 \end{proof}
 
     \item[(c)] What is $P(Y_1 - Y_2 < -3)$?
 \begin{proof}[Solution]
- 
+By symmetry, $P(Y_1-Y_2<-3) = P(Y_2-Y_1>3) = e^{-3}$.
 \end{proof}
 
     \item[(d)] What are $E(Y_1 - Y_2)$ and $V(Y_1 - Y_2)$?
 \begin{proof}[Solution]
- 
+$$\EE(Y_1-Y_2) = 0, \quad V(Y_1-Y_2) = 2$$
 \end{proof}
 
     \item[(e)] What do you notice about $V(Y_1 + Y_2)$ and $V(Y_1 - Y_2)$?
 \begin{proof}[Solution]
- 
+They are equal: both equal 2.
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -624,17 +663,26 @@ is a valid joint probability density function. Find
 \begin{enumerate}
     \item[(a)] $E(Y_1)$ and $E(Y_2)$.
 \begin{proof}[Solution]
- 
+From 5.27: $f_1(y_1) = 3(1-y_1)^2$ and $f_2(y_2) = 6y_2(1-y_2)$.
+\begin{align*}
+  \EE(Y_1) &= \int_0^1 y_1 \cdot 3(1-y_1)^2 dy_1 = 3\int_0^1(y_1-2y_1^2+y_1^3)dy_1 = 3[\frac{1}{2}-\frac{2}{3}+\frac{1}{4}] = \frac{1}{4}\\
+  \EE(Y_2) &= \int_0^1 y_2 \cdot 6y_2(1-y_2)dy_2 = 6\int_0^1(y_2^2-y_2^3)dy_2 = 6[\frac{1}{3}-\frac{1}{4}] = \frac{1}{2}
+\end{align*}
 \end{proof}
 
     \item[(b)] $V(Y_1)$ and $V(Y_2)$.
 \begin{proof}[Solution]
- 
+\begin{align*}
+  \EE(Y_1^2) &= 3\int_0^1 y_1^2(1-y_1)^2dy_1 = 3\int_0^1(y_1^2-2y_1^3+y_1^4)dy_1 = 3[\frac{1}{3}-\frac{1}{2}+\frac{1}{5}] = \frac{1}{10}\\
+  V(Y_1) &= \frac{1}{10} - \frac{1}{16} = \frac{3}{80}\\
+  \EE(Y_2^2) &= 6\int_0^1 y_2^3(1-y_2)dy_2 = 6[\frac{1}{4}-\frac{1}{5}] = \frac{3}{10}\\
+  V(Y_2) &= \frac{3}{10} - \frac{1}{4} = \frac{1}{20}
+\end{align*}
 \end{proof}
 
     \item[(c)] $E(Y_1 - 3Y_2)$.
 \begin{proof}[Solution]
- 
+$$\EE(Y_1-3Y_2) = \frac{1}{4} - 3 \cdot \frac{1}{2} = -\frac{5}{4}$$
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -643,7 +691,11 @@ is a valid joint probability density function. Find
 Suppose that, as in Exercise 5.11, $Y_1$ and $Y_2$ are uniformly distributed over the triangle shaded in the accompanying diagram with vertices at $(-1, 0)$, $(1, 0)$, and $(0, 1)$. Find $E(Y_1Y_2)$.
 
 \begin{proof}[Solution]
- 
+\begin{align*}
+\EE(Y_1Y_2) &= \int_{-1}^0 \int_0^{1+y_1} y_1y_2 dy_2dy_1 + \int_0^1 \int_0^{1-y_1} y_1y_2 dy_2dy_1\\
+&= \int_{-1}^0 \frac{y_1(1+y_1)^2}{2}dy_1 + \int_0^1 \frac{y_1(1-y_1)^2}{2}dy_1 = 0
+\end{align*}
+By symmetry around $y_1=0$.
 \end{proof}
 \end{exercise}
 
@@ -657,7 +709,11 @@ $$f(y_1, y_2) = \begin{cases}
 One way to measure the relative efficiency of the two components is to compute the ratio $Y_2/Y_1$. Find $E(Y_2/Y_1)$. [Hint: In Exercise 5.61, we proved that $Y_1$ and $Y_2$ are independent.]
 
 \begin{proof}[Solution]
- 
+Not independent (from 5.61), compute directly:
+\begin{align*}
+\EE(Y_2/Y_1) &= \int_0^\infty \int_0^\infty \frac{y_2}{y_1} \cdot \frac{1}{8}y_1 e^{-(y_1+y_2)/2}dy_2dy_1\\
+&= \frac{1}{8}\int_0^\infty \int_0^\infty y_2 e^{-(y_1+y_2)/2}dy_2dy_1 = \frac{1}{8} \cdot 4 \cdot 4 = 2
+\end{align*}
 \end{proof}
 \end{exercise}
 
@@ -667,12 +723,12 @@ Suppose that $Y_1$ and $Y_2$ are independent $\chi^2$ random variables with $\nu
 \begin{enumerate}
     \item[(a)] $E(Y_1 + Y_2)$.
 \begin{proof}[Solution]
- 
+$$\EE(Y_1+Y_2) = \EE(Y_1) + \EE(Y_2) = \nu_1 + \nu_2$$
 \end{proof}
 
     \item[(b)] $V(Y_1 + Y_2)$. [Hint: Use Theorem 5.9 and the result of Exercise 4.112(a).]
 \begin{proof}[Solution]
- 
+$$V(Y_1+Y_2) = V(Y_1) + V(Y_2) = 2\nu_1 + 2\nu_2$$
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -696,7 +752,13 @@ $y_1$ & 0 & 1 & 2 \\
 Find $\text{Cov}(Y_1, Y_2)$. Does it surprise you that $\text{Cov}(Y_1, Y_2)$ is negative? Why?
 
 \begin{proof}[Solution]
- 
+\begin{align*}
+\EE(Y_1) &= 0(4/9) + 1(4/9) + 2(1/9) = 2/3\\
+\EE(Y_2) &= 0(4/9) + 1(4/9) + 2(1/9) = 2/3\\
+\EE(Y_1Y_2) &= \sum y_1y_2 p(y_1,y_2) = 0(1/9) + 0(2/9) + 0(1/9) + 0(2/9) + 1(2/9) + 0 = 2/9\\
+\text{Cov}(Y_1,Y_2) &= \EE(Y_1Y_2) - \EE(Y_1)\EE(Y_2) = 2/9 - (2/3)(2/3) = 2/9 - 4/9 = -2/9
+\end{align*}
+Not surprising: more contracts to one firm means fewer to the other (negative association).
 \end{proof}
 \end{exercise}
 
@@ -710,7 +772,8 @@ $$f(y_1, y_2) = \begin{cases}
 Show that $\text{Cov}(Y_1, Y_2) = 0$. Does it surprise you that $\text{Cov}(Y_1, Y_2)$ is zero? Why?
 
 \begin{proof}[Solution]
- 
+$f(y_1,y_2) = 4y_1y_2 = (2y_1)(2y_2) = f_1(y_1)f_2(y_2)$, so independent. Thus $\text{Cov}(Y_1,Y_2) = 0$.
+Not surprising: independence implies zero covariance.
 \end{proof}
 \end{exercise}
 
@@ -723,7 +786,13 @@ $$f(y_1, y_2) = \begin{cases}
 is a valid joint probability density function. Find $\text{Cov}(Y_1, Y_2)$. Are $Y_1$ and $Y_2$ independent?
 
 \begin{proof}[Solution]
- 
+From 5.77: $\EE(Y_1) = 1/4$, $\EE(Y_2) = 1/2$.
+\begin{align*}
+\EE(Y_1Y_2) &= \int_0^1 \int_0^{y_2} y_1y_2 \cdot 6(1-y_2)dy_1dy_2 = 6\int_0^1 y_2(1-y_2) \frac{y_2^2}{2}dy_2 \\
+&= 3\int_0^1 (y_2^3 - y_2^4)dy_2 = 3[\frac{1}{4}-\frac{1}{5}] = \frac{3}{20}\\
+\text{Cov}(Y_1,Y_2) &= \frac{3}{20} - \frac{1}{4} \cdot \frac{1}{2} = \frac{3}{20} - \frac{1}{8} = \frac{1}{40}
+\end{align*}
+Not independent (from 5.53).
 \end{proof}
 \end{exercise}
 
@@ -734,7 +803,13 @@ $$p(y_1, y_2) = 1/3, \text{ for } (y_1, y_2) = (-1, 0), (0, 1), (1, 0).$$
 Find $\text{Cov}(Y_1, Y_2)$. Notice that $Y_1$ and $Y_2$ are dependent. (Why?) This is another example of uncorrelated random variables that are not independent.
 
 \begin{proof}[Solution]
- 
+\begin{align*}
+\EE(Y_1) &= \frac{1}{3}[(-1) + 0 + 1] = 0\\
+\EE(Y_2) &= \frac{1}{3}[0 + 1 + 0] = \frac{1}{3}\\
+\EE(Y_1Y_2) &= \frac{1}{3}[(-1)(0) + (0)(1) + (1)(0)] = 0\\
+\text{Cov}(Y_1,Y_2) &= 0 - 0 \cdot \frac{1}{3} = 0
+\end{align*}
+Dependent because support is not a rectangle, but uncorrelated.
 \end{proof}
 \end{exercise}
 
@@ -744,22 +819,26 @@ Suppose that, as in Exercises 5.11 and 5.79, $Y_1$ and $Y_2$ are uniformly distr
 \begin{enumerate}
     \item[(a)] Find $\text{Cov}(Y_1, Y_2)$.
 \begin{proof}[Solution]
- 
+From 5.29: $f_1(y_1) = 1-|y_1|$, $f_2(y_2) = 2(1-y_2)$. By symmetry, $\EE(Y_1) = 0$.
+\begin{align*}
+  \EE(Y_2) &= 2\int_0^1 y_2(1-y_2)dy_2 = 2[\frac{1}{2}-\frac{1}{3}] = \frac{1}{3}\\
+  \text{Cov}(Y_1,Y_2) &= \EE(Y_1Y_2) - \EE(Y_1)\EE(Y_2) = 0 - 0 = 0 \text{ (from 5.79)}
+\end{align*}
 \end{proof}
 
     \item[(b)] Are $Y_1$ and $Y_2$ independent? (See Exercise 5.55.)
 \begin{proof}[Solution]
- 
+No (from 5.55).
 \end{proof}
 
     \item[(c)] Find the coefficient of correlation for $Y_1$ and $Y_2$.
 \begin{proof}[Solution]
- 
+$$\rho = \frac{\text{Cov}(Y_1,Y_2)}{\sqrt{V(Y_1)V(Y_2)}} = \frac{0}{\sqrt{V(Y_1)V(Y_2)}} = 0$$
 \end{proof}
 
     \item[(d)] Does your answer to part (b) lead you to doubt your answer to part (a)? Why or why not?
 \begin{proof}[Solution]
- 
+No. Dependent variables can have zero covariance.
 \end{proof}
 \end{enumerate}
 \end{exercise}
@@ -768,7 +847,7 @@ Suppose that, as in Exercises 5.11 and 5.79, $Y_1$ and $Y_2$ are uniformly distr
 If $c$ is any constant and $Y$ is a random variable such that $E(Y)$ exists, show that $\text{Cov}(c, Y) = 0$.
 
 \begin{proof}[Solution]
- 
+$$\text{Cov}(c,Y) = \EE(cY) - \EE(c)\EE(Y) = c\EE(Y) - c\EE(Y) = 0$$
 \end{proof}
 \end{exercise}
  \end{document} 

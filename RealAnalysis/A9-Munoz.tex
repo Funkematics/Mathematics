@@ -1,0 +1,164 @@
+% <-- a percent symbol indicates a comment which does not affect the output of LaTeX
+% you can leave the preamble alone, from here ...
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{enumitem,palatino}
+\usepackage[final]{graphicx}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+
+\newtheorem{problem}{Problem}
+% ... to here
+
+% shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\II}{\ensuremath{\mathbb I}}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+
+\newcommand{\eps}{\ensuremath{\epsilon}}
+\newcommand{\ds}{\displaystyle}
+
+% feel free to add more shortcuts here
+
+
+\begin{document}
+% replace with your name, but otherwise leave this header alone, from here ...
+\small
+\noindent \textsc{Math 401: Homework Assignment 9} \hfill Christopher Munoz
+
+\normalsize
+\bigskip
+% ... to here
+
+\setcounter{problem}{59}
+
+
+\begin{problem} % Problem 60
+Let $f,g,h$ satisfy $f(x)\le g(x)\le h(x)$ for all $x$ in some common domain $A$.  Assume $c$ is a limit point of $A$.  If $\lim_{x\to c} f(x)=L$ and $\lim_{x\to c} h(x)=L$ then $\lim_{x\to c} g(x)=L$.
+\end{problem}
+
+% PLEASE READ: This is a squeeze theorem, and it is Exercise 4.2.11 in the book.  Compare Exercise 2.3.3.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 61
+If $h:\RR \to \RR$ is a continuous function then the set $K=\{x\in \RR\,:\,h(x)=0\}$ is closed.
+\end{problem}
+
+% PLEASE READ: As expected, prove that K contains its limit points.  (Or prove that K^c is open.)
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 62
+If $c$ is an isolated point of $A\subset\RR$, and if $f:A\to\RR$ is a function, then $f$ is continuous at $c$.
+\end{problem}
+
+% PLEASE READ: Read Definition 4.3.1 carefully.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 63
+The function $g:\RR\to\RR$ defined by $g(x) = \sqrt[3]{x}$ is continuous.
+\end{problem}
+
+% PLEASE READ: You will want to prove that g is continuous at c = 0, and separately prove it for every other point c \ne 0.  For the latter, the identity a^3 - b^3 = (a - b) (a^2 + ab + b^2) will be useful.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 64
+Dirichlet's function from Section 4.1, namely
+	$$g(x) = \begin{cases} 1 &\text{ if } x \in \QQ, \\
+	                       0 &\text{ if } x \notin \QQ \end{cases}$$
+is not continuous at any $c\in\RR$.
+\end{problem}
+
+% PLEASE READ: On page 123 there is a suggestion about a good way to show a function is not continuous; feel free to use that technique.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 65
+The function
+	$$h(x) = \begin{cases} 0 &\text{ if } x = 0, \\
+	                       \sqrt{|x|} \cos(1/x) &\text{ otherwise}, \end{cases}$$
+shown in the figure below, is continuous at zero.
+\end{problem}
+
+% PLEASE READ: Please sketch the graph of h(x), or generate the graph using a computer, and include that figure in your solution.  Consider making your figure a .jpg and then using this LaTeX:
+%\begin{center}
+%  \includegraphics[width=0.5\textwidth]{figure.jpg}
+%\end{center}
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 66
+Thomae's function from Section 4.1, namely
+	$$t(x) = \begin{cases} 1   &\text{ if } x = 0, \\
+	                       1/n &\text{ if } x \in \QQ \setminus \{0\} \text{ and } x=\pm m/n \text{ in lowest terms, with } n>0, \\
+	                       0   &\text{ if } x \notin \QQ \end{cases}$$
+is not continuous at any rational point $c\in\QQ$.
+\end{problem}
+
+% PLEASE READ: If you need the fact that every rational is the limit of an irrational sequence, please *justify* (i.e. prove) this fact.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+\begin{problem} % Problem 67
+Suppose $f:A \to \RR$ is continuous at $c\in A$.  Suppose that $g:B\to\RR$ has a domain satisfying $f(A) \subset B$, and that $g$ is continuous at $f(c)$.  Let
+	$$h(x) = (g \circ f)(x) = g(f(x))$$
+be the composition of functions. Then $h$ is continuous at $c$.
+\end{problem}
+
+% PLEASE READ: This is Theorem 4.3.9 in the book.  You can prove it either using the \epsilon-\delta definition of continuity, or the sequential characterization (Theorem 4.3.2 (iii)).
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 68
+The function $f(x) = 1/x^2$ is uniformly continuous on $(1,2)$, but it is not uniformly continuous on $(0,1)$.
+\end{problem}
+
+% PLEASE READ: The result on (1,2) can be proven directly from the definition of uniform continuity.  (You cannot use Theorem 4.4.7 since (1,2) is not compact, right?)  To show the failure of uniform continuity on (0,1), perhaps use a suitable Theorem.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 69
+We say that a function $f:A\to \RR$ is \emph{Lipschitz} if there exists $M>0$ so that
+	$$\frac{|f(x)-f(y)|}{|x-y|} \le M$$
+for all $x,y\in A$.  If $f$ is Lipschitz then $f$ is uniformly continuous.
+\end{problem}
+
+% PLEASE READ: It is recommended to prove this directly from the definition of uniform continuity.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+\end{document}
