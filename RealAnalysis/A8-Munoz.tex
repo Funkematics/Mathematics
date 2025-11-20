@@ -102,6 +102,18 @@ Each of the $K_n$ are closed and bounded and thus compact, if we union an an inf
 
 True:
 \begin{proof}
+  Let $\{K_\alpha\}_{\alpha \in I}$ be an arbitrary collection of compact sets, and let $K = \bigcap_{\alpha \in I} K_\alpha.$
+  We want to show that $K$ is compact, so we want to show $K$ is closed and bounded. We start by showing $K$ is closed:
+
+  Each $K_\alpha$ is compact, hence by Heine-Borel each $K_\alpha$ is closed. Because an arbitrary intersection of closed sets is closed, $K$ is closed.
+
+  Now we show that $K$ is bounded:
+
+  Choose any $K_\alpha$ in $K$, we denote this particular $K$ with index $\alpha' \in I$. Then
+  
+  $$K = \bigcap_{\alpha \in I} K_\alpha \subseteq K_{\alpha'}$$
+
+  Since $K_{\alpha'}$ is compact, it follows that $K_{\alpha'}$ is bounded. Since any subset of a bounded set is bounded that means $K$ is bounded. Since $K$ is closed and bounded, $K$ is compact by Heine-Borel.
 \end{proof}
 \item Let $A$ be arbitrary, and let $K$ be compact.  Then $A\cap K$ is compact.
 
