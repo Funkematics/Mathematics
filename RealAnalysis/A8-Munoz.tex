@@ -27,7 +27,7 @@
 \begin{document}
 % replace with your name, but otherwise leave this header alone, from here ...
 \small
-\noindent \textsc{Math 401: Homework Assignment 8} \hfill YOUR NAME HERE
+\noindent \textsc{Math 401: Homework Assignment 8} \hfill Christopher Munoz
 
 \normalsize
 \bigskip
@@ -41,8 +41,20 @@ If $K\subset\RR$ is compact and nonempty, then $\sup K$ and $\inf K$ both exist 
 \end{problem}
 
 \begin{proof}
+We want to show that $\sup K$ and $\inf K$ exist, then we will show that they are elements of $K$.
 Recall that a set is compact if it is closed and bounded, meaning that the set $K$ contains all its limit points, is non-empty and is bounded both above and below. 
-It follows by the Axiom of completeness that $\sup K$ and $\inf K$ both exist from the definitions.
+Since $K$ is nonempty and bounded, there exist real numbers $m$ and $M$ such that $m \leq x \leq M$ for all $x \in K$. Thus $K$ is bounded above and below. By the Axiom of Completeness, $\sup K$ and $\inf K$ both exist. Now show that $\sup K \in K$.
+\newline\newline\noindent
+Let $s = \sup K$. For each $n \in \NN$, since $s$ is the least upper bound, $s - \frac{1}{n}$ is not an upper bound of $K$. Therefore, there exists $x_n \in K$ such that 
+$$s - \frac{1}{n} < x_n \leq s$$
+this gives $0 \leq s - x_n < \frac{1}{n}$, so $|x_n - s| < \frac{1}{n}$.
+\newline
+Given $\varepsilon > 0$, by the Archimedean Property, there exists $N \in \NN$ such that $\frac{1}{N} < \varepsilon$. For all $n \geq N$:
+$$|x_n - s| < \frac{1}{n} \leq \frac{1}{N} < \varepsilon$$
+
+Therefore $(x_n) \to s$. Since $x_n \in K$ for all $n$ and $K$ is closed, we have $s \in K$.
+By the same argument (using $\inf K + \frac{1}{n}$ instead), $\inf K \in K$.
+Therefore $\sup K$ and $\inf K$ both exist and are elements of $K$.
 \end{proof}
 
 
@@ -62,13 +74,13 @@ This is not compact because $\NN$ is unbounded. This means that all sequences an
   This is not compact because $\QQ \cap [0,1]$ does not contain all its limit points, we can construct a sequence of rational numbers converging to $1/\pi$ since this is an irrational number, it is not in the set.
 \item The Cantor set $C$
 
-The Cantor set is closed, since it consists of compliments of the union of open sets, which is closed and is bounded by 0 and 1 which contained in the set. By Heine-Borel C is compact. 
+The Cantor set is closed, since it consists of complements of the union of open sets, which is closed and is bounded by 0 and 1 which contained in the set. By Heine-Borel C is compact. 
 \item $\ds \left\{1+\frac{1}{2^2}+\frac{1}{3^2}+\dots+\frac{1}{n^2}\,:\,n\in\NN\right\}$
 
   We should note that the set is a p-series, with the value for $p=2$. This sum converges to $\frac{\pi^2}{6}$. Consider the range of the sequence of partial sum, if $(s_n) = \left\{1+\frac{1}{2^2}+\frac{1}{3^2}+\dots+\frac{1}{n^2}\,:\,n\in\NN\right\}$, we define it as the set $S = \{s_1, s_2, s_3, \cdots\, s_n\}$. We observe that $\frac{\pi^2}{6}$ is not in $S$ but that $S$ approaches $\frac{\pi^2}{6}$ as $n$ goes to infinity, this means that $S$ does not contain all its limit points and thus $S$ is not compact. 
 \item $\ds \left\{1,\frac{1}{2},\frac{2}{3},\frac{4}{5},\dots\right\}$
 
-  Observe that this sequence is equivalent to $S = \{1\} \cup \{n/(n+1) : n \geq 1\}$. We note that $\{n/(n+1) : n \geq 1\}$ with its bounds defined by $[0, 1)$ converges to 1 as $n$ approaches infinity , all of its subsequences also converge to $\{1\}$ similary. Normally this set would not be closed since it wouldn't contain all its limit point, but since $\{1\}$ is unioned to this set, it contains all its limit points and the bounds are defined by $[0,1]$. Thus the set is compact. 
+  Observe that this sequence is equivalent to $S = \{1\} \cup \{n/(n+1) : n \geq 1\}$. We note that $\{n/(n+1) : n \geq 1\}$ with its bounds defined by $[0, 1)$ converges to 1 as $n$ approaches infinity , all of its subsequences also converge to $\{1\}$ similarly. Normally this set would not be closed since it wouldn't contain all its limit point, but since $\{1\}$ is unioned to this set, it contains all its limit points and the bounds are defined by $[0,1]$. Thus the set is compact. 
 \end{enumerate}
 
 
@@ -96,8 +108,8 @@ Decide whether the following propositions are true or false.  If the claim is va
 \begin{enumerate}
 \item The arbitrary union of compact sets is compact.
 
-False: Since we are speaking of arbitrary union, suppose an infinite union of compact sets such as $K_n = [n, n+1]$ for $n \in \NN$. 
-Each of the $K_n$ are closed and bounded and thus compact, if we union an an infinite amount of these $K_n$ we get an unbounded set and thus not compact.
+False: Since we are speaking of arbitrary union, suppose an infinite union of compact sets such as $K_n = [n, n+1]$ for $n \in \NN$.
+Each of the $K_n$ are closed and bounded and thus compact, if we union an infinite amount of these $K_n$ we get an unbounded set and thus not compact.
 \item The arbitrary intersection of compact sets is compact.
 
 True:
@@ -120,7 +132,10 @@ True:
   False: Since $A$ is arbitrary, let $A = \QQ$ and let $K = [0,4]$, the intersection $A\cap K$ would consist of every rational number between $0$ and $4$. We can construct a sequence of rational numbers in the set that converge to $\pi$ via decimal expansion $(\frac{31}{10}, \frac{314}{100}, \frac{3141}{1000}, \frac{31415}{10000}, \cdots)$. But $\pi$ is not in the set and so $A \cap K$ does not contain all its limit points. Thus $A \cap K$ is not closed let alone compact.
 \item If $F_1 \supseteq F_2 \supseteq F_3 \supseteq \dots$ is a nested sequence of nonempty closed sets then the intersection $\ds F = \bigcap_{n=1}^\infty F_n$ is nonempty.
 
-% FILL IN
+False:
+We can let $F_n = [n, \infty)$ for $n \in \NN$. These are closed sets and we can verify by considering the complement of these sets $F_n^c = (-\infty,n)$ which are clearly open. Explicitly writing this out we get
+$$F =\bigcap_{n=1}^\infty F_n = [1,\infty) \supseteq [2,\infty) \supseteq [3, \infty) \supseteq \cdots \supseteq [n, \infty)$$
+Since the sets move infinitely rightward, there is no common value in any of the $F_n$ so the set is empty.
 \end{enumerate}
 
 
@@ -131,7 +146,17 @@ Let $A$ and $B$ be nonempty subsets of $\RR$.  If there exist disjoint open sets
 % PLEASE READ: 
 
 \begin{proof}
-% FILL IN
+  We want to show $A$ and $B$ are separated, that is $A \cap \overline{B} = \emptyset$ and $\overline{A} \cap B = \emptyset$.
+\newline\noindent\newline
+  For the sake of contradiction suppose $A \cap \overline{B} \neq \emptyset$. Then there is some $x \in A \cap \overline{B}$. It follows from this that if $x \in A$ and $A \subseteq U$ that $x \in U$. Since $U$ is open and $x \in U$, $x$ has an $\eps$-neighborhood contained in $U$: there exists an $\eps > 0$ such that $N_\eps(x) \subseteq U$. Now since $x \in \overline{B}$ and $\overline{B}$ is closed, $\overline{B}$ contains all its limit points meaning either $x \in B$ or $x$ is a limit point of $B$.
+  \newline
+  \newline
+  \textbf{Case 1:} Suppose $x \in B$. Then $x \in B \subseteq V$, so $x \in V$. This is a contradiction we assumed $U$ and $V$ are disjoint and so $U \cap V = \emptyset$.
+  \newline\newline
+  \textbf{Case 2:} Suppose $x$ is a limit point of $B$. Then every $\eps$-neighborhood of $x$ contains a point of $B$. So $N_\eps(x)$ contains some point $b \in B$. Since $b \in B$ and $B \subseteq V$, it follows that $b \in V$. But since $b \in N_\eps \subseteq U$, that means $b$ is in $U$ and $V$ so $b \in U \cap V \neq \emptyset$. A contradiction.
+\newline\noindent\newline
+  Thus it must be the case that $A \cap \overline{B} = \emptyset$. Similarly by symmetry, the same argument shows that $\overline{A} \cap B = \emptyset$. Therefore $A$ and $B$ are separated.
+
 \end{proof}
 
 
@@ -147,7 +172,40 @@ The Cantor set $C$ is totally disconnected.
 % 3. Now argue that $C$ is totally disconnected.
 
 \begin{proof}
-% FILL IN
+  Recall that the Cantor set is defined by
+  $$C = \bigcap_{n=0}^\infty C_n$$
+  such that
+  \begin{align*}
+    C_0 &= [0,1] \\
+    C_1 &= [0, \frac{1}{3}] \cup [\frac{2}{3}, 1] \\
+    C_2 &= [0,\frac{1}{9}] \cup [\frac{2}{9}, \frac{1}{3}] \cup [\frac{2}{3}, \frac{7}{9}] \cup [\frac{8}{9}, 1] \\
+    \vdots \\
+    C_n &= [0, \frac{1}{3^n}] \cup \cdots \cup [\frac{(3^n-1)}{3^n}, 1]
+  \end{align*}
+  Let $x,y \in C$ with $x < y$. We want to show there exists separated sets $A$ and $B$ with $x \in A$, $y \in B$ and $C = A \cup B$.
+  Let $\eps = y - x > 0$. At the $n^{th}$ iteration of our Cantor set, each interval in $C_n$ has a length $\frac{1}{3^n}$. Since the $\lim_{n\to\infty} \frac{1}{3^n} = 0$, there exists an $N \in \NN$ such that:
+  $$\frac{1}{3^N} < \eps = y - x$$
+  Suppose for the sake of contradiction that $x$ and $y$ are in the same interval $I \subseteq C_N$.We define $\ell(I)$ as the length of $I$. Since $I$ is an interval containing both $x$ and $y$ and $x < y$, the interval $I$ must contain the segment $[x,y]$. Therefore the length of $I$(or $\ell(I)$) must be at least
+  $$\ell(I) \geq y - x $$
+  But every interval in $C_N$ has a length of exactly $\frac{1}{3^N}$, so :
+  $$\ell(I) = \frac{1}{3^N} < y - x$$
+  This is a contradiction, therefore $x$ and $y$ are in different intervals of $C_N$
+  Since $x$ and $y$ are in different intervals of $C_N$, there exists at least one removed open interval $(a,b)$ (a gap from the construction) with $x < a < b < y$.
+  
+  Define:
+  \begin{align*}
+    A &= C \cap (-\infty, a] \\
+    B &= C \cap [b, \infty)
+  \end{align*} 
+  Then $x \in A$ (since $x < a$), $y \in B$ (since $y > b$), and $C = A \cup B$ (since the gap $(a,b)$ was removed from the Cantor set).
+  \newline
+  To show $A$ and $B$ are separated, note that $A \subseteq (-\infty, a]$ and $B \subseteq [b, \infty)$ where $a < b$. Since $\overline{A} \subseteq \overline{(-\infty, a]} = (-\infty, a]$ and $\overline{B} \subseteq \overline{[b, \infty)} = [b, \infty)$, we have:
+  \begin{align*}
+    A \cap \overline{B} &\subseteq (-\infty, a] \cap [b, \infty) = \emptyset \\
+    \overline{A} \cap B &\subseteq (-\infty, a] \cap [b, \infty) = \emptyset
+  \end{align*}
+  
+  Therefore $A$ and $B$ are separated, and $C$ is totally disconnected.
 \end{proof}
 
 
@@ -161,13 +219,35 @@ For each stated limit, find the largest possible $\delta$-neighborhood that is a
 \begin{enumerate}
 \item $\ds \lim_{x\to 3} 5x-6 = 9$, where $\eps=1$
 
-% FILL IN
+  \begin{align*}
+    |f(x) - L | &= |(5x-6) - 9| < 1 \\
+      &= |5x -15| < 1 \\
+      &= 5|x - 3| < 1 \\
+      &= |x - 3| < \frac{1}{5}
+  \end{align*}
+  So our $\delta$-neighborhood is $|x - 3| < \frac{1}{5}$.
 \item $\ds \lim_{x\to 4} \sqrt{x} = 2$, where $\eps=0.5$
 
-% FILL IN
+\begin{align*}
+    |\sqrt{x} - 2| &< 0.5 \\
+    -0.5 < \sqrt{x} - 2 &< 0.5 \\
+    1.5 < \sqrt{x} &< 2.5 \\
+    2.25 < x &< 6.25 \\
+    -1.75 < x - 4 &< 2.25
+  \end{align*}
+  So $|x - 4| < \min\{1.75, 2.25\} = 1.75$, thus $\delta = \frac{7}{4}$
 \item $\ds \lim_{x\to \pi} [[x]] = 3$, where $\eps=0.5$
 
-% FILL IN
+ \begin{align*}
+    |[[x]] - 3| &< 0.5 \\
+    2.5 < [[x]] &< 3.5
+  \end{align*}
+  Since $[[x]]$ is an integer, we need $[[x]] = 3$, which occurs when $x \in [3, 4)$.
+  
+  For $|x - \pi| < \delta$ to imply $x \in [3, 4)$, we need:
+  $$\delta = \min\{\pi - 3, 4 - \pi\} = \pi - 3$$
+  
+  Thus $\delta = \pi - 3$.
 \end{enumerate}
 
 
@@ -180,19 +260,56 @@ Use the definition of functional limit in the textbook (Definition 4.2.1) to pro
 \item $\ds \lim_{x\to 2} 3x+4 = 10$
 
 \begin{proof}
-% FILL IN
+Let $\eps > 0$. We want to find $\delta > 0$ such that 
+$$0 < |x - 2| < \delta \implies |f(x) - 10| < \eps$$
+Observe that 
+\begin{align*}
+  |f(x) - 10| &= |(3x + 4) - 10| < \eps\\
+              &= |3x - 6| < \eps \\
+              &= 3|x-2| < \eps\\
+              &= |x - 2| < \frac{\eps}{3}
+\end{align*}
+Choose $\delta = \frac{\eps}{3}$. Then if $0 < |x-2| < \delta$, we have 
+$$|f(x) - 10| = 3|x-2| < 3 \cdot \frac{\eps}{3} = \eps$$
+Thus $\lim_{x \to 2} 3x+4 = 10$
 \end{proof}
 
 \item $\ds \lim_{x\to 2} x^2 + x - 1 = 5$
 
 \begin{proof}
-% FILL IN
+Let $\eps > 0$. We want to find $\delta > 0$ such that
+$$0 < |x - 2| < \delta \implies |f(x) - 5| < \eps$$
+Observe that
+\begin{align*}
+  |f(x) - 5| &= |(x^2 + x - 1) - 5| \\
+              &= |x^2 + x - 6| \\
+              &= |(x+3)(x-2)| \\
+              &= |x+3| \cdot |x-2|
+\end{align*}
+Assume $\delta \leq 1$. Then $|x-2| < 1$ implies $1 < x < 3$, so $4 < x+3 < 6$, thus $|x+3| < 6$.
+We want $|x+3| \cdot |x-2| < \eps$. Since $|x+3| < 6$, we need $|x-2| < \frac{\eps}{6}$.
+
+Choose $\delta = \min\left\{1, \frac{\eps}{6}\right\}$. Then if $0 < |x-2| < \delta$, we have
+$$|f(x) - 5| = |x+3| \cdot |x-2| < 6 \cdot \frac{\eps}{6} = \eps$$
+Thus $\lim_{x \to 2} x^2 + x - 1 = 5$.
 \end{proof}
 
 \item $\ds \lim_{x\to 3} \frac{1}{x} = \frac{1}{3}$
 
 \begin{proof}
-% FILL IN
+Let $\eps > 0$. We want to find $\delta > 0$ such that
+$$0 < |x - 3| < \delta \implies \left|f(x) - \frac{1}{3}\right| < \eps$$
+Observe that
+\begin{align*}
+  \left|\frac{1}{x} - \frac{1}{3}\right| &= \left|\frac{3-x}{3x}\right| \\
+                                           &= \frac{|x-3|}{3|x|}
+\end{align*}
+Assume $\delta \leq 1$. Then $|x-3| < 1$ implies $2 < x < 4$, so $|x| > 2$, thus $\frac{1}{|x|} < \frac{1}{2}$.
+We want $\frac{|x-3|}{3|x|} < \eps$. Since $\frac{1}{|x|} < \frac{1}{2}$, we need $\frac{|x-3|}{6} < \eps$, so $|x-3| < 6\eps$.
+
+Choose $\delta = \min\{1, 6\eps\}$. Then if $0 < |x-3| < \delta$, we have
+$$\left|\frac{1}{x} - \frac{1}{3}\right| = \frac{|x-3|}{3|x|} < \frac{|x-3|}{6} < \frac{6\eps}{6} = \eps$$
+Thus $\lim_{x \to 3} \frac{1}{x} = \frac{1}{3}$.
 \end{proof}
 
 \item $\ds \lim_{x\to 3} \frac{x^2-9}{x-3} = 6$
@@ -200,7 +317,24 @@ Use the definition of functional limit in the textbook (Definition 4.2.1) to pro
 % PLEASE READ:  Justify any algebra which is essential to proving the limit.  What is the domain of the function f(x)=(x^2-9)/(x-3)?
 
 \begin{proof}
-% FILL IN
+  Note that the domain of $f(x) = \frac{x^2-9}{x-3}$ is $\{x \in \RR : x \neq 3\}$.
+
+For $x \neq 3$, we have
+$$f(x) = \frac{x^2-9}{x-3} = \frac{(x-3)(x+3)}{x-3} = x+3$$
+
+Let $\eps > 0$. We want to find $\delta > 0$ such that
+$$0 < |x - 3| < \delta \implies |f(x) - 6| < \eps$$
+For $x \neq 3$, observe that
+\begin{align*}
+  |f(x) - 6| &= \left|\frac{x^2-9}{x-3} - 6\right| \\
+              &= |x+3-6| \\
+              &= |x-3|
+\end{align*}
+We want $|x-3| < \eps$.
+
+Choose $\delta = \eps$. Then if $0 < |x-3| < \delta$ (which ensures $x \neq 3$), we have
+$$|f(x) - 6| = |x-3| < \delta = \eps$$
+Thus $\lim_{x \to 3} \frac{x^2-9}{x-3} = 6$.
 \end{proof}
 
 \end{enumerate}
@@ -211,7 +345,23 @@ Let $g:A\to\RR$ and assume that $f$ is a bounded function on $A$.  Assume $c$ is
 \end{problem}
 
 \begin{proof}
-% FILL IN
+Since $f$ is bounded on $A$, by definition there exists $M > 0$ such that $|f(x)| \leq M$ for all $x \in A$.
+
+Let $\eps > 0$. We want to find $\delta > 0$ such that for all $x \in A$
+$$0 < |x - c| < \delta \implies |f(x)g(x) - 0| < \eps$$
+Since $\lim_{x\to c} g(x) = 0$ for an $\eps' = \frac{\eps}{M} > 0$. there exists $\delta > 0$ such that for all $x \in A$ we have
+$$0 < |x-c| < \delta \implies |g(x) - 0| < \frac{\eps}{M}$$
+
+Now, for all $x \in A$ with $0 < | x - c| < \delta$ we have
+\begin{align*}
+  |f(x)g(x) - 0| &= |f(x)g(x)| \\
+                  &= |f(x)| \cdot |g(x)| \\
+                  &\leq M \cdot |g(x)| \\
+                  &< M \cdot \frac{\varepsilon}{M} \\
+                  &= \varepsilon
+\end{align*}
+Thus $\lim_{x \to c} f(x)g(x) = 0$.
+
 \end{proof}
 
 
