@@ -1,0 +1,398 @@
+%https://uafrcs.atlassian.net/browse/RCS-14891 !TEX TS-program = pdflatexmk
+\documentclass[12pt]{amsart}
+
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{amsmath,amssymb,amsthm,latexsym,graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{setspace} %used for doublespacing, etc.
+\usepackage{hyperref}
+\usepackage[dvipsnames,usenames]{color}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{0.5pt} % and the line
+	\headsep=1cm
+	\setlength{\headheight}{14pt}
+	\setlength{\footskip}{14pt}
+	
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%Some useful environments.
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem*{exercise}{Exercise}%[section]
+
+%Some shortcuts helpful for our assignments
+\newcommand{\bx}{\begin{exercise}}
+\newcommand{\ex}{\end{exercise}}
+
+%Some useful shortcuts for our favorite sets of numbers.
+%Note, you can use these WITHOUT entering math mode
+\def\RR{\ensuremath{\mathbb R}} 
+\def\NN{\ensuremath{\mathbb N}}
+\def\ZZ{\ensuremath{\mathbb Z}}
+\def\QQ{{\ensuremath\mathbb Q}}
+\def\CC{\ensuremath{\mathbb C}}
+\def\EE{{\ensuremath\mathbb E}}
+
+%Some useful shortcuts for formatting lists
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%Some useful shortcuts for formatting mathematical symbols
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\iff}} %labeled iff symbol
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} } %makes a vector.
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}} %put something in caligraphic font
+\newcommand{\normale}{\trianglelefteq}
+\newcommand{\normal}{\triangleleft}
+
+%Code for formatting the proofs a little nicer for submitted homework
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par\doublespacing
+  \pushQED{\qed}%
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \list{}{%
+    \settowidth{\leftmargin}{\itshape\proofname:\hskip\labelsep}%
+    \setlength{\labelwidth}{0pt}%
+    \setlength{\itemindent}{-\leftmargin}%
+  }%
+  \item[\hskip\labelsep\itshape#1\@addpunct{:}]\ignorespaces
+}{%
+  \popQED\endlist\@endpefalse
+  \singlespacing
+}
+\makeatother
+
+
+%Commenting tools for the professor
+\newcommand{\mpg}[1]{\marginpar{ #1}} %to put comments in margins
+\usepackage{soul}
+\definecolor{highlight}{rgb}{1,0.6,0.6}
+\sethlcolor{highlight}
+\newcommand{\hlm}[1]{\colorbox{highlight}{$\displaystyle #1$}}
+\newtheoremstyle{mycomment}{\topsep}{-0in}{\small \itshape \sffamily}{}{\small \itshape\sffamily}{:}{.5em}{}
+\theoremstyle{mycomment}
+\newtheorem*{acomment}{\color{BrickRed}{Comment}}
+\newcommand{\com}[1]{{\color{OliveGreen}\begin{acomment}{#1} %#2 \color{black} 
+\end{acomment}\noindent}}
+\newcommand{\red}[1]{{\color{BrickRed} #1}}
+\newcommand{\blue}[1]{{\color{MidnightBlue}#1}}
+\newcommand{\green}[1]{{\color{OliveGreen}#1}}
+\newcommand{\mwrong}[2]{\red{\cancel{#1}}\green{#2}}
+\newcommand{\wrong}[2]{\red{\sout{#1}}\green{#2}}
+\definecolor{OliveGreen}{rgb}{.3,.5,.2}
+\definecolor{MidnightBlue}{rgb}{.3,.4,.6}
+\newcommand{\pts}[1]{\hfill\blue{{#1}/5}}
+
+\chead{MATH 371}
+\pagestyle{fancy}
+%Modify these items:
+\rhead{\emph{Christopher Munoz}}
+\lhead{\emph{HW 11}}
+
+\begin{document}
+
+\thispagestyle{fancy}
+%§12.1 1, 3, 7, 9, 12.
+\section*{Section 6.3: Method of Transformations}
+
+\begin{exercise}[6.1]
+Let $Y$ be a random variable with probability density function given by
+$$f(y) = \begin{cases}
+2(1 - y), & 0 \leq y \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+
+\begin{enumerate}
+    \item[(a)] Find the density function of $U_1 = 2Y - 1$.
+\begin{proof}[Solution]
+  \begin{align*}
+    U_1 = 2Y - 1 && \frac{dy}{du_1} &= \frac{1}{2}\\
+    2Y = U_1 + 1 && f_{u_1(}u_1) &= 2(1-\frac{u_1 + 1}{2}) \frac{1}{2}\\
+    Y = \frac{U_1 + 1}{2} && &= \frac{1-u_1}{2} \\
+    & f_{U_1} = 
+    \begin{cases}
+      \frac{1+u_1}{2}, & -1 \leq u_1 \leq 1 \\
+      0, & \text{elsewhere}
+    \end{cases}
+  \end{align*}
+\end{proof}
+
+    \item[(b)] Find the density function of $U_2 = 1 - 2Y$.
+\begin{proof}[Solution]
+  \begin{align*}
+    U_2 &= 1 - 2Y  && \frac{dy}{du_2} = -\frac{1}{2}\\
+    2Y &= 1 - U_2 && f_{U_2} = 2 (1 - \frac{1-u_2}{2} * \frac{1}{2} \\
+    Y &= \frac{1 - U_2}{2} && = \frac{1+u_2}{2} \\
+    &&  f_{U_2}(u_2) = 
+    \begin{cases}
+      \frac{1+u_2}{2}, & -1 \leq u_2 \leq 1 \\
+      0, & \text{elsewhere}
+    \end{cases}
+  \end{align*}
+\end{proof}
+
+    \item[(c)] Find the density function of $U_3 = Y^2$.
+\begin{proof}[Solution]
+  \begin{align*}
+    U_3 &= Y^2 && \frac{dy}{du_3} = \frac{1}{2\sqrt{u_3}}\\
+    Y &= \sqrt{U_3} && f_{U_3}(u_3) = 2(1-\sqrt{u_3}) \cdot \frac{1}{2\sqrt{u_3}}\\
+    && &= \frac{1-\sqrt{u_3}}{\sqrt{u_3}} \\
+    && f_{U_3}(u_3) =
+    \begin{cases}
+      \frac{1-\sqrt{u_3}}{\sqrt{u_3}}, & 0 \leq u_3 \leq 1 \\
+      0, & \text{elsewhere}
+    \end{cases}
+  \end{align*}
+\end{proof}
+
+    \item[(d)] Find $E(U_1)$, $E(U_2)$, and $E(U_3)$ by using the derived density functions for these random variables.
+\begin{proof}[Solution]
+  \begin{align*}
+    E(U_1) &= \int_{-1}^{1} u_1 \cdot \frac{1-u_1}{2} du_1 = \frac{1}{2}\left[\frac{u_1^2}{2} - \frac{u_1^3}{3}\right]_{-1}^{1} = \frac{1}{2}\left[-\frac{2}{3}\right] = -\frac{1}{3}\\
+    E(U_2) &= \int_{-1}^{1} u_2 \cdot \frac{1+u_2}{2} du_2 = \frac{1}{2}\left[\frac{u_2^2}{2} + \frac{u_2^3}{3}\right]_{-1}^{1} = \frac{1}{2}\left[\frac{2}{3}\right] = \frac{1}{3}\\
+    E(U_3) &= \int_{0}^{1} u_3 \cdot \frac{1-\sqrt{u_3}}{\sqrt{u_3}} du_3 = \int_{0}^{1} (\sqrt{u_3} - u_3) du_3 = \left[\frac{2u_3^{3/2}}{3} - \frac{u_3^2}{2}\right]_{0}^{1} = \frac{2}{3} - \frac{1}{2} = \frac{1}{6}
+  \end{align*}
+\end{proof}
+
+    \item[(e)] Find $E(U_1)$, $E(U_2)$, and $E(U_3)$ by the methods of Chapter 4.
+\begin{proof}[Solution]
+  First, $E(Y) = \int_{0}^{1} y \cdot 2(1-y) dy = 2\left[\frac{y^2}{2} - \frac{y^3}{3}\right]_{0}^{1} = \frac{1}{3}$
+  \begin{align*}
+    E(U_1) &= E(2Y-1) = 2E(Y) - 1 = 2 \cdot \frac{1}{3} - 1 = -\frac{1}{3}\\
+    E(U_2) &= E(1-2Y) = 1 - 2E(Y) = 1 - \frac{2}{3} = \frac{1}{3}\\
+    E(U_3) &= E(Y^2) = \int_{0}^{1} y^2 \cdot 2(1-y) dy = 2\left[\frac{y^3}{3} - \frac{y^4}{4}\right]_{0}^{1} = \frac{2}{3} - \frac{1}{2} = \frac{1}{6}
+  \end{align*}
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[6.6]
+The joint distribution of amount of pollutant emitted from a smokestack without a cleaning device ($Y_1$) and a similar smokestack with a cleaning device ($Y_2$) was given in Exercise 5.10 to be
+$$f(y_1, y_2) = \begin{cases}
+1, & 0 \leq y_1 \leq 2, 0 \leq y_2 \leq 1, 2y_2 \leq y_1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+The reduction in amount of pollutant due to the cleaning device is given by $U = Y_1 - Y_2$.
+
+\begin{enumerate}
+    \item[(a)] Find the probability density function for $U$.
+\begin{proof}[Solution]
+  Let $U = Y_1 - Y_2$ and $V = Y_2$. Then $Y_1 = U + V$, $Y_2 = V$, and $|J| = 1$.
+
+  The region becomes: $0 \leq v \leq 1$, $2v \leq u + v \leq 2$, which gives $v \leq u$ and $v \leq 2-u$.
+  \begin{align*}
+    f_U(u) &= \int_0^{\min(u, 1, 2-u)} 1 \, dv\\
+    f_U(u) &= \begin{cases}
+      u, & 0 \leq u \leq 1 \\
+      2-u, & 1 < u \leq 2 \\
+      0, & \text{elsewhere}
+    \end{cases}
+  \end{align*}
+\end{proof}
+
+    \item[(b)] Use the answer in part (a) to find $E(U)$. Compare your results with those of Exercise 5.78(c).
+\begin{proof}[Solution]
+  \begin{align*}
+    E(U) &= \int_0^1 u \cdot u \, du + \int_1^2 u(2-u) \, du\\
+    &= \left[\frac{u^3}{3}\right]_0^1 + \left[u^2 - \frac{u^3}{3}\right]_1^2\\
+    &= \frac{1}{3} + \left[\left(4 - \frac{8}{3}\right) - \left(1 - \frac{1}{3}\right)\right]\\
+    &= \frac{1}{3} + \frac{2}{3} = 1
+  \end{align*}
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[6.7]
+Suppose that $Z$ has a standard normal distribution.
+
+\begin{enumerate}
+    \item[(a)] Find the density function of $U = Z^2$.
+\begin{proof}[Solution]
+  For $Z \sim N(0,1)$, $f_Z(z) = \frac{1}{\sqrt{2\pi}}e^{-z^2/2}$.
+
+  Since $u = z^2$ gives $z = \pm\sqrt{u}$ and $\left|\frac{dz}{du}\right| = \frac{1}{2\sqrt{u}}$:
+  \begin{align*}
+    f_U(u) &= f_Z(\sqrt{u}) \cdot \frac{1}{2\sqrt{u}} + f_Z(-\sqrt{u}) \cdot \frac{1}{2\sqrt{u}}\\
+    &= 2 \cdot \frac{1}{\sqrt{2\pi}}e^{-u/2} \cdot \frac{1}{2\sqrt{u}} = \frac{1}{\sqrt{2\pi u}} e^{-u/2}, \quad u > 0
+  \end{align*}
+\end{proof}
+
+    \item[(b)] Does $U$ have a gamma distribution? What are the values of $\alpha$ and $\beta$?
+\begin{proof}[Solution]
+  Yes. Rewriting $f_U(u) = \frac{1}{\sqrt{2\pi}} u^{-1/2} e^{-u/2}$ and using $\Gamma(1/2) = \sqrt{\pi}$:
+  $$f_U(u) = \frac{1}{\Gamma(1/2) \cdot 2^{1/2}} u^{1/2-1} e^{-u/2}$$
+
+  Thus $\alpha = 1/2$ and $\beta = 2$.
+\end{proof}
+
+    \item[(c)] What is another name for the distribution of $U$?
+\begin{proof}[Solution]
+  Chi-square distribution with 1 degree of freedom, $\chi^2(1)$.
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[6.8]
+Assume that $Y$ has a beta distribution with parameters $\alpha$ and $\beta$.
+
+\begin{enumerate}
+    \item[(a)] Find the density function of $U = 1 - Y$.
+\begin{proof}[Solution]
+  For $Y \sim \text{Beta}(\alpha, \beta)$, $f_Y(y) = \frac{1}{B(\alpha, \beta)} y^{\alpha-1}(1-y)^{\beta-1}$.
+
+  Since $u = 1 - y$, we have $y = 1 - u$ and $\left|\frac{dy}{du}\right| = 1$:
+  $$f_U(u) = \frac{1}{B(\alpha, \beta)} (1-u)^{\alpha-1}u^{\beta-1}, \quad 0 \leq u \leq 1$$
+\end{proof}
+
+    \item[(b)] Identify the density of $U$ as one of the types we studied in Chapter 4. Be sure to identify any parameter values.
+\begin{proof}[Solution]
+  $U$ has a beta distribution with parameters $\beta$ and $\alpha$: $U \sim \text{Beta}(\beta, \alpha)$.
+\end{proof}
+
+    \item[(c)] How is $E(U)$ related to $E(Y)$?
+\begin{proof}[Solution]
+  $E(U) = E(1-Y) = 1 - E(Y)$, or equivalently $E(U) = \frac{\beta}{\alpha+\beta}$ and $E(Y) = \frac{\alpha}{\alpha+\beta}$.
+\end{proof}
+
+    \item[(d)] How is $V(U)$ related to $V(Y)$?
+\begin{proof}[Solution]
+  $V(U) = V(1-Y) = V(Y)$, since variance is unaffected by sign changes.
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[6.9]
+Suppose that a unit of mineral ore contains a proportion $Y_1$ of metal A and a proportion $Y_2$ of metal B. Experience has shown that the joint probability density function of $Y_1$ and $Y_2$ is uniform over the region $0 \leq y_1 \leq 1$, $0 \leq y_2 \leq 1$, $0 \leq y_1 + y_2 \leq 1$. Let $U = Y_1 + Y_2$, the proportion of either metal A or B per unit. Find
+
+\begin{enumerate}
+    \item[(a)] the probability density function for $U$.
+\begin{proof}[Solution]
+  The region has area $1/2$, so $f(y_1, y_2) = 2$ on the region. Let $U = Y_1 + Y_2$ and $V = Y_2$.
+
+  Then $Y_1 = U - V$, $Y_2 = V$, and $|J| = 1$. For $0 \leq u \leq 1$, $v$ ranges from $0$ to $u$:
+  $$f_U(u) = \int_0^u 2 \, dv = 2u, \quad 0 \leq u \leq 1$$
+\end{proof}
+
+    \item[(b)] $E(U)$ by using the answer to part (a).
+\begin{proof}[Solution]
+  $$E(U) = \int_0^1 u \cdot 2u \, du = 2\left[\frac{u^3}{3}\right]_0^1 = \frac{2}{3}$$
+\end{proof}
+
+    \item[(c)] $E(U)$ by using only the marginal densities of $Y_1$ and $Y_2$.
+\begin{proof}[Solution]
+  $$f_1(y_1) = \int_0^{1-y_1} 2 \, dy_2 = 2(1-y_1), \quad 0 \leq y_1 \leq 1$$
+
+  Similarly, $f_2(y_2) = 2(1-y_2)$. Then:
+  $$E(Y_1) = \int_0^1 y_1 \cdot 2(1-y_1) \, dy_1 = 2\left[\frac{y_1^2}{2} - \frac{y_1^3}{3}\right]_0^1 = \frac{1}{3}$$
+
+  By symmetry, $E(Y_2) = \frac{1}{3}$. Thus $E(U) = E(Y_1) + E(Y_2) = \frac{2}{3}$.
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[6.10]
+The total time from arrival to completion of service at a fast-food outlet, $Y_1$, and the time spent waiting in line before arriving at the service window, $Y_2$, were given in Exercise 5.15 with joint density function
+$$f(y_1, y_2) = \begin{cases}
+e^{-y_1}, & 0 \leq y_2 \leq y_1 < \infty, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+Another random variable of interest is $U = Y_1 - Y_2$, the time spent at the service window. Find
+
+\begin{enumerate}
+    \item[(a)] the probability density function for $U$.
+\begin{proof}[Solution]
+  Let $U = Y_1 - Y_2$ and $V = Y_2$. Then $Y_1 = U + V$, $Y_2 = V$, and $|J| = 1$.
+
+  The region $0 \leq y_2 \leq y_1$ becomes $0 \leq v$ and $v \leq u + v$, so $u \geq 0$:
+  $$f_U(u) = \int_0^\infty e^{-(u+v)} \, dv = e^{-u} \int_0^\infty e^{-v} \, dv = e^{-u}, \quad u \geq 0$$
+\end{proof}
+
+    \item[(b)] $E(U)$ and $V(U)$. Compare your answers with the results of Exercise 5.108.
+\begin{proof}[Solution]
+  $U$ is exponential with parameter 1, so $E(U) = 1$ and $V(U) = 1$.
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[6.11]
+Suppose that two electronic components in the guidance system for a missile operate independently and that each has a length of life governed by the exponential distribution with mean 1 (with measurements in hundreds of hours). Find the
+
+\begin{enumerate}
+    \item[(a)] probability density function for the average length of life of the two components.
+\begin{proof}[Solution]
+  Let $W = Y_1 + Y_2$. Since $Y_1, Y_2$ are independent exponential(1), $W \sim \text{Gamma}(2, 1)$ with $f_W(w) = we^{-w}$ for $w \geq 0$.
+
+  For $U = W/2$, we have $w = 2u$ and $\frac{dw}{du} = 2$:
+  $$f_U(u) = f_W(2u) \cdot 2 = (2u)e^{-2u} \cdot 2 = 4ue^{-2u}, \quad u \geq 0$$
+\end{proof}
+
+    \item[(b)] mean and variance of this average, using the answer in part (a). Check your answer by computing the mean and variance, using Theorem 5.12.
+\begin{proof}[Solution]
+  \begin{align*}
+    E(U) &= \int_0^\infty u \cdot 4ue^{-2u} \, du = 4 \cdot \frac{2!}{2^3} = 1\\
+    E(U^2) &= \int_0^\infty u^2 \cdot 4ue^{-2u} \, du = 4 \cdot \frac{3!}{2^4} = \frac{3}{2}\\
+    V(U) &= E(U^2) - [E(U)]^2 = \frac{3}{2} - 1 = \frac{1}{2}
+  \end{align*}
+
+  Using Theorem 5.12: $E(U) = \frac{E(Y_1) + E(Y_2)}{2} = 1$ and $V(U) = \frac{V(Y_1) + V(Y_2)}{4} = \frac{1}{2}$.
+\end{proof}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}[6.13]
+If $Y_1$ and $Y_2$ are independent exponential random variables, both with mean $\beta$, find the density function for their sum. (In Exercise 5.7, we considered two independent exponential random variables, both with mean 1 and determined $P(Y_1 + Y_2 \leq 3)$.)
+
+\begin{proof}[Solution]
+  Since $Y_1, Y_2$ are independent exponential with mean $\beta$, their sum $U = Y_1 + Y_2$ has a gamma distribution with $\alpha = 2$ and parameter $\beta$:
+  $$f_U(u) = \frac{1}{\Gamma(2)\beta^2} u^{2-1} e^{-u/\beta} = \frac{u}{\beta^2} e^{-u/\beta}, \quad u \geq 0$$
+\end{proof}
+\end{exercise}
+
+\begin{exercise}[6.14]
+In a process of sintering (heating) two types of copper powder (see Exercise 5.152), the density function for $Y_1$, the volume proportion of solid copper in a sample, was given by
+$$f_1(y_1) = \begin{cases}
+6y_1(1 - y_1), & 0 \leq y_1 \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+The density function for $Y_2$, the proportion of type A crystals among the solid copper, was given as
+$$f_2(y_2) = \begin{cases}
+3y_2^2, & 0 \leq y_2 \leq 1, \\
+0, & \text{elsewhere}.
+\end{cases}$$
+The variable $U = Y_1Y_2$ gives the proportion of the sample volume due to type A crystals. If $Y_1$ and $Y_2$ are independent, find the probability density function for $U$.
+
+\begin{proof}[Solution]
+  Let $U = Y_1Y_2$ and $V = Y_2$. Then $Y_1 = U/V$, $Y_2 = V$, and $|J| = \frac{1}{v}$.
+
+  Since $Y_1, Y_2$ are independent:
+  \begin{align*}
+    f_{U,V}(u,v) &= f_1(u/v) \cdot f_2(v) \cdot \frac{1}{v}\\
+    &= 6(u/v)(1-u/v) \cdot 3v^2 \cdot \frac{1}{v}\\
+    &= 18u - \frac{18u^2}{v}
+  \end{align*}
+
+  For $0 \leq u \leq 1$, $v$ ranges from $u$ to $1$ (from $u/v \leq 1$ and $v \leq 1$):
+  \begin{align*}
+    f_U(u) &= \int_u^1 \left(18u - \frac{18u^2}{v}\right) dv\\
+    &= 18u(1-u) - 18u^2[\ln v]_u^1\\
+    &= 18u(1-u) + 18u^2\ln u, \quad 0 \leq u \leq 1
+  \end{align*}
+\end{proof}
+\end{exercise}
+ \end{document} 
