@@ -81,6 +81,24 @@ We will begin by building theorems from the ground up from basic rules
 
 \end{proof}
 
-\begin{definition}
-\end{definition}
+\begin{theorem}(Algebraic Limit Theorem)
+If $x_n \to a$ and $y_n \to b$, then the algebraic limit theorem states 
+  \begin{align}
+    \textbf{Sum: } && \lim(x_n + y_n) = a + b  \\
+    \textbf{Scalar: } && \lim(cx_n) = ca \\
+    \textbf{Product: } && \lim(x_n * y_n) = a * b \\
+    \textbf{Quotient: } && \lim(\frac{x_n}{y_n}) = \frac{a}{b} && \text{for $b \neq 0$}
+  \end{align}
+  \begin{proof}
+    Sum: Recall that a sequence $(s_n)$ converges to $L$ if for every $\eps > 0$ there exists an $N \in \NN$ such that if $n \geq N$ then $|s_n - L| < \eps$. Given $x_n \to a$ and $y_n \to b$, it follows that there exists $N_1, N_2 \in \NN$ such that if $n \geq N$ we have $n \geq N_1$ and $n \geq N_2$ such that $|x_n - a| < \eps/2$ and $|y_n - b| < \eps/2$. Let $N = \max\{N_1, N_2\}$. In order to show that $\lim(x_n + y_n) = a + b$, we need to show that $|(x_n + y_n) - (a + b)| < \eps$ (epsilon definition of equality). Observe that
+    \begin{align*} 
+      |(x_n + y_n) - (a + b)| = |(x_n -a) + (y_n - b)| \leq |x_n - a| + |y_n - b| < \eps/2 + \eps/2 = \eps
+    \end{align*}
+    By the triangle inequality. Thus $\lim(x_n + y_n) = a + b$. 
+  \end{proof} 
+  \begin{proof}
+    Scalar: 
+  \end{proof}
+\end{theorem}
 \end{document}
+
