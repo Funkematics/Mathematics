@@ -1,0 +1,3 @@
+sudo useradd -c "Romain Hugonnet" --no-create-home -g 14022 -G snowmass -s /bin/bash -u 13971 rhugonnet
+sudo usermod -a -G snowmass msturm1 
+

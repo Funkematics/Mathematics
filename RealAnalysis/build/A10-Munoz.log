@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2025.9.25)  1 DEC 2025 12:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2025.9.25)  7 DEC 2025 23:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**A9-Munoz.tex
-(./A9-Munoz.tex
+**A10-Munoz.tex
+(./A10-Munoz.tex
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -322,8 +322,8 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count300
 \l__pdf_internal_box=\box55
 )
-(build/A9-Munoz.aux)
-\openout1 = `A9-Munoz.aux'.
+(build/A10-Munoz.aux)
+\openout1 = `A10-Munoz.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
@@ -410,10 +410,9 @@ Package color Info: Driver file: pdftex.def on input line 149.
 
 (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 Package hyperref Info: Link coloring ON on input line 27.
- (build/A9-Munoz.out)
-(build/A9-Munoz.out)
+ (build/A10-Munoz.out) (build/A10-Munoz.out)
 \@outlinefile=\write3
-\openout3 = `A9-Munoz.out'.
+\openout3 = `A10-Munoz.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
 
@@ -432,38 +431,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/base/8r.enc}]
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 160--165
-
- []
-
-<A9-Desmos.png, id=29, 803.0pt x 803.0pt>
-File: A9-Desmos.png Graphic file (type png)
-<use A9-Desmos.png>
-Package pdftex.def Info: A9-Desmos.png  used on input line 194.
-(pdftex.def)             Requested size: 173.44534pt x 173.43806pt.
-
-
-[3 <./A9-Desmos.png>]
-
-[4]
-
-[5] (build/A9-Munoz.aux)
+[2] (build/A10-Munoz.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-Package rerunfilecheck Info: File `A9-Munoz.out' has not changed.
+Package rerunfilecheck Info: File `A10-Munoz.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10717 strings out of 475322
- 162072 string characters out of 5767664
- 579417 words of memory out of 5000000
- 33418 multiletter control sequences out of 15000+600000
- 570024 words of font info for 68 fonts, out of 8000000 for 9000
+ 10709 strings out of 475322
+ 161970 string characters out of 5767664
+ 576422 words of memory out of 5000000
+ 33412 multiletter control sequences out of 15000+600000
+ 568922 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,13n,79p,545b,577s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,9n,79p,546b,686s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -474,10 +457,10 @@ fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino
 /uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
 are/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/A9-Munoz.pdf (5 pages, 202113 bytes).
+Output written on build/A10-Munoz.pdf (2 pages, 133117 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

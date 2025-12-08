@@ -27,14 +27,13 @@
 \begin{document}
 % replace with your name, but otherwise leave this header alone, from here ...
 \small
-\noindent \textsc{Math 401: Homework Assignment 9} \hfill Christopher Munoz
+\noindent \textsc{Math 401: Homework Assignment 9} {\footnotesize [version 2]} \hfill Christopher Munoz
 
 \normalsize
 \bigskip
 % ... to here
 
 \setcounter{problem}{59}
-
 
 \begin{problem} % Problem 60
 Let $f,g,h$ satisfy $f(x)\le g(x)\le h(x)$ for all $x$ in some common domain $A$.  Assume $c$ is a limit point of $A$.  If $\lim_{x\to c} f(x)=L$ and $\lim_{x\to c} h(x)=L$ then $\lim_{x\to c} g(x)=L$.
@@ -43,7 +42,17 @@ Let $f,g,h$ satisfy $f(x)\le g(x)\le h(x)$ for all $x$ in some common domain $A$
 % PLEASE READ: This is a squeeze theorem, and it is Exercise 4.2.11 in the book.  Compare Exercise 2.3.3.
 
 \begin{proof}
-% FILL IN
+  Let $\eps > 0$.
+  Since $\lim_{x \to c} f(x) = L$ and $\lim_{x \to c} h(x) = L$ then by definition of limit in the context of functions, for every $\eps > 0$, there exists $\delta_1 > 0$ and $\delta_2 > 0$ such that
+  \begin{align*}
+    0 < |x - c| < \delta_1 \Rightarrow L - \eps < f(x) < L + \eps\\
+    0 < |x - c| < \delta_2 \Rightarrow L - \eps < h(x) < L + \eps
+  \end{align*}
+  for all $x \in A$. Given $f(x) \le g(x) \le h(x)$, if we let $\delta = \min\{\delta_1, \delta_2\}$, then for all $x \in A$ with $0 < |x - c| < \delta$ we have
+  $$L - \eps < f(x) \le g(x) \le h(x) < L + \eps$$
+  Therefore $L - \eps < g(x) < L + \eps$ or equivalently $|g(x) - L| < \eps$. Since $\eps$ was arbitrary we conclude that 
+   $$\lim_{x \to c} g(x) = L.$$
+
 \end{proof}
 
 
@@ -54,7 +63,16 @@ If $h:\RR \to \RR$ is a continuous function then the set $K=\{x\in \RR\,:\,h(x)=
 % PLEASE READ: As expected, prove that K contains its limit points.  (Or prove that K^c is open.)
 
 \begin{proof}
-% FILL IN
+Recall that a set is closed if it contains all of its limit points. 
+
+Let $c \in K$ be a limit point, since $K=\{x\in \RR\,:\,h(x)=0\}$, we want to show that $h(c) = 0$. Since $c$ is a limit point of $K$, then there exists a sequence $(x_n)$ in $K$ with $x_n \to c$. Since each $x_n \in K$, it follows that $h(x_n) = 0$ for all $n$. 
+
+Since $h: \RR \to \RR$ is a continous function at $c$ and $x_n \to c$, we have 
+$$\lim_{n \to \infty} h(x_n) = h(c)$$
+Since $h(x_n) = 0$ for all $n$, we have
+$$\lim_{n \to \infty} h(x_n) = 0$$
+Therefore $h(c) = 0$, which means $c \in K$.
+Thus every limit point of $K$ belongs to $K$ meaning the set $K$ is closed.
 \end{proof}
 
 
@@ -65,7 +83,12 @@ If $c$ is an isolated point of $A\subset\RR$, and if $f:A\to\RR$ is a function, 
 % PLEASE READ: Read Definition 4.3.1 carefully.
 
 \begin{proof}
-% FILL IN
+  Suppose $c$ is an isolated point for $A \subset \RR$. Then by definition there exists $\delta_0 > 0$ such that $(c - \delta_0, c + \delta_0) \cap A = \{c\}$
+  We want to show that $f$ is continous at $c$. For this we let $\eps > 0$, we must find $\delta > 0$ such that for all $x \in A$ with $|x - c| < \delta$, we have $|f(x) - f(c)| < \eps$.
+
+  Choose $\delta = \delta_0$ and suppose $x \in A$ such that $|x - c| < \delta = \delta_0$. Then $x \in (c - \delta_0, c+ \delta_0) \cap A = \{c\}$, which means $x = c$. Therefore when $x \in A$ and $|x - c| < \delta$, we have $x = c$, so
+  $$|f(x) - f(c)| = |f(c) - f(c)| = 0 < \eps$$
+  Thus $f$ is continuous at $c$.
 \end{proof}
 
 
@@ -76,7 +99,51 @@ The function $g:\RR\to\RR$ defined by $g(x) = \sqrt[3]{x}$ is continuous.
 % PLEASE READ: You will want to prove that g is continuous at c = 0, and separately prove it for every other point c \ne 0.  For the latter, the identity a^3 - b^3 = (a - b) (a^2 + ab + b^2) will be useful.
 
 \begin{proof}
-% FILL IN
+We need to show that $g(x) = \sqrt[3]{x}$ is continuous at every point $c \in \RR$.
+\newline\noindent
+\textbf{Case 1: $c = 0$:}
+
+Let $\eps > 0$. We need to find $\delta > 0$ such that $|x - 0| < \delta$ implies $|\sqrt[3]{x} - 0| < \eps$.
+
+Choose $\delta = \eps^3$. Then if $|x| < \delta = \eps^3$, we have
+$$|\sqrt[3]{x}| = \sqrt[3]{|x|} < \sqrt[3]{\eps^3} = \eps$$
+Thus $g$ is continuous at $c = 0$.
+\newline\noindent
+\textbf{Case 2: $c > 0$:}
+
+Let $\eps > 0$. Using the identity $a^3 - b^3 = (a - b)(a^2 + ab + b^2)$ with $a = \sqrt[3]{x}$ and 
+
+$b = \sqrt[3]{c}$, we have
+$$x - c = (\sqrt[3]{x} - \sqrt[3]{c})((\sqrt[3]{x})^2 + \sqrt[3]{x}\sqrt[3]{c} + (\sqrt[3]{c})^2)$$
+
+Therefore
+$$\sqrt[3]{x} - \sqrt[3]{c} = \frac{x - c}{(\sqrt[3]{x})^2 + \sqrt[3]{x}\sqrt[3]{c} + (\sqrt[3]{c})^2}$$
+
+Choose $\delta = \frac{c}{2}$. For $|x - c| < \delta = \frac{c}{2}$, we have $x > \frac{c}{2} > 0$, so $\sqrt[3]{x} > 0$ and $\sqrt[3]{c} > 0$. 
+
+Thus
+$$(\sqrt[3]{x})^2 + \sqrt[3]{x}\sqrt[3]{c} + (\sqrt[3]{c})^2 > (\sqrt[3]{c})^2$$
+
+So for $|x - c| < \min\left\{\frac{c}{2}, \eps(\sqrt[3]{c})^2\right\}$, we have
+$$|\sqrt[3]{x} - \sqrt[3]{c}| = \frac{|x - c|}{(\sqrt[3]{x})^2 + \sqrt[3]{x}\sqrt[3]{c} + (\sqrt[3]{c})^2} < \frac{\eps(\sqrt[3]{c})^2}{(\sqrt[3]{c})^2} = \eps$$
+
+Thus $g$ is continuous at every $c > 0$.
+\newline\noindent
+\textbf{Case 3: $c < 0$:}
+
+Let $\eps > 0$. Using the same identity as in Case 2, for $|x - c| < \frac{|c|}{2}$, we have 
+
+$x < \frac{c}{2} < 0$, so $\sqrt[3]{x} < 0$ and $\sqrt[3]{c} < 0$. Thus
+$$(\sqrt[3]{x})^2 + \sqrt[3]{x}\sqrt[3]{c} + (\sqrt[3]{c})^2 > (\sqrt[3]{c})^2$$
+
+So for $|x - c| < \min\left\{\frac{|c|}{2}, \eps(\sqrt[3]{c})^2\right\}$, we have
+$$|\sqrt[3]{x} - \sqrt[3]{c}| < \frac{\eps(\sqrt[3]{c})^2}{(\sqrt[3]{c})^2} = \eps$$
+
+Thus $g$ is continuous at every $c < 0$.
+
+Since $g$ is continuous at every point $c \in \RR$, we conclude that $g$ is continuous on 
+
+$\RR$.
 \end{proof}
 
 
@@ -90,7 +157,28 @@ is not continuous at any $c\in\RR$.
 % PLEASE READ: On page 123 there is a suggestion about a good way to show a function is not continuous; feel free to use that technique.
 
 \begin{proof}
-% FILL IN
+Recall the Criterion for Discontinuity: Let $f: A \to \RR$, and let $c \in A$ be a limit point of $A$. If there exists a sequence $(x_n) \subseteq A$ where $(x_n) \to c$ but such that $f(x_n)$ does not converge to $f(c)$, we may conclude that $f$ is not continuous at $c$.
+\newline\newline \noindent
+Let $c \in \RR$ be arbitrary. Note that $c$ is a limit point of $\RR$ since every neighborhood of $c$ contains infinitely many points of $\RR$. By the density of rationals in $\RR$, there exists a sequence $(r_n)$ of rational numbers with $r_n \to c$. Since $r_n \in \QQ$ for all $n$, we have $g(r_n) = 1$ for all $n$. Consider the following cases
+\newline\noindent
+\textbf{Case 1: $c \in \QQ$:} 
+
+Then $g(c) = 1$. But by the density of irrationals in $\RR$, there exists a sequence 
+
+$(s_n)$ of irrational numbers with $s_n \to c$. Since $s_n \notin \QQ$ for all $n$, we have $g(s_n) = 0$ 
+
+for all $n$. Thus $g(s_n) \to 0 \neq 1 = g(c)$.
+
+By the Criterion for Discontinuity, $g$ is not continuous at $c$.
+\newline\noindent
+\textbf{Case 2: $c \notin \QQ$:}
+
+
+Then $g(c) = 0$. Since $r_n \to c$ and $g(r_n) = 1$ for all $n$, we have 
+
+$g(r_n) \to 1 \neq 0 = g(c)$.
+\noindent \newline
+By the Criterion for Discontinuity, $g$ is not continuous at $c$. Since $c$ was arbitrary, $g$ is not continuous at any point in $\RR$.
 \end{proof}
 
 
@@ -103,11 +191,23 @@ shown in the figure below, is continuous at zero.
 
 % PLEASE READ: Please sketch the graph of h(x), or generate the graph using a computer, and include that figure in your solution.  Consider making your figure a .jpg and then using this LaTeX:
 %\begin{center}
-%  \includegraphics[width=0.5\textwidth]{figure.jpg}
+  \includegraphics[width=0.4\textwidth]{A9-Desmos.png}
 %\end{center}
 
 \begin{proof}
-% FILL IN
+Let $\eps > 0$.
+
+We must find $\delta > 0$ such that $|x - 0| < \delta$ implies $|h(x) - h(0)| < \eps$.
+
+Since $h(0) = 0$, we need to show that $|h(x)| < \eps$ when $|x| < \delta$.
+
+For $x \neq 0$, we have $h(x) = \sqrt{|x|} \cos(1/x)$. Since $|\cos(1/x)| \leq 1$ for all $x \neq 0$, we have
+$$|h(x)| = |\sqrt{|x|} \cos(1/x)| = \sqrt{|x|} |\cos(1/x)| \leq \sqrt{|x|} \cdot 1 = \sqrt{|x|}$$
+
+Choose $\delta = \eps^2$. Then if $|x - 0| = |x| < \delta = \eps^2$, we have
+$$|h(x) - h(0)| = |h(x)| \leq \sqrt{|x|} < \sqrt{\eps^2} = \eps$$
+
+Since $\eps$ was arbitrary, we conclude that $h$ is continuous at $0$.
 \end{proof}
 
 
@@ -122,7 +222,22 @@ is not continuous at any rational point $c\in\QQ$.
 % PLEASE READ: If you need the fact that every rational is the limit of an irrational sequence, please *justify* (i.e. prove) this fact.
 
 \begin{proof}
-% FILL IN
+We will use the Criterion for Discontinuity again in this problem.  Let $f: A \to \RR$, and let $c \in A$ be a limit point of $A$. If there exists a sequence $(x_n) \subseteq A$ where $(x_n) \to c$ but such that $f(x_n)$ does not converge to $f(c)$, we may conclude that $f$ is not continuous at $c$.
+
+Let $c \in \QQ$ be arbitrary. We will show that $t$ is not continuous at $c$ using the Criterion for Discontinuity.
+
+First, we show that every rational is the limit of an irrational sequence. For each $n \in \NN$, define $s_n = c + \frac{\sqrt{2}}{n}$. Since $\sqrt{2}$ is irrational and $c$ is rational, each $s_n$ is irrational. Clearly $s_n \to c$ as $n \to \infty$ since
+$$|s_n - c| = \left|\frac{\sqrt{2}}{n}\right| = \frac{\sqrt{2}}{n} \to 0$$
+
+Since each $s_n \notin \QQ$, we have $t(s_n) = 0$ for all $n$. Thus $t(s_n) \to 0$ as $n \to \infty$.
+
+However, since $c \in \QQ$, we have either $c = 0$ (in which case $t(c) = 1$) or $c = \pm m/n$ in lowest terms with $n > 0$ (in which case $t(c) = 1/n > 0$). In either case, $t(c) > 0$.
+
+Since $t(s_n) \to 0$ but $t(c) > 0$, we have $t(s_n)$ does not converge to $t(c)$.
+
+By the Criterion for Discontinuity, $t$ is not continuous at $c$.
+
+Since $c$ was an arbitrary rational point, $t$ is not continuous at any rational point.
 \end{proof}
 
 \begin{problem} % Problem 67
@@ -134,31 +249,23 @@ be the composition of functions. Then $h$ is continuous at $c$.
 % PLEASE READ: This is Theorem 4.3.9 in the book.  You can prove it either using the \epsilon-\delta definition of continuity, or the sequential characterization (Theorem 4.3.2 (iii)).
 
 \begin{proof}
-% FILL IN
-\end{proof}
+We need to show that $h$ is continuous at $c$. Let $\eps > 0$.
 
+Since $g$ is continuous at $f(c)$ and $f(c) \in B$, there exists $\delta_1 > 0$ such that for all $y \in B$,
+$$|y - f(c)| < \delta_1 \implies |g(y) - g(f(c))| < \eps$$
 
-\begin{problem} % Problem 68
-The function $f(x) = 1/x^2$ is uniformly continuous on $(1,2)$, but it is not uniformly continuous on $(0,1)$.
-\end{problem}
+Since $f$ is continuous at $c \in A$, using $\delta_1 > 0$ from above, there exists $\delta > 0$ such that for all $x \in A$,
+$$|x - c| < \delta \implies |f(x) - f(c)| < \delta_1$$
 
-% PLEASE READ: The result on (1,2) can be proven directly from the definition of uniform continuity.  (You cannot use Theorem 4.4.7 since (1,2) is not compact, right?)  To show the failure of uniform continuity on (0,1), perhaps use a suitable Theorem.
+Now suppose $x \in A$ and $|x - c| < \delta$. Then by continuity of $f$ at $c$, we have
+$$|f(x) - f(c)| < \delta_1$$
 
-\begin{proof}
-% FILL IN
-\end{proof}
+Since $f(A) \subset B$, we have $f(x) \in B$. Thus we can apply the continuity of $g$ at $f(c)$ with $y = f(x)$ to obtain
+$$|g(f(x)) - g(f(c))| < \eps$$
 
+That is, $|h(x) - h(c)| < \eps$.
 
-\begin{problem} % Problem 69
-We say that a function $f:A\to \RR$ is \emph{Lipschitz} if there exists $M>0$ so that
-	$$\frac{|f(x)-f(y)|}{|x-y|} \le M$$
-for all $x,y\in A$.  If $f$ is Lipschitz then $f$ is uniformly continuous.
-\end{problem}
-
-% PLEASE READ: It is recommended to prove this directly from the definition of uniform continuity.
-
-\begin{proof}
-% FILL IN
+Since $\eps$ was arbitrary, we conclude that $h$ is continuous at $c$.
 \end{proof}
 
 \end{document}

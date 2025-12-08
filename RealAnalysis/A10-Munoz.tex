@@ -1,0 +1,140 @@
+% <-- a percent symbol indicates a comment which does not affect the output of LaTeX
+% you can leave the preamble alone, from here ...
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{enumitem,palatino}
+\usepackage[final]{graphicx}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=red,urlcolor=blue]{hyperref}
+
+\newtheorem{problem}{Problem}
+% ... to here
+
+% shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\II}{\ensuremath{\mathbb I}}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+
+\newcommand{\eps}{\ensuremath{\epsilon}}
+\newcommand{\ds}{\displaystyle}
+
+% feel free to add more shortcuts here
+
+
+\begin{document}
+% replace with your name, but otherwise leave this header alone, from here ...
+\small
+\noindent \textsc{Math 401: Homework Assignment 10} \hfill Christopher Munoz
+
+\normalsize
+\bigskip
+% ... to here
+
+\setcounter{problem}{67}
+
+\begin{problem} % Problem 68
+The function $f(x) = 1/x^2$ is uniformly continuous on $(1,2)$, but it is not uniformly continuous on $(0,1)$.
+\end{problem}
+
+% PLEASE READ: The result on (1,2) can be proven directly from the definition of uniform continuity.  (You cannot use Theorem 4.4.7 since (1,2) is not compact, right?)  To show the failure of uniform continuity on (0,1), perhaps use a suitable Theorem.
+
+\begin{proof}
+  \textbf{Part 1: Uniform Continuity on (1,2): }To show that the function $f(x) = 1/x^2$ is uniformly continuous on the set $S_1 = (1,2)$ we must show that for every $\eps > 0$ there exists $\delta > 0$ such that for all $x,y \in S_1$:
+  $$|x-y| < \delta \implies |f(x) - f(y)| < \eps$$
+Let $\eps > 0$, Observe that
+$$|f(x) - f(y)| = |\frac{1}{x^2} - \frac{1}{y^2}| = |\frac{y_2 - x^2}{x^2y_2}|= \frac{|x+y||x-y|}{x^2y^2}$$
+Since $x,y \in (1,2)$, it follows that $x^2 > 1$ and $y^2 > 1$, so $x^2y^2 > 1$. Furthermore $|x + y| < 2 + 2 = 4$.
+Therefore:
+$$|f(x) - f(y)| = \frac{|x-y||x+y|}{x^2y^2} < \frac{|x-y|*4}{1}  = 4|x-y|$$
+Choose $\delta = \frac{\eps}{4}$. Then whenever $|x - y| < \delta$, we have:
+$$|f(x) - f(y)| < 4|x-y| < 4 * \frac{\eps}{4} = \eps$$
+Since $\delta$ only depends on $\eps$, $f$ is uniformly continous on $(1,2)$
+\end{proof}
+\begin{proof}
+  \textbf{Part 2: Not Uniformly continuous on (0,1): }
+  Suppose for the sake of contradiction that $f$ is uniformly continuous on the set $S_2 = (0,1)$. Choose $\eps = 1$. Then there exists a $\delta > 0$ such that for all $x,y \in S_2$ we have 
+  $$|x-y| < \delta \implies |\frac{1}{x^2} - \frac{1}{y^2}| < 1$$
+  Choose $x \in S_2$ with $x < \delta$ and choose $y = \frac{x}{2}$. Note that $y \in S_2$ because $x \in S_2$ so $y = \frac{x}{2} < \frac{1}{2} < 1$. Then
+  $$|x-y| = |x - \frac{x}{2}| = |\frac{x}{2}| = \frac{x}{2} < \frac{\delta}{2} < \delta$$
+  So $|x-y| < \delta$ holds, it follows that
+  $$|\frac{1}{x^2} - \frac{1}{y^2}| = |\frac{1}{x^2} - \frac{1}{(x/2)^2}|= |\frac{1}{x^2} - \frac{1}{(x^2/4)}| = |\frac{1}{x^2} - \frac{4}{x^2}| = |\frac{-3}{x^2}| = \frac{3}{x^2} > 1$$
+  So $|\frac{1}{x^2}-\frac{1}{y_2}| > 1$. A contradiction, thus $f$ is not uniformly continuous on $S_2 = (0,1)$.
+\end{proof}
+
+
+\begin{problem} % Problem 69
+We say that a function $f:A\to \RR$ is \emph{Lipschitz} if there exists $M>0$ so that
+	$$\frac{|f(x)-f(y)|}{|x-y|} \le M$$
+for all $x,y\in A$.  If $f$ is Lipschitz then $f$ is uniformly continuous.
+\end{problem}
+
+% PLEASE READ: It is recommended to prove this directly from the definition of uniform continuity.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 70
+Let $f$ and $g$ be functions defined on an interval $A$.  Assume both are differentiable at some point $c\in A$, and suppose $k\in \RR$.  Then
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\begin{enumerate}
+\item $(f+g)'(c) = f'(c) + g'(c)$
+\item $(kf)'(c) = k f'(c)$
+\end{enumerate}
+\end{problem}
+
+% PLEASE READ:  This theorem is the first two parts of Theorem 5.2.4, the Algebraic Differentiability Theorem.  I proved the product rule in class, and the proofs here are easier.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 71
+Let $h(x) = 1/x$ and $\ell(x) = 1/x^2$.  For $c\ne 0$, we have
+	$$h'(c) = - \frac{1}{c^2}, \qquad \ell'(c) = - \frac{2}{c^3}$$ 
+\end{problem}
+
+% PLEASE READ: Prove these formulas directly from the definition of the derivative, namely Definition 5.2.1.
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 72
+Let $f$ and $g$ be functions defined on an interval $A$.  Assume both are differentiable at some point $c\in A$, and suppose $g(c)\ne 0$.  Then
+    $$\left(\frac{f}{g}\right)'(c) = \frac{f'(c) g(c) - f(c) g'(c)}{g(c)^2}.$$
+\end{problem}
+
+% PLEASE READ: This is the quotient rule, which is Theorem 5.2.4 (iv).  Please prove it using the following tools:
+% 1) the Chain Rule, Theorem 5.2.5.
+% 2) the result of Problem 71 for h(x)=1/x,
+% 3) the Product Rule, Theorem 5.2.4 (iii),
+
+\begin{proof}
+% FILL IN
+\end{proof}
+
+
+\begin{problem} % Problem 73
+For $a\in\RR$, let
+	$$f_a(x) = \begin{cases} x^a, & \text{if } x > 0 \\
+	                         0, & \text{if } x \le 0 \end{cases}$$
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+\item For which values of $a$ is $f_a(x)$ continuous at $x=0$?
+
+% FILL IN
+\item What is the derivative $f_a'(x)$, and what is its domain?  For which values of $a$ is $f_a(x)$ differentiable at $x=0$?  When is the derivative function $f_a'(x)$ continuous?
+
+% FILL IN
+\end{enumerate}
+\end{problem}
+
+\end{document}
