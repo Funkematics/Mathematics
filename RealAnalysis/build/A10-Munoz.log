@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2025.9.25)  7 DEC 2025 23:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024 Gentoo Linux) (preloaded format=pdflatex 2025.9.25)  8 DEC 2025 02:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -430,6 +430,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/base/8r.enc}]
+Overfull \hbox (41.81537pt too wide) in paragraph at lines 98--99
+[]\OT1/ppl/b/n/12 (i) \OT1/ppl/m/n/12 Since $\OML/cmm/m/it/12 f$ \OT1/ppl/m/n/1
+2 and $\OML/cmm/m/it/12 g$ \OT1/ppl/m/n/12 are dif-fer-en-tiable at some point 
+$\OML/cmm/m/it/12 c \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 A$\OT1/ppl/m/n/12 , the
+n $\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 c\OT1/cmr/m/n/12 ) = [
+][] []$
+ []
+
+
 
 [2] (build/A10-Munoz.aux)
  ***********
@@ -446,7 +455,7 @@ Here is how much of TeX's memory you used:
  33412 multiletter control sequences out of 15000+600000
  568922 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,9n,79p,546b,686s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 75i,9n,79p,546b,501s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -457,7 +466,7 @@ fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino
 /uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
 are/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on build/A10-Munoz.pdf (2 pages, 133117 bytes).
+Output written on build/A10-Munoz.pdf (2 pages, 137210 bytes).
 PDF statistics:
  91 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream

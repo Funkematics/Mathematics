@@ -74,7 +74,12 @@ for all $x,y\in A$.  If $f$ is Lipschitz then $f$ is uniformly continuous.
 % PLEASE READ: It is recommended to prove this directly from the definition of uniform continuity.
 
 \begin{proof}
-% FILL IN
+Since $f$ is Lipschitz, there exists $M > 0$ such that $|f(x) - f(y)| \leq M|x - y|$ for all $x,y \in A$.
+Let $\delta = \frac{\eps}{M}$ and let $x,y \in A$ be any two points such that $|x - y| < \delta$. Then it follows that
+$$|f(x) - f(y)| \leq M|x - y| \implies |f(x)-f(y)| < M*\delta $$
+Since $|x-y| < \delta$. Observe that
+$$|f(x)-f(y)| < M*\delta = M*\frac{\eps}{M} = \eps$$
+Thus, whenever $|x - y| < \delta$, we have $|f(x)-f(y) < \eps$. Note that $M$ is a constant and $\delta$ only depends on $\eps$. Therefore proving that if $f$ is Lipschitz, then $f$ is uniformly continuous.
 \end{proof}
 
 
@@ -90,7 +95,9 @@ Let $f$ and $g$ be functions defined on an interval $A$.  Assume both are differ
 % PLEASE READ:  This theorem is the first two parts of Theorem 5.2.4, the Algebraic Differentiability Theorem.  I proved the product rule in class, and the proofs here are easier.
 
 \begin{proof}
-% FILL IN
+  \textbf{(i)} Since $f$ and $g$ are differentiable at some point $c \in A$, then $f'(c) = \lim_{h \to \infty} \frac{f(c+h) - f(c)}{h}$ and $g'(c) = \lim_{h \to \infty} \frac{g(c+h) - g(c)}{h}$ by definition. We want to show that $(f+g)'(c) = f'(c) + g'(c)$. Observe that
+  \begin{align*}
+  \end{align*}
 \end{proof}
 
 
