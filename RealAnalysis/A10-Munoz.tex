@@ -97,9 +97,21 @@ Let $f$ and $g$ be functions defined on an interval $A$.  Assume both are differ
 \begin{proof}
   \textbf{(i)} Since $f$ and $g$ are differentiable at some point $c \in A$, then $f'(c) = \lim_{h \to \infty} \frac{f(c+h) - f(c)}{h}$ and $g'(c) = \lim_{h \to \infty} \frac{g(c+h) - g(c)}{h}$ by definition. We want to show that $(f+g)'(c) = f'(c) + g'(c)$. Observe that
   \begin{align*}
+    (f+g)'(c) &= \lim_{h \to 0} \frac{(f+g)(c + h) - (f+g)(c)}{h} \\
+              &= \lim_{h \to 0} \frac{[f(c+h) + g(c+h)] - [f(c) + g(c)]}{h} \\
+              &= \lim_{h \to 0} \frac{[f(c+h) - f(c)] + [g(c+h)-g(c)]}{h} \\
+              &= \lim_{h \to 0} \frac{f(c+h) - f(c)}{h} + \lim_{h \to 0} \frac{g(c+h) - g(c)}{h} \\
+              &= f'(c) + g'(c)
+  \end{align*}
+  Thus $(f+g)'(c) = f'(c) + g'(c)$.
+\end{proof}
+\begin{proof}
+  \textbf{(ii)} 
+  \begin{align*}
+    (kf)'(c) &= \lim_{h \to 0} \frac{(kf)(c+h) - (kf(c)}{h} \\
+            &= 
   \end{align*}
 \end{proof}
-
 
 \begin{problem} % Problem 71
 Let $h(x) = 1/x$ and $\ell(x) = 1/x^2$.  For $c\ne 0$, we have
