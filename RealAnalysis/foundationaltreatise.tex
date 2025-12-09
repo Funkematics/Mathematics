@@ -100,7 +100,51 @@ If $x_n \to a$ and $y_n \to b$, then the algebraic limit theorem states
     Scalar: 
   \end{proof}
 \end{theorem}
+\begin{theorem}
+  Monotone Convergence Theorem: If a sequence is monotone and bounded then it converges.
+  \begin{proof}
+    Suppose $(a_n)$ is a monotone and bounded sequence. Without loss of generality assume $(a_n)$ is monotone increasing.
+    Since $(a_n)$ is bounded above, the set $S = \{a_n : n \in \NN\}$ is a nonempty set of real numbers that is bounded above. By the Axiom of completeness, S has a supremum. Let $s = \sup S.$
 
+    We want to show that $\lim a_n = s$.
+
+    Let $\eps > 0$ Since $s$ is the supremum of S, the number $s - \eps$ is not an upper bound for $S$. Therefore there exists $N \in \NN$ such that
+    $$s-e < A_n \leq s$$
+
+    Since $(a_n)$ is monotone increasing, for all $n \geq N$ we have
+    $$a_N \leq a_n \leq s$$
+    combining these inequalities, for all $n \geq N$ we obtain
+    $$s- \eps < a_N \leq a_n \leq s < s+ \eps$$
+    Which implies $|a_n - s| < \eps$
+    Since $\eps > 0$ was arbitrary, we conclude that $\lim a_n = s$.
+  \end{proof}
+\end{theorem}
+\begin{theorem}
+  Bolzano-Wierstrass Theorem: Every bounded sequence contains a convergent subsequence.
+  \begin{proof}
+    Suppose $(a_n)$ is a bounded sequence. Then by definition there exists $m, M \in \RR$ such that $m \leq a_n \leq M$.
+
+    Let $I_1 = [m, M]$. Bisect this interval at its midpoint $\frac{M-m}{2}$ so we get the intervals $[m, \frac{M-m}{2}]$ and $[\frac{M-m}{2}, M]$. Because $I_1$ contained $a_n$ for infinitely many $n$, it follows that at least one of the 2 intervals we constructed also contains $a_n$ for infinitely many terms of $n$. Choose that interval and denote it as $I_2$. Continue this process inductively.
+
+    Suppose $I_k$ is an interval containing $a_n$ for infinitely many $n$. Bisect this interval by its midpoint to obtain two closed intervals, choose one that contains $a_n$ for infinitely many $n$ and denote this interval by $I_{k+1}$.
+    This construction yields the nested sequence of closed intervals
+    $$I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots $$
+    Where each $I_k = [c_k, d_k]$ satisfying $d_k - c_k = \frac{M-m}{2^{k-1}}$ and each $I_k$ contains an infinitely many terms of the sequence $(a_n)$.
+    By the Nested Interval Property there exists $x \in \bigcap_{k = 1}^\infty I_k$. Now construct a a convergent subsequence of $(a_n)$ as follows. Choose $n_1 \in \NN$ such that $a_{n_1} \in I_1$. Since $I_2$ contains infinitely many terms of the sequence, choose $n_2 > n_1$ such that $a_{n_2} \in I_2$. Continue this process inductively.
+    We get $n_1 < n_2 < \cdots < n_k$ with $a_{n_j} \in I_j$ for $j = 1, 2, \cdots k$. Choose $n_{k+1} > n_k$ such that $a_{n_{k+1}} > a_{n_k}$. such that $a_{n_{k+1}} \in I_{k+1}$. This produces a subsequence $(a_{n_k})$ with the property that $a_{n_k} \in I_k$ for all $k \in \NN$.
+
+    We want to show that $a_{n_k} \to x$.
+
+    Let $\eps > 0$.
+
+    Choose $K \in \NN$ such that $\frac{M-m}{2^{K-1}} < \eps$.
+    Then for all $k \geq K$, both $a_{n_k}$ and $x$ like in $I_k$ which has the length 
+    $$\frac{M-m}{2^{k-1}} \leq \frac{M-m}{2^{K-1}} < \eps$$
+    It follows then that
+    $$|a_{n_k} - x| \leq \frac{M-m}{2^{k-1}} < \eps$$
+    Thus $|a_{n_k} - x| < \eps$ meaning $a_{n_k} \to x$. 
+  \end{proof}
+\end{theorem}
 \begin{theorem}Density of $\QQ$: For every two real numbers $a$ and $b$ with $a < b$, there exists a rational number $r \in \QQ$ satisfying $a < r < b.$
   \begin{proof}
     Let $a$ and $b$ be real numbers with $a < b$. Then $b - a > 0$. By the Archimedean property there exists $n \in \NN$ such that 
