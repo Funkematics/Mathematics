@@ -100,5 +100,47 @@ If $x_n \to a$ and $y_n \to b$, then the algebraic limit theorem states
     Scalar: 
   \end{proof}
 \end{theorem}
+
+\begin{theorem}Density of $\QQ$: For every two real numbers $a$ and $b$ with $a < b$, there exists a rational number $r \in \QQ$ satisfying $a < r < b.$
+  \begin{proof}
+    Let $a$ and $b$ be real numbers with $a < b$. Then $b - a > 0$. By the Archimedean property there exists $n \in \NN$ such that 
+    $$n(b-a) > 1$$
+    Rearranging gives 
+    $$nb > na + 1$$
+    Now suppose we have a set $S = \{k \in \ZZ: k > na\}$. By the well-ordered properties of the integers and because $S$ is bounded by $k > na$. The set $S$ has a least element. Denote this element as as $m = \min S$. Note that since $m \in S$, it follows that $m > na$ and $m - 1 \notin S$. So $m -1 \leq na$. From this we get
+    $$m \leq na + 1$$
+    noticeably 
+    $$m \leq na + 1 < nb$$
+    Together with $m > na$ we get
+    $$na < m < nb$$
+    Dividing by $n$ we get
+    $$a < \frac{m}{n} < b$$
+    Setting $r = \frac{m}{n} \in \QQ$, we conclude that $a < r < b$.
+  \end{proof}
+\end{theorem}
+\begin{theorem} Continous preserves compactness: Let $f : A \to \RR$ be continous on A. If $K \subseteq A$ is compact then $f(K)$ is compact.
+  \begin{proof}
+    Let $K \subseteq A$ be compact. We will show that $f(K)$ is compact by showing that every sequence in $f(K)$ has a subsequence that converges to a point in $f(K)$.
+    Let $(y_n)$ be a sequence in $f(K)$.
+
+    By definition of $f(K)$, for each $n \in \NN$ there exists $f(x_n) = y_n$.
+
+    Since $K$ is compact and $(x_n)$ is a sequence in $K$, there exists a subsequence $(x_{n_k})$ of $(x_n)$ and a point $x \in K$ such that 
+    $$\lim_{k \to \infty} x_{n_k} = x$$
+
+    Since $f$ is continous on $A$ and $x \in K \subseteq A$, the function $f$ is continuous at $x$.
+
+    Therefore by the sequential characterization of continuity,
+    
+    $$\lim_{k \to \infty} f(x_{n_k}) = f(x)$$
+
+    But $f(x_{n_k}) = y_{n_k}$ for all $k$, so we have
+    $$\lim_{k \to \infty} y_{n_k} = f(x) $$
+    Since $x \in K$, we have $f(x) \in f(K)$.
+
+    Thus, we have found a subsequence $(y_{n_k})$ of $(y_n)$ that converges to a point $f(x) \in f(K)$.
+    Since $(y_n)$ was an arbitrary sequence in $f(K)$, we have concluded that every sequence in $f(K)$ has a subsequence converging to a point in $f(K)$.
+  \end{proof}
+\end{theorem}
 \end{document}
 
